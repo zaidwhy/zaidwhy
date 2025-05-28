@@ -2,7 +2,7 @@
 
 ###
 
-<div align="left"style="padding: 0 70px;">
+<div align="left" style="padding: 0 100px;">
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" height="30" alt="javascript logo"  />
   <img width="12" />
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" height="30" alt="react logo"  />
@@ -34,7 +34,7 @@
 
 ###
 
-<div align="center">
+<div align="center" style="padding: 0 100px;">
   <img src="https://streak-stats.demolab.com?user=syzayd&locale=en&mode=daily&theme=dracula&hide_border=false&border_radius=5" height="150" alt="streak graph"  />
 </div>
 
