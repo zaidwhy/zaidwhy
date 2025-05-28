@@ -66,11 +66,3 @@
 <img align="right" height="150" src="https://imgflip.com/gif/9vhnpi"  />
 
 ###
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/syzayd/syzayd/output/pacman-contribution-graph-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/syzayd/syzayd/output/pacman-contribution-graph.svg">
-  <img alt="pacman contribution graph" src="https://raw.githubusercontent.com/syzayd/syzayd/output/pacman-contribution-graph.svg">
-</picture>
-
-###
