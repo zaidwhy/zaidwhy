@@ -1,8 +1,4 @@
-<h2 align="left">🛠️ Currently building:<br>A world where Java code fits in your palm, fantasy meets logic, and even a flip-flop can feel like magic.<br><br>🤝 Wanna team up on:<br>AI projects that actually think, visual stories that bend reality, or scripts that make crowds laugh and professors nod.<br><br>🙋‍♀️ Need a hand with:<br>Turning wild imagination into precise execution—be it quantum concepts, stats breakdowns, or cinematic eye-portals.<br><br>🌱 On my radar lately:<br>Gen - AI, Prompt Engineering, Cloud computing, Quantum computing... and oh, how to make them look cooler than they sound.<br><br>💭 Ask me about:<br>How I turned boring practicals into artworks, events into theatre, and data into something you’d double-tap on.<br><br>⚡ Fun twist:<br>My creative fuel? A mix of deadline panic, deep logic, and daydreams about floating kingdoms in the sky.</h2>
-
-###
-
-<img align="right" height="150" src="https://imgflip.com/gif/9vhnpi"  />
+<h4 align="left">🎤 Hey, <br>Part logic designer, part visual dreamer—I'm building code that breathes, scripts that speak, and concepts that click. If it’s weird, wild, or wonderful, I’m probably working on it.<br><br>🛠️ Currently building:<br>A world where Java code fits in your palm, fantasy meets logic, and even a flip-flop can feel like magic.<br><br>🤝 Wanna team up on:<br>AI projects that actually think, visual stories that bend reality, or scripts that make crowds laugh and professors nod.<br><br>🙋‍♀️ Need a hand with:<br>Turning wild imagination into precise execution—be it quantum concepts, stats breakdowns, or cinematic eye-portals.<br><br>🌱 On my radar lately:<br>Gen - AI, Prompt Engineering, Cloud computing, Quantum computing... and oh, how to make them look cooler than they sound.<br><br>💭 Ask me about:<br>How I turned boring practicals into artworks, events into theatre, and data into something you’d double-tap on.<br><br>⚡ Fun twist:<br>My creative fuel? A mix of deadline panic, deep logic, and daydreams about floating kingdoms in the sky.</h4>
 
 ###
 
@@ -38,6 +34,12 @@
 
 ###
 
+<div align="center">
+  <img src="https://streak-stats.demolab.com?user=syzayd&locale=en&mode=daily&theme=dracula&hide_border=false&border_radius=5" height="150" alt="streak graph"  />
+</div>
+
+###
+
 <div align="left">
   <img src="https://img.shields.io/static/v1?message=Instagram&logo=instagram&label=&color=E4405F&logoColor=white&labelColor=&style=for-the-badge" height="35" alt="instagram logo"  />
   <img src="https://img.shields.io/static/v1?message=Twitch&logo=twitch&label=&color=9146FF&logoColor=white&labelColor=&style=for-the-badge" height="35" alt="twitch logo"  />
@@ -49,10 +51,26 @@
 
 ###
 
+<img src="https://raw.githubusercontent.com/syzayd/syzayd/output/snake.svg" alt="Snake animation" />
+
+###
+
 <div align="center">
   <a href="https://open.spotify.com/user/314tlg5nqigmqu6ina7gclr3qdjq">
-    <img src="https://spotify-recently-played-readme.vercel.app/api?user=314tlg5nqigmqu6ina7gclr3qdjq&count=5" alt="Spotify recently played"  />
+    <img src="https://spotify-recently-played-readme.vercel.app/api?user=314tlg5nqigmqu6ina7gclr3qdjq&count=5&unique=false" alt="Spotify recently played"  />
   </a>
 </div>
+
+###
+
+<img align="right" height="150" src="https://imgflip.com/gif/9vhnpi"  />
+
+###
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/syzayd/syzayd/output/pacman-contribution-graph-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/syzayd/syzayd/output/pacman-contribution-graph.svg">
+  <img alt="pacman contribution graph" src="https://raw.githubusercontent.com/syzayd/syzayd/output/pacman-contribution-graph.svg">
+</picture>
 
 ###
