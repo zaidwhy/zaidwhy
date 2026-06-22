@@ -1,68 +1,113 @@
-<h4 align="left">🎤 Hey, <br>Part logic designer, part visual dreamer—I'm building code that breathes, scripts that speak, and concepts that click. If it’s weird, wild, or wonderful, I’m probably working on it.<br><br>🛠️ Currently building:<br>A world where Java code fits in your palm, fantasy meets logic, and even a flip-flop can feel like magic.<br><br>🤝 Wanna team up on:<br>AI projects that actually think, visual stories that bend reality, or scripts that make crowds laugh and professors nod.<br><br>🙋‍♀️ Need a hand with:<br>Turning wild imagination into precise execution—be it quantum concepts, stats breakdowns, or cinematic eye-portals.<br><br>🌱 On my radar lately:<br>Gen - AI, Prompt Engineering, Cloud computing, Quantum computing... and oh, how to make them look cooler than they sound.<br><br>💭 Ask me about:<br>How I turned boring practicals into artworks, events into theatre, and data into something you’d double-tap on.<br><br>⚡ Fun twist:<br>My creative fuel? A mix of deadline panic, deep logic, and daydreams about floating kingdoms in the sky.</h4>
+<div align="center">
 
-###
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=20&duration=3000&pause=1000&color=58A6FF&center=true&vCenter=true&width=700&lines=Building+AI+that+remembers+%E2%80%A2+reasons+%E2%80%A2+simulates.;Multi-agent+systems+%7C+RAG+architectures+%7C+LLM+orchestration;Python+%C2%B7+Gemini+%C2%B7+Claude+%C2%B7+FastAPI+%C2%B7+React;Open+to+AI+engineer+%2F+internship+opportunities.)](https://git.io/typing-svg)
 
-<div align="left" style="padding: 0 100px;">
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" height="30" alt="javascript logo"  />
-  <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" height="30" alt="react logo"  />
-  <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" height="30" alt="html5 logo"  />
-  <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" height="30" alt="css3 logo"  />
-  <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" height="30" alt="python logo"  />
-  <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-line-wordmark.svg" height="30" alt="amazonwebservices logo"  />
-  <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/aftereffects/aftereffects-original.svg" height="30" alt="aftereffects logo"  />
-  <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/canva/canva-original.svg" height="30" alt="canva logo"  />
-  <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" height="30" alt="java logo"  />
-  <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" height="30" alt="nodejs logo"  />
-  <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-plain.svg" height="30" alt="photoshop logo"  />
-  <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg" height="30" alt="googlecloud logo"  />
-  <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" height="30" alt="bootstrap logo"  />
-  <img width="12" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/premierepro/premierepro-plain.svg" height="30" alt="premierepro logo"  />
 </div>
 
-###
+---
 
-<div align="center" style="padding: 0 100px;">
-  <img src="https://streak-stats.demolab.com?user=syzayd&locale=en&mode=daily&theme=dracula&hide_border=false&border_radius=5" height="150" alt="streak graph"  />
-</div>
+I build AI systems that go beyond chatbots.
 
-###
+Not wrappers. Not demos. Real architectures: multi-agent coordination, novel RAG retrieval, voice-vision pipelines, fine-tuned models — shipped end-to-end with tests, CI, and evals.
+
+Building in public. Looking for **AI engineer / applied AI internship** roles.
+
+---
+
+## Flagship Projects
+
+### [CivilizationOS](https://github.com/syzayd/CivilizationOS) — Multi-Agent AI Society
+
+> A living simulation: 10 autonomous citizen-agents + 5 institutional councils (35 AI agents) debate, remember, and react to injected crises — Pandemic, Drought, Cyberattack, Election, Crime Wave.
+
+**Novel contribution — Temporal-Causal Memory Fusion (TCMF):**
+Standard RAG retrieves by semantic similarity alone. TCMF fuses two streams:
+
+```
+AGORA stream    — citizen episodic memories scored by relevance x recency x importance
+PANTHEON stream — societal causal graph (NetworkX DiGraph): crisis -> decision -> outcome
+
+Fused score = episodic_score(m, q) x (1 + lambda x causal_boost(m))
+```
+
+A witness to a root cause outranks someone who heard about it second-hand. No off-the-shelf RAG system does this.
+
+```
+3-tier LLM router:  Ollama/Qwen2.5-3B ($0) -> Gemini Flash ($0) -> Claude API (~$0.002/debate)
+Fine-tuning:        LoRA on Qwen2.5-3B | MLflow tracking | persona-consistency eval harness
+Full-stack:         FastAPI + WebSocket <-> React + PixiJS isometric city UI
+Tests:              48 passing
+Total cost:         Under $5 to build. 118 commits.
+```
+
+`Python` `TypeScript` `FastAPI` `React` `ChromaDB` `Ollama` `Gemini` `Claude` `LoRA` `MLflow` `NetworkX`
+
+---
+
+### [Recall](https://github.com/syzayd/recall) — Spatial AI Memory
+
+> Point your phone camera at your space. Ask out loud "where did I leave my keys?" Get a spoken answer with the exact frame it was seen in.
+
+**Not another AI wrapper.** Persistent spatial memory across sessions. Time-decay re-ranking. Gemini Live function-calling into local ChromaDB. The voice model doesn't hallucinate locations — it calls a tool that searches a vector store built from what the camera actually saw.
+
+```
+Eval (June 2026):   Recall@1 100% (10/10) | Recall@3 100% (10/10) | Median latency 149ms
+Embeddings:         all-MiniLM-L6-v2 via ONNX — fully local, zero embedding cost
+Voice:              Gemini Live push-to-talk with function calling
+Quota management:   120s minimum between vision calls + daily budget counter on-screen
+Total commits:      162
+```
+
+`Python` `FastAPI` `React` `ChromaDB` `Gemini Live` `ONNX` `WebSocket` `cloudflared`
+
+---
+
+### [resume-job-fit-ai](https://github.com/syzayd/resume-job-fit-ai) — AI Resume Scorer | [Live Demo](https://resume-job-fit-ai.streamlit.app)
+
+> Fit scoring, keyword analysis, AI-rewritten bullet diffs, multi-tone cover letter, interview prep, skills gap roadmap, LinkedIn optimizer — one click.
+
+```
+Deployed:    Streamlit Community Cloud (live now, free tier, no credit card)
+Tests:       26 unit tests | GitHub Actions CI on every push
+Outputs:     Pydantic-validated structured JSON — no brittle string parsing
+Features:    12+ tools: multi-job comparison, application tracker, cover letter, DOCX export
+```
+
+`Python` `Gemini` `Streamlit` `Pydantic` `SQLite` `pdfplumber` `GitHub Actions`
+
+---
+
+## Tech Stack
+
+```python
+ai_ml    = ["RAG architectures", "multi-agent systems", "LoRA fine-tuning",
+            "vector DBs", "LLM orchestration", "structured outputs", "evals"]
+
+apis     = ["Gemini", "Claude (Anthropic)", "Ollama", "Gemini Live"]
+
+backend  = ["Python 3.11+", "FastAPI", "WebSocket", "Node.js"]
+
+frontend = ["React", "TypeScript", "Vite", "PixiJS"]
+
+infra    = ["AWS", "Google Cloud", "Docker", "Streamlit Cloud", "cloudflared"]
+
+tracking = ["MLflow", "Pydantic", "ChromaDB", "SQLite", "GitHub Actions CI"]
+```
+
+---
+
+## Currently
+
+- Building in public — [LinkedIn](https://linkedin.com/in/zaidsyed)
+- Open to **AI engineer internships**, **applied AI roles**, early-stage startups
+- Next: demo video for Recall + open-sourcing CivilizationOS fully
+
+---
 
 <div align="center">
-  <a href="https://open.spotify.com/user/314tlg5nqigmqu6ina7gclr3qdjq">
-    <img src="https://spotify-recently-played-readme.vercel.app/api?user=314tlg5nqigmqu6ina7gclr3qdjq&count=5&unique=false" alt="Spotify recently played"  />
-  </a>
+
+![GitHub Stats](https://github-readme-stats.vercel.app/api?username=syzayd&show_icons=true&theme=github_dark&hide_border=true&bg_color=0d1117&title_color=58a6ff&icon_color=58a6ff&text_color=8b949e&hide=issues&count_private=true)
+
+[![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=syzayd&layout=compact&theme=github_dark&hide_border=true&bg_color=0d1117&title_color=58a6ff&text_color=8b949e&hide=html,css)](https://github.com/syzayd)
+
 </div>
-
-###
-
-<img src="https://raw.githubusercontent.com/syzayd/syzayd/output/snake.svg" alt="Snake animation" />
-
-###
-
-<div align="left">
-  <img src="https://img.shields.io/static/v1?message=Instagram&logo=instagram&label=&color=E4405F&logoColor=white&labelColor=&style=for-the-badge" height="35" alt="instagram logo"  />
-  <img src="https://img.shields.io/static/v1?message=Twitch&logo=twitch&label=&color=9146FF&logoColor=white&labelColor=&style=for-the-badge" height="35" alt="twitch logo"  />
-  <img src="https://img.shields.io/static/v1?message=Discord&logo=discord&label=&color=7289DA&logoColor=white&labelColor=&style=for-the-badge" height="35" alt="discord logo"  />
-  <img src="https://img.shields.io/static/v1?message=Gmail&logo=gmail&label=&color=D14836&logoColor=white&labelColor=&style=for-the-badge" height="35" alt="gmail logo"  />
-  <img src="https://img.shields.io/static/v1?message=LinkedIn&logo=linkedin&label=&color=0077B5&logoColor=white&labelColor=&style=for-the-badge" height="35" alt="linkedin logo"  />
-  <img src="https://img.shields.io/static/v1?message=Twitter&logo=twitter&label=&color=1DA1F2&logoColor=white&labelColor=&style=for-the-badge" height="35" alt="twitter logo"  />
-</div>
-
-###
-
-<img align="right" height="150" src="https://imgflip.com/gif/9vhnpi"  />
-
-###
