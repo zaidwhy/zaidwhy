@@ -8,7 +8,7 @@
 
 I build AI systems that go beyond chatbots.
 
-Not wrappers. Not demos. Real architectures: multi-agent coordination, novel RAG retrieval, voice-vision pipelines, fine-tuned models — shipped end-to-end with tests, CI, and evals.
+Not wrappers. Not demos. Real architectures: multi-agent coordination, novel RAG retrieval, voice-vision pipelines, fine-tuned models shipped end-to-end with tests, CI, and evals.
 
 Building in public. Looking for **AI engineer / applied AI internship** roles.
 
