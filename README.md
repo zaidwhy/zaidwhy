@@ -135,6 +135,7 @@ tracking = ["MLflow", "Pydantic", "ChromaDB", "SQLite", "GitHub Actions CI"]
 
 ## Currently
 
+- Portfolio - [portfolio-gamma-rose-ct7idea9wx.vercel.app](https://portfolio-gamma-rose-ct7idea9wx.vercel.app) | [source](https://github.com/syzayd/portfolio) (Next.js 16, Three.js WebGL, GSAP)
 - Building in public - [LinkedIn](https://linkedin.com/in/zaid-ali-syed)
 - Open to **AI engineer internships**, **applied AI roles**, early-stage startups
 - Next: Agent Factory Phase 2 (Python SDK orchestrator) hardening, open-sourcing CivilizationOS fully
