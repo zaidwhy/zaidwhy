@@ -58,7 +58,7 @@ PANTHEON stream - societal causal graph (NetworkX DiGraph): crisis -> decision -
 Fused score = episodic_score(m, q) x (1 + lambda x causal_boost(m))
 ```
 
-A witness to a root cause outranks someone who heard about it second-hand. No off-the-shelf RAG system does this.
+A witness to a root cause outranks someone who heard about it second-hand. No off-the-shelf RAG system does this. Full design write-up with code and tradeoffs: [docs/tcmf.md](https://github.com/syzayd/CivilizationOS/blob/main/docs/tcmf.md)
 
 **Latest additions:** sustained-fear auto-crisis injection so the society generates its own emergencies, per-council effectiveness scoring (debate to verdict to 60-tick fear delta), union-find citizen faction detection on mutual affinity, and a Story Rewind scrubber over the full causal timeline.
 
