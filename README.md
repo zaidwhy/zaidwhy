@@ -8,7 +8,7 @@
 
 I build AI systems that go beyond chatbots.
 
-Not wrappers. Not demos. Real architectures: multi-agent coordination, novel RAG retrieval, voice-vision pipelines, fine-tuned models shipped end-to-end with tests, CI, and evals.
+Not wrappers. Not demos. Real architectures: multi-agent coordination, novel RAG retrieval, voice-vision pipelines, fine-tuned models, autonomous build pipelines shipped end-to-end with tests, CI, and evals.
 
 Building in public. Looking for **AI engineer / applied AI internship** roles.
 
@@ -16,9 +16,37 @@ Building in public. Looking for **AI engineer / applied AI internship** roles.
 
 ## Flagship Projects
 
+### [Agent Factory](https://github.com/syzayd/agent-factory) - 6-Agent Pipeline That Ships Full Projects
+
+> One command, `/forge`, and a team of six specialized agents (idea-hunter, architect, backend-engineer, frontend-engineer, reviewer, debugger) turns nothing into a tested, runnable project.
+
+**Not a code generator. A pipeline with contracts.** The architect freezes an API contract before backend and frontend build in parallel from it - that's what keeps two agents' output compatible without either seeing the other's code. The reviewer is read-only by design; the debugger is the only agent that runs code, graded on fixing what it finds rather than writing more.
+
+```
+Agents:       idea-hunter -> architect -> backend + frontend (parallel) -> reviewer -> debugger -> devops-engineer
+Proof:        3 full projects shipped end-to-end in test runs - PinPoint, DriftGuard, Receipts.dev
+Receipts.dev: 92 files, 16 bugs found and fixed (1 critical, 4 high), 0 type errors, 0 lint errors
+Contract:     runs/<timestamp>/ file handoff - architect's API contract is the single source of truth
+Roadmap:      Phase 1 (Claude Code subagents, live) -> Phase 2 (Python SDK orchestrator, factory.py, live)
+```
+
+`Claude Code Subagents` `Anthropic Python SDK` `Multi-Agent Orchestration` `Streaming Tool Loop` `ThreadPoolExecutor`
+
+---
+
+### [Receipts.dev](https://github.com/syzayd/receipts-dev) - Prove Skills With Code, Not Buzzwords
+
+> AI-powered skill verification from real Git history. Every skill on the profile deep-links to the actual commit that proves it, via a recruiter chat that can only cite real diffs and never invent a claim.
+
+Built by Agent Factory's full pipeline in a single run: idea to architecture to parallel backend/frontend to review to debug. GitHub OAuth with Fernet-encrypted tokens, an async GitHub client with retry, a pgvector code-chunk retriever, and grounded chat with hallucination-proof citation validation.
+
+`Next.js 15` `FastAPI` `pgvector` `GitHub OAuth` `Celery` `Grounded RAG`
+
+---
+
 ### [CivilizationOS](https://github.com/syzayd/CivilizationOS) - Multi-Agent AI Society
 
-> A living simulation: 10 autonomous citizen-agents + 5 institutional councils (35 AI agents) debate, remember, and react to injected crises - Pandemic, Drought, Cyberattack, Election, Crime Wave.
+> A living simulation: 10 autonomous citizen-agents + 5 institutional councils (35 AI agents) debate, remember, and react to injected crises - Pandemic, Drought, Cyberattack, Election, Crime Wave, and now self-generated emergent crises.
 
 **Novel contribution - Temporal-Causal Memory Fusion (TCMF):**
 Standard RAG retrieves by semantic similarity alone. TCMF fuses two streams:
@@ -32,15 +60,17 @@ Fused score = episodic_score(m, q) x (1 + lambda x causal_boost(m))
 
 A witness to a root cause outranks someone who heard about it second-hand. No off-the-shelf RAG system does this.
 
+**Latest additions:** sustained-fear auto-crisis injection so the society generates its own emergencies, per-council effectiveness scoring (debate to verdict to 60-tick fear delta), union-find citizen faction detection on mutual affinity, and a Story Rewind scrubber over the full causal timeline.
+
 ```
 3-tier LLM router:  Ollama/Qwen2.5-3B ($0) -> Gemini Flash ($0) -> Claude API (~$0.002/debate)
 Fine-tuning:        LoRA on Qwen2.5-3B | MLflow tracking | persona-consistency eval harness
-Full-stack:         FastAPI + WebSocket <-> React + PixiJS isometric city UI
-Tests:              48 passing
-Total cost:         Under $5 to build. 118 commits.
+Full-stack:         FastAPI + WebSocket <-> React + Three.js 3D city (replaced the earlier PixiJS UI)
+Tests:              54 passing
+Total cost:         Under $5 to build.
 ```
 
-`Python` `TypeScript` `FastAPI` `React` `ChromaDB` `Ollama` `Gemini` `Claude` `LoRA` `MLflow` `NetworkX`
+`Python` `TypeScript` `FastAPI` `React` `Three.js` `ChromaDB` `Ollama` `Gemini` `Claude` `LoRA` `MLflow` `NetworkX`
 
 ---
 
@@ -77,19 +107,26 @@ Features:    12+ tools: multi-job comparison, application tracker, cover letter,
 
 ---
 
+## Open Source
+
+**[google/adk-python #6190](https://github.com/google/adk-python/pull/6190)** - fixed an `Optional[List[str]]` type hint bug in `cleanup_unused_files` that broke the CLI parser (labeled "good first issue" by Google's ADK team). Went through a maintainer review round: root-caused a CI failure to a leftover repro script breaking Mypy and the pyink linter, removed it, verified pyink/isort/ruff clean locally, and re-pushed a single focused fix.
+
+---
+
 ## Tech Stack
 
 ```python
 ai_ml    = ["RAG architectures", "multi-agent systems", "LoRA fine-tuning",
-            "vector DBs", "LLM orchestration", "structured outputs", "evals"]
+            "vector DBs", "LLM orchestration", "structured outputs", "evals",
+            "agent pipelines with frozen API contracts"]
 
 apis     = ["Gemini", "Claude (Anthropic)", "Ollama", "Gemini Live"]
 
 backend  = ["Python 3.11+", "FastAPI", "WebSocket", "Node.js"]
 
-frontend = ["React", "TypeScript", "Vite", "PixiJS"]
+frontend = ["React", "TypeScript", "Vite", "Three.js", "PixiJS"]
 
-infra    = ["AWS", "Google Cloud", "Docker", "Streamlit Cloud", "cloudflared"]
+infra    = ["AWS", "Google Cloud", "Docker", "Streamlit Cloud", "cloudflared", "Vercel"]
 
 tracking = ["MLflow", "Pydantic", "ChromaDB", "SQLite", "GitHub Actions CI"]
 ```
@@ -98,9 +135,9 @@ tracking = ["MLflow", "Pydantic", "ChromaDB", "SQLite", "GitHub Actions CI"]
 
 ## Currently
 
-- Building in public - [LinkedIn](https://linkedin.com/in/zaidsyed)
+- Building in public - [LinkedIn](https://linkedin.com/in/zaid-ali-syed)
 - Open to **AI engineer internships**, **applied AI roles**, early-stage startups
-- Next: demo video for Recall + open-sourcing CivilizationOS fully
+- Next: Agent Factory Phase 2 (Python SDK orchestrator) hardening, open-sourcing CivilizationOS fully
 
 ---
 
