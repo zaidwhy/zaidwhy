@@ -5,7 +5,7 @@
 </div>
 
 ---
-
+Not just prompting.
 I build AI systems that go beyond chatbots.
 
 Not wrappers. Not demos. Real architectures: multi-agent coordination, novel RAG retrieval, voice-vision pipelines, fine-tuned models, autonomous build pipelines shipped end-to-end with tests, CI, and evals.
