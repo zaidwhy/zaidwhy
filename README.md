@@ -44,6 +44,23 @@ Built by Agent Factory's full pipeline in a single run: idea to architecture to 
 
 ---
 
+### [Personal LLM](https://github.com/syzayd/personal-llm) - Local-First Memory + RAG Kernel
+
+> One memory engine, built once, imported by everything else: a local-first, privacy-preserving memory + RAG core (SQLite + ChromaDB + hybrid model router) that answers with citations and refuses honestly when it doesn't know.
+
+**Not a demo - infrastructure.** Three downstream apps import it instead of rebuilding retrieval: [second-brain](https://github.com/syzayd/second-brain) (vault ingestion, auto-linking, offline knowledge-graph viewer - 40 tests) and [github-pr-agent](https://github.com/syzayd/github-pr-agent) (repo analysis, issue triage, PR planning - 32 tests) are public; DreamOS (an Electron AI command bar over the same engine) ships when its demo video does.
+
+```
+Tests:        100 offline, fully mocked - zero-key CI on every push
+Agent layer:  plan-act-reflect loop, 4 permission-tiered tools (incl. SSRF-guarded web fetch), full audit log
+Voice/vision: faster-whisper STT (offline, free) + OCR ingestion; native-crash inputs pre-validated (PyAV)
+Security:     token-authenticated HTTP gateway; browser-Origin requests rejected outright
+```
+
+`Python` `FastAPI` `ChromaDB` `SQLite` `sentence-transformers` `Ollama` `Gemini` `faster-whisper`
+
+---
+
 ### [CivilizationOS](https://github.com/syzayd/CivilizationOS) - Multi-Agent AI Society
 
 > A living simulation: 10 autonomous citizen-agents + 5 institutional councils (35 AI agents) debate, remember, and react to injected crises - Pandemic, Drought, Cyberattack, Election, Crime Wave, and now self-generated emergent crises.
