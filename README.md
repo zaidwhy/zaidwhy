@@ -115,7 +115,7 @@ Total commits:      162
 
 ```
 Deployed:    Streamlit Community Cloud (live now, free tier, no credit card)
-Tests:       26 unit tests | GitHub Actions CI on every push
+Tests:       29 unit tests | GitHub Actions CI on every push
 Outputs:     Pydantic-validated structured JSON - no brittle string parsing
 Features:    12+ tools: multi-job comparison, application tracker, cover letter, DOCX export
 ```
