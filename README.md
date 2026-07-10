@@ -83,7 +83,7 @@ A witness to a root cause outranks someone who heard about it second-hand. No of
 3-tier LLM router:  Ollama/Qwen2.5-3B ($0) -> Gemini Flash ($0) -> Claude API (~$0.002/debate)
 Fine-tuning:        LoRA on Qwen2.5-3B | MLflow tracking | persona-consistency eval harness
 Full-stack:         FastAPI + WebSocket <-> React + Three.js 3D city (replaced the earlier PixiJS UI)
-Tests:              54 passing
+Tests:              61 passing
 Total cost:         Under $5 to build.
 ```
 
