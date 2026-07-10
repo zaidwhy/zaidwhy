@@ -126,6 +126,8 @@ Features:    12+ tools: multi-job comparison, application tracker, cover letter,
 
 ## Open Source
 
+**[memgraph/gqlalchemy #390](https://github.com/memgraph/gqlalchemy/pull/390)** - open PR adding unary-operator support (`IS NOT NULL`) to the query builder: 4 tests, docs, CI green, CLA signed. Found and scoped with my own triage pipeline (AutoCTO), implemented keylessly via git + the GitHub CLI.
+
 **[google/adk-python #6190](https://github.com/google/adk-python/pull/6190)** - fixed an `Optional[List[str]]` type hint bug in `cleanup_unused_files` that broke the CLI parser (labeled "good first issue" by Google's ADK team). Went through a maintainer review round: root-caused a CI failure to a leftover repro script breaking Mypy and the pyink linter, removed it, verified pyink/isort/ruff clean locally, and re-pushed a single focused fix.
 
 ---
