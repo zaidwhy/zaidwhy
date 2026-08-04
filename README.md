@@ -130,11 +130,21 @@ Features:    12+ tools: multi-job comparison, application tracker, cover letter,
 
 ---
 
+## Autonomous Build Agent
+
+I run a nightly agent across my own 12-repo project fleet: it triages the next task, implements it, runs the tests, and opens a PR - every change gated by CI and a human merge, nothing lands unreviewed. Shipped and merged 30+ PRs in the past month. Coordination records (task queue, run logs) live in a private repo since they're internal tooling, not a product.
+
+---
+
 ## Open Source
 
 **[memgraph/gqlalchemy #390](https://github.com/memgraph/gqlalchemy/pull/390)** - open PR adding unary-operator support (`IS NOT NULL`) to the query builder: 4 tests, docs, CI green, CLA signed. Found and scoped with my own triage pipeline (AutoCTO), implemented keylessly via git + the GitHub CLI.
 
-**[google/adk-python #6190](https://github.com/google/adk-python/pull/6190)** - fixed an `Optional[List[str]]` type hint bug in `cleanup_unused_files` that broke the CLI parser (labeled "good first issue" by Google's ADK team). Went through a maintainer review round: root-caused a CI failure to a leftover repro script breaking Mypy and the pyink linter, removed it, verified pyink/isort/ruff clean locally, and re-pushed a single focused fix.
+**[memgraph/gqlalchemy #392](https://github.com/memgraph/gqlalchemy/pull/392)** - open PR adding `ON CREATE` / `ON MATCH` clauses to the same query builder, with tests and docs.
+
+**[jazzband/django-taggit #944](https://github.com/jazzband/django-taggit/pull/944)** - open PR adding `remove_by_slug()` to `TaggableManager`, with tests.
+
+**[google/adk-python #6190](https://github.com/google/adk-python/pull/6190)** - fixed an `Optional[List[str]]` type hint bug in `cleanup_unused_files` that broke the CLI parser (labeled "good first issue" by Google's ADK team). Survived a full maintainer review round - root-caused a CI failure to a leftover repro script breaking Mypy and the pyink linter, fixed it, and got an LGTM - before a maintainer's own commit resolved the same underlying bug first, closing the PR unmerged.
 
 ---
 
