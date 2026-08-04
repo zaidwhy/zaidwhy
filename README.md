@@ -77,6 +77,8 @@ Fused score = episodic_score(m, q) x (1 + lambda x causal_boost(m))
 
 A witness to a root cause outranks someone who heard about it second-hand. No off-the-shelf RAG system does this. Full design write-up with code and tradeoffs: [docs/tcmf.md](https://github.com/syzayd/CivilizationOS/blob/main/docs/tcmf.md)
 
+Validated it with a controlled benchmark against 6 baseline retrieval strategies: the original multiplicative fusion scored 0.00 on the causal signal it was meant to exploit, a fixed normalized-additive version recovered it and beat every single-signal baseline in a mixed regime. A follow-up 60-scenario study showed retrieval choice changes the model's actual decision, not just its confidence.
+
 **Latest additions:** sustained-fear auto-crisis injection so the society generates its own emergencies, per-council effectiveness scoring (debate to verdict to 60-tick fear delta), union-find citizen faction detection on mutual affinity, and a Story Rewind scrubber over the full causal timeline.
 
 ```
