@@ -89,6 +89,8 @@ Tests:              61 passing
 Total cost:         Under $5 to build.
 ```
 
+Live now: [civilization-os-murex.vercel.app](https://civilization-os-murex.vercel.app) (frontend) - backend on Render.
+
 `Python` `TypeScript` `FastAPI` `React` `Three.js` `ChromaDB` `Ollama` `Gemini` `Claude` `LoRA` `MLflow` `NetworkX`
 
 ---
