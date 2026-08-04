@@ -109,6 +109,8 @@ Quota management:   120s minimum between vision calls + daily budget counter on-
 Total commits:      162
 ```
 
+Live now: deployed on Render.
+
 `Python` `FastAPI` `React` `ChromaDB` `Gemini Live` `ONNX` `WebSocket` `cloudflared`
 
 ---
