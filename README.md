@@ -138,6 +138,12 @@ I run a nightly agent across my own 12-repo project fleet: it triages the next t
 
 ## Open Source
 
+**[jd/tenacity #668](https://github.com/jd/tenacity/pull/668)** - MERGED. Fixed static typing for `@retry`-decorated instance methods so bound-method signatures survive the decorator under mypy strict.
+
+**[dry-python/returns #2480](https://github.com/dry-python/returns/pull/2480)** - MERGED. Relaxed `future()` / `future_safe()` parameter types from `Coroutine` to the broader `Awaitable` protocol.
+
+**[astral-sh/ruff #27494](https://github.com/astral-sh/ruff/pull/27494)** - open PR (Rust) extending two lint rules (`RUF008`/`RUF009`) to recognize PEP 681 `dataclass_transform` decorators, closing a false-negative on Pydantic-style custom dataclass factories.
+
 **[memgraph/gqlalchemy #390](https://github.com/memgraph/gqlalchemy/pull/390)** - open PR adding unary-operator support (`IS NOT NULL`) to the query builder: 4 tests, docs, CI green, CLA signed. Found and scoped with my own triage pipeline (AutoCTO), implemented keylessly via git + the GitHub CLI.
 
 **[memgraph/gqlalchemy #392](https://github.com/memgraph/gqlalchemy/pull/392)** - open PR adding `ON CREATE` / `ON MATCH` clauses to the same query builder, with tests and docs.
