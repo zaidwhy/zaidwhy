@@ -16,7 +16,7 @@ Building in public. Looking for **AI engineer / applied AI internship** roles.
 
 ## Flagship Projects
 
-### [Agent Factory](https://github.com/syzayd/agent-factory) - 6-Agent Pipeline That Ships Full Projects
+### [Agent Factory](https://github.com/zaidwhy/agent-factory) - 6-Agent Pipeline That Ships Full Projects
 
 > One command, `/forge`, and a team of six specialized agents (idea-hunter, architect, backend-engineer, frontend-engineer, reviewer, debugger) turns nothing into a tested, runnable project.
 
@@ -34,7 +34,7 @@ Roadmap:      Phase 1 (Claude Code subagents, live) -> Phase 2 (Python SDK orche
 
 ---
 
-### [Receipts.dev](https://github.com/syzayd/receipts-dev) - Prove Skills With Code, Not Buzzwords
+### [Receipts.dev](https://github.com/zaidwhy/receipts-dev) - Prove Skills With Code, Not Buzzwords
 
 > AI-powered skill verification from real Git history. Every skill on the profile deep-links to the actual commit that proves it, via a recruiter chat that can only cite real diffs and never invent a claim.
 
@@ -44,11 +44,11 @@ Built by Agent Factory's full pipeline in a single run: idea to architecture to 
 
 ---
 
-### [Personal LLM](https://github.com/syzayd/personal-llm) - Local-First Memory + RAG Kernel
+### [Personal LLM](https://github.com/zaidwhy/personal-llm) - Local-First Memory + RAG Kernel
 
 > One memory engine, built once, imported by everything else: a local-first, privacy-preserving memory + RAG core (SQLite + ChromaDB + hybrid model router) that answers with citations and refuses honestly when it doesn't know.
 
-**Not a demo - infrastructure.** Three downstream apps import it instead of rebuilding retrieval: [second-brain](https://github.com/syzayd/second-brain) (vault ingestion, auto-linking, offline knowledge-graph viewer - 40 tests) and [github-pr-agent](https://github.com/syzayd/github-pr-agent) (repo analysis, issue triage, PR planning - 32 tests) are public; DreamOS (an Electron AI command bar over the same engine) ships when its demo video does.
+**Not a demo - infrastructure.** Three downstream apps import it instead of rebuilding retrieval: [second-brain](https://github.com/zaidwhy/second-brain) (vault ingestion, auto-linking, offline knowledge-graph viewer - 40 tests) and [github-pr-agent](https://github.com/zaidwhy/github-pr-agent) (repo analysis, issue triage, PR planning - 32 tests) are public; DreamOS (an Electron AI command bar over the same engine) ships when its demo video does.
 
 ```
 Tests:        100 offline, fully mocked - zero-key CI on every push
@@ -61,7 +61,7 @@ Security:     token-authenticated HTTP gateway; browser-Origin requests rejected
 
 ---
 
-### [CivilizationOS](https://github.com/syzayd/CivilizationOS) - Multi-Agent AI Society
+### [CivilizationOS](https://github.com/zaidwhy/CivilizationOS) - Multi-Agent AI Society
 
 > A living simulation: 10 autonomous citizen-agents + 5 institutional councils (35 AI agents) debate, remember, and react to injected crises - Pandemic, Drought, Cyberattack, Election, Crime Wave, and now self-generated emergent crises.
 
@@ -75,7 +75,7 @@ PANTHEON stream - societal causal graph (NetworkX DiGraph): crisis -> decision -
 Fused score = episodic_score(m, q) x (1 + lambda x causal_boost(m))
 ```
 
-A witness to a root cause outranks someone who heard about it second-hand. No off-the-shelf RAG system does this. Full design write-up with code and tradeoffs: [docs/tcmf.md](https://github.com/syzayd/CivilizationOS/blob/main/docs/tcmf.md)
+A witness to a root cause outranks someone who heard about it second-hand. No off-the-shelf RAG system does this. Full design write-up with code and tradeoffs: [docs/tcmf.md](https://github.com/zaidwhy/CivilizationOS/blob/main/docs/tcmf.md)
 
 Validated it with a controlled benchmark against 6 baseline retrieval strategies: the original multiplicative fusion scored 0.00 on the causal signal it was meant to exploit, a fixed normalized-additive version recovered it and beat every single-signal baseline in a mixed regime. A follow-up 60-scenario study showed retrieval choice changes the model's actual decision, not just its confidence.
 
@@ -95,7 +95,7 @@ Live now: [civilization-os-murex.vercel.app](https://civilization-os-murex.verce
 
 ---
 
-### [Recall](https://github.com/syzayd/recall) - Spatial AI Memory
+### [Recall](https://github.com/zaidwhy/recall) - Spatial AI Memory
 
 > Point your phone camera at your space. Ask out loud "where did I leave my keys?" Get a spoken answer with the exact frame it was seen in.
 
@@ -115,7 +115,7 @@ Live now: deployed on Render.
 
 ---
 
-### [resume-job-fit-ai](https://github.com/syzayd/resume-job-fit-ai) - AI Resume Scorer | [Live Demo](https://resume-job-fit-ai.streamlit.app)
+### [resume-job-fit-ai](https://github.com/zaidwhy/resume-job-fit-ai) - AI Resume Scorer | [Live Demo](https://resume-job-fit-ai.streamlit.app)
 
 > Fit scoring, keyword analysis, AI-rewritten bullet diffs, multi-tone cover letter, interview prep, skills gap roadmap, LinkedIn optimizer - one click.
 
@@ -174,7 +174,7 @@ tracking = ["MLflow", "Pydantic", "ChromaDB", "SQLite", "GitHub Actions CI"]
 
 ## Currently
 
-- Portfolio - [zaidalisyed.vercel.app](https://zaidalisyed.vercel.app) | [source](https://github.com/syzayd/portfolio) (Next.js 16, Three.js WebGL, GSAP)
+- Portfolio - [zaidalisyed.vercel.app](https://zaidalisyed.vercel.app) | [source](https://github.com/zaidwhy/portfolio) (Next.js 16, Three.js WebGL, GSAP)
 - Building in public - [LinkedIn](https://linkedin.com/in/zaid-ali-syed)
 - Open to **AI engineer internships**, **applied AI roles**, early-stage startups
 - Next: Agent Factory Phase 2 (Python SDK orchestrator) hardening, open-sourcing CivilizationOS fully
@@ -183,8 +183,8 @@ tracking = ["MLflow", "Pydantic", "ChromaDB", "SQLite", "GitHub Actions CI"]
 
 <div align="center">
 
-![GitHub Stats](https://github-readme-stats.vercel.app/api?username=syzayd&show_icons=true&theme=github_dark&hide_border=true&bg_color=0d1117&title_color=58a6ff&icon_color=58a6ff&text_color=8b949e&hide=issues&count_private=true)
+![GitHub Stats](https://github-readme-stats.vercel.app/api?username=zaidwhy&show_icons=true&theme=github_dark&hide_border=true&bg_color=0d1117&title_color=58a6ff&icon_color=58a6ff&text_color=8b949e&hide=issues&count_private=true)
 
-[![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=syzayd&layout=compact&theme=github_dark&hide_border=true&bg_color=0d1117&title_color=58a6ff&text_color=8b949e&hide=html,css)](https://github.com/syzayd)
+[![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=zaidwhy&layout=compact&theme=github_dark&hide_border=true&bg_color=0d1117&title_color=58a6ff&text_color=8b949e&hide=html,css)](https://github.com/zaidwhy)
 
 </div>
