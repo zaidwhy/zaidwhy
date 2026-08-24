@@ -130,6 +130,70 @@ Features:    12+ tools: multi-job comparison, application tracker, cover letter,
 
 ---
 
+## Research
+
+Two small studies, each with a negative control and a replication on a second model family,
+because a finding from one model is a fact about that model.
+
+### [AUGUR](https://github.com/zaidwhy/augur) - Where a time-locked model actually stands
+
+> A model trained on nothing published after 1938, asked what year it is, answers **1899**.
+
+Vintage language models are being used to reconstruct historical belief, on the assumption
+that a 1938 cutoff represents 1938. It does not. A cutoff describes the edge of a corpus, not
+its centre of gravity, and both models tested answer from **four to eight decades earlier**
+than their stated cutoff. Telling one of them the year relocates it forty years on the spot;
+telling the other does nothing at all - so a time-locked model has to be characterised on two
+axes, where it stands and whether it can be moved.
+
+A second finding fell out of the demo: asked whether another great war was coming, a
+1930-anchored model says no and calls it highly improbable. Asked instead to *enumerate the
+dangers*, the same model in the same year gives an accurate threat assessment naming the
+Rhineland, Poland, and Czechoslovakia. Both were in the corpus. **The form of the question
+decides which 1930 you meet.**
+
+`n=2 replication` `two model families` `14-probe battery, temperature 0, fixed seed`
+
+---
+
+### [COLD READ](https://github.com/zaidwhy/coldread) - The anonymity half-life belongs to the reader
+
+> How many words can you write before a machine knows who you are? The question is malformed,
+> and why it is malformed is the finding.
+
+72 authors from a labelled blog corpus, shown to local models in growing slices, guessing
+gender, age band, and star sign at every step. Star sign is the negative control - labelled in
+the data, not inferable from prose - and it never left the floor in either model, which is
+what makes the rest trustworthy.
+
+Same authors, same words, same prompt, two readers: **one model needs the better part of a
+thousand words to beat a coin flip on gender, the other needs fifty.** A sixteen-fold gap on
+identical text. No statement of the form "you are anonymous for N words" means anything
+without naming the model. Corpus memorisation tested directly and ruled out. Ships with a
+two-seat consent-gated app that profiles both participants live.
+
+`n=2 replication` `negative control` `contamination ruled out` `Wilson intervals`
+
+---
+
+## Production Work
+
+### [Zabira Academy case study](case-studies/zabira-academy.md) - 27 merged PRs into a live product
+
+Twelve days, +8,838/-1,619 across 557 file changes, into a production learning platform I did
+not build, every change reviewed and merged by the repository owner. Security hardening
+(exception leakage across 226 files, Origin checks on 60 mutating endpoints, a sanitizer
+bypass, session revocation), an end-to-end suite covering the seven launch-critical flows with
+a CI gate, and a sitewide search feature built from backend to voice input.
+
+Including the one where CI went red on my feature branch and the cause turned out to predate
+my work by three days - a registration validation rule that silently failed a test fixture,
+bisected through the run history and confirmed from the failed run's Playwright snapshot.
+
+The codebase is private, so the [case study](case-studies/zabira-academy.md) is the record.
+
+---
+
 ## Autonomous Build Agent
 
 I run a nightly agent across my own 12-repo project fleet: it triages the next task, implements it, runs the tests, and opens a PR - every change gated by CI and a human merge, nothing lands unreviewed. Shipped and merged 30+ PRs in the past month. Coordination records (task queue, run logs) live in a private repo since they're internal tooling, not a product.
