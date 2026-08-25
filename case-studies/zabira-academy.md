@@ -153,5 +153,3 @@ That constraint is the whole point. It is where you find out whether you can rea
 codebase quickly, scope a change so it can actually be reviewed, keep an unrelated fix out of a
 feature branch, and tell the difference between the bug you were sent to fix and the one that
 was already there.
-
-It is also the closest thing in my portfolio to the actual job.
