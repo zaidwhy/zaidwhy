@@ -8,10 +8,6 @@ Every change reviewed and merged by the repository owner. The codebase is privat
 why this document exists - the work is real and the commits are not public, so here is an
 account of it with enough specifics to check.
 
-**Disclosure up front:** the platform belongs to a family member's business. It is a real
-company with real customers taking real payments, and every pull request went through review
-before merge, but I would rather say whose product it is than have someone discover it later.
-
 ---
 
 ## What it is
