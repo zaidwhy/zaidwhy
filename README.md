@@ -121,9 +121,9 @@ Shipped 3 full projects end to end in test runs. On [Receipts.dev](https://githu
 
 <br>
 
-- **[personal-llm](https://github.com/zaidwhy/personal-llm)** - local-first memory + RAG kernel. 100 offline tests, fully mocked, zero-key CI. Plan-act-reflect agent loop, 4 permission-tiered tools including an SSRF-guarded fetch, full audit log.
-- **[second-brain](https://github.com/zaidwhy/second-brain)** - vault ingestion, auto-linking, offline knowledge-graph viewer.
-- **[github-pr-agent](https://github.com/zaidwhy/github-pr-agent)** - repo analysis, issue triage, PR planning.
+- **[personal-llm](https://github.com/zaidwhy/personal-llm)** - local-first memory + RAG kernel. 168 offline tests, fully mocked, zero-key CI. Plan-act-reflect agent loop, 4 permission-tiered tools including an SSRF-guarded fetch, full audit log.
+- **[second-brain](https://github.com/zaidwhy/second-brain)** - vault ingestion, auto-linking, offline knowledge-graph viewer. 110 tests.
+- **[github-pr-agent](https://github.com/zaidwhy/github-pr-agent)** - repo analysis, issue triage, PR planning. 56 tests.
 - **[DreamOS](https://github.com/zaidwhy/dreamos-college-project)** - semantic file-management OS shell.
 - **[resume-job-fit-ai](https://github.com/zaidwhy/resume-job-fit-ai)** - resume-to-job fit scoring with truthful rewrites. 29 unit tests, CI on every push, Pydantic-validated structured output.
 
