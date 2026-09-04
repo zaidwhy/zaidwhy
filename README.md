@@ -86,16 +86,7 @@ A second finding fell out of the demo. Asked whether another great war was comin
 
 One memory kernel, built once, imported by everything downstream instead of each app rebuilding retrieval:
 
-```mermaid
-flowchart LR
-  K["personal-llm<br/><i>memory + RAG kernel</i>"]
-  A["second-brain<br/><i>vault, auto-linking</i>"]
-  B["github-pr-agent<br/><i>triage, PR planning</i>"]
-  C["DreamOS<br/><i>semantic OS shell</i>"]
-  K --> A
-  K --> B
-  K --> C
-```
+<img src="https://raw.githubusercontent.com/zaidwhy/zaidwhy/main/assets/kernel-map.svg" alt="The personal-llm memory and RAG kernel, with 168 offline tests, imported by second-brain (110 tests), github-pr-agent (56 tests) and DreamOS." width="100%">
 
 ### [CivilizationOS](https://github.com/zaidwhy/CivilizationOS) - a society of agents, and a retrieval method that failed first
 
