@@ -16,6 +16,10 @@
   produced by the author's own measurement code and are reproducible from
   the repository named above. If this file appears anywhere other than
   zaidwhy/*, it was copied.
+
+  Note: every animation here degrades gracefully. Static attribute values
+  represent the finished state, so the figure is complete and correct even
+  where SMIL is not played.
   ============================================================================
 -->
 <defs>
@@ -27,14 +31,13 @@
 
 <!-- title -->
 <text x="78" y="36" fill="#E9EEF5" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="17" font-weight="700" letter-spacing="1.6">THE ANONYMITY HALF-LIFE BELONGS TO THE READER</text>
-<text x="78" y="57" fill="#7D8794" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="11.5">Gender inferred from a person's own words. Same 72 authors, same prompt, two different models.</text>
+<text x="78" y="57" fill="#7D8794" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="11.5">Gender inferred from a person's own words. Same 72 authors, two readers.</text>
 
 <!-- legend -->
 <g font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="10.5">
-<rect x="600" y="26" width="14" height="3" fill="#22D3EE"/><text x="620" y="33" fill="#9AA5B1">llama3.1:8b</text>
-<rect x="600" y="42" width="14" height="3" fill="#F59E0B"/><text x="620" y="49" fill="#9AA5B1">qwen2.5:7b</text>
-<rect x="740" y="26" width="14" height="3" fill="#6B7280"/><text x="760" y="33" fill="#9AA5B1">star sign</text>
-<text x="760" y="49" fill="#5C6875">(control)</text>
+<rect x="672" y="26" width="14" height="3" fill="#22D3EE"/><text x="692" y="33" fill="#9AA5B1">llama3.1:8b</text>
+<rect x="672" y="42" width="14" height="3" fill="#F59E0B"/><text x="692" y="49" fill="#9AA5B1">qwen2.5:7b</text>
+<rect x="672" y="58" width="14" height="3" fill="#6B7280"/><text x="692" y="65" fill="#9AA5B1">star sign (control)</text>
 </g>
 
 <!-- y gridlines + labels -->
@@ -47,7 +50,7 @@
 
 <!-- chance line -->
 <path d="M78 214H858" stroke="#4B5563" stroke-width="1.5" stroke-dasharray="7 6"/>
-<text x="864" y="211" fill="#6B7280" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="9.5" text-anchor="end">chance</text>
+<text x="856" y="207" fill="#6B7280" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="9.5" text-anchor="end">chance</text>
 
 <!-- axes -->
 <path d="M78 84V344H858" stroke="#2A3542" stroke-width="1.5" fill="none"/>
@@ -59,17 +62,17 @@
 <text x="468" y="384" fill="#7D8794" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="10.5" text-anchor="middle">words of the author's own text shown to the model</text>
 
 <!-- control curve -->
-<polyline points="78,322.4 208,318.8 338,322.4 468,329.4 598,318.8 728,322.4 858,322.4" fill="none" stroke="#6B7280" stroke-width="2" stroke-dasharray="1000" stroke-dashoffset="1000">
+<polyline points="78,322.4 208,318.8 338,322.4 468,329.4 598,318.8 728,322.4 858,322.4" fill="none" stroke="#6B7280" stroke-width="2" stroke-dasharray="1000" stroke-dashoffset="0">
 <animate attributeName="stroke-dashoffset" from="1000" to="0" dur="1.6s" begin="0.2s" fill="freeze"/>
 </polyline>
 
 <!-- qwen curve -->
-<polyline points="78,228.6 208,231.9 338,224.9 468,210.4 598,196.1 728,174.2 858,156.3" fill="none" stroke="#F59E0B" stroke-width="2.6" stroke-linejoin="round" stroke-dasharray="1000" stroke-dashoffset="1000">
+<polyline points="78,228.6 208,231.9 338,224.9 468,210.4 598,196.1 728,174.2 858,156.3" fill="none" stroke="#F59E0B" stroke-width="2.6" stroke-linejoin="round" stroke-dasharray="1000" stroke-dashoffset="0">
 <animate attributeName="stroke-dashoffset" from="1000" to="0" dur="1.9s" begin="0.5s" fill="freeze"/>
 </polyline>
 
 <!-- llama curve -->
-<polyline points="78,188.8 208,166.9 338,159.9 468,149 598,141.7 728,127.4 858,109.2" fill="none" stroke="#22D3EE" stroke-width="2.6" stroke-linejoin="round" stroke-dasharray="1000" stroke-dashoffset="1000">
+<polyline points="78,188.8 208,166.9 338,159.9 468,149 598,141.7 728,127.4 858,109.2" fill="none" stroke="#22D3EE" stroke-width="2.6" stroke-linejoin="round" stroke-dasharray="1000" stroke-dashoffset="0">
 <animate attributeName="stroke-dashoffset" from="1000" to="0" dur="1.9s" begin="0.5s" fill="freeze"/>
 </polyline>
 
@@ -81,18 +84,18 @@
 </g>
 
 <!-- half-life markers -->
-<g opacity="0">
+<g opacity="1">
 <animate attributeName="opacity" from="0" to="1" dur="0.6s" begin="2.3s" fill="freeze"/>
 <path d="M208 166.9V214" stroke="#22D3EE" stroke-width="1.2" stroke-dasharray="4 4" opacity="0.7"/>
 <circle cx="208" cy="166.9" r="7" fill="none" stroke="#22D3EE" stroke-width="2"/>
-<text x="216" y="150" fill="#22D3EE" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="11" font-weight="700">50 words</text>
+<text x="218" y="152" fill="#22D3EE" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="11" font-weight="700">clears at 50 words</text>
 <path d="M728 174.2V214" stroke="#F59E0B" stroke-width="1.2" stroke-dasharray="4 4" opacity="0.7"/>
 <circle cx="728" cy="174.2" r="7" fill="none" stroke="#F59E0B" stroke-width="2"/>
-<text x="720" y="196" fill="#F59E0B" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="11" font-weight="700" text-anchor="end">800 words</text>
+<text x="718" y="196" fill="#F59E0B" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="11" font-weight="700" text-anchor="end">clears at 800 words</text>
 </g>
 
 <!-- finding -->
-<text x="78" y="410" fill="#E9EEF5" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="12.5" opacity="0">
+<text x="78" y="410" fill="#E9EEF5" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="12.5" opacity="1">
 <animate attributeName="opacity" from="0" to="1" dur="0.7s" begin="2.8s" fill="freeze"/>
 Identical text. One reader needs 50 words to beat a coin flip. The other needs 800. A 16x gap.</text>
 
