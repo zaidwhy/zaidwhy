@@ -76,6 +76,8 @@ A second finding fell out of the demo. Asked whether another great war was comin
 
 `n=2 model families` · `14-probe battery, temperature 0, fixed seed` · `raw output shipped unedited` · [read the finding](https://github.com/zaidwhy/augur/blob/master/FINDING.md)
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22309658.svg)](https://doi.org/10.5281/zenodo.22309658) archived, citable, timestamped
+
 ---
 
 ## Systems
