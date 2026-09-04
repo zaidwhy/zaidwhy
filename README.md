@@ -62,6 +62,8 @@ Corpus memorisation was tested directly rather than waved away, and ruled out. O
 
 `n=2 model families` · `negative control held` · `contamination ruled out` · `Wilson 95% intervals` · [read the result](https://github.com/zaidwhy/coldread/blob/master/RESULT.md)
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22309660.svg)](https://doi.org/10.5281/zenodo.22309660) archived, citable, timestamped
+
 ### [AUGUR](https://github.com/zaidwhy/augur) - a model with a 1938 cutoff answers from 1899
 
 Research groups are training language models from scratch on text that stops at a fixed historical date, to ask the past a question and get the past's answer. The assumption riding underneath is that a model with a 1938 cutoff represents 1938.
