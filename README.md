@@ -185,7 +185,7 @@ Zaid Ali Syed
 PGP  EFE9 4832 B2B9 80D9 B583  91F2 8FAA BCC1 B1AC 09E5
 ```
 
-Full signed statement: **[PROVENANCE.md](PROVENANCE.md)** · verify with [`PROVENANCE.md.asc`](PROVENANCE.md.asc)
+Full signed statement: **[PROVENANCE.md](PROVENANCE.md)** · verify with `gpg --verify` on [`PROVENANCE.sig.txt`](PROVENANCE.sig.txt)
 
 ---
 
