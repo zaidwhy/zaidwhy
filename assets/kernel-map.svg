@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 400" width="900" height="400" role="img" aria-label="Architecture map: the personal-llm memory and RAG kernel, with 168 offline tests, is imported by second-brain (110 tests), github-pr-agent (56 tests) and DreamOS, rather than each rebuilding retrieval.">
+<!--
+  ============================================================================
+  ORIGINAL WORK - AUTHORSHIP MANIFEST
+  ============================================================================
+  Title      : One kernel, imported. Plate 04.
+  Author     : Zaid Ali Syed
+  ORCID      : 0009-0003-4313-1510
+  Origin     : https://github.com/zaidwhy/zaidwhy
+  Copyright  : (c) 2026 Zaid Ali Syed. All rights reserved.
+  PGP key    : EFE9 4832 B2B9 80D9 B583  91F2 8FAA BCC1 B1AC 09E5
+
+  Test counts are real, collected with `pytest --collect-only` on 2026-09-05:
+  personal-llm 168, second-brain 110, github-pr-agent 56.
+
+  Hand-authored artwork, not a badge service. Every animation degrades
+  gracefully: static attribute values are the finished state.
+  ============================================================================
+-->
+<defs>
+<clipPath id="km-clip"><rect x="0" y="0" width="900" height="400" rx="10"/></clipPath>
+<path id="km-p1" d="M310 204 C 430 204, 450 124, 570 124" fill="none"/>
+<path id="km-p2" d="M310 204 H 570" fill="none"/>
+<path id="km-p3" d="M310 204 C 430 204, 450 284, 570 284" fill="none"/>
+</defs>
+
+<g clip-path="url(#km-clip)">
+<rect x="0" y="0" width="900" height="400" fill="#0B0E14"/>
+
+<text x="70" y="34" fill="#E9EEF5" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="17" font-weight="700" letter-spacing="1.6">ONE KERNEL, IMPORTED</text>
+<text x="70" y="55" fill="#7D8794" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="11.5">Built once. Three apps import it instead of each rebuilding retrieval.</text>
+
+<!-- connectors -->
+<g stroke="#2A3542" stroke-width="1.6" fill="none">
+<use href="#km-p1"/><use href="#km-p2"/><use href="#km-p3"/>
+</g>
+
+<!-- flow dots -->
+<g fill="#22D3EE">
+<circle r="3.5"><animateMotion dur="2.8s" repeatCount="indefinite"><mpath href="#km-p1"/></animateMotion></circle>
+<circle r="3.5"><animateMotion dur="2.8s" begin="0.9s" repeatCount="indefinite"><mpath href="#km-p2"/></animateMotion></circle>
+<circle r="3.5"><animateMotion dur="2.8s" begin="1.8s" repeatCount="indefinite"><mpath href="#km-p3"/></animateMotion></circle>
+</g>
+
+<!-- kernel -->
+<rect x="70" y="144" width="240" height="120" rx="10" fill="#0E1720" stroke="#22D3EE" stroke-width="2"/>
+<text x="90" y="176" fill="#22D3EE" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="15" font-weight="700">personal-llm</text>
+<text x="90" y="197" fill="#9AA5B1" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="11">memory + RAG kernel</text>
+<text x="90" y="219" fill="#7D8794" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="10.5">SQLite + ChromaDB + router</text>
+<text x="90" y="243" fill="#E9EEF5" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="11.5" font-weight="700">168 offline tests</text>
+
+<!-- consumers -->
+<g>
+<rect x="570" y="95" width="270" height="58" rx="8" fill="#0E141C" stroke="#1B2430" stroke-width="1.5"/>
+<text x="590" y="120" fill="#E9EEF5" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="13" font-weight="700">second-brain</text>
+<text x="590" y="139" fill="#7D8794" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="10.5">vault ingestion, auto-linking  ·  110 tests</text>
+
+<rect x="570" y="175" width="270" height="58" rx="8" fill="#0E141C" stroke="#1B2430" stroke-width="1.5"/>
+<text x="590" y="200" fill="#E9EEF5" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="13" font-weight="700">github-pr-agent</text>
+<text x="590" y="219" fill="#7D8794" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="10.5">repo analysis, issue triage  ·  56 tests</text>
+
+<rect x="570" y="255" width="270" height="58" rx="8" fill="#0E141C" stroke="#1B2430" stroke-width="1.5"/>
+<text x="590" y="280" fill="#E9EEF5" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="13" font-weight="700">DreamOS</text>
+<text x="590" y="299" fill="#7D8794" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="10.5">AI command bar over the same engine</text>
+</g>
+
+<!-- finding -->
+<text x="70" y="352" fill="#E9EEF5" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="12.5">334 tests across the three, every one offline and mocked. No API key runs any of them.</text>
+
+<!-- plate line -->
+<rect x="0" y="376" width="900" height="24" fill="#070A0F"/>
+<text x="70" y="392" fill="#4A5563" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="10" letter-spacing="2.2">PLATE 04  ·  ORIGINAL WORK OF ZAID ALI SYED  ·  ORCID 0009-0003-4313-1510  ·  MMXXVI</text>
+</g>
+</svg>
