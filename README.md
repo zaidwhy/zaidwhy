@@ -1,254 +1,192 @@
-<div align="center">
+<img src="https://raw.githubusercontent.com/zaidwhy/zaidwhy/main/assets/nameplate.svg" alt="Zaid Ali Syed - AI systems engineer" width="100%">
 
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=20&duration=3000&pause=1000&color=58A6FF&center=true&vCenter=true&width=700&lines=Building+AI+that+remembers+%E2%80%A2+reasons+%E2%80%A2+simulates.;Multi-agent+systems+%7C+RAG+architectures+%7C+LLM+orchestration;Python+%C2%B7+Gemini+%C2%B7+Claude+%C2%B7+FastAPI+%C2%B7+React;Open+to+AI+engineer+%2F+internship+opportunities.)](https://git.io/typing-svg)
+I build AI systems that remember, retrieve, and decide - and I measure whether they actually work.
 
-</div>
+Most of what follows is a number. Every number is a link to the artifact that produced it: the merged pull request, the raw model output, the test run, the reproducible script. Nothing here asks to be believed.
 
----
-Not just prompting.
-I build AI systems that go beyond chatbots.
-
-Not wrappers. Not demos. Real architectures: multi-agent coordination, novel RAG retrieval, voice-vision pipelines, fine-tuned models, autonomous build pipelines shipped end-to-end with tests, CI, and evals.
-
-Building in public. Looking for **AI engineer / applied AI internship** roles.
+Open to **AI engineer / applied AI internship** roles.
 
 ---
 
-## Flagship Projects
+## The short version, with receipts
 
-### [Agent Factory](https://github.com/zaidwhy/agent-factory) - 6-Agent Pipeline That Ships Full Projects
+| Claim | Proof |
+|---|---|
+| 3 pull requests merged into upstream OSS totalling **13.4k stars** | [tenacity #668](https://github.com/jd/tenacity/pull/668) · [returns #2480](https://github.com/dry-python/returns/pull/2480) · [gqlalchemy #390](https://github.com/memgraph/gqlalchemy/pull/390) |
+| 27 pull requests merged into a **live production product** I did not build | [case study](case-studies/zabira-academy.md) |
+| 2 original research findings, each with a negative control and a second-model replication | [COLD READ](https://github.com/zaidwhy/coldread) · [AUGUR](https://github.com/zaidwhy/augur) |
+| A retrieval method benchmarked against 6 baselines - including the version of it that **failed** | [TCMF write-up](https://github.com/zaidwhy/CivilizationOS/blob/main/docs/tcmf.md) |
+| Every commit on this account is cryptographically signed | [PROVENANCE.md](PROVENANCE.md) |
 
-> One command, `/forge`, and a team of six specialized agents (idea-hunter, architect, backend-engineer, frontend-engineer, reviewer, debugger) turns nothing into a tested, runnable project.
+<details>
+<summary><b>Don't take my word for any of it - here is how to falsify this page</b></summary>
 
-**Not a code generator. A pipeline with contracts.** The architect freezes an API contract before backend and frontend build in parallel from it - that's what keeps two agents' output compatible without either seeing the other's code. The reviewer is read-only by design; the debugger is the only agent that runs code, graded on fixing what it finds rather than writing more.
+<br>
 
-```
-Agents:       idea-hunter -> architect -> backend + frontend (parallel) -> reviewer -> debugger -> devops-engineer
-Proof:        3 full projects shipped end-to-end in test runs - PinPoint, DriftGuard, Receipts.dev
-Receipts.dev: 92 files, 16 bugs found and fixed (1 critical, 4 high), 0 type errors, 0 lint errors
-Contract:     runs/<timestamp>/ file handoff - architect's API contract is the single source of truth
-Roadmap:      Phase 1 (Claude Code subagents, live) -> Phase 2 (Python SDK orchestrator, factory.py, live)
-```
+```bash
+# The merged pull requests. Check the author field.
+gh pr view 668  --repo jd/tenacity         --json state,mergedAt,author
+gh pr view 2480 --repo dry-python/returns  --json state,mergedAt,author
+gh pr view 390  --repo memgraph/gqlalchemy --json state,mergedAt,author
 
-`Claude Code Subagents` `Anthropic Python SDK` `Multi-Agent Orchestration` `Streaming Tool Loop` `ThreadPoolExecutor`
+# The research. Re-run the analysis on the shipped raw data.
+git clone https://github.com/zaidwhy/coldread && cd coldread
+python analyze.py out/results-qwen2.5_7b-instruct.jsonl
 
----
-
-### [Receipts.dev](https://github.com/zaidwhy/receipts-dev) - Prove Skills With Code, Not Buzzwords
-
-> AI-powered skill verification from real Git history. Every skill on the profile deep-links to the actual commit that proves it, via a recruiter chat that can only cite real diffs and never invent a claim.
-
-Built by Agent Factory's full pipeline in a single run: idea to architecture to parallel backend/frontend to review to debug. GitHub OAuth with Fernet-encrypted tokens, an async GitHub client with retry, a pgvector code-chunk retriever, and grounded chat with hallucination-proof citation validation.
-
-`Next.js 15` `FastAPI` `pgvector` `GitHub OAuth` `Celery` `Grounded RAG`
-
----
-
-### [Personal LLM](https://github.com/zaidwhy/personal-llm) - Local-First Memory + RAG Kernel
-
-> One memory engine, built once, imported by everything else: a local-first, privacy-preserving memory + RAG core (SQLite + ChromaDB + hybrid model router) that answers with citations and refuses honestly when it doesn't know.
-
-**Not a demo - infrastructure.** Three downstream apps import it instead of rebuilding retrieval: [second-brain](https://github.com/zaidwhy/second-brain) (vault ingestion, auto-linking, offline knowledge-graph viewer - 40 tests) and [github-pr-agent](https://github.com/zaidwhy/github-pr-agent) (repo analysis, issue triage, PR planning - 32 tests) are public; DreamOS (an Electron AI command bar over the same engine) ships when its demo video does.
-
-```
-Tests:        100 offline, fully mocked - zero-key CI on every push
-Agent layer:  plan-act-reflect loop, 4 permission-tiered tools (incl. SSRF-guarded web fetch), full audit log
-Voice/vision: faster-whisper STT (offline, free) + OCR ingestion; native-crash inputs pre-validated (PyAV)
-Security:     token-authenticated HTTP gateway; browser-Origin requests rejected outright
+# The commit signatures.
+git clone https://github.com/zaidwhy/augur && cd augur
+git log --show-signature -3
 ```
 
-`Python` `FastAPI` `ChromaDB` `SQLite` `sentence-transformers` `Ollama` `Gemini` `faster-whisper`
+If any of it does not reproduce, the claim above is wrong and I want to know.
 
----
-
-### [CivilizationOS](https://github.com/zaidwhy/CivilizationOS) - Multi-Agent AI Society
-
-> A living simulation: 10 autonomous citizen-agents + 5 institutional councils (35 AI agents) debate, remember, and react to injected crises - Pandemic, Drought, Cyberattack, Election, Crime Wave, and now self-generated emergent crises.
-
-**Novel contribution - Temporal-Causal Memory Fusion (TCMF):**
-Standard RAG retrieves by semantic similarity alone. TCMF fuses two streams:
-
-```
-AGORA stream    - citizen episodic memories scored by relevance x recency x importance
-PANTHEON stream - societal causal graph (NetworkX DiGraph): crisis -> decision -> outcome
-
-Fused score = episodic_score(m, q) x (1 + lambda x causal_boost(m))
-```
-
-A witness to a root cause outranks someone who heard about it second-hand. No off-the-shelf RAG system does this. Full design write-up with code and tradeoffs: [docs/tcmf.md](https://github.com/zaidwhy/CivilizationOS/blob/main/docs/tcmf.md)
-
-Validated it with a controlled benchmark against 6 baseline retrieval strategies: the original multiplicative fusion scored 0.00 on the causal signal it was meant to exploit, a fixed normalized-additive version recovered it and beat every single-signal baseline in a mixed regime. A follow-up 60-scenario study showed retrieval choice changes the model's actual decision, not just its confidence.
-
-**Latest additions:** sustained-fear auto-crisis injection so the society generates its own emergencies, per-council effectiveness scoring (debate to verdict to 60-tick fear delta), union-find citizen faction detection on mutual affinity, and a Story Rewind scrubber over the full causal timeline.
-
-```
-3-tier LLM router:  Ollama/Qwen2.5-3B ($0) -> Gemini Flash ($0) -> Claude API (~$0.002/debate)
-Fine-tuning:        LoRA on Qwen2.5-3B | MLflow tracking | persona-consistency eval harness
-Full-stack:         FastAPI + WebSocket <-> React + Three.js 3D city (replaced the earlier PixiJS UI)
-Tests:              61 passing
-Total cost:         Under $5 to build.
-```
-
-Live now: [civilization-os-murex.vercel.app](https://civilization-os-murex.vercel.app) (frontend) - backend on Render.
-
-`Python` `TypeScript` `FastAPI` `React` `Three.js` `ChromaDB` `Ollama` `Gemini` `Claude` `LoRA` `MLflow` `NetworkX`
-
----
-
-### [Recall](https://github.com/zaidwhy/recall) - Spatial AI Memory
-
-> Point your phone camera at your space. Ask out loud "where did I leave my keys?" Get a spoken answer with the exact frame it was seen in.
-
-**Not another AI wrapper.** Persistent spatial memory across sessions. Time-decay re-ranking. Gemini Live function-calling into local ChromaDB. The voice model doesn't hallucinate locations - it calls a tool that searches a vector store built from what the camera actually saw.
-
-```
-Eval (June 2026):   Recall@1 100% (10/10) | Recall@3 100% (10/10) | Median latency 149ms
-Embeddings:         all-MiniLM-L6-v2 via ONNX - fully local, zero embedding cost
-Voice:              Gemini Live push-to-talk with function calling
-Quota management:   120s minimum between vision calls + daily budget counter on-screen
-Total commits:      162
-```
-
-Live now: deployed on Render.
-
-`Python` `FastAPI` `React` `ChromaDB` `Gemini Live` `ONNX` `WebSocket` `cloudflared`
-
----
-
-### [resume-job-fit-ai](https://github.com/zaidwhy/resume-job-fit-ai) - AI Resume Scorer | [Live Demo](https://resume-job-fit-ai.streamlit.app)
-
-> Fit scoring, keyword analysis, AI-rewritten bullet diffs, multi-tone cover letter, interview prep, skills gap roadmap, LinkedIn optimizer - one click.
-
-```
-Deployed:    Streamlit Community Cloud (live now, free tier, no credit card)
-Tests:       29 unit tests | GitHub Actions CI on every push
-Outputs:     Pydantic-validated structured JSON - no brittle string parsing
-Features:    12+ tools: multi-job comparison, application tracker, cover letter, DOCX export
-```
-
-`Python` `Gemini` `Streamlit` `Pydantic` `SQLite` `pdfplumber` `GitHub Actions`
+</details>
 
 ---
 
 ## Research
 
-Two small studies, each with a negative control and a replication on a second model family,
-because a finding from one model is a fact about that model.
+Two studies. Each one carries a negative control, because a measurement without a control is a rumour, and each one was replicated on a second model family, because a finding from one model is a fact about that model.
 
-### [AUGUR](https://github.com/zaidwhy/augur) - Where a time-locked model actually stands
+### [COLD READ](https://github.com/zaidwhy/coldread) - the anonymity half-life belongs to the reader
 
-> A model trained on nothing published after 1938, asked what year it is, answers **1899**.
+<img src="https://raw.githubusercontent.com/zaidwhy/zaidwhy/main/assets/coldread-curves.svg" alt="Gender inference accuracy against words shown, for two models. llama3.1:8b clears chance at 50 words, qwen2.5:7b at 800." width="100%">
 
-Vintage language models are being used to reconstruct historical belief, on the assumption
-that a 1938 cutoff represents 1938. It does not. A cutoff describes the edge of a corpus, not
-its centre of gravity, and both models tested answer from **four to eight decades earlier**
-than their stated cutoff. Telling one of them the year relocates it forty years on the spot;
-telling the other does nothing at all - so a time-locked model has to be characterised on two
-axes, where it stands and whether it can be moved.
+How many words can you write before a machine knows who you are? I went looking for that number and found that the question is malformed - and why it is malformed is the finding.
 
-A second finding fell out of the demo: asked whether another great war was coming, a
-1930-anchored model says no and calls it highly improbable. Asked instead to *enumerate the
-dangers*, the same model in the same year gives an accurate threat assessment naming the
-Rhineland, Poland, and Czechoslovakia. Both were in the corpus. **The form of the question
-decides which 1930 you meet.**
+72 authors from a labelled blog corpus, shown to local models in growing slices, forced to commit to gender, age band, and star sign at every step. **Star sign is the control**: it is labelled in the data and is not inferable from prose. It never left its floor in either model, which is the only reason to trust anything else on the chart.
 
-`n=2 replication` `two model families` `14-probe battery, temperature 0, fixed seed`
+Same authors, same words, same prompt, two readers. One needs 800 words to beat a coin flip on gender. The other needs 50. **A sixteen-fold gap on identical text**, which means no statement of the form "you are anonymous for N words" means anything at all without naming the model doing the reading.
 
----
+Corpus memorisation was tested directly rather than waved away, and ruled out. One finding from the first model - that short samples produce *confidently wrong* guesses rather than uncertainty - did **not** replicate on the second, and the write-up says so in those words.
 
-### [COLD READ](https://github.com/zaidwhy/coldread) - The anonymity half-life belongs to the reader
+`n=2 model families` · `negative control held` · `contamination ruled out` · `Wilson 95% intervals` · [read the result](https://github.com/zaidwhy/coldread/blob/master/RESULT.md)
 
-> How many words can you write before a machine knows who you are? The question is malformed,
-> and why it is malformed is the finding.
+### [AUGUR](https://github.com/zaidwhy/augur) - a model with a 1938 cutoff answers from 1899
 
-72 authors from a labelled blog corpus, shown to local models in growing slices, guessing
-gender, age band, and star sign at every step. Star sign is the negative control - labelled in
-the data, not inferable from prose - and it never left the floor in either model, which is
-what makes the rest trustworthy.
+Research groups are training language models from scratch on text that stops at a fixed historical date, to ask the past a question and get the past's answer. The assumption riding underneath is that a model with a 1938 cutoff represents 1938.
 
-Same authors, same words, same prompt, two readers: **one model needs the better part of a
-thousand words to beat a coin flip on gender, the other needs fifty.** A sixteen-fold gap on
-identical text. No statement of the form "you are anonymous for N words" means anything
-without naming the model. Corpus memorisation tested directly and ruled out. Ships with a
-two-seat consent-gated app that profiles both participants live.
+It does not. A cutoff describes the *edge* of a corpus, not its centre of gravity - and the shelves are not even. Ask such a model what year it is and it answers from where the mass of its training data sits. Both models tested answer from **four to eight decades before their stated cutoff**. One names George Washington as President. The other names Grover Cleveland and dates the term to 1893.
 
-`n=2 replication` `negative control` `contamination ruled out` `Wilson intervals`
+Tell one of them the year and it relocates forty years on the spot, correctly naming Hoover, his 1928 election, and his inauguration date. Tell the other and it does not move at all. So a time-locked model has to be characterised on **two** axes, not one: where it stands, and whether it can be moved. The practical rule falls straight out - anchor the date, then verify the anchor took, because on half the models tested it did not.
+
+A second finding fell out of the demo. Asked whether another great war was coming, a 1930-anchored model calls it highly improbable. Asked instead to *enumerate the dangers*, the same model in the same year names the Rhineland, Poland, Czechoslovakia, and the Italo-Yugoslav quarrel, and says every one of them is armed to the teeth. Both answers were in the corpus. **The form of the question decides which 1930 you meet** - which means elicitation is not a neutral window onto a model, it is part of the measurement.
+
+`n=2 model families` · `14-probe battery, temperature 0, fixed seed` · `raw output shipped unedited` · [read the finding](https://github.com/zaidwhy/augur/blob/master/FINDING.md)
 
 ---
 
-## Production Work
+## Systems
 
-### [Zabira Academy case study](case-studies/zabira-academy.md) - 27 merged PRs into a live product
+One memory kernel, built once, imported by everything downstream instead of each app rebuilding retrieval:
 
-Twelve days, +8,838/-1,619 across 557 file changes, into a production learning platform I did
-not build, every change reviewed and merged by the repository owner. Security hardening
-(exception leakage across 226 files, Origin checks on 60 mutating endpoints, a sanitizer
-bypass, session revocation), an end-to-end suite covering the seven launch-critical flows with
-a CI gate, and a sitewide search feature built from backend to voice input.
+```mermaid
+flowchart LR
+  K["personal-llm<br/><i>memory + RAG kernel</i>"]
+  A["second-brain<br/><i>vault, auto-linking</i>"]
+  B["github-pr-agent<br/><i>triage, PR planning</i>"]
+  C["DreamOS<br/><i>semantic OS shell</i>"]
+  K --> A
+  K --> B
+  K --> C
+```
 
-Including the one where CI went red on my feature branch and the cause turned out to predate
-my work by three days - a registration validation rule that silently failed a test fixture,
-bisected through the run history and confirmed from the failed run's Playwright snapshot.
+### [CivilizationOS](https://github.com/zaidwhy/CivilizationOS) - a society of agents, and a retrieval method that failed first
+
+35 agents - 10 autonomous citizens and 5 institutional councils - debate, remember, and react to injected crises, and now generate their own.
+
+The part worth reading is **Temporal-Causal Memory Fusion**. Standard RAG retrieves on semantic similarity alone; TCMF fuses episodic memory with a causal graph over the society's own history, so a witness to a root cause outranks somebody who heard about it second-hand.
+
+I benchmarked it against 6 baseline retrieval strategies and **the first version scored 0.00 on the exact causal signal it was built to exploit.** The multiplicative fusion was the bug. A normalised additive version recovered the signal and beat every single-signal baseline in a mixed regime, and a follow-up 60-scenario study showed the retrieval choice changes the model's actual decision rather than merely its confidence. The failed version is still in the write-up, because a method that was never wrong was never tested.
+
+`Python` · `FastAPI` · `React` · `Three.js` · `ChromaDB` · `NetworkX` · `LoRA` · `MLflow` · [live](https://civilization-os-murex.vercel.app) · [TCMF write-up](https://github.com/zaidwhy/CivilizationOS/blob/main/docs/tcmf.md)
+
+### [Recall](https://github.com/zaidwhy/recall) - spatial memory you can talk to
+
+Point a phone camera at your space, ask out loud where you left something, get a spoken answer with the exact frame it was seen in. The voice model does not guess locations - it calls a tool that searches a vector store built from what the camera actually recorded.
+
+```
+Eval:         Recall@1 100% (10/10) · Recall@3 100% (10/10) · median latency 149ms
+Embeddings:   all-MiniLM-L6-v2 via ONNX, fully local, zero embedding cost
+Quota guard:  120s floor between vision calls, on-screen daily budget counter
+```
+
+`Python` · `FastAPI` · `React` · `ChromaDB` · `ONNX` · `WebSocket`
+
+### [Agent Factory](https://github.com/zaidwhy/agent-factory) - a build pipeline with frozen contracts
+
+Six specialised agents turn a one-line idea into a tested, runnable project. It is not a code generator; it is a pipeline with contracts. The architect **freezes an API contract before backend and frontend build in parallel from it**, which is the only reason two agents' output stays compatible without either one seeing the other's code. The reviewer is read-only by design. The debugger is the only agent permitted to execute, and is graded on what it fixes rather than what it writes.
+
+Shipped 3 full projects end to end in test runs. On [Receipts.dev](https://github.com/zaidwhy/receipts-dev): 92 files, 16 bugs found and fixed, 0 type errors, 0 lint errors.
+
+<details>
+<summary>More systems</summary>
+
+<br>
+
+- **[personal-llm](https://github.com/zaidwhy/personal-llm)** - local-first memory + RAG kernel. 100 offline tests, fully mocked, zero-key CI. Plan-act-reflect agent loop, 4 permission-tiered tools including an SSRF-guarded fetch, full audit log.
+- **[second-brain](https://github.com/zaidwhy/second-brain)** - vault ingestion, auto-linking, offline knowledge-graph viewer.
+- **[github-pr-agent](https://github.com/zaidwhy/github-pr-agent)** - repo analysis, issue triage, PR planning.
+- **[DreamOS](https://github.com/zaidwhy/dreamos-college-project)** - semantic file-management OS shell.
+- **[resume-job-fit-ai](https://github.com/zaidwhy/resume-job-fit-ai)** - resume-to-job fit scoring with truthful rewrites. 29 unit tests, CI on every push, Pydantic-validated structured output.
+
+</details>
+
+---
+
+## Production work
+
+### [Zabira Academy](case-studies/zabira-academy.md) - 27 merged PRs into a live product I did not build
+
+Twelve days. +8,838 / -1,619 across 557 file changes, into a production learning platform with real users, every change reviewed and merged by the repository owner.
+
+Security hardening (exception leakage across 226 files, Origin checks on 60 mutating endpoints, a sanitiser bypass, session revocation), an end-to-end suite covering the seven launch-critical flows behind a CI gate, and a sitewide search feature built from the backend through to voice input.
+
+Including the one where CI went red on my branch and the cause turned out to **predate my work by three days** - a registration validation rule silently failing a test fixture, bisected through the run history and confirmed from the failed run's Playwright snapshot. Reading the evidence beat blaming my own diff.
 
 The codebase is private, so the [case study](case-studies/zabira-academy.md) is the record.
 
 ---
 
-## Autonomous Build Agent
+## Open source
 
-I run a nightly agent across my own 12-repo project fleet: it triages the next task, implements it, runs the tests, and opens a PR - every change gated by CI and a human merge, nothing lands unreviewed. Shipped and merged 30+ PRs in the past month. Coordination records (task queue, run logs) live in a private repo since they're internal tooling, not a product.
+**Merged:**
 
----
+- **[jd/tenacity #668](https://github.com/jd/tenacity/pull/668)** · 8.8k stars - fixed static typing for `@retry`-decorated instance methods so bound-method signatures survive the decorator under mypy strict.
+- **[dry-python/returns #2480](https://github.com/dry-python/returns/pull/2480)** · 4.4k stars - relaxed `future()` / `future_safe()` parameter types from `Coroutine` to the broader `Awaitable` protocol.
+- **[memgraph/gqlalchemy #390](https://github.com/memgraph/gqlalchemy/pull/390)** - added unary-operator support (`IS NOT NULL`) to the query builder, with tests, docs, and a signed CLA.
 
-## Open Source
+**Open:** [gqlalchemy #392](https://github.com/memgraph/gqlalchemy/pull/392) (`ON CREATE` / `ON MATCH` clauses) · [django-taggit #944](https://github.com/jazzband/django-taggit/pull/944) (`remove_by_slug()` on `TaggableManager`).
 
-**[jd/tenacity #668](https://github.com/jd/tenacity/pull/668)** - MERGED. Fixed static typing for `@retry`-decorated instance methods so bound-method signatures survive the decorator under mypy strict.
-
-**[dry-python/returns #2480](https://github.com/dry-python/returns/pull/2480)** - MERGED. Relaxed `future()` / `future_safe()` parameter types from `Coroutine` to the broader `Awaitable` protocol.
-
-**[memgraph/gqlalchemy #390](https://github.com/memgraph/gqlalchemy/pull/390)** - open PR adding unary-operator support (`IS NOT NULL`) to the query builder: 4 tests, docs, CI green, CLA signed. Found and scoped with my own triage pipeline (AutoCTO), implemented keylessly via git + the GitHub CLI.
-
-**[memgraph/gqlalchemy #392](https://github.com/memgraph/gqlalchemy/pull/392)** - open PR adding `ON CREATE` / `ON MATCH` clauses to the same query builder, with tests and docs.
-
-**[jazzband/django-taggit #944](https://github.com/jazzband/django-taggit/pull/944)** - open PR adding `remove_by_slug()` to `TaggableManager`, with tests.
-
-**[google/adk-python #6190](https://github.com/google/adk-python/pull/6190)** - fixed an `Optional[List[str]]` type hint bug in `cleanup_unused_files` that broke the CLI parser (labeled "good first issue" by Google's ADK team). Survived a full maintainer review round - root-caused a CI failure to a leftover repro script breaking Mypy and the pyink linter, fixed it, and got an LGTM - before a maintainer's own commit resolved the same underlying bug first, closing the PR unmerged.
+**And one that closed unmerged, which is the more useful story:** [google/adk-python #6190](https://github.com/google/adk-python/pull/6190) fixed an `Optional[List[str]]` hint that broke the CLI parser. It survived a full maintainer review round - I root-caused a CI failure to a leftover repro script breaking Mypy and the linter, fixed it, got an LGTM - and then a maintainer's own commit resolved the same underlying bug first and the PR closed. Reviewed, correct, and beaten to it.
 
 ---
 
-## Tech Stack
+## Stack
 
-```python
-ai_ml    = ["RAG architectures", "multi-agent systems", "LoRA fine-tuning",
-            "vector DBs", "LLM orchestration", "structured outputs", "evals",
-            "agent pipelines with frozen API contracts"]
-
-apis     = ["Gemini", "Claude (Anthropic)", "Ollama", "Gemini Live"]
-
-backend  = ["Python 3.11+", "FastAPI", "WebSocket", "Node.js"]
-
-frontend = ["React", "TypeScript", "Vite", "Three.js", "PixiJS"]
-
-infra    = ["AWS", "Google Cloud", "Docker", "Streamlit Cloud", "cloudflared", "Vercel"]
-
-tracking = ["MLflow", "Pydantic", "ChromaDB", "SQLite", "GitHub Actions CI"]
+```
+languages   Python 3.11+ · TypeScript · SQL
+ai          RAG architectures · multi-agent orchestration · LoRA fine-tuning
+            structured outputs · evals · vector search · agent tool loops
+backend     FastAPI · WebSocket · Node.js · Pydantic
+frontend    React · Vite · Three.js
+data        ChromaDB · SQLite · pgvector · NetworkX · sentence-transformers
+infra       Docker · GitHub Actions · Vercel · Render · GCP
 ```
 
 ---
 
-## Currently
+## Provenance
 
-- Portfolio - [zaidalisyed.vercel.app](https://zaidalisyed.vercel.app) | [source](https://github.com/zaidwhy/portfolio) (Next.js 16, Three.js WebGL, GSAP)
-- Building in public - [LinkedIn](https://linkedin.com/in/zaid-ali-syed)
-- Open to **AI engineer internships**, **applied AI roles**, early-stage startups
-- Next: Agent Factory Phase 2 (Python SDK orchestrator) hardening, open-sourcing CivilizationOS fully
+Every commit on this account is signed with the key below. The artwork on this page is hand-authored SVG, served from this repository, and carries an authorship manifest in its source.
+
+```
+Zaid Ali Syed
+PGP  EFE9 4832 B2B9 80D9 B583  91F2 8FAA BCC1 B1AC 09E5
+```
+
+Full signed statement: **[PROVENANCE.md](PROVENANCE.md)** · verify with [`PROVENANCE.md.asc`](PROVENANCE.md.asc)
 
 ---
 
-<div align="center">
-
-![GitHub Stats](https://github-readme-stats.vercel.app/api?username=zaidwhy&show_icons=true&theme=github_dark&hide_border=true&bg_color=0d1117&title_color=58a6ff&icon_color=58a6ff&text_color=8b949e&hide=issues&count_private=true)
-
-[![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=zaidwhy&layout=compact&theme=github_dark&hide_border=true&bg_color=0d1117&title_color=58a6ff&text_color=8b949e&hide=html,css)](https://github.com/zaidwhy)
-
-</div>
+**[Portfolio](https://zaidverse.vercel.app)** · **[LinkedIn](https://linkedin.com/in/zaid-ali-syed)** · Open to AI engineer internships and applied AI roles.
