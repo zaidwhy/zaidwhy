@@ -4,12 +4,15 @@ This repository is the GitHub profile of **Zaid Ali Syed** ([@zaidwhy](https://g
 
 Everything on the profile page - the writing, the artwork, the research results - is original work. This file exists so that authorship can be checked rather than assumed.
 
-## Signing key
+## Identity
 
 ```
-Zaid Ali Syed <zaidsyed7021@gmail.com>
+Zaid Ali Syed
+ORCID    0009-0003-4313-1510   https://orcid.org/0009-0003-4313-1510
 ed25519  EFE9 4832 B2B9 80D9 B583  91F2 8FAA BCC1 B1AC 09E5
 ```
+
+The ORCID iD is a permanent identifier bound to me personally and is the authoritative record of what I have authored. The signing key below covers everything in these repositories.
 
 The public key is in this repository as [`zaid-pubkey.txt`](zaid-pubkey.txt).
 
