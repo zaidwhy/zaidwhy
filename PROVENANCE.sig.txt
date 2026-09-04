@@ -1,0 +1,35 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA512
+
+AUTHORSHIP STATEMENT
+
+I, Zaid Ali Syed (GitHub: zaidwhy), assert that the following are my own
+original work:
+
+  1. The prose and layout of the profile page at github.com/zaidwhy
+  2. assets/nameplate.svg          - hand-authored SVG artwork, Plate 01
+  3. assets/coldread-curves.svg    - hand-authored SVG plotting my own
+                                     experimental results, Plate 02
+  4. The research findings in github.com/zaidwhy/coldread (COLD READ) and
+     github.com/zaidwhy/augur (AUGUR), including the measurement code, the
+     raw model output, and the written analysis.
+
+The COLD READ figures plotted in Plate 02 were produced by my own
+measurement code from 72 authors of the Blog Authorship Corpus, 504 model
+calls per model family, temperature 0, seed 1938, run 2026-08-23. They are
+reproducible from that repository.
+
+Code in my repositories is MIT licensed. The prose and artwork above are
+not part of that grant and remain (c) 2026 Zaid Ali Syed, all rights
+reserved.
+
+Signed on 2026-09-05 with ed25519 key
+EFE9 4832 B2B9 80D9 B583 91F2 8FAA BCC1 B1AC 09E5
+
+-----BEGIN PGP SIGNATURE-----
+
+iHUEARYKAB0WIQTv6UgysrmA2bWDkfKPqrzBsawJ5QUCapsShwAKCRCPqrzBsawJ
+5QOiAP4rmbmL3q+mddPQsafzPiEX1j8C9LDEAE1+MvrZ1JPcCQD+PrPpSvDNuCVX
+S8tIVdbyDuIZ3wOK5TTb+thfocl+/AQ=
+=tSne
+-----END PGP SIGNATURE-----
