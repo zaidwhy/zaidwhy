@@ -66,6 +66,8 @@ Corpus memorisation was tested directly rather than waved away, and ruled out. O
 
 ### [AUGUR](https://github.com/zaidwhy/augur) - a model with a 1938 cutoff answers from 1899
 
+<img src="https://raw.githubusercontent.com/zaidwhy/zaidwhy/main/assets/augur-drift.svg" alt="Two time-locked models on a timeline: TypeWriter-1938 speaks from 1899, a 39 year gap; Talkie-1930 speaks from 1850, an 80 year gap." width="100%">
+
 Research groups are training language models from scratch on text that stops at a fixed historical date, to ask the past a question and get the past's answer. The assumption riding underneath is that a model with a 1938 cutoff represents 1938.
 
 It does not. A cutoff describes the *edge* of a corpus, not its centre of gravity - and the shelves are not even. Ask such a model what year it is and it answers from where the mass of its training data sits. Both models tested answer from **four to eight decades before their stated cutoff**. One names George Washington as President. The other names Grover Cleveland and dates the term to 1893.
