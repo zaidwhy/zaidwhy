@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 450" width="900" height="450" role="img" aria-label="AUGUR results: two time-locked language models plotted on a timeline. TypeWriter-1938 has a 1938 cutoff but speaks from 1899, a 39 year gap, and refuses to relocate. Talkie-1930 has a 1930 cutoff but speaks from 1850, an 80 year gap, and relocates correctly when told the year.">
+<!--
+  ============================================================================
+  ORIGINAL WORK - AUTHORSHIP MANIFEST
+  ============================================================================
+  Title      : AUGUR, epistemic drift. Plate 03.
+  Author     : Zaid Ali Syed
+  ORCID      : 0009-0003-4313-1510
+  Origin     : https://github.com/zaidwhy/augur
+  Archived   : https://doi.org/10.5281/zenodo.22309658
+  Data       : 14-probe battery, temperature 0, fixed seed, run 2026-08-23.
+               Verbatim from augur/FINDING.md.
+  Copyright  : (c) 2026 Zaid Ali Syed. All rights reserved.
+  PGP key    : EFE9 4832 B2B9 80D9 B583  91F2 8FAA BCC1 B1AC 09E5
+
+  Original experimental results. If this file appears anywhere other than
+  zaidwhy/*, it was copied. Every animation degrades gracefully: static
+  attribute values are the finished state.
+  ============================================================================
+-->
+<defs>
+<clipPath id="ag-clip"><rect x="0" y="0" width="900" height="450" rx="10"/></clipPath>
+</defs>
+
+<g clip-path="url(#ag-clip)">
+<rect x="0" y="0" width="900" height="450" fill="#0B0E14"/>
+
+<!-- title -->
+<text x="90" y="36" fill="#E9EEF5" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="17" font-weight="700" letter-spacing="1.6">A CUTOFF IS A WALL, NOT AN ADDRESS</text>
+<text x="90" y="57" fill="#7D8794" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="11.5">Where two time-locked models actually answer from, against the date on the tin.</text>
+
+<!-- ============ track 1: TypeWriter-1938 ============ -->
+<text x="497.6" y="138" fill="#E9EEF5" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="13" font-weight="700">TypeWriter-1938<tspan fill="#5C6875" font-weight="400" font-size="10.5">   7.2B, Q8_0</tspan></text>
+
+<rect x="497.6" y="150" width="269.5" height="14" rx="7" fill="#F59E0B" opacity="0.28">
+<animate attributeName="width" from="0" to="269.5" dur="1.2s" begin="0.3s" fill="freeze"/>
+</rect>
+<text x="632.4" y="161" fill="#F59E0B" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="11.5" font-weight="700" text-anchor="middle">39 years adrift</text>
+
+<circle cx="497.6" cy="157" r="7.5" fill="#0B0E14" stroke="#F59E0B" stroke-width="2.5"/>
+<path d="M767.1 143V171" stroke="#F59E0B" stroke-width="2.5"/>
+
+<text x="497.6" y="186" fill="#F59E0B" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="12" font-weight="700">1899</text>
+<text x="767.1" y="186" fill="#7D8794" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="11" text-anchor="end">1938 stated cutoff</text>
+<text x="497.6" y="206" fill="#7D8794" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="10.5">Names George Washington as President. Told the year, it will not move.</text>
+
+<!-- ============ track 2: Talkie-1930 ============ -->
+<text x="159.1" y="248" fill="#E9EEF5" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="13" font-weight="700">Talkie-1930<tspan fill="#5C6875" font-weight="400" font-size="10.5">   13B, Q4_K_M</tspan></text>
+
+<rect x="159.1" y="260" width="552.7" height="14" rx="7" fill="#22D3EE" opacity="0.28">
+<animate attributeName="width" from="0" to="552.7" dur="1.5s" begin="0.5s" fill="freeze"/>
+</rect>
+<text x="435.5" y="271" fill="#22D3EE" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="11.5" font-weight="700" text-anchor="middle">80 years adrift</text>
+
+<circle cx="159.1" cy="267" r="7.5" fill="#0B0E14" stroke="#22D3EE" stroke-width="2.5"/>
+<path d="M711.8 253V281" stroke="#22D3EE" stroke-width="2.5"/>
+
+<text x="159.1" y="296" fill="#22D3EE" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="12" font-weight="700">1850</text>
+<text x="711.8" y="296" fill="#7D8794" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="11" text-anchor="end">1930 stated cutoff</text>
+<text x="159.1" y="316" fill="#7D8794" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="10.5">Names Bismarck and Grover Cleveland. Told the year, it jumps 80 years and gets Hoover right.</text>
+
+<!-- ============ axis ============ -->
+<path d="M90 350H850" stroke="#2A3542" stroke-width="1.5"/>
+<g stroke="#2A3542" stroke-width="1">
+<path d="M90 350V357M228.2 350V357M366.4 350V357M504.5 350V357M642.7 350V357M780.9 350V357"/>
+</g>
+<g fill="#5C6875" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="10" text-anchor="middle">
+<text x="90" y="371">1840</text><text x="228.2" y="371">1860</text><text x="366.4" y="371">1880</text><text x="504.5" y="371">1900</text><text x="642.7" y="371">1920</text><text x="780.9" y="371">1940</text>
+</g>
+
+<!-- finding -->
+<text x="90" y="405" fill="#E9EEF5" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="12.5">The cutoff is the edge of the corpus. The model answers from its centre of gravity.</text>
+
+<!-- plate line -->
+<rect x="0" y="426" width="900" height="24" fill="#070A0F"/>
+<text x="90" y="442" fill="#4A5563" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="10" letter-spacing="2.2">PLATE 03  ·  AUGUR  ·  ORIGINAL RESEARCH OF ZAID ALI SYED  ·  doi 10.5281/zenodo.22309658</text>
+</g>
+</svg>
