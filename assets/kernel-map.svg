@@ -10,7 +10,7 @@
   Copyright  : (c) 2026 Zaid Ali Syed. All rights reserved.
   PGP key    : EFE9 4832 B2B9 80D9 B583  91F2 8FAA BCC1 B1AC 09E5
 
-  Test counts are real, collected with `pytest --collect-only` on 2026-09-05:
+  Test counts are real, collected by pytest in collect-only mode on 2026-09-05:
   personal-llm 168, second-brain 110, github-pr-agent 56.
 
   Hand-authored artwork, not a badge service. Every animation degrades
