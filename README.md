@@ -45,6 +45,16 @@ If any of it does not reproduce, the claim above is wrong and I want to know.
 
 ---
 
+## The ledger of things I got wrong
+
+<img src="https://raw.githubusercontent.com/zaidwhy/zaidwhy/main/assets/failure-ledger.svg" alt="The failure ledger: TCMF version one scored 0.00 on the causal signal it was built for, AUGUR's forecasting programme was killed by its own phase zero, COLD READ's headline finding failed to replicate on a second model, and adk-python 6190 was closed unmerged after an LGTM." width="100%">
+
+Anyone can publish the version of their work where everything went right. The four entries above are claims I actually made, each one struck by evidence I went and collected, and each correction is published in the repository named beside it rather than quietly dropped. The [TCMF write-up](https://github.com/zaidwhy/CivilizationOS/blob/main/docs/tcmf.md) still contains the fusion formula that scored zero. [`FINDING.md`](https://github.com/zaidwhy/augur/blob/main/FINDING.md) still contains the forecasting plan its own first phase falsified. [`RESULT.md`](https://github.com/zaidwhy/coldread/blob/main/RESULT.md) still contains the headline that did not survive a second model. [adk-python #6190](https://github.com/google/adk-python/pull/6190) is closed and is on this page anyway.
+
+That is the whole argument for the numbers further down. A result that was never allowed to fail is not evidence of anything.
+
+---
+
 ## Research
 
 Two studies. Each one carries a negative control, because a measurement without a control is a rumour, and each one was replicated on a second model family, because a finding from one model is a fact about that model.

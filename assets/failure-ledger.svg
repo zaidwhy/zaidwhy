@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 400" width="900" height="400" role="img" aria-label="The failure ledger: four claims that turned out wrong and what replaced them. TCMF version one scored 0.00 on the causal signal it was built for. AUGUR's forecasting programme was killed by its own phase zero. COLD READ's headline finding failed to replicate on a second model. The adk-python pull request was closed unmerged after an LGTM. Each correction is published in the write-up rather than dropped.">
+<!--
+  ============================================================================
+  ORIGINAL WORK - AUTHORSHIP MANIFEST
+  ============================================================================
+  Title      : The failure ledger. Plate 06.
+  Author     : Zaid Ali Syed
+  ORCID      : 0009-0003-4313-1510
+  Origin     : https://github.com/zaidwhy/zaidwhy
+  Copyright  : (c) 2026 Zaid Ali Syed. All rights reserved.
+  PGP key    : EFE9 4832 B2B9 80D9 B583  91F2 8FAA BCC1 B1AC 09E5
+
+  Every entry is a claim I actually made and a correction that is actually
+  published, in the repository named beside it. None of these were quietly
+  dropped, which is the only reason the surviving claims are worth anything.
+
+  Hand-authored artwork, not a badge service. Every animation degrades
+  gracefully: static attribute values are the finished state.
+  ============================================================================
+-->
+<defs>
+<clipPath id="fl-clip"><rect x="0" y="0" width="900" height="400" rx="10"/></clipPath>
+</defs>
+
+<g clip-path="url(#fl-clip)">
+<rect x="0" y="0" width="900" height="400" fill="#0B0E14"/>
+
+<text x="70" y="36" fill="#E9EEF5" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="17" font-weight="700" letter-spacing="1.6">THE FAILURE LEDGER</text>
+<text x="70" y="58" fill="#7D8794" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="11.5">Four things I was wrong about, and where the correction is published. Struck, not deleted.</text>
+<line x1="70" y1="72" x2="830" y2="72" stroke="#1B2430" stroke-width="1"/>
+
+<g font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace">
+
+<rect x="70" y="92" width="7" height="7" fill="#F59E0B"/>
+<text x="104" y="99" fill="#7D8794" font-size="11.5">TCMF will retrieve on causal precedence, not just similarity.</text>
+<line x1="102" y1="95" x2="522" y2="95" stroke="#F59E0B" stroke-width="1.4" stroke-dasharray="420" stroke-dashoffset="0">
+<animate attributeName="stroke-dashoffset" from="420" to="0" dur="0.7s" begin="0.2s" fill="freeze"/>
+</line>
+<text x="104" y="118" fill="#E9EEF5" font-size="12">v1 scored 0.00 on that exact signal. Multiplicative fusion was the bug; additive beat every baseline.</text>
+<text x="830" y="99" fill="#34D399" font-size="10" letter-spacing="1.2" text-anchor="end">CivilizationOS</text>
+
+<rect x="70" y="154" width="7" height="7" fill="#F59E0B"/>
+<text x="104" y="161" fill="#7D8794" font-size="11.5">Time-locked models will forecast their own future better than we assume.</text>
+<line x1="102" y1="157" x2="601" y2="157" stroke="#F59E0B" stroke-width="1.4" stroke-dasharray="499" stroke-dashoffset="0">
+<animate attributeName="stroke-dashoffset" from="499" to="0" dur="0.7s" begin="0.8s" fill="freeze"/>
+</line>
+<text x="104" y="180" fill="#E9EEF5" font-size="12">Phase 0 killed the programme. The 1938 model thinks it is 1899, which is the better finding.</text>
+<text x="830" y="161" fill="#34D399" font-size="10" letter-spacing="1.2" text-anchor="end">AUGUR</text>
+
+<rect x="70" y="216" width="7" height="7" fill="#F59E0B"/>
+<text x="104" y="223" fill="#7D8794" font-size="11.5">Short samples read below chance: ignorance looks like confident wrongness.</text>
+<line x1="102" y1="219" x2="608" y2="219" stroke="#F59E0B" stroke-width="1.4" stroke-dasharray="506" stroke-dashoffset="0">
+<animate attributeName="stroke-dashoffset" from="506" to="0" dur="0.7s" begin="1.4s" fill="freeze"/>
+</line>
+<text x="104" y="242" fill="#E9EEF5" font-size="12">It did not replicate on a second model. The correction is published; the headline is not.</text>
+<text x="830" y="223" fill="#34D399" font-size="10" letter-spacing="1.2" text-anchor="end">COLD READ</text>
+
+<rect x="70" y="278" width="7" height="7" fill="#F59E0B"/>
+<text x="104" y="285" fill="#7D8794" font-size="11.5">adk-python #6190 will land. It passed a full review round and got an LGTM.</text>
+<line x1="102" y1="281" x2="608" y2="281" stroke="#F59E0B" stroke-width="1.4" stroke-dasharray="506" stroke-dashoffset="0">
+<animate attributeName="stroke-dashoffset" from="506" to="0" dur="0.7s" begin="2.0s" fill="freeze"/>
+</line>
+<text x="104" y="304" fill="#E9EEF5" font-size="12">Closed unmerged, superseded by a maintainer's own fix. Still on the record instead of edited out.</text>
+<text x="830" y="285" fill="#34D399" font-size="10" letter-spacing="1.2" text-anchor="end">google/adk-python</text>
+
+</g>
+
+<line x1="70" y1="326" x2="830" y2="326" stroke="#1B2430" stroke-width="1"/>
+<text x="70" y="350" fill="#E9EEF5" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="12.5">A method that was never wrong was never tested. Every correction above is in the write-up it belongs to.</text>
+
+<rect x="0" y="376" width="900" height="24" fill="#070A0F"/>
+<text x="70" y="392" fill="#4A5563" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="10" letter-spacing="2.2">PLATE 06  ·  ORIGINAL WORK OF ZAID ALI SYED  ·  ORCID 0009-0003-4313-1510  ·  MMXXVI</text>
+</g>
+</svg>
