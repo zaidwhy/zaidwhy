@@ -176,6 +176,35 @@ infra       Docker · GitHub Actions · Vercel · Render · GCP
 
 ## Provenance
 
+<img src="https://raw.githubusercontent.com/zaidwhy/zaidwhy/main/assets/chain-of-custody.svg" alt="Chain of custody: a signed commit leads to an ed25519 signature verified by GitHub, to an immutable release tag, to a Zenodo DOI with an independent timestamp, to an ORCID bound to a person." width="100%">
+
+Five links, and the useful property is that four of them are asserted by somebody other than me. GitHub checks the signature. Zenodo issues the timestamp. ORCID binds the iD to a person. A repository can be cloned in a second; none of that comes with it.
+
+<details>
+<summary><b>How to tell this work from a copy of it</b></summary>
+
+<br>
+
+```bash
+# 1. Whose signature is on the history? A copy carries commits it cannot re-sign.
+gh api repos/OWNER/REPO/commits --jq '.[0].commit.verification'
+
+# 2. Which DOI does the write-up resolve to, and whose ORCID does that record list?
+curl -sIL https://doi.org/10.5281/zenodo.22309658 | grep -i location
+
+# 3. Does the fork still load assets, badges, or CI status from the original account?
+grep -rn 'raw.githubusercontent.com\|/actions/workflows/' README.md
+
+# 4. Does the LICENSE copyright line match the account that published it?
+head -3 LICENSE
+```
+
+Check 3 is the one that tends to settle it. A README copied wholesale keeps pulling its images and its CI badge from wherever it was copied from, which means the copy renders the original's URL to prove the copy's claim.
+
+</details>
+
+<br>
+
 Every commit on this account is signed with the key below. The artwork on this page is hand-authored SVG, served from this repository, and carries an authorship manifest in its source.
 
 ```

@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 400" width="900" height="400" role="img" aria-label="Chain of custody: a signed commit leads to an ed25519 signature verified by GitHub, to an immutable release tag, to a Zenodo DOI with an independent timestamp, to an ORCID bound to a person. Each link is independently checkable and none of them can be reassigned by copying a repository.">
+<!--
+  ============================================================================
+  ORIGINAL WORK - AUTHORSHIP MANIFEST
+  ============================================================================
+  Title      : Chain of custody. Plate 05.
+  Author     : Zaid Ali Syed
+  ORCID      : 0009-0003-4313-1510
+  Origin     : https://github.com/zaidwhy/zaidwhy
+  Copyright  : (c) 2026 Zaid Ali Syed. All rights reserved.
+  PGP key    : EFE9 4832 B2B9 80D9 B583  91F2 8FAA BCC1 B1AC 09E5
+
+  Every value drawn below is real and independently checkable:
+  the commit hash resolves in github.com/zaidwhy/augur, the key
+  fingerprint matches PROVENANCE.sig.txt, the tag exists as a release,
+  the DOI resolves at doi.org, and the ORCID lists both DOIs.
+
+  This file is served from the repository named in Origin above. A copy of
+  the page that embeds it is loading it from here, which is the point.
+
+  Hand-authored artwork, not a badge service. Every animation degrades
+  gracefully: static attribute values are the finished state.
+  ============================================================================
+-->
+<defs>
+<clipPath id="cc-clip"><rect x="0" y="0" width="900" height="400" rx="10"/></clipPath>
+<path id="cc-spine" d="M 96 104 V 300" fill="none"/>
+<linearGradient id="cc-fade" gradientUnits="userSpaceOnUse" x1="96" y1="104" x2="96" y2="300">
+<stop offset="0" stop-color="#22D3EE" stop-opacity="0.85"/>
+<stop offset="1" stop-color="#34D399" stop-opacity="0.85"/>
+</linearGradient>
+</defs>
+
+<g clip-path="url(#cc-clip)">
+<rect x="0" y="0" width="900" height="400" fill="#0B0E14"/>
+
+<text x="70" y="38" fill="#E9EEF5" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="17" font-weight="700" letter-spacing="1.6">CHAIN OF CUSTODY</text>
+<text x="70" y="60" fill="#7D8794" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="11.5">Five links. Each one checkable on its own. None of them transfers when a repository is copied.</text>
+
+<line x1="96" y1="104" x2="96" y2="300" stroke="url(#cc-fade)" stroke-width="2"/>
+<use href="#cc-spine" stroke="none"/>
+
+<circle r="5" fill="#E9EEF5" opacity="0.9">
+<animateMotion dur="4.4s" repeatCount="indefinite" keyPoints="0;1" keyTimes="0;1" calcMode="linear"><mpath href="#cc-spine"/></animateMotion>
+<animate attributeName="opacity" values="0;0.95;0.95;0" dur="4.4s" repeatCount="indefinite"/>
+</circle>
+
+<g font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace">
+
+<circle cx="96" cy="104" r="6.5" fill="#0B0E14" stroke="#22D3EE" stroke-width="2"/>
+<text x="126" y="99" fill="#E9EEF5" font-size="13.5" font-weight="700">git commit b8da2ba</text>
+<text x="126" y="118" fill="#7D8794" font-size="11">authored and signed locally, never through a web editor</text>
+<text x="700" y="106" fill="#34D399" font-size="10.5" letter-spacing="1.4" opacity="1">SIGNED ed25519<animate attributeName="opacity" values="0;0;1" dur="4.4s" keyTimes="0;0.10;0.20" repeatCount="indefinite"/></text>
+
+<circle cx="96" cy="153" r="6.5" fill="#0B0E14" stroke="#22D3EE" stroke-width="2"/>
+<text x="126" y="148" fill="#E9EEF5" font-size="13.5" font-weight="700">EFE9 4832 B2B9 80D9 B583 91F2 8FAA BCC1 B1AC 09E5</text>
+<text x="126" y="167" fill="#7D8794" font-size="11">public key uploaded to GitHub, so the badge is checked by them and not claimed by me</text>
+<text x="700" y="155" fill="#34D399" font-size="10.5" letter-spacing="1.4" opacity="1">VERIFIED<animate attributeName="opacity" values="0;0;1" dur="4.4s" keyTimes="0;0.32;0.42" repeatCount="indefinite"/></text>
+
+<circle cx="96" cy="202" r="6.5" fill="#0B0E14" stroke="#22D3EE" stroke-width="2"/>
+<text x="126" y="197" fill="#E9EEF5" font-size="13.5" font-weight="700">tag v1.0.2</text>
+<text x="126" y="216" fill="#7D8794" font-size="11">a release, not a branch: the tree it points at cannot change under it</text>
+<text x="700" y="204" fill="#34D399" font-size="10.5" letter-spacing="1.4" opacity="1">IMMUTABLE<animate attributeName="opacity" values="0;0;1" dur="4.4s" keyTimes="0;0.52;0.62" repeatCount="indefinite"/></text>
+
+<circle cx="96" cy="251" r="6.5" fill="#0B0E14" stroke="#22D3EE" stroke-width="2"/>
+<text x="126" y="246" fill="#E9EEF5" font-size="13.5" font-weight="700">doi 10.5281/zenodo.22309658</text>
+<text x="126" y="265" fill="#7D8794" font-size="11">timestamped by CERN, resolvable forever, and not issued by me</text>
+<text x="700" y="253" fill="#34D399" font-size="10.5" letter-spacing="1.4" opacity="1">TIMESTAMPED<animate attributeName="opacity" values="0;0;1" dur="4.4s" keyTimes="0;0.72;0.82" repeatCount="indefinite"/></text>
+
+<circle cx="96" cy="300" r="6.5" fill="#0B0E14" stroke="#34D399" stroke-width="2"/>
+<text x="126" y="295" fill="#E9EEF5" font-size="13.5" font-weight="700">orcid 0009-0003-4313-1510</text>
+<text x="126" y="314" fill="#7D8794" font-size="11">a person, not an account: the DOIs list this iD and the iD lists the DOIs</text>
+<text x="700" y="302" fill="#34D399" font-size="10.5" letter-spacing="1.4" opacity="1">BOUND<animate attributeName="opacity" values="0;0;1" dur="4.4s" keyTimes="0;0.90;0.98" repeatCount="indefinite"/></text>
+
+</g>
+
+<text x="70" y="352" fill="#E9EEF5" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="12.5">This image is served from github.com/zaidwhy. Wherever you are reading it, it is loading from there.</text>
+
+<rect x="0" y="376" width="900" height="24" fill="#070A0F"/>
+<text x="70" y="392" fill="#4A5563" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="10" letter-spacing="2.2">PLATE 05  ·  ORIGINAL WORK OF ZAID ALI SYED  ·  ORCID 0009-0003-4313-1510  ·  MMXXVI</text>
+</g>
+</svg>
