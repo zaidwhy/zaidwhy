@@ -47,7 +47,7 @@ If any of it does not reproduce, the claim above is wrong and I want to know.
 
 ## The ledger of things I got wrong
 
-<img src="https://raw.githubusercontent.com/zaidwhy/zaidwhy/main/assets/failure-ledger.svg" alt="The failure ledger: TCMF version one scored 0.00 on the causal signal it was built for, AUGUR's forecasting programme was killed by its own phase zero, COLD READ's headline finding failed to replicate on a second model, and adk-python 6190 was closed unmerged after an LGTM." width="100%">
+<img src="https://raw.githubusercontent.com/zaidwhy/zaidwhy/main/assets/failure-ledger.svg" alt="The failure ledger: TCMF version one scored 0.02 recall at 5 on the causal signal it was built for where a causal oracle reaches 1.00, AUGUR's forecasting programme was killed by its own phase zero, COLD READ's headline finding failed to replicate on a second model, and adk-python 6190 was closed unmerged after an LGTM." width="100%">
 
 Anyone can publish the version of their work where everything went right. The four entries above are claims I actually made, each one struck by evidence I went and collected, and each correction is published in the repository named beside it rather than quietly dropped. The [TCMF write-up](https://github.com/zaidwhy/CivilizationOS/blob/main/docs/tcmf.md) still contains the fusion formula that scored zero. [`FINDING.md`](https://github.com/zaidwhy/augur/blob/main/FINDING.md) still contains the forecasting plan its own first phase falsified. [`RESULT.md`](https://github.com/zaidwhy/coldread/blob/main/RESULT.md) still contains the headline that did not survive a second model. [adk-python #6190](https://github.com/google/adk-python/pull/6190) is closed and is on this page anyway.
 
@@ -105,7 +105,7 @@ One memory kernel, built once, imported by everything downstream instead of each
 
 The part worth reading is **Temporal-Causal Memory Fusion**. Standard RAG retrieves on semantic similarity alone; TCMF fuses episodic memory with a causal graph over the society's own history, so a witness to a root cause outranks somebody who heard about it second-hand.
 
-I benchmarked it against 6 baseline retrieval strategies and **the first version scored 0.00 on the exact causal signal it was built to exploit.** The multiplicative fusion was the bug. A normalised additive version recovered the signal and beat every single-signal baseline in a mixed regime, and a follow-up 60-scenario study showed the retrieval choice changes the model's actual decision rather than merely its confidence. The failed version is still in the write-up, because a method that was never wrong was never tested.
+I benchmarked it against 6 baseline retrieval strategies over 300 scenarios and **the first version recovered almost none of the causal signal it was built to exploit: recall@5 of 0.02, where the causal signal alone reaches 1.00 on the identical scores.** The multiplicative fusion was the bug. A normalised additive version recovered the signal and beat every single-signal baseline in a mixed regime, and a follow-up 60-scenario study showed the retrieval choice changes the model's actual decision rather than merely its confidence. The failed version is still in the write-up, because a method that was never wrong was never tested.
 
 `Python` · `FastAPI` · `React` · `Three.js` · `ChromaDB` · `NetworkX` · `LoRA` · `MLflow` · [live](https://civilization-os-murex.vercel.app) · [TCMF write-up](https://github.com/zaidwhy/CivilizationOS/blob/main/docs/tcmf.md)
 
