@@ -1,0 +1,1 @@
+mutation { changeUserStatus(input: { message: "", emoji: "" }) { status { message emoji } } }
