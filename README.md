@@ -156,6 +156,18 @@ The codebase is private, so the [case study](case-studies/zabira-academy.md) is 
 
 ---
 
+## Engineering work
+
+### [CivilizationOS](case-studies/civilizationos.md) - a retrieval method that failed its own benchmark, in public
+
+A multi-agent society simulation, live at [civilization-os-murex.vercel.app](https://civilization-os-murex.vercel.app). TCMF, its causal-retrieval method, is benchmarked against six baselines - the first version scored recall@5 0.02 on the exact signal it was built to exploit, and the benchmark is what caught it, not a hunch. 76 API tests, 152 benchmark tests, both in CI.
+
+### [Personal LLM](case-studies/personal-llm.md) - one kernel, three apps, and an eval suite that argued with itself
+
+A local-first memory and RAG engine imported by three separate apps instead of rebuilt per app. Building its offline eval suite surfaced three real issues on the first run - two bugs in the eval harness and one artifact of a synthetic test double - each root-caused separately before any threshold was touched. 168 kernel tests, 334 across the fleet, 7 eval suites, all offline.
+
+---
+
 ## Open source
 
 **Merged:**
