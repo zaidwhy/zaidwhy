@@ -108,7 +108,12 @@ One memory kernel, built once, imported by everything downstream instead of each
 
 <img src="https://raw.githubusercontent.com/zaidwhy/zaidwhy/main/assets/kernel-map.svg" alt="The personal-llm memory and RAG kernel, with 168 offline tests, imported by second-brain (110 tests), github-pr-agent (56 tests) and DreamOS." width="100%">
 
+<!-- STATUS:START -->
+<!-- STATUS:END -->
+
 ### [CivilizationOS](https://github.com/zaidwhy/CivilizationOS) - a society of agents, and a retrieval method that failed first
+
+*A causal memory that has to outrank a rumour with a witness, not just a similar-sounding one.*
 
 35 agents - 10 autonomous citizens and 5 institutional councils - debate, remember, and react to injected crises, and now generate their own.
 
