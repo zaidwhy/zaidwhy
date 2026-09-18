@@ -49,7 +49,7 @@ If any of it does not reproduce, the claim above is wrong and I want to know.
 
 ---
 
-## The ledger of things I got wrong
+## II. The ledger of things I got wrong
 
 <img src="https://raw.githubusercontent.com/zaidwhy/zaidwhy/main/assets/failure-ledger.svg" alt="The failure ledger: TCMF version one scored 0.02 recall at 5 on the causal signal it was built for where a causal oracle reaches 1.00, AUGUR's forecasting programme was killed by its own phase zero, COLD READ's headline finding failed to replicate on a second model, and adk-python 6190 was closed unmerged after an LGTM." width="100%">
 
@@ -59,7 +59,7 @@ That is the whole argument for the numbers further down. A result that was never
 
 ---
 
-## Research
+## III. Research
 
 Two studies. Each one carries a negative control, because a measurement without a control is a rumour, and each one was replicated on a second model family, because a finding from one model is a fact about that model.
 
@@ -97,7 +97,7 @@ A second finding fell out of the demo. Asked whether another great war was comin
 
 ---
 
-## Systems
+## IV. Systems
 
 One memory kernel, built once, imported by everything downstream instead of each app rebuilding retrieval:
 
@@ -146,7 +146,7 @@ Shipped 3 full projects end to end in test runs. On [Receipts.dev](https://githu
 
 ---
 
-## Production work
+## V. Production work
 
 ### [Zabira Academy](case-studies/zabira-academy.md) - 27 merged PRs into a live product I did not build
 
@@ -200,7 +200,7 @@ infra       Docker · GitHub Actions · Vercel · Render · GCP
 
 ---
 
-## Provenance
+## VI. Provenance
 
 <img src="https://raw.githubusercontent.com/zaidwhy/zaidwhy/main/assets/chain-of-custody.svg" alt="Chain of custody: a signed commit leads to an ed25519 signature verified by GitHub, to an immutable release tag, to a Zenodo DOI with an independent timestamp, to an ORCID bound to a person." width="100%">
 
