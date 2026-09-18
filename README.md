@@ -47,6 +47,11 @@ If any of it does not reproduce, the claim above is wrong and I want to know.
 
 </details>
 
+**Recent activity, pulled live from the repos below every night, not written by hand:**
+
+<!-- ACTIVITY:START -->
+<!-- ACTIVITY:END -->
+
 ---
 
 ## II. The ledger of things I got wrong
