@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 170" width="900" height="170" role="img" aria-label="Roadmap of this page, six stations on a rail: I Proof, II Failures, III Research, IV Systems, V Production, VI Provenance. A signal travels the rail from station one to station six.">
+<!--
+  ============================================================================
+  ORIGINAL WORK - AUTHORSHIP MANIFEST
+  ============================================================================
+  Title      : Roadmap, Plate 07.
+  Author     : Zaid Ali Syed
+  ORCID      : 0009-0003-4313-1510
+  Origin     : https://github.com/zaidwhy/zaidwhy
+  Created    : 2026-09-18
+  Copyright  : (c) 2026 Zaid Ali Syed. All rights reserved.
+  PGP key    : EFE9 4832 B2B9 80D9 B583  91F2 8FAA BCC1 B1AC 09E5
+
+  This plate is the page's own table of contents, drawn as the same
+  instrument this page keeps using to show its work: a rail, a signal,
+  six stations, nothing hidden between them.
+
+  Hand-authored artwork, not a badge service. Every animation degrades
+  gracefully: static attribute values are the finished state.
+  If you are reading this inside a repository that is not zaidwhy/zaidwhy,
+  this asset was copied. The identity block above travels with the file.
+  ============================================================================
+-->
+<defs>
+<clipPath id="rm-clip"><rect x="0" y="0" width="900" height="170" rx="10"/></clipPath>
+<linearGradient id="rm-pulse" x1="0" y1="0" x2="1" y2="0">
+<stop offset="0" stop-color="#22D3EE" stop-opacity="0"/>
+<stop offset="0.5" stop-color="#22D3EE" stop-opacity="0.9"/>
+<stop offset="1" stop-color="#22D3EE" stop-opacity="0"/>
+</linearGradient>
+</defs>
+
+<g clip-path="url(#rm-clip)">
+<rect x="0" y="0" width="900" height="170" fill="#0B0E14"/>
+
+<text x="46" y="30" fill="#7D8794" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="11" letter-spacing="2">SIX STATIONS, ONE RAIL. NOTHING BELOW IS OUT OF ORDER BY ACCIDENT.</text>
+
+<!-- rail -->
+<line x1="70" y1="92" x2="830" y2="92" stroke="#1B2430" stroke-width="2"/>
+<rect x="0" y="82" width="220" height="20" fill="url(#rm-pulse)">
+<animate attributeName="x" values="-220;900" dur="9s" repeatCount="indefinite"/>
+</rect>
+
+<g font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace">
+
+<!-- six stations -->
+<g>
+<circle cx="70" cy="92" r="5.5" fill="#0B0E14" stroke="#22D3EE" stroke-width="2"/>
+<text x="70" y="122" fill="#5C6875" font-size="10.5" letter-spacing="1.6" text-anchor="middle">I</text>
+<text x="70" y="140" fill="#E9EEF5" font-size="11" text-anchor="middle">PROOF</text>
+<text x="70" y="154" fill="#4A5563" font-size="9" text-anchor="middle">the receipts</text>
+</g>
+
+<g>
+<circle cx="222" cy="92" r="5.5" fill="#0B0E14" stroke="#F59E0B" stroke-width="2"/>
+<text x="222" y="122" fill="#5C6875" font-size="10.5" letter-spacing="1.6" text-anchor="middle">II</text>
+<text x="222" y="140" fill="#E9EEF5" font-size="11" text-anchor="middle">FAILURES</text>
+<text x="222" y="154" fill="#4A5563" font-size="9" text-anchor="middle">struck, not deleted</text>
+</g>
+
+<g>
+<circle cx="374" cy="92" r="5.5" fill="#0B0E14" stroke="#22D3EE" stroke-width="2"/>
+<text x="374" y="122" fill="#5C6875" font-size="10.5" letter-spacing="1.6" text-anchor="middle">III</text>
+<text x="374" y="140" fill="#E9EEF5" font-size="11" text-anchor="middle">RESEARCH</text>
+<text x="374" y="154" fill="#4A5563" font-size="9" text-anchor="middle">n=2, controlled</text>
+</g>
+
+<g>
+<circle cx="526" cy="92" r="5.5" fill="#0B0E14" stroke="#22D3EE" stroke-width="2"/>
+<text x="526" y="122" fill="#5C6875" font-size="10.5" letter-spacing="1.6" text-anchor="middle">IV</text>
+<text x="526" y="140" fill="#E9EEF5" font-size="11" text-anchor="middle">SYSTEMS</text>
+<text x="526" y="154" fill="#4A5563" font-size="9" text-anchor="middle">one kernel, imported</text>
+</g>
+
+<g>
+<circle cx="678" cy="92" r="5.5" fill="#0B0E14" stroke="#22D3EE" stroke-width="2"/>
+<text x="678" y="122" fill="#5C6875" font-size="10.5" letter-spacing="1.6" text-anchor="middle">V</text>
+<text x="678" y="140" fill="#E9EEF5" font-size="11" text-anchor="middle">PRODUCTION</text>
+<text x="678" y="154" fill="#4A5563" font-size="9" text-anchor="middle">real users, not mine</text>
+</g>
+
+<g>
+<circle cx="830" cy="92" r="5.5" fill="#0B0E14" stroke="#34D399" stroke-width="2"/>
+<text x="830" y="122" fill="#5C6875" font-size="10.5" letter-spacing="1.6" text-anchor="middle">VI</text>
+<text x="830" y="140" fill="#E9EEF5" font-size="11" text-anchor="middle">PROVENANCE</text>
+<text x="830" y="154" fill="#4A5563" font-size="9" text-anchor="middle">how to check the rest</text>
+</g>
+
+</g>
+</g>
+</svg>
