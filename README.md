@@ -1,6 +1,6 @@
 <img src="https://raw.githubusercontent.com/zaidwhy/zaidwhy/main/assets/nameplate.svg" alt="Zaid Ali Syed - AI systems engineer" width="100%">
 
-I build AI systems that remember, retrieve, and decide - and I measure whether they actually work.
+I build AI systems that remember, retrieve, and decide. Then I try to break them, because a system that never got the chance to fail was never actually tested.
 
 Most of what follows is a number. Every number is a link to the artifact that produced it: the merged pull request, the raw model output, the test run, the reproducible script. Nothing here asks to be believed.
 
