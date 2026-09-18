@@ -125,6 +125,8 @@ I benchmarked it against 6 baseline retrieval strategies over 300 scenarios and 
 
 ### [Recall](https://github.com/zaidwhy/recall) - spatial memory you can talk to
 
+*Point, ask out loud, get back the exact frame the camera saw it in.*
+
 Point a phone camera at your space, ask out loud where you left something, get a spoken answer with the exact frame it was seen in. The voice model does not guess locations - it calls a tool that searches a vector store built from what the camera actually recorded.
 
 ```
