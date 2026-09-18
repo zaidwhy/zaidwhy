@@ -6,9 +6,13 @@ Most of what follows is a number. Every number is a link to the artifact that pr
 
 Open to **AI engineer / applied AI internship** roles.
 
+<img src="https://raw.githubusercontent.com/zaidwhy/zaidwhy/main/assets/roadmap.svg" alt="Roadmap of this page, six stations on a rail: I Proof, II Failures, III Research, IV Systems, V Production, VI Provenance." width="100%">
+
+[I. Proof](#i-the-short-version-with-receipts) · [II. Failures](#ii-the-ledger-of-things-i-got-wrong) · [III. Research](#iii-research) · [IV. Systems](#iv-systems) · [V. Production](#v-production-work) · [VI. Provenance](#vi-provenance)
+
 ---
 
-## The short version, with receipts
+## I. The short version, with receipts
 
 | Claim | Proof |
 |---|---|
