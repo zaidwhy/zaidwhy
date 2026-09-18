@@ -139,6 +139,8 @@ Quota guard:  120s floor between vision calls, on-screen daily budget counter
 
 ### [Agent Factory](https://github.com/zaidwhy/agent-factory) - a build pipeline with frozen contracts
 
+*The contract freezes before the code does, so two agents can build in parallel without seeing each other's work.*
+
 Six specialised agents turn a one-line idea into a tested, runnable project. It is not a code generator; it is a pipeline with contracts. The architect **freezes an API contract before backend and frontend build in parallel from it**, which is the only reason two agents' output stays compatible without either one seeing the other's code. The reviewer is read-only by design. The debugger is the only agent permitted to execute, and is graded on what it fixes rather than what it writes.
 
 Shipped 3 full projects end to end in test runs. On [Receipts.dev](https://github.com/zaidwhy/receipts-dev): 92 files, 16 bugs found and fixed, 0 type errors, 0 lint errors.
