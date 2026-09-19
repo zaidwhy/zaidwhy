@@ -51,14 +51,14 @@ If any of it does not reproduce, the claim above is wrong and I want to know.
 **Recent activity, pulled live from the repos below every night, not written by hand:**
 
 <!-- ACTIVITY:START -->
+- `2026-09-18` **CivilizationOS** - Log session close: TCMF paper faculty finalization + N19 audit triage ([`c533f03`](https://github.com/zaidwhy/CivilizationOS/commit/c533f03fc30060fef30522a6e24f484977976511))
+- `2026-09-18` **CivilizationOS** - N19: verify BM25's scaffolding-artifact claim by actually rerunning it ([`7e1ba2d`](https://github.com/zaidwhy/CivilizationOS/commit/7e1ba2d01a4a4cbcaff29d4d4422e6e00a5e72bd))
 - `2026-09-16` **CivilizationOS** - Session log + handoff: docs/tcmf.md correctness fix, M4 observability ([`33cbece`](https://github.com/zaidwhy/CivilizationOS/commit/33cbece293880f789dc765d4268f4d4df9d6101e))
 - `2026-09-16` **recall** - Session log + handoff: live URL recorded, system-design doc ([`40b8b6d`](https://github.com/zaidwhy/recall/commit/40b8b6d893bf313e5518fd6eb5540226ee36792b))
 - `2026-09-16` **personal-llm** - Session log: HF Space deployed live, system-design doc ([`496e423`](https://github.com/zaidwhy/personal-llm/commit/496e42348158813274a956235303e0e1d99f2163))
 - `2026-09-16` **CivilizationOS** - Add structured per-call LLM observability (M4) ([`b6f4167`](https://github.com/zaidwhy/CivilizationOS/commit/b6f4167a60dc71101bda9114153f56b94a68e3e0))
 - `2026-09-16` **CivilizationOS** - Fix docs/tcmf.md: it described the old, disproven multiplicative formul... ([`61f712c`](https://github.com/zaidwhy/CivilizationOS/commit/61f712cf869ceea6aa9ed58cd9100404575438f9))
 - `2026-09-16` **recall** - Add a 13-section system-design case study ([`b85f92b`](https://github.com/zaidwhy/recall/commit/b85f92b47bcfdfc5cf203b857b65b29ad215b20c))
-- `2026-09-16` **personal-llm** - Add a 13-section system-design case study; fix a stale deploy note ([`74120ac`](https://github.com/zaidwhy/personal-llm/commit/74120ac7a4f422904f141a36565831786ced2cee))
-- `2026-09-16` **agent-factory** - Add a golden-run test for the 6-agent pipeline handoff contract ([`b02f76f`](https://github.com/zaidwhy/agent-factory/commit/b02f76fe8b0d3de0df853f18d7bc713c334a4e9a))
 <!-- ACTIVITY:END -->
 
 ---
@@ -120,7 +120,7 @@ One memory kernel, built once, imported by everything downstream instead of each
 <!-- STATUS:START -->
 - **CivilizationOS** - `200 OK` - [https://civilization-os-murex.vercel.app](https://civilization-os-murex.vercel.app)
 
-*checked 2026-09-18 10:22 UTC, by the workflow that runs this page*
+*checked 2026-09-19 07:50 UTC, by the workflow that runs this page*
 <!-- STATUS:END -->
 
 ### [CivilizationOS](https://github.com/zaidwhy/CivilizationOS) - a society of agents, and a retrieval method that failed first
