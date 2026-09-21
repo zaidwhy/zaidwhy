@@ -51,14 +51,14 @@ If any of it does not reproduce, the claim above is wrong and I want to know.
 **Recent activity, pulled live from the repos below every night, not written by hand:**
 
 <!-- ACTIVITY:START -->
+- `2026-09-20` **dreamos-college-project** - Add Project Monitoring II report and deck for the finished system ([`5e2aa26`](https://github.com/zaidwhy/dreamos-college-project/commit/5e2aa265d3cf2d9535f40b12d025b5a06c576044))
+- `2026-09-20` **dreamos-college-project** - Fix short-query search: relative cutoff plus keyword boost, and never o... ([`99ca100`](https://github.com/zaidwhy/dreamos-college-project/commit/99ca10006cde0f180a37013b390ec7c7abb626d9))
+- `2026-09-20` **dreamos-college-project** - Add Project Monitoring II deck; update diagrams for all six modules; fi... ([`b885901`](https://github.com/zaidwhy/dreamos-college-project/commit/b88590164a8ccc9eb2fe12d8d618755395abf4a6))
+- `2026-09-20` **dreamos-college-project** - Update docs and demo for all six modules; add demo reset script ([`7a97532`](https://github.com/zaidwhy/dreamos-college-project/commit/7a97532405b71d405eae958e268c62edfada4248))
+- `2026-09-20` **dreamos-college-project** - Add chat follow-ups, knowledge graph view and workspace panel to the de... ([`cb0d60f`](https://github.com/zaidwhy/dreamos-college-project/commit/cb0d60fea952cc64adbc6ac95aeca5b2d6d1bbc5))
 - `2026-09-18` **CivilizationOS** - Log session close: TCMF paper faculty finalization + N19 audit triage ([`c533f03`](https://github.com/zaidwhy/CivilizationOS/commit/c533f03fc30060fef30522a6e24f484977976511))
 - `2026-09-18` **CivilizationOS** - N19: verify BM25's scaffolding-artifact claim by actually rerunning it ([`7e1ba2d`](https://github.com/zaidwhy/CivilizationOS/commit/7e1ba2d01a4a4cbcaff29d4d4422e6e00a5e72bd))
 - `2026-09-16` **CivilizationOS** - Session log + handoff: docs/tcmf.md correctness fix, M4 observability ([`33cbece`](https://github.com/zaidwhy/CivilizationOS/commit/33cbece293880f789dc765d4268f4d4df9d6101e))
-- `2026-09-16` **recall** - Session log + handoff: live URL recorded, system-design doc ([`40b8b6d`](https://github.com/zaidwhy/recall/commit/40b8b6d893bf313e5518fd6eb5540226ee36792b))
-- `2026-09-16` **personal-llm** - Session log: HF Space deployed live, system-design doc ([`496e423`](https://github.com/zaidwhy/personal-llm/commit/496e42348158813274a956235303e0e1d99f2163))
-- `2026-09-16` **CivilizationOS** - Add structured per-call LLM observability (M4) ([`b6f4167`](https://github.com/zaidwhy/CivilizationOS/commit/b6f4167a60dc71101bda9114153f56b94a68e3e0))
-- `2026-09-16` **CivilizationOS** - Fix docs/tcmf.md: it described the old, disproven multiplicative formul... ([`61f712c`](https://github.com/zaidwhy/CivilizationOS/commit/61f712cf869ceea6aa9ed58cd9100404575438f9))
-- `2026-09-16` **recall** - Add a 13-section system-design case study ([`b85f92b`](https://github.com/zaidwhy/recall/commit/b85f92b47bcfdfc5cf203b857b65b29ad215b20c))
 <!-- ACTIVITY:END -->
 
 ---
@@ -120,7 +120,7 @@ One memory kernel, built once, imported by everything downstream instead of each
 <!-- STATUS:START -->
 - **CivilizationOS** - `200 OK` - [https://civilization-os-murex.vercel.app](https://civilization-os-murex.vercel.app)
 
-*checked 2026-09-20 08:19 UTC, by the workflow that runs this page*
+*checked 2026-09-21 08:37 UTC, by the workflow that runs this page*
 <!-- STATUS:END -->
 
 ### [CivilizationOS](https://github.com/zaidwhy/CivilizationOS) - a society of agents, and a retrieval method that failed first
