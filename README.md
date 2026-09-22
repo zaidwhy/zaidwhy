@@ -51,14 +51,14 @@ If any of it does not reproduce, the claim above is wrong and I want to know.
 **Recent activity, pulled live from the repos below every night, not written by hand:**
 
 <!-- ACTIVITY:START -->
-- `2026-09-20` **dreamos-college-project** - Add Project Monitoring II report and deck for the finished system ([`5e2aa26`](https://github.com/zaidwhy/dreamos-college-project/commit/5e2aa265d3cf2d9535f40b12d025b5a06c576044))
-- `2026-09-20` **dreamos-college-project** - Fix short-query search: relative cutoff plus keyword boost, and never o... ([`99ca100`](https://github.com/zaidwhy/dreamos-college-project/commit/99ca10006cde0f180a37013b390ec7c7abb626d9))
-- `2026-09-20` **dreamos-college-project** - Add Project Monitoring II deck; update diagrams for all six modules; fi... ([`b885901`](https://github.com/zaidwhy/dreamos-college-project/commit/b88590164a8ccc9eb2fe12d8d618755395abf4a6))
-- `2026-09-20` **dreamos-college-project** - Update docs and demo for all six modules; add demo reset script ([`7a97532`](https://github.com/zaidwhy/dreamos-college-project/commit/7a97532405b71d405eae958e268c62edfada4248))
-- `2026-09-20` **dreamos-college-project** - Add chat follow-ups, knowledge graph view and workspace panel to the de... ([`cb0d60f`](https://github.com/zaidwhy/dreamos-college-project/commit/cb0d60fea952cc64adbc6ac95aeca5b2d6d1bbc5))
-- `2026-09-18` **CivilizationOS** - Log session close: TCMF paper faculty finalization + N19 audit triage ([`c533f03`](https://github.com/zaidwhy/CivilizationOS/commit/c533f03fc30060fef30522a6e24f484977976511))
-- `2026-09-18` **CivilizationOS** - N19: verify BM25's scaffolding-artifact claim by actually rerunning it ([`7e1ba2d`](https://github.com/zaidwhy/CivilizationOS/commit/7e1ba2d01a4a4cbcaff29d4d4422e6e00a5e72bd))
-- `2026-09-16` **CivilizationOS** - Session log + handoff: docs/tcmf.md correctness fix, M4 observability ([`33cbece`](https://github.com/zaidwhy/CivilizationOS/commit/33cbece293880f789dc765d4268f4d4df9d6101e))
+- `2026-09-21` **CivilizationOS** - Add deployment guide, security policy and changelog ([`5dabe8a`](https://github.com/zaidwhy/CivilizationOS/commit/5dabe8a631a093ed13a30de93d040a2b9db4fb61))
+- `2026-09-21` **autocto** - CLAUDE.md: it still said no CLI and 93 tests; match the shipped package ([`cceef28`](https://github.com/zaidwhy/autocto/commit/cceef28193e9478c62cd783f4d6626d4e9a2229c))
+- `2026-09-21` **autocto** - Add architecture note and roadmap ([`7188d33`](https://github.com/zaidwhy/autocto/commit/7188d33a762c8ccb1236c4c560e86ff16568864c))
+- `2026-09-21` **autocto** - CLAUDE.md: autocto is published as repo-autocto; verify via the PyPI JS... ([`1712ac8`](https://github.com/zaidwhy/autocto/commit/1712ac84a61a359594b293a429f4c994dd5c4570))
+- `2026-09-21` **coldread** - Add architecture, changelog, contributing, issue templates and an unatt... ([`fb57081`](https://github.com/zaidwhy/coldread/commit/fb57081c4844a3f06a601fdb1bfe149d3c6ed0e3))
+- `2026-09-21` **CivilizationOS** - Make the fig3 committed-vs-generated check tolerate last-digit float no... ([`e931864`](https://github.com/zaidwhy/CivilizationOS/commit/e931864823a4b283e8349afbaf3686408384b7b9))
+- `2026-09-21` **CivilizationOS** - Bump pytest to 9.0.3 (fixes PYSEC-2026-1845) and pytest-asyncio to 1.4.0 ([`d9bb12e`](https://github.com/zaidwhy/CivilizationOS/commit/d9bb12e2973e32296754ad30725692fe3713340b))
+- `2026-09-21` **personal-llm** - Point the self-review default log path at records/NIGHT_SHIFT.md ([`a19ad18`](https://github.com/zaidwhy/personal-llm/commit/a19ad18e49fb08b7a1c1c477c9e2fddf2a4f5247))
 <!-- ACTIVITY:END -->
 
 ---
@@ -120,7 +120,7 @@ One memory kernel, built once, imported by everything downstream instead of each
 <!-- STATUS:START -->
 - **CivilizationOS** - `200 OK` - [https://civilization-os-murex.vercel.app](https://civilization-os-murex.vercel.app)
 
-*checked 2026-09-21 08:37 UTC, by the workflow that runs this page*
+*checked 2026-09-22 08:16 UTC, by the workflow that runs this page*
 <!-- STATUS:END -->
 
 ### [CivilizationOS](https://github.com/zaidwhy/CivilizationOS) - a society of agents, and a retrieval method that failed first
