@@ -51,14 +51,14 @@ If any of it does not reproduce, the claim above is wrong and I want to know.
 **Recent activity, pulled live from the repos below every night, not written by hand:**
 
 <!-- ACTIVITY:START -->
+- `2026-09-23` **dreamos-college-project** - Fix stale context overriding a confident new topic in open/related inte... ([`8e5448e`](https://github.com/zaidwhy/dreamos-college-project/commit/8e5448e3e520f84caa91cdc0cb2443b20c8f17a8))
+- `2026-09-22` **coldread** - Third model family: mistral:7b sweep complete, 504/504, 0 unparsed ([`623caa7`](https://github.com/zaidwhy/coldread/commit/623caa7ccefbdce03819fda38252a537a236454e))
 - `2026-09-21` **CivilizationOS** - Add deployment guide, security policy and changelog ([`5dabe8a`](https://github.com/zaidwhy/CivilizationOS/commit/5dabe8a631a093ed13a30de93d040a2b9db4fb61))
 - `2026-09-21` **autocto** - CLAUDE.md: it still said no CLI and 93 tests; match the shipped package ([`cceef28`](https://github.com/zaidwhy/autocto/commit/cceef28193e9478c62cd783f4d6626d4e9a2229c))
 - `2026-09-21` **autocto** - Add architecture note and roadmap ([`7188d33`](https://github.com/zaidwhy/autocto/commit/7188d33a762c8ccb1236c4c560e86ff16568864c))
 - `2026-09-21` **autocto** - CLAUDE.md: autocto is published as repo-autocto; verify via the PyPI JS... ([`1712ac8`](https://github.com/zaidwhy/autocto/commit/1712ac84a61a359594b293a429f4c994dd5c4570))
 - `2026-09-21` **coldread** - Add architecture, changelog, contributing, issue templates and an unatt... ([`fb57081`](https://github.com/zaidwhy/coldread/commit/fb57081c4844a3f06a601fdb1bfe149d3c6ed0e3))
 - `2026-09-21` **CivilizationOS** - Make the fig3 committed-vs-generated check tolerate last-digit float no... ([`e931864`](https://github.com/zaidwhy/CivilizationOS/commit/e931864823a4b283e8349afbaf3686408384b7b9))
-- `2026-09-21` **CivilizationOS** - Bump pytest to 9.0.3 (fixes PYSEC-2026-1845) and pytest-asyncio to 1.4.0 ([`d9bb12e`](https://github.com/zaidwhy/CivilizationOS/commit/d9bb12e2973e32296754ad30725692fe3713340b))
-- `2026-09-21` **personal-llm** - Point the self-review default log path at records/NIGHT_SHIFT.md ([`a19ad18`](https://github.com/zaidwhy/personal-llm/commit/a19ad18e49fb08b7a1c1c477c9e2fddf2a4f5247))
 <!-- ACTIVITY:END -->
 
 ---
@@ -120,7 +120,7 @@ One memory kernel, built once, imported by everything downstream instead of each
 <!-- STATUS:START -->
 - **CivilizationOS** - `200 OK` - [https://civilization-os-murex.vercel.app](https://civilization-os-murex.vercel.app)
 
-*checked 2026-09-22 08:16 UTC, by the workflow that runs this page*
+*checked 2026-09-23 08:19 UTC, by the workflow that runs this page*
 <!-- STATUS:END -->
 
 ### [CivilizationOS](https://github.com/zaidwhy/CivilizationOS) - a society of agents, and a retrieval method that failed first
