@@ -51,14 +51,14 @@ If any of it does not reproduce, the claim above is wrong and I want to know.
 **Recent activity, pulled live from the repos below every night, not written by hand:**
 
 <!-- ACTIVITY:START -->
+- `2026-09-23` **agent-factory** - Refinement pass: replace em dashes in docs, comments and strings ([`17a00aa`](https://github.com/zaidwhy/agent-factory/commit/17a00aa14fa4eec0b9229731de407a8036849538))
+- `2026-09-23` **resume-job-fit-ai** - Refinement pass: replace em dashes in docs, comments and strings ([`23dcd7b`](https://github.com/zaidwhy/resume-job-fit-ai/commit/23dcd7bf36f7d960ae3af3f731037586598b5891))
+- `2026-09-23` **recall** - Refinement pass: replace em dashes in docs, comments and strings ([`8452331`](https://github.com/zaidwhy/recall/commit/84523311da9dfe0aa00c822f71defd4443dec4a2))
+- `2026-09-23` **CivilizationOS** - Refinement pass: replace em dashes in docs, comments and strings ([`628313a`](https://github.com/zaidwhy/CivilizationOS/commit/628313abcb430be1fd2c2e9e4a0f4533593e38bd))
+- `2026-09-23` **CivilizationOS** - N20 queue entry: soften the normalization-mechanism claim to an interpr... ([`5c902d1`](https://github.com/zaidwhy/CivilizationOS/commit/5c902d1835c188912153d80b51abb3b897764f47))
+- `2026-09-23` **CivilizationOS** - N20: does normalizing the episodic score before multiplying rescue the... ([`d2a1e8e`](https://github.com/zaidwhy/CivilizationOS/commit/d2a1e8e9cdcb054b245fe831c8f0ee2c91bef760))
 - `2026-09-23` **dreamos-college-project** - Fix stale context overriding a confident new topic in open/related inte... ([`8e5448e`](https://github.com/zaidwhy/dreamos-college-project/commit/8e5448e3e520f84caa91cdc0cb2443b20c8f17a8))
 - `2026-09-22` **coldread** - Third model family: mistral:7b sweep complete, 504/504, 0 unparsed ([`623caa7`](https://github.com/zaidwhy/coldread/commit/623caa7ccefbdce03819fda38252a537a236454e))
-- `2026-09-21` **CivilizationOS** - Add deployment guide, security policy and changelog ([`5dabe8a`](https://github.com/zaidwhy/CivilizationOS/commit/5dabe8a631a093ed13a30de93d040a2b9db4fb61))
-- `2026-09-21` **autocto** - CLAUDE.md: it still said no CLI and 93 tests; match the shipped package ([`cceef28`](https://github.com/zaidwhy/autocto/commit/cceef28193e9478c62cd783f4d6626d4e9a2229c))
-- `2026-09-21` **autocto** - Add architecture note and roadmap ([`7188d33`](https://github.com/zaidwhy/autocto/commit/7188d33a762c8ccb1236c4c560e86ff16568864c))
-- `2026-09-21` **autocto** - CLAUDE.md: autocto is published as repo-autocto; verify via the PyPI JS... ([`1712ac8`](https://github.com/zaidwhy/autocto/commit/1712ac84a61a359594b293a429f4c994dd5c4570))
-- `2026-09-21` **coldread** - Add architecture, changelog, contributing, issue templates and an unatt... ([`fb57081`](https://github.com/zaidwhy/coldread/commit/fb57081c4844a3f06a601fdb1bfe149d3c6ed0e3))
-- `2026-09-21` **CivilizationOS** - Make the fig3 committed-vs-generated check tolerate last-digit float no... ([`e931864`](https://github.com/zaidwhy/CivilizationOS/commit/e931864823a4b283e8349afbaf3686408384b7b9))
 <!-- ACTIVITY:END -->
 
 ---
@@ -120,7 +120,7 @@ One memory kernel, built once, imported by everything downstream instead of each
 <!-- STATUS:START -->
 - **CivilizationOS** - `200 OK` - [https://civilization-os-murex.vercel.app](https://civilization-os-murex.vercel.app)
 
-*checked 2026-09-23 08:19 UTC, by the workflow that runs this page*
+*checked 2026-09-24 08:10 UTC, by the workflow that runs this page*
 <!-- STATUS:END -->
 
 ### [CivilizationOS](https://github.com/zaidwhy/CivilizationOS) - a society of agents, and a retrieval method that failed first
