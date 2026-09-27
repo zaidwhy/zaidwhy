@@ -81,15 +81,17 @@ Two studies. Each one carries a negative control, because a measurement without 
 
 <img src="https://raw.githubusercontent.com/zaidwhy/zaidwhy/main/assets/coldread-curves.svg" alt="Gender inference accuracy against words shown, for two models. llama3.1:8b clears chance at 50 words, qwen2.5:7b at 800." width="100%">
 
+<sub>Plate 02 plots the first two readers. The third, mistral:7b, needs about 1600 words; all three are in <a href="https://github.com/zaidwhy/coldread/blob/master/RESULT.md">RESULT.md</a>.</sub>
+
 How many words can you write before a machine knows who you are? I went looking for that number and found that the question is malformed - and why it is malformed is the finding.
 
-72 authors from a labelled blog corpus, shown to local models in growing slices, forced to commit to gender, age band, and star sign at every step. **Star sign is the control**: it is labelled in the data and is not inferable from prose. It never left its floor in either model, which is the only reason to trust anything else on the chart.
+72 authors from a labelled blog corpus, shown to local models in growing slices, forced to commit to gender, age band, and star sign at every step. **Star sign is the control**: it is labelled in the data and is not inferable from prose. It never cleared its floor in any of the three models, which is the only reason to trust anything else on the chart.
 
-Same authors, same words, same prompt, two readers. One needs 800 words to beat a coin flip on gender. The other needs 50. **A sixteen-fold gap on identical text**, which means no statement of the form "you are anonymous for N words" means anything at all without naming the model doing the reading.
+Same authors, same words, same prompt, three readers of the same size. One needs 50 words to beat a coin flip on gender, another 800, the third 1600. **A thirty-two-fold spread on identical text**, which means no statement of the form "you are anonymous for N words" means anything at all without naming the model doing the reading.
 
 Corpus memorisation was tested directly rather than waved away, and ruled out. One finding from the first model - that short samples produce *confidently wrong* guesses rather than uncertainty - did **not** replicate on the second, and the write-up says so in those words.
 
-`n=2 model families` · `negative control held` · `contamination ruled out` · `Wilson 95% intervals` · [read the result](https://github.com/zaidwhy/coldread/blob/master/RESULT.md)
+`n=3 model families` · `negative control held` · `contamination ruled out` · `Wilson 95% intervals` · [read the result](https://github.com/zaidwhy/coldread/blob/master/RESULT.md)
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22309660.svg)](https://doi.org/10.5281/zenodo.22309660) archived, citable, timestamped
 
@@ -181,7 +183,7 @@ Shipped 3 full projects end to end in test runs. On [Receipts.dev](https://githu
 - **[second-brain](https://github.com/zaidwhy/second-brain)** - vault ingestion, auto-linking, offline knowledge-graph viewer. 110 tests.
 - **[github-pr-agent](https://github.com/zaidwhy/github-pr-agent)** - repo analysis, issue triage, PR planning. 56 tests.
 - **[DreamOS](https://github.com/zaidwhy/dreamos-college-project)** - semantic file-management OS shell.
-- **[resume-job-fit-ai](https://github.com/zaidwhy/resume-job-fit-ai)** - resume-to-job fit scoring with truthful rewrites. 29 unit tests, CI on every push, Pydantic-validated structured output.
+- **[resume-job-fit-ai](https://github.com/zaidwhy/resume-job-fit-ai)** - resume-to-job fit scoring with truthful rewrites. 42 unit tests, CI on every push, Pydantic-validated structured output.
 
 </details>
 
