@@ -21,7 +21,7 @@ Open to **AI engineer / applied AI internship** roles.
 | 27 pull requests merged into a **live production product** I did not build | [case study](case-studies/zabira-academy.md) |
 | 2 original research findings, each with a negative control and a second-model replication, **archived with a permanent DOI** | [10.5281/zenodo.22309660](https://doi.org/10.5281/zenodo.22309660) · [10.5281/zenodo.22309658](https://doi.org/10.5281/zenodo.22309658) |
 | A retrieval method benchmarked against 6 baselines - including the version of it that **failed** | [TCMF write-up](https://github.com/zaidwhy/CivilizationOS/blob/main/docs/tcmf.md) · [case study](case-studies/civilizationos.md) |
-| 334 tests across the ecosystem, every one offline and mocked - no API key runs any of them | `pytest --collect-only` on [personal-llm](https://github.com/zaidwhy/personal-llm) · [second-brain](https://github.com/zaidwhy/second-brain) · [github-pr-agent](https://github.com/zaidwhy/github-pr-agent) |
+| 354 tests across the ecosystem, every one offline and mocked - no API key runs any of them | `pytest --collect-only` on [personal-llm](https://github.com/zaidwhy/personal-llm) · [second-brain](https://github.com/zaidwhy/second-brain) · [github-pr-agent](https://github.com/zaidwhy/github-pr-agent) |
 | Every commit on this account is cryptographically signed, and both findings carry an ORCID-bound DOI | [PROVENANCE.md](PROVENANCE.md) · [ORCID 0009-0003-4313-1510](https://orcid.org/0009-0003-4313-1510) |
 
 <details>
@@ -115,7 +115,7 @@ A second finding fell out of the demo. Asked whether another great war was comin
 
 One memory kernel, built once, imported by everything downstream instead of each app rebuilding retrieval:
 
-<img src="https://raw.githubusercontent.com/zaidwhy/zaidwhy/main/assets/kernel-map.svg" alt="The personal-llm memory and RAG kernel, with 168 offline tests, imported by second-brain (110 tests), github-pr-agent (56 tests) and DreamOS." width="100%">
+<img src="https://raw.githubusercontent.com/zaidwhy/zaidwhy/main/assets/kernel-map.svg" alt="The personal-llm memory and RAG kernel, with 188 offline tests, imported by second-brain (110 tests), github-pr-agent (56 tests) and DreamOS." width="100%">
 
 <!-- STATUS:START -->
 - **CivilizationOS** - `200 OK` - [https://civilization-os-murex.vercel.app](https://civilization-os-murex.vercel.app)
@@ -149,6 +149,21 @@ Quota guard:  120s floor between vision calls, on-screen daily budget counter
 
 `Python` · `FastAPI` · `React` · `ChromaDB` · `ONNX` · `WebSocket`
 
+### [autocto](https://github.com/zaidwhy/autocto) - where the risk in a repo lives, from its git history alone
+
+*The file to review first is the one that changes most and branches most.*
+
+Five analyzers, no LLM and zero runtime dependencies: bug hotspots (churn x complexity), duplicated logic (token-shingle Jaccard), maintenance cost (size x churn x (1 + fan-in)), architectural debt (Tarjan cycles, god files, layering violations), and a migration planner that orders proposed changes with a topological sort. I/O lives in one `analyze_repo()` per analyzer, with the `git log` call behind an injectable seam; everything underneath is a pure function. 107 tests.
+
+```
+$ autocto hotspots ../recall --limit 3
+frontend/src/App.jsx   churn 41 x complexity 129 = 5289
+backend/main.py        churn 41 x complexity  89 = 3649
+backend/memory.py      churn 11 x complexity  49 =  539
+```
+
+`Python` · `pipx install repo-autocto` · [PyPI](https://pypi.org/project/repo-autocto/)
+
 ### [Agent Factory](https://github.com/zaidwhy/agent-factory) - a build pipeline with frozen contracts
 
 *The contract freezes before the code does, so two agents can build in parallel without seeing each other's work.*
@@ -162,7 +177,7 @@ Shipped 3 full projects end to end in test runs. On [Receipts.dev](https://githu
 
 <br>
 
-- **[personal-llm](https://github.com/zaidwhy/personal-llm)** - local-first memory + RAG kernel. 168 offline tests, fully mocked, zero-key CI. Plan-act-reflect agent loop, 4 permission-tiered tools including an SSRF-guarded fetch, full audit log.
+- **[personal-llm](https://github.com/zaidwhy/personal-llm)** - local-first memory + RAG kernel. 188 offline tests, fully mocked, zero-key CI. Plan-act-reflect agent loop, 4 permission-tiered tools including an SSRF-guarded fetch, full audit log.
 - **[second-brain](https://github.com/zaidwhy/second-brain)** - vault ingestion, auto-linking, offline knowledge-graph viewer. 110 tests.
 - **[github-pr-agent](https://github.com/zaidwhy/github-pr-agent)** - repo analysis, issue triage, PR planning. 56 tests.
 - **[DreamOS](https://github.com/zaidwhy/dreamos-college-project)** - semantic file-management OS shell.
@@ -194,7 +209,7 @@ A multi-agent society simulation, live at [civilization-os-murex.vercel.app](htt
 
 ### [Personal LLM](case-studies/personal-llm.md) - one kernel, three apps, and an eval suite that argued with itself
 
-A local-first memory and RAG engine imported by three separate apps instead of rebuilt per app. Building its offline eval suite surfaced three real issues on the first run - two bugs in the eval harness and one artifact of a synthetic test double - each root-caused separately before any threshold was touched. 168 kernel tests, 334 across the fleet, 7 eval suites, all offline.
+A local-first memory and RAG engine imported by three separate apps instead of rebuilt per app. Building its offline eval suite surfaced three real issues on the first run - two bugs in the eval harness and one artifact of a synthetic test double - each root-caused separately before any threshold was touched. 188 kernel tests, 354 across the fleet, 7 eval suites, all offline.
 
 ---
 
