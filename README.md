@@ -21,7 +21,7 @@ Open to **AI engineer / applied AI internship** roles.
 | 27 pull requests merged into a **live production product** I did not build | [case study](case-studies/zabira-academy.md) |
 | 2 original research findings, each with a negative control and a second-model replication, **archived with a permanent DOI** | [10.5281/zenodo.22309660](https://doi.org/10.5281/zenodo.22309660) · [10.5281/zenodo.22309658](https://doi.org/10.5281/zenodo.22309658) |
 | A retrieval method benchmarked against 6 baselines - including the version of it that **failed** | [TCMF write-up](https://github.com/zaidwhy/CivilizationOS/blob/main/docs/tcmf.md) · [case study](case-studies/civilizationos.md) |
-| 354 tests across the ecosystem, every one offline and mocked - no API key runs any of them | `pytest --collect-only` on [personal-llm](https://github.com/zaidwhy/personal-llm) · [second-brain](https://github.com/zaidwhy/second-brain) · [github-pr-agent](https://github.com/zaidwhy/github-pr-agent) |
+| 356 tests across the ecosystem, every one offline and mocked - no API key runs any of them | `pytest --collect-only` on [personal-llm](https://github.com/zaidwhy/personal-llm) · [second-brain](https://github.com/zaidwhy/second-brain) · [github-pr-agent](https://github.com/zaidwhy/github-pr-agent) |
 | Every commit on this account is cryptographically signed, and both findings carry an ORCID-bound DOI | [PROVENANCE.md](PROVENANCE.md) · [ORCID 0009-0003-4313-1510](https://orcid.org/0009-0003-4313-1510) |
 
 <details>
@@ -117,7 +117,7 @@ A second finding fell out of the demo. Asked whether another great war was comin
 
 One memory kernel, built once, imported by everything downstream instead of each app rebuilding retrieval:
 
-<img src="https://raw.githubusercontent.com/zaidwhy/zaidwhy/main/assets/kernel-map.svg" alt="The personal-llm memory and RAG kernel, with 188 offline tests, imported by second-brain (110 tests), github-pr-agent (56 tests) and DreamOS." width="100%">
+<img src="https://raw.githubusercontent.com/zaidwhy/zaidwhy/main/assets/kernel-map.svg" alt="The personal-llm memory and RAG kernel, with 188 offline tests, imported by second-brain (110 tests), github-pr-agent (58 tests) and DreamOS." width="100%">
 
 <!-- STATUS:START -->
 - **CivilizationOS** - `200 OK` - [https://civilization-os-murex.vercel.app](https://civilization-os-murex.vercel.app)
@@ -181,7 +181,7 @@ Shipped 3 full projects end to end in test runs. On [Receipts.dev](https://githu
 
 - **[personal-llm](https://github.com/zaidwhy/personal-llm)** - local-first memory + RAG kernel. 188 offline tests, fully mocked, zero-key CI. Plan-act-reflect agent loop, 4 permission-tiered tools including an SSRF-guarded fetch, full audit log.
 - **[second-brain](https://github.com/zaidwhy/second-brain)** - vault ingestion, auto-linking, offline knowledge-graph viewer. 110 tests.
-- **[github-pr-agent](https://github.com/zaidwhy/github-pr-agent)** - repo analysis, issue triage, PR planning. 56 tests.
+- **[github-pr-agent](https://github.com/zaidwhy/github-pr-agent)** - repo analysis, issue triage, PR planning. 58 tests.
 - **[DreamOS](https://github.com/zaidwhy/dreamos-college-project)** - semantic file-management OS shell.
 - **[resume-job-fit-ai](https://github.com/zaidwhy/resume-job-fit-ai)** - resume-to-job fit scoring with truthful rewrites. 42 unit tests, CI on every push, Pydantic-validated structured output.
 
@@ -211,7 +211,7 @@ A multi-agent society simulation, live at [civilization-os-murex.vercel.app](htt
 
 ### [Personal LLM](case-studies/personal-llm.md) - one kernel, three apps, and an eval suite that argued with itself
 
-A local-first memory and RAG engine imported by three separate apps instead of rebuilt per app. Building its offline eval suite surfaced three real issues on the first run - two bugs in the eval harness and one artifact of a synthetic test double - each root-caused separately before any threshold was touched. 188 kernel tests, 354 across the fleet, 7 eval suites, all offline.
+A local-first memory and RAG engine imported by three separate apps instead of rebuilt per app. Building its offline eval suite surfaced three real issues on the first run - two bugs in the eval harness and one artifact of a synthetic test double - each root-caused separately before any threshold was touched. 188 kernel tests, 356 across the fleet, 7 eval suites, all offline.
 
 ---
 

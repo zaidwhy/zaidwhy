@@ -2,7 +2,7 @@
 
 **A local-first memory and retrieval-augmented-generation engine, built once and
 imported by three separate applications instead of being rebuilt for each. 188 tests on
-the kernel itself, 354 across the three apps that depend on it, and a seven-suite offline
+the kernel itself, 356 across the three apps that depend on it, and a seven-suite offline
 eval harness whose first honest result was that its own test fixture was wrong - not the
 kernel.**
 
@@ -87,7 +87,7 @@ green result mean something.
 
 | | |
 |---|---|
-| Kernel tests | 188 (354 across the three apps that import it) |
+| Kernel tests | 188 (356 across the three apps that import it) |
 | Eval suites | 7, all passing, fully deterministic |
 | Correctness / retrieval / refusal | 100% / 100% recall@1 & @3 / 100% |
 | Hallucination violations | 0 |
