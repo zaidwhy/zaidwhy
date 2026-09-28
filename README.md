@@ -51,14 +51,14 @@ If any of it does not reproduce, the claim above is wrong and I want to know.
 **Recent activity, pulled live from the repos below every night, not written by hand:**
 
 <!-- ACTIVITY:START -->
-- `2026-09-27` **coldread** - v1.1.0: write up the third model family (mistral:7b) ([`0ed8f54`](https://github.com/zaidwhy/coldread/commit/0ed8f54b9f3214b56ab24ecf4a4d4f88ac709d1e))
-- `2026-09-27` **CivilizationOS** - tcmfbench N23 geometry and PPR mechanism; correct superseded claims in... ([`b221c1d`](https://github.com/zaidwhy/CivilizationOS/commit/b221c1d2f4b460c1a48a60734773cdb64b82bc30))
-- `2026-09-27` **aura-private-ai-memory** - README: archive status note ([`9acf8cc`](https://github.com/zaidwhy/aura-private-ai-memory/commit/9acf8cca5ad2b0c93ec97ecac24b3c1076c046c5))
-- `2026-09-27` **receipts-dev** - README: archive status note ([`ef9f903`](https://github.com/zaidwhy/receipts-dev/commit/ef9f9036a690e61c677ac68148777185ee8a4265))
-- `2026-09-27` **github-pr-agent** - Rename the package autocto -> github_pr_agent (CLI github-pr-agent) ([`8764ce5`](https://github.com/zaidwhy/github-pr-agent/commit/8764ce592ee55ebb9942adb809b95f475f35474b))
-- `2026-09-27` **CivilizationOS** - gitignore: .claude/worktrees/ harness scratch (from the never-merged ch... ([`73ad435`](https://github.com/zaidwhy/CivilizationOS/commit/73ad435e87c87d81344d6b2a74a7cabd09784611))
-- `2026-09-27` **coldread** - HANDOFF/CHANGELOG: the mistral:7b run finished on 2026-09-22; record th... ([`a8497a3`](https://github.com/zaidwhy/coldread/commit/a8497a3e40bf05e6129a46d894a338a38cce4d89))
-- `2026-09-27` **dreamos-college-project** - gitignore: Office owner files (~$*) that appear while the Monitoring de... ([`62eb6e8`](https://github.com/zaidwhy/dreamos-college-project/commit/62eb6e8bd5245121084fa7d4093d44fa7dd88af0))
+- `2026-09-28` **recall** - Guard test: chroma stays embedded (PersistentClient, one fixed collecti... ([`e8d36ac`](https://github.com/zaidwhy/recall/commit/e8d36aca2be44a6cfc1a2324f2214a6a06469e38))
+- `2026-09-28` **dreamos-college-project** - docs: handoff for the pypdf security bump ([`9e7d155`](https://github.com/zaidwhy/dreamos-college-project/commit/9e7d1555e641dcff8abbf1d0187f6c836268e1be))
+- `2026-09-28` **recall** - docs: master log and handoff for the frontend advisory fixes ([`b8c3a0e`](https://github.com/zaidwhy/recall/commit/b8c3a0eaf55566891fffaf5568c2c4bfd01d11f3))
+- `2026-09-28` **autocto** - docs: changelog and handoff for the ruff CI gate ([`6208b08`](https://github.com/zaidwhy/autocto/commit/6208b0834f01d7d8c10d1aa5045d4c9ecbdabf64))
+- `2026-09-28` **CivilizationOS** - docs: 2026-09-28 security/keep-warm build log entry and handoff ([`2c90e84`](https://github.com/zaidwhy/CivilizationOS/commit/2c90e84d891bb3f13aa5882d86ed2c85ed59edee))
+- `2026-09-28` **CivilizationOS** - tcmfbench N30: seven causal-graph shapes and the leaked-pair phase map;... ([`13ac2a7`](https://github.com/zaidwhy/CivilizationOS/commit/13ac2a777a51505657990343cd77d162e3eb98cc))
+- `2026-09-28` **CivilizationOS** - tcmfbench N29: cluttered causal graphs; mirror case in the theory; 191... ([`ff55018`](https://github.com/zaidwhy/CivilizationOS/commit/ff5501858888589c31838dac20988d707d95c41c))
+- `2026-09-28` **CivilizationOS** - fix(ci): pytest-asyncio 1.4.0 in the CI freeze; 0.25.0 requires pytest<9 ([`b8b99f0`](https://github.com/zaidwhy/CivilizationOS/commit/b8b99f0b1ab4181a4be7df484cbbef41bea5660c))
 <!-- ACTIVITY:END -->
 
 ---
@@ -122,7 +122,7 @@ One memory kernel, built once, imported by everything downstream instead of each
 <!-- STATUS:START -->
 - **CivilizationOS** - `200 OK` - [https://civilization-os-murex.vercel.app](https://civilization-os-murex.vercel.app)
 
-*checked 2026-09-27 08:58 UTC, by the workflow that runs this page*
+*checked 2026-09-28 09:25 UTC, by the workflow that runs this page*
 <!-- STATUS:END -->
 
 ### [CivilizationOS](https://github.com/zaidwhy/CivilizationOS) - a society of agents, and a retrieval method that failed first
