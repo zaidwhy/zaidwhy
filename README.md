@@ -51,14 +51,14 @@ If any of it does not reproduce, the claim above is wrong and I want to know.
 **Recent activity, pulled live from the repos below every night, not written by hand:**
 
 <!-- ACTIVITY:START -->
+- `2026-09-29` **CivilizationOS** - Log TCMF paid runs and LLM-built graph experiments; handoff ([`694659f`](https://github.com/zaidwhy/CivilizationOS/commit/694659f991a767706b993d6e7270f595c90bc297))
+- `2026-09-29` **CivilizationOS** - tcmfbench N31: all four graph builders (Qwen-3B, Mistral-7B, Llama-70B,... ([`bbc8f81`](https://github.com/zaidwhy/CivilizationOS/commit/bbc8f8128bff73a403deaf0b4a61e393f653fd5b))
+- `2026-09-28` **CivilizationOS** - tcmfbench N31: Qwen2.5-3B graph results and N31b rescore ([`16b02ee`](https://github.com/zaidwhy/CivilizationOS/commit/16b02ee929e98cc27515967f620b930334b344ea))
+- `2026-09-28` **CivilizationOS** - tcmfbench: tests and docs for LLM-built graphs and stronger judges; 204... ([`2f00a7f`](https://github.com/zaidwhy/CivilizationOS/commit/2f00a7fc49befd774a8a6a69bdcb51c05c9d0cdf))
+- `2026-09-28` **CivilizationOS** - tcmfbench N31/N32 paid runs: LLM-built graphs and stronger decision jud... ([`a08cceb`](https://github.com/zaidwhy/CivilizationOS/commit/a08cceb73831ee85b240683b51ae0efb1d6fac5f))
+- `2026-09-28` **coldread** - sweep.py --provider openrouter: hosted readers (e.g. 70B) with the same... ([`22c609b`](https://github.com/zaidwhy/coldread/commit/22c609b8d1dacf03f7a7e7bcc37fbc3ee551c56c))
 - `2026-09-28` **recall** - Guard test: chroma stays embedded (PersistentClient, one fixed collecti... ([`e8d36ac`](https://github.com/zaidwhy/recall/commit/e8d36aca2be44a6cfc1a2324f2214a6a06469e38))
 - `2026-09-28` **dreamos-college-project** - docs: handoff for the pypdf security bump ([`9e7d155`](https://github.com/zaidwhy/dreamos-college-project/commit/9e7d1555e641dcff8abbf1d0187f6c836268e1be))
-- `2026-09-28` **recall** - docs: master log and handoff for the frontend advisory fixes ([`b8c3a0e`](https://github.com/zaidwhy/recall/commit/b8c3a0eaf55566891fffaf5568c2c4bfd01d11f3))
-- `2026-09-28` **autocto** - docs: changelog and handoff for the ruff CI gate ([`6208b08`](https://github.com/zaidwhy/autocto/commit/6208b0834f01d7d8c10d1aa5045d4c9ecbdabf64))
-- `2026-09-28` **CivilizationOS** - docs: 2026-09-28 security/keep-warm build log entry and handoff ([`2c90e84`](https://github.com/zaidwhy/CivilizationOS/commit/2c90e84d891bb3f13aa5882d86ed2c85ed59edee))
-- `2026-09-28` **CivilizationOS** - tcmfbench N30: seven causal-graph shapes and the leaked-pair phase map;... ([`13ac2a7`](https://github.com/zaidwhy/CivilizationOS/commit/13ac2a777a51505657990343cd77d162e3eb98cc))
-- `2026-09-28` **CivilizationOS** - tcmfbench N29: cluttered causal graphs; mirror case in the theory; 191... ([`ff55018`](https://github.com/zaidwhy/CivilizationOS/commit/ff5501858888589c31838dac20988d707d95c41c))
-- `2026-09-28` **CivilizationOS** - fix(ci): pytest-asyncio 1.4.0 in the CI freeze; 0.25.0 requires pytest<9 ([`b8b99f0`](https://github.com/zaidwhy/CivilizationOS/commit/b8b99f0b1ab4181a4be7df484cbbef41bea5660c))
 <!-- ACTIVITY:END -->
 
 ---
@@ -122,7 +122,7 @@ One memory kernel, built once, imported by everything downstream instead of each
 <!-- STATUS:START -->
 - **CivilizationOS** - `200 OK` - [https://civilization-os-murex.vercel.app](https://civilization-os-murex.vercel.app)
 
-*checked 2026-09-28 09:25 UTC, by the workflow that runs this page*
+*checked 2026-09-29 09:30 UTC, by the workflow that runs this page*
 <!-- STATUS:END -->
 
 ### [CivilizationOS](https://github.com/zaidwhy/CivilizationOS) - a society of agents, and a retrieval method that failed first
