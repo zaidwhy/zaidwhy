@@ -51,11 +51,11 @@ If any of it does not reproduce, the claim above is wrong and I want to know.
 **Recent activity, pulled live from the repos below every night, not written by hand:**
 
 <!-- ACTIVITY:START -->
+- `2026-09-29` **CivilizationOS** - Handoff: TCMF remaining steps and OpenReview status ([`254cddc`](https://github.com/zaidwhy/CivilizationOS/commit/254cddc2160bdfdbc1801c026f8002e51a60bd22))
+- `2026-09-29` **CivilizationOS** - Log the long SRW version and N33 ([`69549d9`](https://github.com/zaidwhy/CivilizationOS/commit/69549d901a71c077c4f225f7a31bf6e993a7c696))
+- `2026-09-29` **CivilizationOS** - tcmfbench N33: decisions from LLM-built graphs; 206 tests ([`cfe1413`](https://github.com/zaidwhy/CivilizationOS/commit/cfe1413ba6ff78609ce34a5e87491616e968819e))
 - `2026-09-29` **CivilizationOS** - Log TCMF paid runs and LLM-built graph experiments; handoff ([`694659f`](https://github.com/zaidwhy/CivilizationOS/commit/694659f991a767706b993d6e7270f595c90bc297))
 - `2026-09-29` **CivilizationOS** - tcmfbench N31: all four graph builders (Qwen-3B, Mistral-7B, Llama-70B,... ([`bbc8f81`](https://github.com/zaidwhy/CivilizationOS/commit/bbc8f8128bff73a403deaf0b4a61e393f653fd5b))
-- `2026-09-28` **CivilizationOS** - tcmfbench N31: Qwen2.5-3B graph results and N31b rescore ([`16b02ee`](https://github.com/zaidwhy/CivilizationOS/commit/16b02ee929e98cc27515967f620b930334b344ea))
-- `2026-09-28` **CivilizationOS** - tcmfbench: tests and docs for LLM-built graphs and stronger judges; 204... ([`2f00a7f`](https://github.com/zaidwhy/CivilizationOS/commit/2f00a7fc49befd774a8a6a69bdcb51c05c9d0cdf))
-- `2026-09-28` **CivilizationOS** - tcmfbench N31/N32 paid runs: LLM-built graphs and stronger decision jud... ([`a08cceb`](https://github.com/zaidwhy/CivilizationOS/commit/a08cceb73831ee85b240683b51ae0efb1d6fac5f))
 - `2026-09-28` **coldread** - sweep.py --provider openrouter: hosted readers (e.g. 70B) with the same... ([`22c609b`](https://github.com/zaidwhy/coldread/commit/22c609b8d1dacf03f7a7e7bcc37fbc3ee551c56c))
 - `2026-09-28` **recall** - Guard test: chroma stays embedded (PersistentClient, one fixed collecti... ([`e8d36ac`](https://github.com/zaidwhy/recall/commit/e8d36aca2be44a6cfc1a2324f2214a6a06469e38))
 - `2026-09-28` **dreamos-college-project** - docs: handoff for the pypdf security bump ([`9e7d155`](https://github.com/zaidwhy/dreamos-college-project/commit/9e7d1555e641dcff8abbf1d0187f6c836268e1be))
@@ -122,7 +122,7 @@ One memory kernel, built once, imported by everything downstream instead of each
 <!-- STATUS:START -->
 - **CivilizationOS** - `200 OK` - [https://civilization-os-murex.vercel.app](https://civilization-os-murex.vercel.app)
 
-*checked 2026-09-29 09:30 UTC, by the workflow that runs this page*
+*checked 2026-09-30 09:21 UTC, by the workflow that runs this page*
 <!-- STATUS:END -->
 
 ### [CivilizationOS](https://github.com/zaidwhy/CivilizationOS) - a society of agents, and a retrieval method that failed first
