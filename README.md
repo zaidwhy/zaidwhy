@@ -51,6 +51,7 @@ If any of it does not reproduce, the claim above is wrong and I want to know.
 **Recent activity, pulled live from the repos below every night, not written by hand:**
 
 <!-- ACTIVITY:START -->
+- `2026-10-04` **coldread** - Step 3 result: industry is inferable from 25 to 200 words, control clea... ([`307df25`](https://github.com/zaidwhy/coldread/commit/307df25865a65e0126cb9c437d94953d1edcfdfb))
 - `2026-10-04` **autocto** - Handoff 2026-10-04: import resolution and plan command ([`1d393d6`](https://github.com/zaidwhy/autocto/commit/1d393d61a9d4ab8c7ac77cf65b54c993208d64dd))
 - `2026-10-04` **coldread** - Step 3: pre-register industry as a fourth attribute, add the industry t... ([`43a7846`](https://github.com/zaidwhy/coldread/commit/43a784626f47cd9ded7c8cb0494a568a14d6d90b))
 - `2026-10-04` **resume-job-fit-ai** - Split app.py: result panels to ui_sections.py, download builders to exp... ([`415852c`](https://github.com/zaidwhy/resume-job-fit-ai/commit/415852c253c7e419f765e6c868b50c0b54689314))
@@ -58,7 +59,6 @@ If any of it does not reproduce, the claim above is wrong and I want to know.
 - `2026-10-02` **CivilizationOS** - Handoff addendum: mentorship draft submitted; Machine Dialect SRW fit a... ([`45c55e1`](https://github.com/zaidwhy/CivilizationOS/commit/45c55e1164b44373bf7d9f764d2a1b8d36ba7a74))
 - `2026-10-02` **CivilizationOS** - Handoff 2026-10-02: TCMF cross-verified, N34 done, ready to submit ([`eaf5be3`](https://github.com/zaidwhy/CivilizationOS/commit/eaf5be365d68747b4b9f4bdafad83118f0484beb))
 - `2026-10-02` **CivilizationOS** - TCMF N34: decision tests at n=120 with Holm correction ([`b8918d2`](https://github.com/zaidwhy/CivilizationOS/commit/b8918d24cecf42cbc567200df87b855ab2d3d4a1))
-- `2026-10-01` **CivilizationOS** - TCMF: lambda=6 evidence for the clean-shape parity claim; FINDINGS corr... ([`7964b1e`](https://github.com/zaidwhy/CivilizationOS/commit/7964b1ebcfb35fd4bc2e1b60dd81eeb23b0caabd))
 <!-- ACTIVITY:END -->
 
 ---
@@ -122,7 +122,7 @@ One memory kernel, built once, imported by everything downstream instead of each
 <!-- STATUS:START -->
 - **CivilizationOS** - `200 OK` - [https://civilization-os-murex.vercel.app](https://civilization-os-murex.vercel.app)
 
-*checked 2026-10-04 09:23 UTC, by the workflow that runs this page*
+*checked 2026-10-05 10:03 UTC, by the workflow that runs this page*
 <!-- STATUS:END -->
 
 ### [CivilizationOS](https://github.com/zaidwhy/CivilizationOS) - a society of agents, and a retrieval method that failed first
