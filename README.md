@@ -286,4 +286,4 @@ Full signed statement: **[PROVENANCE.md](PROVENANCE.md)** · verify with `gpg --
 
 ---
 
-**[Portfolio](https://zaid-universe.vercel.app)** · **[LinkedIn](https://linkedin.com/in/zaid-ali-syed)** · Open to AI engineer internships and applied AI roles.
+**[Portfolio](https://www.solstine.dev)** · **[LinkedIn](https://linkedin.com/in/zaid-ali-syed)** · Open to AI engineer internships and applied AI roles.
