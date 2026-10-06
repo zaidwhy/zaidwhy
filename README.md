@@ -19,6 +19,7 @@ Open to **AI engineer / applied AI internship** roles.
 |---|---|
 | 3 pull requests merged into upstream OSS totalling **13.4k stars** | [tenacity #668](https://github.com/jd/tenacity/pull/668) · [returns #2480](https://github.com/dry-python/returns/pull/2480) · [gqlalchemy #390](https://github.com/memgraph/gqlalchemy/pull/390) |
 | 27 pull requests merged into a **live production product** I did not build | [case study](case-studies/zabira-academy.md) |
+| A customer-support analytics dashboard built from scratch for a WhatsApp support team (Python, FastAPI, pandas): all 10 aggregate totals match the support platform's own report, 146 tests, zero accessibility violations | no link: private repository, company work |
 | 2 original research findings, each with a negative control and a second-model replication, **archived with a permanent DOI** | [10.5281/zenodo.22309660](https://doi.org/10.5281/zenodo.22309660) · [10.5281/zenodo.22309658](https://doi.org/10.5281/zenodo.22309658) |
 | A retrieval method benchmarked against 6 baselines - including the version of it that **failed** | [TCMF write-up](https://github.com/zaidwhy/CivilizationOS/blob/main/docs/tcmf.md) · [case study](case-studies/civilizationos.md) |
 | 363 tests across the ecosystem, every one offline and mocked - no API key runs any of them | `pytest --collect-only` on [personal-llm](https://github.com/zaidwhy/personal-llm) · [second-brain](https://github.com/zaidwhy/second-brain) · [github-pr-agent](https://github.com/zaidwhy/github-pr-agent) |
@@ -200,6 +201,16 @@ Security hardening (exception leakage across 226 files, Origin checks on 60 muta
 Including the one where CI went red on my branch and the cause turned out to **predate my work by three days** - a registration validation rule silently failing a test fixture, bisected through the run history and confirmed from the failed run's Playwright snapshot. Reading the evidence beat blaming my own diff.
 
 The codebase is private, so the [case study](case-studies/zabira-academy.md) is the record.
+
+---
+
+### Support analytics dashboard - built from scratch during an AI internship at Pratyaya Limited
+
+A customer-support analytics dashboard for a WhatsApp support team (Python, FastAPI, pandas, Jinja2): daily to month-to-date performance, per-agent response, resolution and CSAT, and bot versus agent resolution, each figure shown beside the support platform's own report.
+
+Reconciled to that platform's reports: all 10 aggregate totals match exactly and 53 of 55 per-agent response-time averages agree within one second; a figure that differs is clickable and explains why. Chat transcripts are read through a read-only, test-enforced API client to classify why chats were handed from bot to agent, which shrank the unexplained "other" bucket to about 1%. Role-based login, argon2 password hashing, a strict content-security policy, 146 automated tests, and zero accessibility violations in an axe-core audit of all 7 pages.
+
+The repository is private and the data is the company's, so there is no link and nothing here describes a customer or a business figure.
 
 ---
 
