@@ -5,7 +5,7 @@
 
 Most of what follows is a number. Every number is a link to the artifact that produced it: the merged pull request, the raw model output, the test run, the reproducible script. Nothing here asks to be believed.
 
-Open to **AI engineer / applied AI internship** roles.
+B.Tech Information Technology (Honours with Research), MGM University, graduating June 2027. Open to **AI engineer / applied AI internship** roles.
 
 <img src="https://raw.githubusercontent.com/zaidwhy/zaidwhy/main/assets/roadmap.svg" alt="Roadmap of this page, six stations on a rail: I Proof, II Failures, III Research, IV Systems, V Production, VI Provenance." width="100%">
 
