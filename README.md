@@ -52,14 +52,14 @@ If any of it does not reproduce, the claim above is wrong and I want to know.
 **Recent activity, pulled live from the repos below every night, not written by hand:**
 
 <!-- ACTIVITY:START -->
-- `2026-10-04` **coldread** - Step 3 result: industry is inferable from 25 to 200 words, control clea... ([`307df25`](https://github.com/zaidwhy/coldread/commit/307df25865a65e0126cb9c437d94953d1edcfdfb))
-- `2026-10-04` **autocto** - Handoff 2026-10-04: import resolution and plan command ([`1d393d6`](https://github.com/zaidwhy/autocto/commit/1d393d61a9d4ab8c7ac77cf65b54c993208d64dd))
-- `2026-10-04` **coldread** - Step 3: pre-register industry as a fourth attribute, add the industry t... ([`43a7846`](https://github.com/zaidwhy/coldread/commit/43a784626f47cd9ded7c8cb0494a568a14d6d90b))
-- `2026-10-04` **resume-job-fit-ai** - Split app.py: result panels to ui_sections.py, download builders to exp... ([`415852c`](https://github.com/zaidwhy/resume-job-fit-ai/commit/415852c253c7e419f765e6c868b50c0b54689314))
-- `2026-10-04` **autocto** - Resolve imports to real files and add the plan command ([`c83e2b2`](https://github.com/zaidwhy/autocto/commit/c83e2b2b71927c3885af7c43a7cc438368dc0a31))
-- `2026-10-02` **CivilizationOS** - Handoff addendum: mentorship draft submitted; Machine Dialect SRW fit a... ([`45c55e1`](https://github.com/zaidwhy/CivilizationOS/commit/45c55e1164b44373bf7d9f764d2a1b8d36ba7a74))
-- `2026-10-02` **CivilizationOS** - Handoff 2026-10-02: TCMF cross-verified, N34 done, ready to submit ([`eaf5be3`](https://github.com/zaidwhy/CivilizationOS/commit/eaf5be365d68747b4b9f4bdafad83118f0484beb))
-- `2026-10-02` **CivilizationOS** - TCMF N34: decision tests at n=120 with Holm correction ([`b8918d2`](https://github.com/zaidwhy/CivilizationOS/commit/b8918d24cecf42cbc567200df87b855ab2d3d4a1))
+- `2026-10-06` **dreamos-college-project** - Refresh handoff: scale benchmark, privacy audit, final deck and report ([`8b56d99`](https://github.com/zaidwhy/dreamos-college-project/commit/8b56d9998782d2af04717450fa0cc4334973a07e))
+- `2026-10-06` **dreamos-college-project** - Deck: add flow, sequence, use-case and database diagrams from the desig... ([`1112498`](https://github.com/zaidwhy/dreamos-college-project/commit/11124982ecec7514d4bcf62480299ff9a6bbc5db))
+- `2026-10-06` **dreamos-college-project** - Add final monitoring deck and final-year project report ([`0b33d21`](https://github.com/zaidwhy/dreamos-college-project/commit/0b33d212bb1f715f83289c560ef0e6aaf08147c3))
+- `2026-10-06` **dreamos-college-project** - Add privacy audit: report where data could leave the machine ([`2761ece`](https://github.com/zaidwhy/dreamos-college-project/commit/2761ece3ff273f9cb26852bd99940784877077d7))
+- `2026-10-06` **dreamos-college-project** - Fix two measured bottlenecks: localhost IPv6 delay and quadratic graph... ([`cab4fbc`](https://github.com/zaidwhy/dreamos-college-project/commit/cab4fbcb3cf4d27e119e97dc5f09ccb525b0bf89))
+- `2026-10-06` **coldread** - Step 3b result: topic-word masking delays the industry half-life one st... ([`90a72d3`](https://github.com/zaidwhy/coldread/commit/90a72d38783e82035db26e1136abdd3b18795b45))
+- `2026-10-06` **coldread** - HANDOFF: v1.3.0 deposited; step 3b status ([`c3dcf3d`](https://github.com/zaidwhy/coldread/commit/c3dcf3d3411fc0b714ce0aa7089a72448c4e152a))
+- `2026-10-06` **coldread** - v1.3.0: step 3 (industry as a fourth attribute) written up for deposit ([`ad33ff7`](https://github.com/zaidwhy/coldread/commit/ad33ff7fb79ce82b83870fc38804979d00831816))
 <!-- ACTIVITY:END -->
 
 ---
@@ -123,7 +123,7 @@ One memory kernel, built once, imported by everything downstream instead of each
 <!-- STATUS:START -->
 - **CivilizationOS** - `200 OK` - [https://civilization-os-murex.vercel.app](https://civilization-os-murex.vercel.app)
 
-*checked 2026-10-06 09:48 UTC, by the workflow that runs this page*
+*checked 2026-10-07 09:53 UTC, by the workflow that runs this page*
 <!-- STATUS:END -->
 
 ### [CivilizationOS](https://github.com/zaidwhy/CivilizationOS) - a society of agents, and a retrieval method that failed first
