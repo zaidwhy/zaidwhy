@@ -52,11 +52,11 @@ If any of it does not reproduce, the claim above is wrong and I want to know.
 **Recent activity, pulled live from the repos below every night, not written by hand:**
 
 <!-- ACTIVITY:START -->
+- `2026-10-10` **dreamos-college-project** - Add guide name and MGM logo to blackbook, deck and paper; export blackb... ([`21fc042`](https://github.com/zaidwhy/dreamos-college-project/commit/21fc042f15f2d9a4df0589b6b8f11cab08b4bf29))
+- `2026-10-09` **dreamos-college-project** - Add IEEE-format conference paper for the Research Methodology CA4 submi... ([`30ea55a`](https://github.com/zaidwhy/dreamos-college-project/commit/30ea55a7c58bda10f55e1c2775cdaf56880c597a))
 - `2026-10-06` **dreamos-college-project** - Refresh handoff: scale benchmark, privacy audit, final deck and report ([`8b56d99`](https://github.com/zaidwhy/dreamos-college-project/commit/8b56d9998782d2af04717450fa0cc4334973a07e))
 - `2026-10-06` **dreamos-college-project** - Deck: add flow, sequence, use-case and database diagrams from the desig... ([`1112498`](https://github.com/zaidwhy/dreamos-college-project/commit/11124982ecec7514d4bcf62480299ff9a6bbc5db))
 - `2026-10-06` **dreamos-college-project** - Add final monitoring deck and final-year project report ([`0b33d21`](https://github.com/zaidwhy/dreamos-college-project/commit/0b33d212bb1f715f83289c560ef0e6aaf08147c3))
-- `2026-10-06` **dreamos-college-project** - Add privacy audit: report where data could leave the machine ([`2761ece`](https://github.com/zaidwhy/dreamos-college-project/commit/2761ece3ff273f9cb26852bd99940784877077d7))
-- `2026-10-06` **dreamos-college-project** - Fix two measured bottlenecks: localhost IPv6 delay and quadratic graph... ([`cab4fbc`](https://github.com/zaidwhy/dreamos-college-project/commit/cab4fbcb3cf4d27e119e97dc5f09ccb525b0bf89))
 - `2026-10-06` **coldread** - Step 3b result: topic-word masking delays the industry half-life one st... ([`90a72d3`](https://github.com/zaidwhy/coldread/commit/90a72d38783e82035db26e1136abdd3b18795b45))
 - `2026-10-06` **coldread** - HANDOFF: v1.3.0 deposited; step 3b status ([`c3dcf3d`](https://github.com/zaidwhy/coldread/commit/c3dcf3d3411fc0b714ce0aa7089a72448c4e152a))
 - `2026-10-06` **coldread** - v1.3.0: step 3 (industry as a fourth attribute) written up for deposit ([`ad33ff7`](https://github.com/zaidwhy/coldread/commit/ad33ff7fb79ce82b83870fc38804979d00831816))
@@ -123,7 +123,7 @@ One memory kernel, built once, imported by everything downstream instead of each
 <!-- STATUS:START -->
 - **CivilizationOS** - `200 OK` - [https://civilization-os-murex.vercel.app](https://civilization-os-murex.vercel.app)
 
-*checked 2026-10-09 10:08 UTC, by the workflow that runs this page*
+*checked 2026-10-10 09:29 UTC, by the workflow that runs this page*
 <!-- STATUS:END -->
 
 ### [CivilizationOS](https://github.com/zaidwhy/CivilizationOS) - a society of agents, and a retrieval method that failed first
