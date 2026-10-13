@@ -5,7 +5,7 @@
 
 Most of what follows is a number. Every number is a link to the artifact that produced it: the merged pull request, the raw model output, the test run, the reproducible script. Nothing here asks to be believed.
 
-B.Tech Information Technology (Honours with Research), MGM University, graduating June 2027. Open to **AI engineer / applied AI internship** roles.
+B.Tech Information Technology (Honors with Research), MGM University, graduating June 2027. Open to **AI engineer / applied AI internship** roles.
 
 <img src="https://raw.githubusercontent.com/zaidwhy/zaidwhy/main/assets/roadmap.svg" alt="Roadmap of this page, six stations on a rail: I Proof, II Failures, III Research, IV Systems, V Production, VI Provenance." width="100%">
 
@@ -19,7 +19,7 @@ B.Tech Information Technology (Honours with Research), MGM University, graduatin
 |---|---|
 | 3 pull requests merged into upstream OSS totalling **13.4k stars** | [tenacity #668](https://github.com/jd/tenacity/pull/668) · [returns #2480](https://github.com/dry-python/returns/pull/2480) · [gqlalchemy #390](https://github.com/memgraph/gqlalchemy/pull/390) |
 | 27 pull requests merged into a **live production product** I did not build | [case study](case-studies/zabira-academy.md) |
-| A customer-support analytics dashboard built from scratch for a WhatsApp support team (Python, FastAPI, pandas): all 10 aggregate totals match the support platform's own report, 146 tests, zero accessibility violations | no link: private repository, company work |
+| A customer-support analytics dashboard built from scratch for a chat support team (Python, FastAPI, pandas): all 10 aggregate totals match the support platform's own report, 170 tests | no link: private repository, company work |
 | 2 original research findings, each with a negative control and a second-model replication, **archived with a permanent DOI** | [10.5281/zenodo.22309660](https://doi.org/10.5281/zenodo.22309660) · [10.5281/zenodo.22309658](https://doi.org/10.5281/zenodo.22309658) |
 | A retrieval method benchmarked against 6 baselines - including the version of it that **failed** | [TCMF write-up](https://github.com/zaidwhy/CivilizationOS/blob/main/docs/tcmf.md) · [case study](case-studies/civilizationos.md) |
 | 363 tests across the ecosystem, every one offline and mocked - no API key runs any of them | `pytest --collect-only` on [personal-llm](https://github.com/zaidwhy/personal-llm) · [second-brain](https://github.com/zaidwhy/second-brain) · [github-pr-agent](https://github.com/zaidwhy/github-pr-agent) |
@@ -82,7 +82,7 @@ Two studies. Each one carries a negative control, because a measurement without 
 
 <img src="https://raw.githubusercontent.com/zaidwhy/zaidwhy/main/assets/coldread-curves.svg" alt="Gender inference accuracy against words shown, for two models. llama3.1:8b clears chance at 50 words, qwen2.5:7b at 800." width="100%">
 
-<sub>Plate 02 plots the first two readers. The third, mistral:7b, needs about 1600 words; all three are in <a href="https://github.com/zaidwhy/coldread/blob/master/RESULT.md">RESULT.md</a>.</sub>
+<sub>Plate 02 plots the first two readers. The third, mistral:7b, needs about 1600 words; all three are in <a href="https://github.com/zaidwhy/coldread/blob/master/RESULT.md">RESULT.md</a>. A 3B model from one family never clears gender within 1600 words (v1.2.0). v1.3.0 adds industry as a fourth attribute, with half-lives of 25 to 50 words at 7-8B, and states that a topic-vocabulary shortcut is not yet ruled out.</sub>
 
 How many words can you write before a machine knows who you are? I went looking for that number and found that the question is malformed - and why it is malformed is the finding.
 
@@ -130,13 +130,13 @@ One memory kernel, built once, imported by everything downstream instead of each
 
 *A causal memory that has to outrank a rumour with a witness, not just a similar-sounding one.*
 
-35 agents - 10 autonomous citizens and 5 institutional councils - debate, remember, and react to injected crises, and now generate their own.
+10 autonomous citizens and 5 institutional councils debate, remember, and react to injected crises, and now generate their own.
 
 The part worth reading is **Temporal-Causal Memory Fusion**. Standard RAG retrieves on semantic similarity alone; TCMF fuses episodic memory with a causal graph over the society's own history, so a witness to a root cause outranks somebody who heard about it second-hand.
 
 I benchmarked it against 6 baseline retrieval strategies over 300 scenarios and **the first version recovered almost none of the causal signal it was built to exploit: recall@5 of 0.02, where the causal signal alone reaches 1.00 on the identical scores.** The multiplicative fusion was the bug. A normalised additive version recovered the signal and beat every single-signal baseline in a mixed regime, and a follow-up 60-scenario study showed the retrieval choice changes the model's actual decision rather than merely its confidence. The failed version is still in the write-up, because a method that was never wrong was never tested.
 
-`Python` · `FastAPI` · `React` · `Three.js` · `ChromaDB` · `NetworkX` · `LoRA` · `MLflow` · [live](https://civilization-os-murex.vercel.app) · [TCMF write-up](https://github.com/zaidwhy/CivilizationOS/blob/main/docs/tcmf.md)
+`Python` · `FastAPI` · `React` · `Three.js` · `ChromaDB` · `NetworkX` · [live](https://civilization-os-murex.vercel.app) · [TCMF write-up](https://github.com/zaidwhy/CivilizationOS/blob/main/docs/tcmf.md)
 
 ### [Recall](https://github.com/zaidwhy/recall) - spatial memory you can talk to
 
@@ -156,7 +156,7 @@ Quota guard:  120s floor between vision calls, on-screen daily budget counter
 
 *The file to review first is the one that changes most and branches most.*
 
-Five analyzers, no LLM and zero runtime dependencies: bug hotspots (churn x complexity), duplicated logic (token-shingle Jaccard), maintenance cost (size x churn x (1 + fan-in)), architectural debt (Tarjan cycles, god files, layering violations), and a migration planner that orders proposed changes with a topological sort. I/O lives in one `analyze_repo()` per analyzer, with the `git log` call behind an injectable seam; everything underneath is a pure function. 107 tests.
+Five analyzers, no LLM and zero runtime dependencies: bug hotspots (churn x complexity), duplicated logic (token-shingle Jaccard), maintenance cost (size x churn x (1 + fan-in)), architectural debt (Tarjan cycles, god files, layering violations), and a migration planner that orders proposed changes with a topological sort. I/O lives in one `analyze_repo()` per analyzer, with the `git log` call behind an injectable seam; everything underneath is a pure function. 160 tests on main.
 
 ```
 $ autocto hotspots ../recall --limit 3
@@ -184,7 +184,7 @@ Shipped 3 full projects end to end in test runs. On [Receipts.dev](https://githu
 - **[second-brain](https://github.com/zaidwhy/second-brain)** - vault ingestion, auto-linking, offline knowledge-graph viewer. 110 tests.
 - **[github-pr-agent](https://github.com/zaidwhy/github-pr-agent)** - repo analysis, issue triage, PR planning. 65 tests.
 - **[DreamOS](https://github.com/zaidwhy/dreamos-college-project)** - semantic file-management OS shell.
-- **[resume-job-fit-ai](https://github.com/zaidwhy/resume-job-fit-ai)** - resume-to-job fit scoring with truthful rewrites. 42 unit tests, CI on every push, Pydantic-validated structured output.
+- **[resume-job-fit-ai](https://github.com/zaidwhy/resume-job-fit-ai)** - resume-to-job fit scoring with truthful rewrites. 48 unit tests, CI on every push, Pydantic-validated structured output.
 
 </details>
 
@@ -206,9 +206,9 @@ The codebase is private, so the [case study](case-studies/zabira-academy.md) is 
 
 ### Support analytics dashboard - built from scratch during an AI internship at Pratyaya Limited
 
-A customer-support analytics dashboard for a WhatsApp support team (Python, FastAPI, pandas, Jinja2): daily to month-to-date performance, per-agent response, resolution and CSAT, and bot versus agent resolution, each figure shown beside the support platform's own report.
+A customer-support analytics dashboard for a chat support team (Python, FastAPI, pandas, Jinja2): daily to month-to-date performance, per-agent response, resolution and CSAT, and bot versus agent resolution, each figure shown beside the support platform's own report.
 
-Reconciled to that platform's reports: all 10 aggregate totals match exactly and 53 of 55 per-agent response-time averages agree within one second; a figure that differs is clickable and explains why. Chat transcripts are read through a read-only, test-enforced API client to classify why chats were handed from bot to agent, which shrank the unexplained "other" bucket to about 1%. Role-based login, argon2 password hashing, a strict content-security policy, 146 automated tests, and zero accessibility violations in an axe-core audit of all 7 pages.
+Reconciled to that platform's reports: all 10 aggregate totals match exactly and 53 of 55 per-agent response-time averages agree within one second; a figure that differs is clickable and explains why. Chat transcripts are read through a read-only, test-enforced API client to classify why chats were handed from bot to agent, which shrank the unexplained "other" bucket to about 1%. Role-based login, argon2 password hashing, a strict content-security policy, and 170 automated tests.
 
 The repository is private and the data is the company's, so there is no link and nothing here describes a customer or a business figure.
 
@@ -218,7 +218,7 @@ The repository is private and the data is the company's, so there is no link and
 
 ### [CivilizationOS](case-studies/civilizationos.md) - a retrieval method that failed its own benchmark, in public
 
-A multi-agent society simulation, live at [civilization-os-murex.vercel.app](https://civilization-os-murex.vercel.app). TCMF, its causal-retrieval method, is benchmarked against six baselines - the first version scored recall@5 0.02 on the exact signal it was built to exploit, and the benchmark is what caught it, not a hunch. 76 API tests, 152 benchmark tests, both in CI.
+A multi-agent society simulation, live at [civilization-os-murex.vercel.app](https://civilization-os-murex.vercel.app). TCMF, its causal-retrieval method, is benchmarked against six baselines - the first version scored recall@5 0.02 on the exact signal it was built to exploit, and the benchmark is what caught it, not a hunch. 76 API tests, 211 benchmark tests, both in CI.
 
 ### [Personal LLM](case-studies/personal-llm.md) - one kernel, three apps, and an eval suite that argued with itself
 
@@ -243,13 +243,13 @@ A local-first memory and RAG engine imported by three separate apps instead of r
 ## Stack
 
 ```
-languages   Python 3.11+ · TypeScript · SQL
-ai          RAG architectures · multi-agent orchestration · LoRA fine-tuning
+languages   Python 3.11+ · TypeScript · SQL · PHP
+ai          RAG architectures · multi-agent orchestration · LLM evals
             structured outputs · evals · vector search · agent tool loops
-backend     FastAPI · WebSocket · Node.js · Pydantic
+backend     FastAPI · WebSocket · Node.js · Pydantic · Playwright E2E
 frontend    React · Vite · Three.js
 data        ChromaDB · SQLite · pgvector · NetworkX · sentence-transformers
-infra       Docker · GitHub Actions · Vercel · Render · GCP
+infra       Docker · GitHub Actions · Vercel · Render
 ```
 
 ---
@@ -297,4 +297,4 @@ Full signed statement: **[PROVENANCE.md](PROVENANCE.md)** · verify with `gpg --
 
 ---
 
-**[Portfolio](https://www.solstine.dev)** · **[LinkedIn](https://linkedin.com/in/zaid-ali-syed)** · Open to AI engineer internships and applied AI roles.
+**[Portfolio](https://www.solstine.dev)** · **[LinkedIn](https://www.linkedin.com/in/zaidalisyed)** · Open to AI engineer internships and applied AI roles.
