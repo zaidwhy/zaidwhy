@@ -52,14 +52,14 @@ If any of it does not reproduce, the claim above is wrong and I want to know.
 **Recent activity, pulled live from the repos below every night, not written by hand:**
 
 <!-- ACTIVITY:START -->
+- `2026-10-14` **dreamos-college-project** - Monitoring pack: final deck with results validation and individual cont... ([`3a2faa9`](https://github.com/zaidwhy/dreamos-college-project/commit/3a2faa9156811d47ecb9d5e93eaa717639c33ade))
+- `2026-10-13` **coldread** - Handoff 2026-10-14: coldread ([`57a3eb0`](https://github.com/zaidwhy/coldread/commit/57a3eb01d76f3f88cee9a3abeab284c92e9183ec))
+- `2026-10-13` **autocto** - Handoff 2026-10-14: autocto ([`e0f0ba5`](https://github.com/zaidwhy/autocto/commit/e0f0ba59ea6c8b4587605fd86d8e8b3fcf61990e))
+- `2026-10-13` **coldread** - v1.4.0: step 3b topic-word masking result in README, changelog, citatio... ([`fb543ed`](https://github.com/zaidwhy/coldread/commit/fb543ed3f334028231a858e19e54c7546f78670a))
+- `2026-10-13` **autocto** - CLAUDE.md: v0.2.0 is on PyPI ([`12f5e17`](https://github.com/zaidwhy/autocto/commit/12f5e17edbf2139275016f515174f82ece112d30))
+- `2026-10-13` **autocto** - Release v0.2.0: changelog dated, version bumped, README and roadmap ref... ([`d92bee3`](https://github.com/zaidwhy/autocto/commit/d92bee395924606a2167560b8e2440643aff7a86))
 - `2026-10-13` **coldread** - Ignore local secrets file ([`3f5e028`](https://github.com/zaidwhy/coldread/commit/3f5e028a03ca710c3ee7bd98255af6440aa3635d))
 - `2026-10-13` **dreamos-college-project** - Ignore local run logs ([`b0b825c`](https://github.com/zaidwhy/dreamos-college-project/commit/b0b825c3e20c3cfc83cfdc9ca70b82bc2a503f82))
-- `2026-10-13` **dreamos-college-project** - Final polish: 3.2 s graph rebuild at 5,000 files, prune deleted files,... ([`e7a4a33`](https://github.com/zaidwhy/dreamos-college-project/commit/e7a4a33559ec0c05f3529c688a70ebcedffcad2e))
-- `2026-10-11` **dreamos-college-project** - Reformat blackbook per faculty feedback; add measured retrieval compari... ([`dfdc2e3`](https://github.com/zaidwhy/dreamos-college-project/commit/dfdc2e3a41013d58953ba172cf47f885bd7354eb))
-- `2026-10-11` **dreamos-college-project** - Rebuild paper to 6 pages: retrieval comparison vs lexical baselines, fi... ([`c46dce4`](https://github.com/zaidwhy/dreamos-college-project/commit/c46dce414aac4e5d7839a4c8d19186c6f2954b17))
-- `2026-10-10` **dreamos-college-project** - Add guide name and MGM logo to blackbook, deck and paper; export blackb... ([`21fc042`](https://github.com/zaidwhy/dreamos-college-project/commit/21fc042f15f2d9a4df0589b6b8f11cab08b4bf29))
-- `2026-10-06` **coldread** - Step 3b result: topic-word masking delays the industry half-life one st... ([`90a72d3`](https://github.com/zaidwhy/coldread/commit/90a72d38783e82035db26e1136abdd3b18795b45))
-- `2026-10-06` **coldread** - HANDOFF: v1.3.0 deposited; step 3b status ([`c3dcf3d`](https://github.com/zaidwhy/coldread/commit/c3dcf3d3411fc0b714ce0aa7089a72448c4e152a))
 <!-- ACTIVITY:END -->
 
 ---
@@ -123,7 +123,7 @@ One memory kernel, built once, imported by everything downstream instead of each
 <!-- STATUS:START -->
 - **CivilizationOS** - `200 OK` - [https://civilization-os-murex.vercel.app](https://civilization-os-murex.vercel.app)
 
-*checked 2026-10-13 10:09 UTC, by the workflow that runs this page*
+*checked 2026-10-14 08:25 UTC, by the workflow that runs this page*
 <!-- STATUS:END -->
 
 ### [CivilizationOS](https://github.com/zaidwhy/CivilizationOS) - a society of agents, and a retrieval method that failed first
