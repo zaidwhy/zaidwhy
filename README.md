@@ -52,14 +52,14 @@ If any of it does not reproduce, the claim above is wrong and I want to know.
 **Recent activity, pulled live from the repos below every night, not written by hand:**
 
 <!-- ACTIVITY:START -->
+- `2026-10-15` **dreamos-college-project** - Paper for ICITIIT'27: trust framing, guarded-open measurement, IEEE mar... ([`b08747e`](https://github.com/zaidwhy/dreamos-college-project/commit/b08747e9345cfba3854236df4f4d29930f3f977c))
+- `2026-10-14` **dreamos-college-project** - Paper: guide name, aligned author block, 20 references ([`593c52e`](https://github.com/zaidwhy/dreamos-college-project/commit/593c52e17e26d1104c44eb02c8f721aa5b987596))
 - `2026-10-14` **dreamos-college-project** - Monitoring pack: final deck with results validation and individual cont... ([`3a2faa9`](https://github.com/zaidwhy/dreamos-college-project/commit/3a2faa9156811d47ecb9d5e93eaa717639c33ade))
 - `2026-10-13` **coldread** - Handoff 2026-10-14: coldread ([`57a3eb0`](https://github.com/zaidwhy/coldread/commit/57a3eb01d76f3f88cee9a3abeab284c92e9183ec))
 - `2026-10-13` **autocto** - Handoff 2026-10-14: autocto ([`e0f0ba5`](https://github.com/zaidwhy/autocto/commit/e0f0ba59ea6c8b4587605fd86d8e8b3fcf61990e))
 - `2026-10-13` **coldread** - v1.4.0: step 3b topic-word masking result in README, changelog, citatio... ([`fb543ed`](https://github.com/zaidwhy/coldread/commit/fb543ed3f334028231a858e19e54c7546f78670a))
 - `2026-10-13` **autocto** - CLAUDE.md: v0.2.0 is on PyPI ([`12f5e17`](https://github.com/zaidwhy/autocto/commit/12f5e17edbf2139275016f515174f82ece112d30))
 - `2026-10-13` **autocto** - Release v0.2.0: changelog dated, version bumped, README and roadmap ref... ([`d92bee3`](https://github.com/zaidwhy/autocto/commit/d92bee395924606a2167560b8e2440643aff7a86))
-- `2026-10-13` **coldread** - Ignore local secrets file ([`3f5e028`](https://github.com/zaidwhy/coldread/commit/3f5e028a03ca710c3ee7bd98255af6440aa3635d))
-- `2026-10-13` **dreamos-college-project** - Ignore local run logs ([`b0b825c`](https://github.com/zaidwhy/dreamos-college-project/commit/b0b825c3e20c3cfc83cfdc9ca70b82bc2a503f82))
 <!-- ACTIVITY:END -->
 
 ---
@@ -123,7 +123,7 @@ One memory kernel, built once, imported by everything downstream instead of each
 <!-- STATUS:START -->
 - **CivilizationOS** - `200 OK` - [https://civilization-os-murex.vercel.app](https://civilization-os-murex.vercel.app)
 
-*checked 2026-10-14 08:25 UTC, by the workflow that runs this page*
+*checked 2026-10-15 08:01 UTC, by the workflow that runs this page*
 <!-- STATUS:END -->
 
 ### [CivilizationOS](https://github.com/zaidwhy/CivilizationOS) - a society of agents, and a retrieval method that failed first
