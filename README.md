@@ -52,14 +52,14 @@ If any of it does not reproduce, the claim above is wrong and I want to know.
 **Recent activity, pulled live from the repos below every night, not written by hand:**
 
 <!-- ACTIVITY:START -->
-- `2026-10-21` **dreamos-college-project** - Paper: paired McNemar/bootstrap statistic for Hit@1, BM25 baseline desc... ([`f9181b7`](https://github.com/zaidwhy/dreamos-college-project/commit/f9181b7dd4257f2071e485bb11228cc9bb92c423))
-- `2026-10-15` **dreamos-college-project** - Paper for ICITIIT'27: trust framing, guarded-open measurement, IEEE mar... ([`b08747e`](https://github.com/zaidwhy/dreamos-college-project/commit/b08747e9345cfba3854236df4f4d29930f3f977c))
-- `2026-10-14` **dreamos-college-project** - Paper: guide name, aligned author block, 20 references ([`593c52e`](https://github.com/zaidwhy/dreamos-college-project/commit/593c52e17e26d1104c44eb02c8f721aa5b987596))
-- `2026-10-14` **dreamos-college-project** - Monitoring pack: final deck with results validation and individual cont... ([`3a2faa9`](https://github.com/zaidwhy/dreamos-college-project/commit/3a2faa9156811d47ecb9d5e93eaa717639c33ade))
-- `2026-10-13` **coldread** - Handoff 2026-10-14: coldread ([`57a3eb0`](https://github.com/zaidwhy/coldread/commit/57a3eb01d76f3f88cee9a3abeab284c92e9183ec))
-- `2026-10-13` **autocto** - Handoff 2026-10-14: autocto ([`e0f0ba5`](https://github.com/zaidwhy/autocto/commit/e0f0ba59ea6c8b4587605fd86d8e8b3fcf61990e))
-- `2026-10-13` **coldread** - v1.4.0: step 3b topic-word masking result in README, changelog, citatio... ([`fb543ed`](https://github.com/zaidwhy/coldread/commit/fb543ed3f334028231a858e19e54c7546f78670a))
-- `2026-10-13` **autocto** - CLAUDE.md: v0.2.0 is on PyPI ([`12f5e17`](https://github.com/zaidwhy/autocto/commit/12f5e17edbf2139275016f515174f82ece112d30))
+- `2026-10-22` **dreamos-college-project** - Dependencies: pypdf 6.21.2 clears 4 alerts ([`ae11ac5`](https://github.com/zaidwhy/dreamos-college-project/commit/ae11ac58e71d8bc2642c55d3bbb49082c25e9c90))
+- `2026-10-22` **dreamos-college-project** - Docs: record remaining Dependabot alerts as not applicable ([`acc84b1`](https://github.com/zaidwhy/dreamos-college-project/commit/acc84b1776fa47a01de22c4b3f4b822d1056c782))
+- `2026-10-21` **CivilizationOS** - TCMF audit items M7, L1, L5, L7, L8, L10 (code side) ([`3269c75`](https://github.com/zaidwhy/CivilizationOS/commit/3269c75b98127351ddf82fe29d52a296bdd89115))
+- `2026-10-21` **dreamos-college-project** - Dependencies: clear Dependabot alerts (9 fixed, 5 left with reasons) ([`da84d62`](https://github.com/zaidwhy/dreamos-college-project/commit/da84d62ba2c3241853ce499f6be5bc29c2deb793))
+- `2026-10-21` **coldread** - Docs: half-life definition and grid resolution, step 3b counts, uncorre... ([`33f5d95`](https://github.com/zaidwhy/coldread/commit/33f5d9592a600359bf520e3175a629102e3d3a43))
+- `2026-10-21` **dreamos-college-project** - Submitted to Confluence 2027 (CMT paper 631); notes and summary screens... ([`271450f`](https://github.com/zaidwhy/dreamos-college-project/commit/271450f43caba195ca9cd9738c7bca548f0613a7))
+- `2026-10-21` **dreamos-college-project** - Conference options for the guide: Confluence 2027 chosen (ICIPTM fallba... ([`5780c54`](https://github.com/zaidwhy/dreamos-college-project/commit/5780c545e847686a7f7471f1a1adcc579074933a))
+- `2026-10-21` **augur** - v1.0.4 correction: withdraw the elicitation-framing finding (unsaved de... ([`ed951f4`](https://github.com/zaidwhy/augur/commit/ed951f4e8c2dfcf71969639acd7aa7cd7ee3da8d))
 <!-- ACTIVITY:END -->
 
 ---
@@ -123,7 +123,7 @@ One memory kernel, built once, imported by everything downstream instead of each
 <!-- STATUS:START -->
 - **CivilizationOS** - `200 OK` - [https://civilization-os-murex.vercel.app](https://civilization-os-murex.vercel.app)
 
-*checked 2026-10-21 08:18 UTC, by the workflow that runs this page*
+*checked 2026-10-22 08:20 UTC, by the workflow that runs this page*
 <!-- STATUS:END -->
 
 ### [CivilizationOS](https://github.com/zaidwhy/CivilizationOS) - a society of agents, and a retrieval method that failed first
