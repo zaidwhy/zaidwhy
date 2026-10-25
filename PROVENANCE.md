@@ -18,7 +18,7 @@ The public key is in this repository as [`zaid-pubkey.txt`](zaid-pubkey.txt).
 
 ## What is signed
 
-- **Commits.** Every commit made on this account is signed with the key above. GitHub shows them as *Verified*. A commit in my name without a valid signature was not made by me.
+- **Commits.** Every commit I author is signed with the key above, and GitHub shows them as *Verified*. The one exception is the nightly activity bot (`github-actions[bot]`), whose `auto:` commits only refresh the activity list and are unsigned. A commit in my name that is neither signed nor from that bot was not made by me.
 - **This statement.** [`PROVENANCE.sig.txt`](PROVENANCE.sig.txt) is a clear-signed authorship assertion covering the artwork and research listed in it.
 
 ## How to verify

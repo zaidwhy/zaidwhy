@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 460" width="1280" height="460" role="img" aria-label="Zaid Ali Syed. I build AI memory systems, then I try to break them. A trace shows my own retrieval method scoring 0.02 recall at 5, then recovering after the fix.">
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#060912"/><stop offset="1" stop-color="#0B1020"/></linearGradient>
+<radialGradient id="glowR" cx="0.82" cy="0.35" r="0.6"><stop offset="0" stop-color="#22D3EE" stop-opacity="0.16"/><stop offset="1" stop-color="#22D3EE" stop-opacity="0"/></radialGradient>
+<radialGradient id="glowL" cx="0.1" cy="0.9" r="0.6"><stop offset="0" stop-color="#8B5CF6" stop-opacity="0.18"/><stop offset="1" stop-color="#8B5CF6" stop-opacity="0"/></radialGradient>
+<linearGradient id="ink" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#E6F7FF"/><stop offset="0.55" stop-color="#7DD3FC"/><stop offset="1" stop-color="#A78BFA"/></linearGradient>
+<linearGradient id="good" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#34D399"/><stop offset="1" stop-color="#22D3EE"/></linearGradient>
+<filter id="blur"><feGaussianBlur stdDeviation="5"/></filter>
+<clipPath id="card"><rect width="1280" height="460" rx="18"/></clipPath>
+<clipPath id="scope"><rect x="742" y="64" width="470" height="212" rx="10"/></clipPath>
+</defs>
+<style>
+.mono{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,"Liberation Mono",monospace}
+.sans{font-family:"Segoe UI",Inter,Helvetica,Arial,sans-serif}
+.draw1{stroke-dasharray:520;stroke-dashoffset:520;animation:d 2.2s .4s cubic-bezier(.4,0,.2,1) forwards}
+.draw2{stroke-dasharray:420;stroke-dashoffset:420;animation:d 1.8s 3.1s cubic-bezier(.3,0,.1,1) forwards}
+.fade{opacity:0;animation:f .7s forwards}
+.f1{animation-delay:2.7s}.f2{animation-delay:4.7s}.f3{animation-delay:.2s}
+.blink{animation:b 1.1s steps(1) infinite}
+.chip{opacity:0;animation:f .6s forwards}
+@keyframes d{to{stroke-dashoffset:0}}
+@keyframes f{to{opacity:1}}
+@keyframes b{50%{opacity:0}}
+@media (prefers-reduced-motion:reduce){.draw1,.draw2{animation:none;stroke-dashoffset:0}.fade,.chip{animation:none;opacity:1}.blink{animation:none}}
+</style>
+<g clip-path="url(#card)">
+<rect width="1280" height="460" fill="url(#bg)"/>
+<rect width="1280" height="460" fill="url(#glowR)"/>
+<rect width="1280" height="460" fill="url(#glowL)"/>
+<g stroke="#16203A" stroke-width="1" opacity="0.8"><path d="M0 46H1280M0 92H1280M0 138H1280M0 184H1280M0 230H1280M0 276H1280M0 322H1280M0 368H1280M0 414H1280"/><path d="M80 0V460M160 0V460M240 0V460M320 0V460M400 0V460M480 0V460M560 0V460M640 0V460M720 0V460M800 0V460M880 0V460M960 0V460M1040 0V460M1120 0V460M1200 0V460"/></g>
+
+<g class="fade f3">
+<text x="64" y="74" class="mono" font-size="13" letter-spacing="4" fill="#38BDF8">AI MEMORY SYSTEMS &#183; BACKEND &#183; EVALUATION</text>
+<text x="62" y="150" class="sans" font-size="76" font-weight="800" letter-spacing="-1" fill="url(#ink)">Zaid Ali Syed</text>
+<text x="64" y="200" class="sans" font-size="27" font-weight="500" fill="#CBD5E1">I build systems that remember and retrieve.</text>
+<text x="64" y="238" class="sans" font-size="27" font-weight="700" fill="#F8FAFC">Then I try to break them.<tspan class="blink mono" fill="#22D3EE" dx="6">_</tspan></text>
+<text x="64" y="282" class="mono" font-size="13.5" fill="#64748B">B.Tech IT (Honors with Research) &#183; MGM University &#183; June 2027</text>
+</g>
+
+<g>
+<rect x="742" y="64" width="470" height="212" rx="10" fill="#050810" stroke="#1E2A4A" stroke-width="1.5"/>
+<text x="742" y="50" class="mono" font-size="12" letter-spacing="2" fill="#475569">RECALL@5 &#183; 300 SCENARIOS &#183; MY OWN METHOD</text>
+<g clip-path="url(#scope)">
+<g stroke="#122040" stroke-width="1"><path d="M742 117H1212M742 170H1212M742 223H1212"/><path d="M820 64V276M898 64V276M976 64V276M1054 64V276M1132 64V276"/></g>
+<path d="M742 90H1212" stroke="#334155" stroke-width="1.2" stroke-dasharray="4 5"/>
+<path class="draw1" d="M752 262 L790 261.5 L830 262.5 L870 261.8 L910 262.2 L950 261.6 L990 262.4 L1030 261.9 L1070 262.3 L1110 261.7 L1150 262.2 L1200 262" fill="none" stroke="#F43F5E" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+<path class="draw2" d="M930 262 C 950 262, 958 120, 996 104 S 1060 100, 1200 99" fill="none" stroke="url(#good)" stroke-width="3" stroke-linecap="round" filter="url(#blur)" opacity="0.5"/>
+<path class="draw2" d="M930 262 C 950 262, 958 120, 996 104 S 1060 100, 1200 99" fill="none" stroke="url(#good)" stroke-width="3" stroke-linecap="round"/>
+</g>
+<g class="fade f1"><path d="M930 64V276" stroke="#FBBF24" stroke-width="1.2" stroke-dasharray="3 4"/><text x="938" y="82" class="mono" font-size="11" fill="#FBBF24">the fix</text></g>
+<text x="728" y="94" class="mono" font-size="11" fill="#64748B" text-anchor="end">1.00</text>
+<text x="728" y="266" class="mono" font-size="11" fill="#64748B" text-anchor="end">0.02</text>
+<text x="1206" y="86" class="mono" font-size="11" fill="#94A3B8" text-anchor="end">signal alone: 1.00</text>
+<text x="750" y="248" class="mono" font-size="12" fill="#FB7185">v1 multiplicative: 0.02</text>
+<g class="fade f2"><text x="1206" y="128" class="mono" font-size="12" fill="#34D399" text-anchor="end">v2 normalized additive: recovered</text></g>
+<text x="742" y="296" class="mono" font-size="10.5" fill="#475569">endpoints 0.02 and 1.00 are measured; the v2 curve shape is drawn, not plotted</text>
+</g>
+
+<g class="mono" font-size="14">
+<g class="chip" style="animation-delay:.9s"><rect x="64" y="332" width="378" height="44" rx="22" fill="#0E1730" stroke="#1E3A5F"/><circle cx="90" cy="354" r="5" fill="#34D399"/><text x="106" y="359" fill="#E2E8F0">27 merged PRs &#183; live payments platform</text></g>
+<g class="chip" style="animation-delay:1.1s"><rect x="458" y="332" width="378" height="44" rx="22" fill="#0E1730" stroke="#1E3A5F"/><circle cx="484" cy="354" r="5" fill="#38BDF8"/><text x="500" y="359" fill="#E2E8F0">3 PRs upstream &#183; 13.4k stars of libraries</text></g>
+<g class="chip" style="animation-delay:1.3s"><rect x="852" y="332" width="360" height="44" rx="22" fill="#0E1730" stroke="#1E3A5F"/><circle cx="878" cy="354" r="5" fill="#A78BFA"/><text x="894" y="359" fill="#E2E8F0">2 studies &#183; permanent DOIs</text></g>
+<g class="chip" style="animation-delay:1.5s"><rect x="64" y="390" width="378" height="44" rx="22" fill="#0E1730" stroke="#1E3A5F"/><circle cx="90" cy="412" r="5" fill="#FBBF24"/><text x="106" y="417" fill="#E2E8F0">24 audit findings fixed &#183; 1 critical</text></g>
+<g class="chip" style="animation-delay:1.7s"><rect x="458" y="390" width="378" height="44" rx="22" fill="#0E1730" stroke="#1E3A5F"/><circle cx="484" cy="412" r="5" fill="#F43F5E"/><text x="500" y="417" fill="#E2E8F0">my own method failed first: 0.02</text></g>
+<g class="chip" style="animation-delay:1.9s"><rect x="852" y="390" width="360" height="44" rx="22" fill="#0E1730" stroke="#1E3A5F"/><circle cx="878" cy="412" r="5" fill="#22D3EE"/><text x="894" y="417" fill="#E2E8F0">available Jan 2027 &#183; India</text></g>
+</g>
+</g>
+<rect x="1" y="1" width="1278" height="458" rx="17" fill="none" stroke="#1E2A4A" stroke-width="2"/>
+</svg>

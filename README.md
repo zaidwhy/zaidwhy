@@ -1,11 +1,13 @@
-<img src="https://raw.githubusercontent.com/zaidwhy/zaidwhy/main/assets/nameplate.svg" alt="Zaid Ali Syed - AI systems engineer" width="100%">
+<img src="https://raw.githubusercontent.com/zaidwhy/zaidwhy/main/assets/hero.svg" alt="Zaid Ali Syed. I build systems that remember and retrieve, then I try to break them. A trace shows my own retrieval method scoring 0.02 recall at 5 before the fix." width="100%">
 
 > **I build AI systems that remember, retrieve, and decide.**
 > Then I try to break them - because a system that never got the chance to fail was never actually tested.
 
 Most of what follows is a number. Every number is a link to the artifact that produced it: the merged pull request, the raw model output, the test run, the reproducible script. Nothing here asks to be believed.
 
-B.Tech Information Technology (Honors with Research), MGM University, graduating June 2027. Open to **AI engineer / applied AI internship** roles.
+<img src="https://raw.githubusercontent.com/zaidwhy/zaidwhy/main/assets/terminal.svg" alt="A terminal replaying real commands: three pull requests show MERGED, 27 pull requests merged at a live payments platform, and the last line says if any of this does not reproduce the claim is wrong." width="100%">
+
+B.Tech Information Technology (Honors with Research), MGM University, graduating June 2027. Open to **backend, AI engineer and new-grad roles in India** from January 2027.
 
 <img src="https://raw.githubusercontent.com/zaidwhy/zaidwhy/main/assets/roadmap.svg" alt="Roadmap of this page, six stations on a rail: I Proof, II Failures, III Research, IV Systems, V Production, VI Provenance." width="100%">
 
@@ -19,11 +21,11 @@ B.Tech Information Technology (Honors with Research), MGM University, graduating
 |---|---|
 | 3 pull requests merged into upstream OSS totalling **13.4k stars** | [tenacity #668](https://github.com/jd/tenacity/pull/668) · [returns #2480](https://github.com/dry-python/returns/pull/2480) · [gqlalchemy #390](https://github.com/memgraph/gqlalchemy/pull/390) |
 | 27 pull requests merged into a **live production product** I did not build | [case study](case-studies/zabira-academy.md) |
-| A customer-support analytics dashboard built from scratch for a chat support team (Python, FastAPI, pandas): all 10 aggregate totals match the support platform's own report, 170 tests | no link: private repository, company work |
+| A customer-support analytics dashboard built from scratch for a chat support team (Python, FastAPI, pandas): all 10 aggregate totals match the support platform's own report, 222 tests | no link: private repository, company work |
 | 2 original research findings, each with a negative control and a second-model replication, **archived with a permanent DOI** | [10.5281/zenodo.22309660](https://doi.org/10.5281/zenodo.22309660) · [10.5281/zenodo.22309658](https://doi.org/10.5281/zenodo.22309658) |
 | A retrieval method benchmarked against 6 baselines - including the version of it that **failed** | [TCMF write-up](https://github.com/zaidwhy/CivilizationOS/blob/main/docs/tcmf.md) · [case study](case-studies/civilizationos.md) |
 | 363 tests across the ecosystem, every one offline and mocked - no API key runs any of them | `pytest --collect-only` on [personal-llm](https://github.com/zaidwhy/personal-llm) · [second-brain](https://github.com/zaidwhy/second-brain) · [github-pr-agent](https://github.com/zaidwhy/github-pr-agent) |
-| Every commit on this account is cryptographically signed, and both findings carry an ORCID-bound DOI | [PROVENANCE.md](PROVENANCE.md) · [ORCID 0009-0003-4313-1510](https://orcid.org/0009-0003-4313-1510) |
+| Every commit I author is cryptographically signed (the nightly activity bot's `auto:` commits are not), and both findings carry an ORCID-bound DOI | [PROVENANCE.md](PROVENANCE.md) · [ORCID 0009-0003-4313-1510](https://orcid.org/0009-0003-4313-1510) |
 
 <details>
 <summary><b>Don't take my word for any of it - here is how to falsify this page</b></summary>
@@ -285,7 +287,7 @@ Check 3 is the one that tends to settle it. A README copied wholesale keeps pull
 
 <br>
 
-Every commit on this account is signed with the key below. The artwork on this page is hand-authored SVG, served from this repository, and carries an authorship manifest in its source.
+Every commit I author is signed with the key below; the nightly activity bot's `auto:` commits are not. The artwork on this page is hand-authored SVG, served from this repository, and carries an authorship manifest in its source.
 
 ```
 Zaid Ali Syed
