@@ -91,7 +91,7 @@ token is configured at all - a demo instance should not lock itself out.
 ## Architecture at a glance
 
 FastAPI backend, React + Three.js frontend, a three-tier model router (local Ollama in
-development, Gemini's free tier, Claude/OpenRouter behind a spend cap in the public
+development, Gemini's free tier, OpenRouter behind a spend cap in the public
 deploy), and no external database - the whole simulation lives in one Python process,
 which is a deliberate simplicity tradeoff for a demo, not an oversight. Full write-up,
 including failure modes and what would need to change to scale past a demo, in
