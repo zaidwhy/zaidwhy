@@ -35,7 +35,10 @@ python -c "from aftershock import ledger; print(ledger.verify())"
 
 ## I. Specimens
 
+<picture>
+<source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/zaidwhy/zaidwhy/main/assets/plate-specimens-narrow.svg">
 <img src="https://raw.githubusercontent.com/zaidwhy/zaidwhy/main/assets/plate-specimens.svg" alt="Plate I, specimens: 3 pull requests merged upstream into libraries with 13.4k stars; 27 pull requests merged into a live product in 12 days; 2 research findings archived with a DOI; 356 offline tests; 3,240 forecasts locked before outcomes; 229 scored coding-agent runs." width="100%">
+</picture>
 
 Six samples from the core, each with a label that says where it was dug up. None of them is a self-description. Five are counts you can reproduce from a public record; the sixth, 27 pull requests into a private codebase, rests on the [case study](case-studies/zabira-academy.md) because the code cannot be shown.
 

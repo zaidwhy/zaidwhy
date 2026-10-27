@@ -46,9 +46,11 @@ def poly(points, **attrs):
     return f'<polygon points="{pts}" {extra}/>'
 
 
-def frame(h, kicker, title, subtitle, label):
+def frame(h, kicker, title, subtitle, label, width=W):
+    """Paper, border and heading. A list subtitle is drawn one line per item, for the narrow phone plates."""
+    sub = subtitle if isinstance(subtitle, list) else [subtitle]
     return [
-        f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {h}" width="{W}" height="{h}" role="img" aria-label="{escape(label)}">',
+        f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {width} {h}" width="{width}" height="{h}" role="img" aria-label="{escape(label)}">',
         f'''<defs>
 <filter id="paper"><feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="2" seed="7"/><feColorMatrix values="0 0 0 0 .17 0 0 0 0 .13 0 0 0 0 .09 0 0 0 .07 0"/><feComposite in2="SourceGraphic" operator="in"/></filter>
 <pattern id="hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="7" stroke="{INK}" stroke-opacity=".22" stroke-width=".8"/></pattern>
@@ -63,12 +65,12 @@ def frame(h, kicker, title, subtitle, label):
 @media (prefers-reduced-motion:reduce){{.rise,.show{{animation:none}}}}
 </style>''',
 f'<metadata>author: Zaid Ali Syed; ORCID 0009-0003-4313-1510; PGP EFE9 4832 B2B9 80D9 B583 91F2 8FAA BCC1 B1AC 09E5; drawn by scripts/plates.py in github.com/zaidwhy/zaidwhy</metadata>',
-        f'<rect width="{W}" height="{h}" fill="{PAPER}"/><rect width="{W}" height="{h}" filter="url(#paper)"/>',
-        f'<rect x="18" y="18" width="{W - 36}" height="{h - 36}" fill="none" stroke="{INK}" stroke-width="1.4"/>',
-        f'<rect x="24" y="24" width="{W - 48}" height="{h - 48}" fill="none" stroke="{INK}" stroke-width=".5"/>',
+        f'<rect width="{width}" height="{h}" fill="{PAPER}"/><rect width="{width}" height="{h}" filter="url(#paper)"/>',
+        f'<rect x="18" y="18" width="{width - 36}" height="{h - 36}" fill="none" stroke="{INK}" stroke-width="1.4"/>',
+        f'<rect x="24" y="24" width="{width - 48}" height="{h - 48}" fill="none" stroke="{INK}" stroke-width=".5"/>',
         text(60, 62, kicker, 12.5, caps=True),
         text(60, 97, title, 28),
-        text(60, 122, subtitle, 14, italic=True, opacity=.8),
+        lines(60, 122, sub, 14, gap=19, italic=True, opacity=.8),
     ]
 
 
@@ -107,41 +109,56 @@ def route():
     print("wrote plate-route.svg")
 
 
+SPECIMENS = [
+    ("3", "pull requests merged upstream", ["tenacity, returns, gqlalchemy", "13.4k stars between them"]),
+    ("27", "pull requests merged into a live product", ["12 days, +8,838 / -1,619 lines", "every one reviewed by its owner"]),
+    ("2", "research findings with a DOI", ["each with a negative control", "and a second-model replication"]),
+    ("356", "tests, all offline", ["mocked end to end", "no API key runs any of them"]),
+    ("3,240", "forecasts locked before outcomes", ["hash-chained public ledger", "graded in public from 15 Nov"]),
+    ("229", "scored coding-agent runs", ["pre-registered, two studies", "every transcript shipped"]),
+]
+SPECIMENS_LABEL = ("Plate I, specimens: 3 pull requests merged upstream into libraries with 13.4k stars; 27 pull requests merged into a live product in 12 days; "
+                   "2 research findings archived with a DOI; 356 offline tests; 3,240 forecasts locked before outcomes; 229 scored coding-agent runs.")
+NARROW = 520  # phone plates: about 400 px on screen keeps the smallest label near 9 px
+
+
+def specimen_card(i, x, y, cw, ch, big, what, notes):
+    tint = TINTS[(i * 3) % len(TINTS)]
+    rock = [(x + 46 + 30 * math.cos(a) * (0.75 + 0.35 * seeded(f"{i}{k}")), y + 62 + 26 * math.sin(a) * (0.75 + 0.35 * seeded(f"r{i}{k}")))
+            for k, a in enumerate([j * math.tau / 9 for j in range(9)])]
+    return "".join([
+        f'<g class="show" style="animation-delay:{.15 * i:.2f}s">',
+        f'<rect x="{x + 3}" y="{y + 4}" width="{cw}" height="{ch}" fill="{INK}" fill-opacity=".12"/>',
+        f'<rect x="{x}" y="{y}" width="{cw}" height="{ch}" fill="{CARD}" stroke="{INK}" stroke-width=".9"/>',
+        poly(rock, fill=tint, stroke=INK, stroke_width="1"), poly(rock, fill="url(#dots)"),
+        text(x + 110, y + 76, big, 46),
+        text(x + 24, y + 118, what, 14.5),
+        lines(x + 24, y + 140, notes, 12, italic=True, opacity=.8),
+        f'<circle cx="{x + cw / 2}" cy="{y + 8}" r="3.2" fill="{WAX}" stroke="{INK}" stroke-width=".6"/>',
+        text(x + cw - 14, y + 24, f"no. {i + 1:02d}", 10.5, anchor="end", italic=True, opacity=.6),
+        "</g>"])
+
+
 def specimens():
     h = 590
-    cards = [
-        ("3", "pull requests merged upstream", ["tenacity, returns, gqlalchemy", "13.4k stars between them"]),
-        ("27", "pull requests merged into a live product", ["12 days, +8,838 / -1,619 lines", "every one reviewed by its owner"]),
-        ("2", "research findings with a DOI", ["each with a negative control", "and a second-model replication"]),
-        ("356", "tests, all offline", ["mocked end to end", "no API key runs any of them"]),
-        ("3,240", "forecasts locked before outcomes", ["hash-chained public ledger", "graded in public from 15 Nov"]),
-        ("229", "scored coding-agent runs", ["pre-registered, two studies", "every transcript shipped"]),
-    ]
     out = frame(h, "Plate I  ·  Specimens", "What the drill brought up",
-                "Six samples from the core, each mounted with the label that says where it came from.",
-                "Plate I, specimens: 3 pull requests merged upstream into libraries with 13.4k stars; 27 pull requests merged into a live product in 12 days; "
-                "2 research findings archived with a DOI; 356 offline tests; 3,240 forecasts locked before outcomes; 229 scored coding-agent runs.")
+                "Six samples from the core, each mounted with the label that says where it came from.", SPECIMENS_LABEL)
     out.append(f'<rect x="54" y="146" width="{W - 108}" height="{h - 192}" fill="#E4D6B8" stroke="{INK}" stroke-width=".9"/>')
     cw, ch = 340, 170
-    for i, (big, what, notes) in enumerate(cards):
-        col, row = i % 3, i // 3
-        x, y = 78 + col * (cw + 24), 166 + row * (ch + 22)
-        tint = TINTS[(i * 3) % len(TINTS)]
-        out.append(f'<g class="show" style="animation-delay:{.15 * i:.2f}s">')
-        out.append(f'<rect x="{x + 3}" y="{y + 4}" width="{cw}" height="{ch}" fill="{INK}" fill-opacity=".12"/>')
-        out.append(f'<rect x="{x}" y="{y}" width="{cw}" height="{ch}" fill="{CARD}" stroke="{INK}" stroke-width=".9"/>')
-        rock = [(x + 26 + 30 * math.cos(a) * (0.75 + 0.35 * seeded(f"{i}{k}")), y + 62 + 26 * math.sin(a) * (0.75 + 0.35 * seeded(f"r{i}{k}")))
-                for k, a in enumerate([j * math.tau / 9 for j in range(9)])]
-        rock = [(px + 20, py) for px, py in rock]
-        out.append(poly(rock, fill=tint, stroke=INK, stroke_width="1"))
-        out.append(poly(rock, fill="url(#dots)"))
-        out.append(text(x + 110, y + 76, big, 46))
-        out.append(text(x + 24, y + 118, what, 14.5))
-        out.append(lines(x + 24, y + 140, notes, 12, italic=True, opacity=.8))
-        out.append(f'<circle cx="{x + cw / 2}" cy="{y + 8}" r="3.2" fill="{WAX}" stroke="{INK}" stroke-width=".6"/>')
-        out.append(text(x + cw - 14, y + 24, f"no. {i + 1:02d}", 10.5, anchor="end", italic=True, opacity=.6))
-        out.append("</g>")
+    for i, (big, what, notes) in enumerate(SPECIMENS):
+        out.append(specimen_card(i, 78 + (i % 3) * (cw + 24), 166 + (i // 3) * (ch + 22), cw, ch, big, what, notes))
     save("plate-specimens.svg", out)
+
+
+def specimens_narrow():
+    cw, ch, gap, top = NARROW - 132, 170, 18, 186
+    h = top + len(SPECIMENS) * (ch + gap) + 40
+    out = frame(h, "Plate I  ·  Specimens", "What the drill brought up",
+                ["Six samples from the core, each mounted", "with the label that says where it came from."], SPECIMENS_LABEL, width=NARROW)
+    out.append(f'<rect x="44" y="{top - 20}" width="{NARROW - 88}" height="{h - top - 10}" fill="#E4D6B8" stroke="{INK}" stroke-width=".9"/>')
+    for i, (big, what, notes) in enumerate(SPECIMENS):
+        out.append(specimen_card(i, 64, top + i * (ch + gap), cw, ch, big, what, notes))
+    save("plate-specimens-narrow.svg", out)
 
 
 def faults():
@@ -405,6 +422,7 @@ def seal():
 if __name__ == "__main__":
     route()
     specimens()
+    specimens_narrow()
     faults()
     assays()
     excavation()
