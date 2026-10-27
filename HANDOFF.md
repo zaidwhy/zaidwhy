@@ -11,6 +11,9 @@
 - PROVENANCE.md (signed) still says the SVGs are "hand-authored". The plates are drawn by scripts in this repo and carry the manifest in `<metadata>`. Re-signing is Zaid's call; the README already states how the plates are drawn.
 - The old neon assets (hero, terminal, roadmap, failure-ledger, kernel-map, chain-of-custody, coldread-curves, augur-drift, flake-laundering) are no longer referenced but were kept in `assets/`.
 
+## Refine log
+- Round 4 (performance): core-sample.svg drew each bed outline three times (tint, hatching, boundary line). Each outline is now defined once and drawn twice by `<use>`, with the stroke drawing the boundary: 177 KB to 93 KB, pixel diff 0.76% (the count and date text). A size-budget test (36 months under 130 KB) guards it.
+
 ## Next
 - Re-run `repo_plates.py` monthly, or when a repo's headline numbers change, so the strips do not go stale.
 - Zaid: upload `weekend-profile-update/creative/banner-core.png` as the LinkedIn background.

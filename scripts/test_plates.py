@@ -58,6 +58,12 @@ class Rendering(unittest.TestCase):
         self.assertValidSvg(svg)
         self.assertNotIn("UNCONFORMITY", svg)
 
+    def test_core_sample_stays_inside_its_size_budget(self):
+        # It is the first image on the profile; three years of beds measured 102 KB after outlines were deduplicated.
+        months = [(f"{2024 + (i + 5) // 12}-{(i + 5) % 12 + 1:02d}", 60 if i % 7 else 900) for i in range(36)]
+        svg = core_sample.render(months, [], [], date(2027, 5, 1))
+        self.assertLess(len(svg.encode()), 130_000)
+
     def test_every_survey_plate_is_valid_svg(self):
         with tempfile.TemporaryDirectory() as out:
             original = plates.ASSETS

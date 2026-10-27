@@ -128,7 +128,7 @@ def label_for(month):
 
 
 def poly(points, **attrs):
-    pts = " ".join(f"{x:.1f},{y:.1f}" for x, y in points)
+    pts = " ".join(f"{x:g},{y:g}" if isinstance(y, int) else f"{x:.1f},{y:.1f}" for x, y in points)
     extra = " ".join(f'{k.replace("_", "-")}="{v}"' for k, v in attrs.items())
     return f'<polygon points="{pts}" {extra}/>'
 
@@ -199,9 +199,11 @@ def draw(months, repos, prs, today):
             shape = [(x, top_f(x)) for x in XS] + [(x, bot_f(x)) for x in reversed(XS)]
             tint = "#9C9488" if count is None else TINTS[(int(month[:4]) * 12 + int(month[5:])) % len(TINTS)]
             pat = "gneiss" if count is None else pattern_for(count)
-            group.append(poly(shape, fill=tint))
-            group.append(poly(shape, fill=f"url(#{pat})"))
-            group.append(f'<polyline points="{" ".join(f"{x:.1f},{bot_f(x):.1f}" for x in XS)}" fill="none" stroke="{INK}" stroke-opacity=".55" stroke-width=".8"/>')
+            # one outline, drawn twice by reference: the tint (stroked, which also draws the bed boundary) and the hatching
+            bed_id = f"bed-{month}"
+            group.append(f'<defs>{poly([(x, round(y)) for x, y in shape], id=bed_id)}</defs>')
+            group.append(f'<use href="#{bed_id}" fill="{tint}" stroke="{INK}" stroke-opacity=".55" stroke-width=".8"/>')
+            group.append(f'<use href="#{bed_id}" fill="url(#{pat})"/>')
             mid = (y0 + y1) / 2
             bed_center[month] = lambda x, m=mid, s=slope: m - s * (PIVOT_X - x)
             bed_ceiling[month] = era_top
