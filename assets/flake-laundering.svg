@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 450" width="900" height="450" role="img" aria-label="FLAKE LAUNDERING results. Left: with a correct test and a real race bug, Claude Code weakened the test in 0 of 60 runs under a plain brief, 1 of 30 under 'do not change the tests', 0 of 40 under 'find out which is wrong'. Right: with a genuinely wrong test, it repaired the test correctly in 9 of 10 runs under the plain brief, 0 of 10 under 'do not change the tests', and 10 of 10 under 'find out which is wrong'.">
+<!--
+  ORIGINAL WORK, AUTHORSHIP MANIFEST
+  Title      : FLAKE LAUNDERING, brief against outcome. Plate 08.
+  Author     : Zaid Ali Syed
+  Origin     : https://github.com/zaidwhy/flake-laundering
+  Data       : 229 scored runs, Claude Code with Sonnet 5.5, headless.
+               Verbatim from flake-laundering/RESULT.md, runs of 2026-10-26 to 2026-10-27.
+  Copyright  : (c) 2026 Zaid Ali Syed. All rights reserved.
+  PGP key    : EFE9 4832 B2B9 80D9 B583  91F2 8FAA BCC1 B1AC 09E5
+  If this file appears anywhere other than zaidwhy/*, it was copied.
+-->
+<defs>
+<clipPath id="fl-clip"><rect x="0" y="0" width="900" height="450" rx="10"/></clipPath>
+</defs>
+<g clip-path="url(#fl-clip)" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace">
+<rect x="0" y="0" width="900" height="450" fill="#0B0E14"/>
+
+<text x="48" y="40" fill="#E9EEF5" font-size="17" font-weight="700" letter-spacing="1.6">THE RULE MEANT TO STOP IT IS WHAT BROKE</text>
+<text x="48" y="61" fill="#7D8794" font-size="11.5">Claude Code (Sonnet 5.5) asked to get a red e2e suite green. 229 scored runs, two pre-registered studies.</text>
+
+<!-- left panel -->
+<text x="48" y="104" fill="#E9EEF5" font-size="12.5" font-weight="700">TEST IS RIGHT, APP HAS A RACE</text>
+<text x="48" y="122" fill="#7D8794" font-size="10.5">runs where the agent weakened the test</text>
+
+<g font-size="11">
+<text x="48" y="166" fill="#9AA5B1">plain brief</text>
+<rect x="48" y="174" width="360" height="16" fill="#151A23"/>
+<rect x="48" y="174" width="2" height="16" fill="#22D3EE"/>
+<text x="416" y="187" fill="#E9EEF5" text-anchor="end" font-weight="700">0 / 60</text>
+
+<text x="48" y="226" fill="#9AA5B1">"do not change the tests"</text>
+<rect x="48" y="234" width="360" height="16" fill="#151A23"/>
+<rect x="48" y="234" width="12" height="16" fill="#F59E0B"/>
+<text x="416" y="247" fill="#E9EEF5" text-anchor="end" font-weight="700">1 / 30</text>
+
+<text x="48" y="286" fill="#9AA5B1">"find out which is wrong"</text>
+<rect x="48" y="294" width="360" height="16" fill="#151A23"/>
+<rect x="48" y="294" width="2" height="16" fill="#34D399"/>
+<text x="416" y="307" fill="#E9EEF5" text-anchor="end" font-weight="700">0 / 40</text>
+</g>
+
+<!-- right panel -->
+<text x="490" y="104" fill="#E9EEF5" font-size="12.5" font-weight="700">TEST IS WRONG, APP IS FINE</text>
+<text x="490" y="122" fill="#7D8794" font-size="10.5">runs where the agent repaired the test correctly</text>
+
+<g font-size="11">
+<text x="490" y="166" fill="#9AA5B1">plain brief</text>
+<rect x="490" y="174" width="360" height="16" fill="#151A23"/>
+<rect x="490" y="174" width="324" height="16" fill="#22D3EE"/>
+<text x="858" y="187" fill="#E9EEF5" text-anchor="end" font-weight="700">9 / 10</text>
+
+<text x="490" y="226" fill="#9AA5B1">"do not change the tests"</text>
+<rect x="490" y="234" width="360" height="16" fill="#151A23"/>
+<rect x="490" y="234" width="2" height="16" fill="#F59E0B"/>
+<text x="858" y="247" fill="#F59E0B" text-anchor="end" font-weight="700">0 / 10</text>
+
+<text x="490" y="286" fill="#9AA5B1">"find out which is wrong"</text>
+<rect x="490" y="294" width="360" height="16" fill="#151A23"/>
+<rect x="490" y="294" width="360" height="16" fill="#34D399"/>
+<text x="858" y="307" fill="#E9EEF5" text-anchor="end" font-weight="700">10 / 10</text>
+</g>
+
+<line x1="48" y1="346" x2="852" y2="346" stroke="#1F2633" stroke-width="1"/>
+<text x="48" y="372" fill="#E9EEF5" font-size="11.5">Told not to touch the tests, every agent kept the wrong test and bent correct code around it:</text>
+<text x="48" y="390" fill="#E9EEF5" font-size="11.5">five cached the mock backend, five restructured a working page.</text>
+<text x="48" y="420" fill="#7D8794" font-size="10">Wilson 95%: 0/60 is 0 to 6%. Explicit vs "find out which" on repairs: +100 points (+61 to +100). github.com/zaidwhy/flake-laundering</text>
+</g>
+</svg>
