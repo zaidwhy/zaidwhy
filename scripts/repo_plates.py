@@ -10,17 +10,16 @@ PROFILE-FACTS.yaml or the repository's own README; change them there first.
 usage: python scripts/repo_plates.py <out_dir> [repo ...]
 writes <out_dir>/<repo>.svg; needs an authenticated `gh` for the commit history.
 """
-import json
 import math
 import os
 import subprocess
 import sys
 from collections import Counter
-from datetime import date, datetime, timedelta, timezone
+from datetime import datetime, timedelta
 from xml.sax.saxutils import escape
 
-from core_sample import INK, PAPER, TINTS, wave
-from plates import CARD, SERIF, WAX, lines, text
+from core_sample import INK, PAPER, TINTS
+from plates import CARD, WAX, text
 
 OWNER = "zaidwhy"
 W, H = 1200, 330
@@ -100,10 +99,10 @@ def core_strip(days, x0, x1, y, h):
             continue
         shade = 0.25 + 0.75 * math.sqrt(n / peak)
         tint = TINTS[(week.isocalendar()[1] // 4) % len(TINTS)]
-        out.append(f'<rect x="{x0 + i * bw:.2f}" y="{y}" width="{max(bw, 1.2):.2f}" height="{h}" fill="{tint}" fill-opacity="{shade:.2f}"/>')
+        out.append(f'<rect x="{x0 + i * bw:.2f}" y="{y}" width="{max(bw, 1.2):.2f}" height="{h}" fill="{tint}" fill-opacity="{shade:.2f}" stroke="{PAPER}" stroke-width=".6"/>')
     out.append("</g>")
     out.append(f'<rect x="{x0}" y="{y}" width="{x1 - x0}" height="{h}" rx="{h / 2}" fill="none" stroke="{INK}" stroke-width="1"/>')
-    return "".join(out), first, last + timedelta(days=6), len(days), span
+    return "".join(out), min(days), max(days), len(days), span
 
 
 def plate(repo, days, taken):
@@ -139,7 +138,7 @@ def plate(repo, days, taken):
 def main():
     out_dir = sys.argv[1]
     os.makedirs(out_dir, exist_ok=True)
-    taken = datetime.now(timezone.utc).date().isoformat()
+    taken = datetime.now().date().isoformat()  # local date: the plate is drawn where I am
     for repo in sys.argv[2:] or REPOS:
         days = commit_days(repo)
         if not days:
