@@ -13,6 +13,7 @@ writes <out_dir>/<repo>.svg; needs an authenticated `gh` for the commit history.
 import math
 import os
 import subprocess
+import textwrap
 import sys
 from collections import Counter
 from datetime import datetime, timedelta
@@ -23,6 +24,7 @@ from plates import CARD, WAX, text
 
 OWNER = "zaidwhy"
 W, H = 1200, 330
+NARROW_W = 520  # phone plate, served under 600 px
 
 REPOS = {
     "CivilizationOS": ("system", "CivilizationOS", "A causal memory that has to outrank a rumour with a witness, not a similar-sounding one.",
@@ -105,19 +107,56 @@ def core_strip(days, x0, x1, y, h):
     return "".join(out), min(days), max(days), len(days), span
 
 
+def plate_head(width, h, label):
+    return [
+        f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {width} {h}" width="{width}" height="{h}" role="img" aria-label="{escape(label)}">',
+        f'<metadata>author: Zaid Ali Syed; ORCID 0009-0003-4313-1510; PGP EFE9 4832 B2B9 80D9 B583 91F2 8FAA BCC1 B1AC 09E5; drawn by scripts/repo_plates.py in github.com/zaidwhy/zaidwhy</metadata>',
+        f'''<defs><filter id="paper"><feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="2" seed="7"/><feColorMatrix values="0 0 0 0 .17 0 0 0 0 .13 0 0 0 0 .09 0 0 0 .07 0"/><feComposite in2="SourceGraphic" operator="in"/></filter></defs>
+<style>.rise{{transform-box:fill-box;transform-origin:bottom;animation:rise 1.6s cubic-bezier(.3,0,.2,1) .3s both}}@keyframes rise{{from{{transform:scaleY(0)}}to{{transform:scaleY(1)}}}}@media (prefers-reduced-motion:reduce){{.rise{{animation:none}}}}</style>''',
+        f'<rect width="{width}" height="{h}" fill="{PAPER}"/><rect width="{width}" height="{h}" filter="url(#paper)"/>',
+        f'<rect x="18" y="18" width="{width - 36}" height="{h - 36}" fill="none" stroke="{INK}" stroke-width="1.4"/>',
+        f'<rect x="24" y="24" width="{width - 48}" height="{h - 48}" fill="none" stroke="{INK}" stroke-width=".5"/>',
+    ]
+
+
+def plate_label(repo, commits, span, first, last):
+    _, title, thesis, notes = REPOS[repo]
+    return (f"{title}: {thesis} {'; '.join(notes)}. Core strip: {commits} commit{'s' if commits != 1 else ''} over {span} week{'s' if span != 1 else ''}, "
+            f"{first.strftime('%b %Y')} to {last.strftime('%b %Y')}.")
+
+
+def plate_narrow(repo, days, taken):
+    """The same plate at 520 px for phones: thesis wrapped, notes stacked, motif beside the notes."""
+    kind, title, thesis, notes = REPOS[repo]
+    thesis_rows = textwrap.wrap(thesis, 46)
+    notes_top = 140 + 20 * len(thesis_rows) + 22
+    strip_y = notes_top + 26 * len(notes) + 52
+    h = strip_y + 74
+    strip, first, last, commits, span = core_strip(days, 60, NARROW_W - 60, strip_y, 18)
+    parts = plate_head(NARROW_W, h, plate_label(repo, commits, span, first, last)) + [
+        text(60, 62, f"Survey of github.com/{OWNER}  ·  {kind}", 12, caps=True),
+        text(60, 104, title, 32),
+    ]
+    parts += [text(60, 136 + 20 * i, row, 15, italic=True, opacity=.85) for i, row in enumerate(thesis_rows)]
+    for i, note in enumerate(notes):
+        y = notes_top + 26 * i
+        parts.append(f'<circle cx="65" cy="{y - 5}" r="4" fill="{WAX}"/>')
+        parts.append(text(78, y, note, 14))
+    mx, my = NARROW_W - 92, notes_top + 20
+    parts.append(f'<g transform="translate({mx} {my}) scale(.55) translate({-mx} {-my})">{motif(kind, mx, my)}</g>')
+    parts.append(text(60, strip_y - 12, f"core strip: {commits} commit{'s' if commits != 1 else ''}, one band per week", 11.5, italic=True, opacity=.75))
+    parts.append(strip)
+    parts.append(text(60, strip_y + 40, f"{first.strftime('%b %Y')} to {last.strftime('%b %Y')}  ·  taken {taken}", 11.5, italic=True, opacity=.75))
+    parts.append("</svg>")
+    return "\n".join(parts)
+
+
 def plate(repo, days, taken):
     kind, title, thesis, notes = REPOS[repo]
     strip, first, last, commits, span = core_strip(days, 60, W - 60, 262, 20)
     label = (f"{title}: {thesis} {'; '.join(notes)}. Core strip: {commits} commit{'s' if commits != 1 else ''} over {span} week{'s' if span != 1 else ''}, "
              f"{first.strftime('%b %Y')} to {last.strftime('%b %Y')}.")
-    parts = [
-        f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {H}" width="{W}" height="{H}" role="img" aria-label="{escape(label)}">',
-        f'<metadata>author: Zaid Ali Syed; ORCID 0009-0003-4313-1510; PGP EFE9 4832 B2B9 80D9 B583 91F2 8FAA BCC1 B1AC 09E5; drawn by scripts/repo_plates.py in github.com/zaidwhy/zaidwhy</metadata>',
-        f'''<defs><filter id="paper"><feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="2" seed="7"/><feColorMatrix values="0 0 0 0 .17 0 0 0 0 .13 0 0 0 0 .09 0 0 0 .07 0"/><feComposite in2="SourceGraphic" operator="in"/></filter></defs>
-<style>.rise{{transform-box:fill-box;transform-origin:bottom;animation:rise 1.6s cubic-bezier(.3,0,.2,1) .3s both}}@keyframes rise{{from{{transform:scaleY(0)}}to{{transform:scaleY(1)}}}}@media (prefers-reduced-motion:reduce){{.rise{{animation:none}}}}</style>''',
-        f'<rect width="{W}" height="{H}" fill="{PAPER}"/><rect width="{W}" height="{H}" filter="url(#paper)"/>',
-        f'<rect x="18" y="18" width="{W - 36}" height="{H - 36}" fill="none" stroke="{INK}" stroke-width="1.4"/>',
-        f'<rect x="24" y="24" width="{W - 48}" height="{H - 48}" fill="none" stroke="{INK}" stroke-width=".5"/>',
+    parts = plate_head(W, H, label) + [
         text(60, 62, f"Survey of github.com/{OWNER}  ·  {kind}", 12, caps=True),
         text(60, 106, title, 38),
         text(60, 136, thesis, 15, italic=True, opacity=.85),
@@ -146,6 +185,8 @@ def main():
             continue
         with open(os.path.join(out_dir, f"{repo}.svg"), "w", encoding="utf-8", newline="\n") as f:
             f.write(plate(repo, days, taken))
+        with open(os.path.join(out_dir, f"{repo}-narrow.svg"), "w", encoding="utf-8", newline="\n") as f:
+            f.write(plate_narrow(repo, days, taken))
         print(f"wrote {repo}.svg: {len(days)} commits")
 
 

@@ -178,6 +178,14 @@ class RepoPlates(unittest.TestCase):
                 self.assertIn("1 commit over 1 week,", svg)
                 self.assertNotIn(chr(0x2014), svg)
 
+    def test_every_listed_repo_has_a_phone_plate(self):
+        for repo in repo_plates.REPOS:
+            with self.subTest(repo=repo):
+                svg = repo_plates.plate_narrow(repo, [date(2026, 1, 5), date(2026, 10, 1)], "2026-10-28")
+                doc = xml.dom.minidom.parseString(svg.encode())
+                self.assertEqual(doc.documentElement.getAttribute("width"), str(repo_plates.NARROW_W))
+                self.assertIn(repo_plates.REPOS[repo][1], svg)
+
     def test_strip_spans_first_to_newest_commit(self):
         days = [date(2026, 1, 5), date(2026, 1, 6), date(2026, 10, 1)]
         svg = repo_plates.plate("augur", days, "2026-10-28")
