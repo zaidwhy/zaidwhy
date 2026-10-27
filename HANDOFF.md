@@ -16,6 +16,8 @@
 
 - Round 5 (renderers without CSS animation): the fade-in elements had `opacity:0` as their base style, so converters and thumbnailers drew them blank: 5.7% of the seal plate and 5.0% of the specimens plate went missing in a Chromium render with `animation:none` forced. The animation now starts from transparent instead, and every plate loses 0.00% with animation off. A test rejects any base `opacity:0` rule.
 
+- Round 6 (facts): a test now renders the plates and requires every number on them to appear in the README outside the bot blocks and dates. It was checked by planting three wrong numbers (27 to 28, 13.4k to 13.5k, 188 to 189); each one failed the test. The first real run caught two plate facts with no written source: the reader model names behind 50/800/1600 words, and AUGUR's 39 and 80 year gaps. Both had only been stated in the alt text of the charts the plates replaced. They are now stated in the Assays section.
+
 ## Next
 - Re-run `repo_plates.py` monthly, or when a repo's headline numbers change, so the strips do not go stale.
 - Zaid: upload `weekend-profile-update/creative/banner-core.png` as the LinkedIn background.

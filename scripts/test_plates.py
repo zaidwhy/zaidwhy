@@ -84,6 +84,40 @@ class Rendering(unittest.TestCase):
                         self.assertValidSvg(f.read())
 
 
+class PlateFactsMatchReadme(unittest.TestCase):
+    """plates.py copies its numbers from README.md, where each sits beside its source link.
+    A number on a plate that the README does not state is a claim without a receipt."""
+
+    def test_every_number_on_a_plate_is_stated_in_the_readme(self):
+        import html
+        import re
+
+        readme_path = os.path.join(os.path.dirname(__file__), "..", "README.md")
+        with open(readme_path, encoding="utf-8") as f:
+            readme = f.read()
+        # nightly bot blocks and ISO dates are full of digits that are not claims
+        readme = re.sub(r"<!-- (ACTIVITY|STATUS):START -->.*?<!-- \1:END -->", "", readme, flags=re.S)
+        readme = re.sub(r"\d{4}-\d{2}-\d{2}", "", readme).replace(",", "")
+        with tempfile.TemporaryDirectory() as out:
+            original = plates.ASSETS
+            plates.ASSETS = out
+            try:
+                for draw in (plates.specimens, plates.faults, plates.assays, plates.excavation, plates.fieldwork, plates.seal):
+                    draw()
+            finally:
+                plates.ASSETS = original
+            for name in sorted(os.listdir(out)):
+                with open(os.path.join(out, name), encoding="utf-8") as f:
+                    texts = [html.unescape(t) for t in re.findall(r"<text[^>]*>([^<]*)</text>", f.read())]
+                for label in texts:
+                    if re.fullmatch(r"[\d,]+|no\. \d+", label.strip()):
+                        continue  # axis ticks and catalogue numbers, not claims
+                    for number in re.findall(r"\d[\d,.]*k?", label):
+                        number = number.rstrip(".,").replace(",", "")
+                        with self.subTest(plate=name, label=label):
+                            self.assertRegex(readme, rf"(?<![\d.]){re.escape(number)}(?!\d)")
+
+
 class RepoPlates(unittest.TestCase):
     def test_every_listed_repo_renders_from_one_commit(self):
         for repo in repo_plates.REPOS:

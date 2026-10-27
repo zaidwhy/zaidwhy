@@ -130,7 +130,7 @@ The control is where it got interesting. On tests that really were wrong, the gu
 
 ### [COLD READ](https://github.com/zaidwhy/coldread) - the anonymity half-life belongs to the reader
 
-**Same 72 authors, same words, three readers of one size: 50, 800 or 1600 words before each one beats a coin flip.** How long you stay anonymous depends on the model reading you, not on the text.
+**Same 72 authors, same words, three readers of one size: 50, 800 or 1600 words before each one beats a coin flip** (llama3.1:8b, qwen2.5:7b and mistral:7b in that order). How long you stay anonymous depends on the model reading you, not on the text.
 
 `n=3 model families` · `negative control held` · `contamination ruled out` · `Wilson 95% intervals` · [read the result](https://github.com/zaidwhy/coldread/blob/master/RESULT.md)
 
@@ -151,7 +151,7 @@ Corpus memorisation was tested directly rather than waved away, and ruled out. O
 
 ### [AUGUR](https://github.com/zaidwhy/augur) - a model with a 1938 cutoff answers from 1899
 
-**A cutoff marks the edge of a corpus, not its centre.** Asked what year it is, both time-locked models answer from four to eight decades before their stated cutoff.
+**A cutoff marks the edge of a corpus, not its centre.** Asked what year it is, both time-locked models answer from four to eight decades before their stated cutoff: TypeWriter-1938 from 1899, 39 years short, and Talkie-1930 from 1850, 80 years short.
 
 `n=2 model families` · `14-probe battery, temperature 0, fixed seed` · `raw output shipped unedited` · [read the finding](https://github.com/zaidwhy/augur/blob/master/FINDING.md)
 
