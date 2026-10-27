@@ -364,7 +364,6 @@ def strata(ground, h, width=W):
     out.append(f'<rect x="24" y="{ground - 8}" width="{width - 48}" height="8" fill="#6E6A3E"/>')
     for x in range(26, width - 26, 7):
         out.append(f'<line x1="{x}" y1="{ground - 8}" x2="{x + 1.5}" y2="{ground - 12 - seeded(f"g{x}") * 4:.1f}" stroke="#4E5A2C" stroke-width=".9"/>')
-
     return out
 
 
@@ -403,6 +402,43 @@ def excavation():
         out.append(text(cx, cy + 14, note, 11, anchor="middle", italic=True, opacity=.8))
     out.append(text(W - 60, ground + 26, "below ground: imports the kernel instead of rebuilding retrieval", 11.5, anchor="end", italic=True, opacity=.75))
     save("plate-excavation.svg", out)
+
+
+def excavation_narrow():
+    """The surface systems become a list of small headframes; the kernel and its chambers keep the shaft."""
+    row_h, top = 58, 190
+    ground = top + len(SURFACE) * row_h + 40
+    kernel_y = ground + 290
+    h = kernel_y + 92
+    out = frame(h, "Plate IV  ·  Excavation", "What stands on the kernel",
+                ["One memory kernel, sunk once and reached by", "every app below ground. Above: the systems."], EXCAVATION_LABEL, width=NARROW)
+    for i, (name, rows) in enumerate(SURFACE):
+        y = top + i * row_h
+        x = 84
+        out.append(f'<g class="show" style="animation-delay:{.12 * i:.2f}s">')
+        out.append(f'<path d="M{x - 13} {y + 30}L{x} {y - 10}L{x + 13} {y + 30}M{x - 9} {y + 16}H{x + 9}M{x - 5} {y + 3}H{x + 5}" stroke="{INK}" stroke-width="1.3" fill="none"/>')
+        out.append(f'<circle cx="{x}" cy="{y - 13}" r="4.5" fill="{CARD}" stroke="{INK}" stroke-width="1.1"/>')
+        out.append(f'<line x1="{x - 22}" y1="{y + 30}" x2="{x + 22}" y2="{y + 30}" stroke="#4E5A2C" stroke-width="2.4"/>')
+        out.append(text(x + 40, y + 6, name, 15, bold=True))
+        out.append(text(x + 40, y + 25, f"{rows[0]}  ·  {rows[1]}", 12, italic=True, opacity=.85))
+        out.append("</g>")
+    out.extend(strata(ground, h, NARROW))
+    shaft_x = NARROW / 2
+    out.append(f'<rect x="{shaft_x - 9}" y="{ground}" width="18" height="{kernel_y - ground - 24}" fill="{PAPER}" stroke="{INK}" stroke-width="1.1"/>')
+    for y in range(ground + 10, kernel_y - 24, 12):
+        out.append(f'<line x1="{shaft_x - 9}" y1="{y}" x2="{shaft_x + 9}" y2="{y}" stroke="{INK}" stroke-width=".5"/>')
+    for (name, note), cx, cy in zip(CHAMBERS, (128, NARROW - 128, 128), (ground + 96, ground + 96, ground + 190)):
+        mid = shaft_x - 9 if cx < shaft_x else shaft_x + 9
+        out.append(f'<path d="M{mid} {cy}H{cx + (70 if cx < shaft_x else -70)}" stroke="{INK}" stroke-width="7" stroke-opacity=".85"/>')
+        out.append(f'<path d="M{mid} {cy}H{cx + (70 if cx < shaft_x else -70)}" stroke="{PAPER}" stroke-width="4"/>')
+        out.append(f'<ellipse cx="{cx}" cy="{cy}" rx="72" ry="22" fill="{CARD}" stroke="{INK}" stroke-width="1.1"/>')
+        out.append(text(cx, cy - 2, name, 13.5, anchor="middle"))
+        out.append(text(cx, cy + 14, note, 11, anchor="middle", italic=True, opacity=.8))
+    out.append(f'<ellipse cx="{shaft_x}" cy="{kernel_y}" rx="200" ry="32" fill="{CARD}" stroke="{WAX}" stroke-width="1.8"/>')
+    out.append(text(shaft_x, kernel_y - 3, "personal-llm  ·  the memory kernel", 15, anchor="middle", bold=True))
+    out.append(text(shaft_x, kernel_y + 16, KERNEL_NOTE, 12, anchor="middle", italic=True))
+    out.append(text(NARROW - 44, ground + 30, "below ground: imports the kernel", 11.5, anchor="end", italic=True, opacity=.75))
+    save("plate-excavation-narrow.svg", out)
 
 
 FIELDWORK_LABEL = ("Plate V, field work. Zabira Academy: 27 pull requests merged into a live product in 12 days. Pratyaya Limited: all 10 aggregate totals match the support platform's report "
@@ -520,6 +556,7 @@ if __name__ == "__main__":
     assays()
     assays_narrow()
     excavation()
+    excavation_narrow()
     fieldwork()
     fieldwork_narrow()
     seal()

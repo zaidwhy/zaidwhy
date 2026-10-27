@@ -30,7 +30,9 @@
 
 - Round 12 (phones, Plate III): the three assay panels are now `flake_panel`, `coldread_panel` and `augur_panel`, placed by origin; the only thing that tied them to the plate was the footnote position, now relative to the panel. `plate-assays-narrow.svg` stacks them; the wide plate regenerates identical apart from line breaks.
 
+- Round 13 (phones, Plate IV): `plate-excavation-narrow.svg` is its own composition, because five headframes in a row do not stack: the surface systems become a list of small headframes, and the shaft keeps the kernel and its three chambers. `strata()`, `SURFACE`, `CHAMBERS` and `KERNEL_NOTE` are shared with the wide plate. Another session committed new test counts (second-brain 116, ecosystem 381, commit b590812) from this same checkout mid-round; that commit also carried this round's refactor, so the history splits the work across two commits.
+
 ## Next
-- Phone twins for the remaining plates: excavation, then the seal and the route strip.
+- Phone twins for the remaining plates: the seal, then the route strip.
 - Re-run `repo_plates.py` monthly, or when a repo's headline numbers change, so the strips do not go stale.
 - Zaid: upload `weekend-profile-update/creative/banner-core.png` as the LinkedIn background.

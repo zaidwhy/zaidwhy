@@ -183,7 +183,10 @@ A second finding fell out of the demo. Asked whether another great war was comin
 
 ## IV. Excavation
 
+<picture>
+<source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/zaidwhy/zaidwhy/main/assets/plate-excavation-narrow.svg">
 <img src="https://raw.githubusercontent.com/zaidwhy/zaidwhy/main/assets/plate-excavation.svg" alt="Plate IV, excavation: five systems on the surface (CivilizationOS, Recall, autocto, AFTERSHOCK, Agent Factory) and below ground the personal-llm memory kernel with 181 offline tests, reached by second-brain, github-pr-agent and DreamOS." width="100%">
+</picture>
 
 The kernel was sunk once and every app below ground draws from it, instead of each one rebuilding retrieval. The headframes on the surface are the systems people can use, each with the one number it is judged by.
 
