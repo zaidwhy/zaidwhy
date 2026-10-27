@@ -169,6 +169,14 @@ backend/memory.py      churn 11 x complexity  49 =  539
 
 `Python` · `pipx install repo-autocto` · [PyPI](https://pypi.org/project/repo-autocto/)
 
+### [AFTERSHOCK](https://github.com/zaidwhy/aftershock) - forecasts where a Netflix breakout spreads next, and grades itself in public
+
+*The forecast is locked in a hash-chained file before the outcome exists.*
+
+Weekly it reads Netflix's public per-country Top 10, finds titles that just broke out, and forecasts the countries they reach next (history-only model, AUC 0.817 on 829 test breakouts). Qloo's taste graph supplies the launch kit and city hotspots. The measured part: Qloo added nothing to the country forecast (AUC 0.8188 against 0.8182), and a soundtrack-song result that looked significant on Tunefind data was discarded when its terms forbade automated collection and did not replicate on MusicBrainz data. Both are in the README. 89 tests.
+
+`Python` · `FastAPI` · `MCP` · [live](https://aftershock-beige.vercel.app)
+
 ### [Agent Factory](https://github.com/zaidwhy/agent-factory) - a build pipeline with frozen contracts
 
 *The contract freezes before the code does, so two agents can build in parallel without seeing each other's work.*
