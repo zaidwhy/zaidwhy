@@ -113,7 +113,10 @@ That is the argument for every number on this page: a result that was never allo
 
 ## III. Assays
 
+<picture>
+<source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/zaidwhy/zaidwhy/main/assets/plate-assays-narrow.svg">
 <img src="https://raw.githubusercontent.com/zaidwhy/zaidwhy/main/assets/plate-assays.svg" alt="Plate III, assays. FLAKE LAUNDERING: handed a wrong test, coding agents repaired it in 9 of 10 runs, 0 of 10 when told not to change the tests, 10 of 10 when told to find out which side is wrong. COLD READ: words before a model beats chance on gender, 50, 800 or about 1600 depending on the model. AUGUR: a 1938-cutoff model answers from 1899, a 1930-cutoff model from 1850." width="100%">
+</picture>
 
 Three samples sent to the lab. Each study has a negative control, because a measurement without one proves nothing. The two older studies were replicated on a second model family. The newest uses one agent and one model, and says so in its first paragraph.
 

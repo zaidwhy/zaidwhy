@@ -71,13 +71,13 @@ class Rendering(unittest.TestCase):
             original = plates.ASSETS
             plates.ASSETS = out
             try:
-                for draw in (plates.route, plates.specimens, plates.specimens_narrow, plates.faults, plates.faults_narrow, plates.assays,
+                for draw in (plates.route, plates.specimens, plates.specimens_narrow, plates.faults, plates.faults_narrow, plates.assays, plates.assays_narrow,
                              plates.excavation, plates.fieldwork, plates.fieldwork_narrow, plates.seal):
                     draw()
             finally:
                 plates.ASSETS = original
             names = sorted(os.listdir(out))
-            self.assertEqual(len(names), 10)
+            self.assertEqual(len(names), 11)
             for name in names:
                 with open(os.path.join(out, name), encoding="utf-8") as f:
                     with self.subTest(plate=name):
@@ -102,7 +102,7 @@ class PlateFactsMatchReadme(unittest.TestCase):
             original = plates.ASSETS
             plates.ASSETS = out
             try:
-                for draw in (plates.specimens, plates.specimens_narrow, plates.faults, plates.faults_narrow, plates.assays, plates.excavation, plates.fieldwork, plates.fieldwork_narrow, plates.seal):
+                for draw in (plates.specimens, plates.specimens_narrow, plates.faults, plates.faults_narrow, plates.assays, plates.assays_narrow, plates.excavation, plates.fieldwork, plates.fieldwork_narrow, plates.seal):
                     draw()
             finally:
                 plates.ASSETS = original

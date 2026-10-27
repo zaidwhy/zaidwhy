@@ -28,7 +28,9 @@
 
 - Round 11 (phones, Plate V): `plate-fieldwork-narrow.svg` stacks the Zabira grid, the Pratyaya reconciliation and the upstream fossils one under another. The three sections are now functions placed by origin, shared with the wide plate, which regenerates identical apart from line breaks.
 
+- Round 12 (phones, Plate III): the three assay panels are now `flake_panel`, `coldread_panel` and `augur_panel`, placed by origin; the only thing that tied them to the plate was the footnote position, now relative to the panel. `plate-assays-narrow.svg` stacks them; the wide plate regenerates identical apart from line breaks.
+
 ## Next
-- Phone twins for the remaining plates: assays, then excavation and the seal.
+- Phone twins for the remaining plates: excavation, then the seal and the route strip.
 - Re-run `repo_plates.py` monthly, or when a repo's headline numbers change, so the strips do not go stale.
 - Zaid: upload `weekend-profile-update/creative/banner-core.png` as the LinkedIn background.

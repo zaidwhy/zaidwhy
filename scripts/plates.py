@@ -240,20 +240,15 @@ def faults_narrow():
     save("plate-faults-narrow.svg", out)
 
 
-def assays():
-    h = 680
-    out = frame(h, "Plate III  ·  Assays", "What the lab measured",
-                "Three samples sent for testing. Each one came back with a number nobody expected, mine included.",
-                "Plate III, assays. FLAKE LAUNDERING: with a correct test, coding agents weakened it in 0 of 60 runs; with a wrong test they repaired it in 9 of 10, "
+ASSAYS_LABEL = ("Plate III, assays. FLAKE LAUNDERING: with a correct test, coding agents weakened it in 0 of 60 runs; with a wrong test they repaired it in 9 of 10, "
                 "0 of 10 when told not to change the tests, 10 of 10 when told to find out which side is wrong. COLD READ: words before a model beats chance on gender: "
                 "50 for llama3.1 8B, 800 for qwen2.5 7B, about 1600 for mistral 7B. AUGUR: a 1938-cutoff model answers from 1899, a 1930-cutoff model from 1850.")
-    panel_w, gap, py = 344, 24, 150
-    panels = [60 + i * (panel_w + gap) for i in range(3)]
-    for px in panels:
-        out.append(f'<rect x="{px}" y="{py}" width="{panel_w}" height="{h - py - 50}" fill="{CARD}" stroke="{INK}" stroke-width=".9"/>')
+PANEL_W = 344
 
-    # A. vials: share of runs that repaired the wrong test
-    px = panels[0]
+
+def flake_panel(px, py, ph):
+    """FLAKE LAUNDERING as vials: the share of runs that repaired a wrong test, per brief."""
+    out = []
     out.append(text(px + 20, py + 32, "FLAKE LAUNDERING", 13, caps=True, bold=True))
     out.append(lines(px + 20, py + 54, ["Handed a wrong test, how often did", "the coding agent repair it?"], 12.5, italic=True))
     vials = [(9, 10, "plain brief"), (0, 10, '"do not change', 'the tests"'), (10, 10, '"find out which', 'side is wrong"')]
@@ -267,10 +262,13 @@ def assays():
         out.append(f'<rect x="{vx - 26}" y="{vtop - 8}" width="52" height="10" fill="{INK}" fill-opacity=".85"/>')
         out.append(text(vx, vbot + 30, f"{got} / {of}", 18, anchor="middle"))
         out.append(lines(vx, vbot + 50, list(vial[2:]), 11.5, gap=15, italic=True, anchor="middle"))
-    out.append(lines(px + 20, h - 92, ["With a correct test: 0 of 60 runs weakened it,", "60 of 60 fixed the real race bug."], 12, italic=True, opacity=.85))
+    out.append(lines(px + 20, py + ph - 42, ["With a correct test: 0 of 60 runs weakened it,", "60 of 60 fixed the real race bug."], 12, italic=True, opacity=.85))
+    return out
 
-    # B. log ruler: words before each reader beats chance on gender
-    px = panels[1]
+
+def coldread_panel(px, py, ph):
+    """COLD READ as a log ruler: words before each reader beats chance on gender."""
+    out = []
     out.append(text(px + 20, py + 32, "COLD READ", 13, caps=True, bold=True))
     out.append(lines(px + 20, py + 54, ["Words a model reads before it beats", "a coin flip on the author's gender"], 12.5, italic=True))
     rx, ry0, ry1 = px + 120, py + 100, py + 370
@@ -287,13 +285,16 @@ def assays():
         out.append(f'<g class="show" style="animation-delay:{.4 + .3 * i:.2f}s"><path d="M{rx + 9} {y:.1f}h28" stroke="{WAX}" stroke-width="1.6"/>'
                    f'<circle cx="{rx}" cy="{y:.1f}" r="5" fill="{WAX}"/>' + text(rx + 44, y + 4.5, f"{model}  ·  {words:,} words", 12.5) + "</g>")
     out.append(text(rx + 44, ry0 - 6, "control (star sign): never", 12, italic=True, opacity=.75))
-    out.append(lines(px + 20, h - 92, ["Same 72 authors, same prompt: a thirty-two-", "fold spread. Anonymity depends on the reader."], 12, italic=True, opacity=.85))
+    out.append(lines(px + 20, py + ph - 42, ["Same 72 authors, same prompt: a thirty-two-", "fold spread. Anonymity depends on the reader."], 12, italic=True, opacity=.85))
+    return out
 
-    # C. timeline: stated cutoff against where each model speaks from
-    px = panels[2]
+
+def augur_panel(px, py, ph):
+    """AUGUR as a timeline: each model's stated cutoff against the year it speaks from."""
+    out = []
     out.append(text(px + 20, py + 32, "AUGUR", 13, caps=True, bold=True))
     out.append(lines(px + 20, py + 54, ["Ask a time-locked model what year it is:", "it answers from the middle of its shelf"], 12.5, italic=True))
-    tx0, tx1 = px + 30, px + panel_w - 30
+    tx0, tx1 = px + 30, px + PANEL_W - 30
     ty = py + 300
     year_x = lambda yr: tx0 + (yr - 1840) / 100 * (tx1 - tx0)
     out.append(f'<line x1="{tx0}" y1="{ty}" x2="{tx1}" y2="{ty}" stroke="{INK}" stroke-width="1.2"/>')
@@ -308,8 +309,36 @@ def assays():
         out.append(f'<circle cx="{px + 28}" cy="{ty + 52 + 40 * i}" r="5" fill="{WAX}"/>')
         out.append(text(px + 42, ty + 56 + 40 * i, f"{model} speaks from {voice}", 12.5))
         out.append(text(px + 42, ty + 72 + 40 * i, f"{cutoff - voice} years short of its {cutoff} cutoff", 11, italic=True, opacity=.8))
-    out.append(lines(px + 20, h - 92, ["Told the year, one model moves forty years;", "the other does not move at all."], 12, italic=True, opacity=.85))
+    out.append(lines(px + 20, py + ph - 42, ["Told the year, one model moves forty years;", "the other does not move at all."], 12, italic=True, opacity=.85))
+    return out
+
+
+def assays():
+    h = 680
+    out = frame(h, "Plate III  ·  Assays", "What the lab measured",
+                "Three samples sent for testing. Each one came back with a number nobody expected, mine included.", ASSAYS_LABEL)
+    gap, py = 24, 150
+    ph = h - py - 50
+    panels = [60 + i * (PANEL_W + gap) for i in range(3)]
+    for px in panels:
+        out.append(f'<rect x="{px}" y="{py}" width="{PANEL_W}" height="{ph}" fill="{CARD}" stroke="{INK}" stroke-width=".9"/>')
+
+    for px, draw in zip(panels, (flake_panel, coldread_panel, augur_panel)):
+        out.extend(draw(px, py, ph))
     save("plate-assays.svg", out)
+
+
+def assays_narrow():
+    ph, gap, top = 480, 24, 196
+    h = top + 3 * (ph + gap) + 30
+    out = frame(h, "Plate III  ·  Assays", "What the lab measured",
+                ["Three samples sent for testing. Each one came back", "with a number nobody expected, mine included."], ASSAYS_LABEL, width=NARROW)
+    px = (NARROW - PANEL_W) / 2
+    for i, draw in enumerate((flake_panel, coldread_panel, augur_panel)):
+        py = top + i * (ph + gap)
+        out.append(f'<rect x="{px}" y="{py}" width="{PANEL_W}" height="{ph}" fill="{CARD}" stroke="{INK}" stroke-width=".9"/>')
+        out.extend(draw(px, py, ph))
+    save("plate-assays-narrow.svg", out)
 
 
 def excavation():
@@ -477,6 +506,7 @@ if __name__ == "__main__":
     faults()
     faults_narrow()
     assays()
+    assays_narrow()
     excavation()
     fieldwork()
     fieldwork_narrow()

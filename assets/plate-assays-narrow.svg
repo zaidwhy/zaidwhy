@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 1738" width="520" height="1738" role="img" aria-label="Plate III, assays. FLAKE LAUNDERING: with a correct test, coding agents weakened it in 0 of 60 runs; with a wrong test they repaired it in 9 of 10, 0 of 10 when told not to change the tests, 10 of 10 when told to find out which side is wrong. COLD READ: words before a model beats chance on gender: 50 for llama3.1 8B, 800 for qwen2.5 7B, about 1600 for mistral 7B. AUGUR: a 1938-cutoff model answers from 1899, a 1930-cutoff model from 1850.">
+<defs>
+<filter id="paper"><feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="2" seed="7"/><feColorMatrix values="0 0 0 0 .17 0 0 0 0 .13 0 0 0 0 .09 0 0 0 .07 0"/><feComposite in2="SourceGraphic" operator="in"/></filter>
+<pattern id="hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="7" stroke="#2B2118" stroke-opacity=".22" stroke-width=".8"/></pattern>
+<pattern id="dots" width="9" height="9" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r=".7" fill="#2B2118" fill-opacity=".4"/><circle cx="6.5" cy="6" r=".6" fill="#2B2118" fill-opacity=".3"/></pattern>
+<pattern id="dash" width="22" height="7" patternUnits="userSpaceOnUse"><line x1="1" y1="3.5" x2="13" y2="3.5" stroke="#2B2118" stroke-opacity=".32" stroke-width=".7"/></pattern>
+</defs>
+<style>
+.rise{transform-box:fill-box;transform-origin:bottom;animation:rise 1.6s cubic-bezier(.3,0,.2,1) both}
+.show{animation:show .8s ease-out both}
+@keyframes rise{from{transform:scaleY(0)}to{transform:scaleY(1)}}
+@keyframes show{from{opacity:0}to{opacity:1}}
+@media (prefers-reduced-motion:reduce){.rise,.show{animation:none}}
+</style>
+<metadata>author: Zaid Ali Syed; ORCID 0009-0003-4313-1510; PGP EFE9 4832 B2B9 80D9 B583 91F2 8FAA BCC1 B1AC 09E5; drawn by scripts/plates.py in github.com/zaidwhy/zaidwhy</metadata>
+<rect width="520" height="1738" fill="#F1E8D4"/><rect width="520" height="1738" filter="url(#paper)"/>
+<rect x="18" y="18" width="484" height="1702" fill="none" stroke="#2B2118" stroke-width="1.4"/>
+<rect x="24" y="24" width="472" height="1690" fill="none" stroke="#2B2118" stroke-width=".5"/>
+<text x="60.0" y="62.0" text-anchor="start" fill="#2B2118" fill-opacity="1.0" style="font-family:Georgia,'Times New Roman',serif;font-size:12.5px;letter-spacing:.16em;text-transform:uppercase">Plate III  ·  Assays</text>
+<text x="60.0" y="97.0" text-anchor="start" fill="#2B2118" fill-opacity="1.0" style="font-family:Georgia,'Times New Roman',serif;font-size:28px">What the lab measured</text>
+<text x="60.0" y="122.0" text-anchor="start" fill="#2B2118" fill-opacity="0.8" style="font-family:Georgia,'Times New Roman',serif;font-size:14px;font-style:italic">Three samples sent for testing. Each one came back</text><text x="60.0" y="141.0" text-anchor="start" fill="#2B2118" fill-opacity="0.8" style="font-family:Georgia,'Times New Roman',serif;font-size:14px;font-style:italic">with a number nobody expected, mine included.</text>
+<rect x="88.0" y="196" width="344" height="480" fill="#F7F0DF" stroke="#2B2118" stroke-width=".9"/>
+<text x="108.0" y="228.0" text-anchor="start" fill="#2B2118" fill-opacity="1.0" style="font-family:Georgia,'Times New Roman',serif;font-size:13px;font-weight:bold;letter-spacing:.16em;text-transform:uppercase">FLAKE LAUNDERING</text>
+<text x="108.0" y="250.0" text-anchor="start" fill="#2B2118" fill-opacity="1.0" style="font-family:Georgia,'Times New Roman',serif;font-size:12.5px;font-style:italic">Handed a wrong test, how often did</text><text x="108.0" y="267.0" text-anchor="start" fill="#2B2118" fill-opacity="1.0" style="font-family:Georgia,'Times New Roman',serif;font-size:12.5px;font-style:italic">the coding agent repair it?</text>
+<rect x="130.0" y="306" width="40" height="190" rx="18" fill="#FBF7EC" stroke="#2B2118" stroke-width="1.2"/>
+<rect class="rise" style="animation-delay:0.30s" x="134.0" y="328.2" width="32" height="163.8" rx="14" fill="#B0663F"/>
+<rect x="124.0" y="298" width="52" height="10" fill="#2B2118" fill-opacity=".85"/>
+<text x="150.0" y="526.0" text-anchor="middle" fill="#2B2118" fill-opacity="1.0" style="font-family:Georgia,'Times New Roman',serif;font-size:18px">9 / 10</text>
+<text x="150.0" y="546.0" text-anchor="middle" fill="#2B2118" fill-opacity="1.0" style="font-family:Georgia,'Times New Roman',serif;font-size:11.5px;font-style:italic">plain brief</text>
+<rect x="240.0" y="306" width="40" height="190" rx="18" fill="#FBF7EC" stroke="#2B2118" stroke-width="1.2"/>
+<rect x="234.0" y="298" width="52" height="10" fill="#2B2118" fill-opacity=".85"/>
+<text x="260.0" y="526.0" text-anchor="middle" fill="#2B2118" fill-opacity="1.0" style="font-family:Georgia,'Times New Roman',serif;font-size:18px">0 / 10</text>
+<text x="260.0" y="546.0" text-anchor="middle" fill="#2B2118" fill-opacity="1.0" style="font-family:Georgia,'Times New Roman',serif;font-size:11.5px;font-style:italic">"do not change</text><text x="260.0" y="561.0" text-anchor="middle" fill="#2B2118" fill-opacity="1.0" style="font-family:Georgia,'Times New Roman',serif;font-size:11.5px;font-style:italic">the tests"</text>
+<rect x="350.0" y="306" width="40" height="190" rx="18" fill="#FBF7EC" stroke="#2B2118" stroke-width="1.2"/>
+<rect class="rise" style="animation-delay:0.80s" x="354.0" y="310.0" width="32" height="182.0" rx="14" fill="#97A077"/>
+<rect x="344.0" y="298" width="52" height="10" fill="#2B2118" fill-opacity=".85"/>
+<text x="370.0" y="526.0" text-anchor="middle" fill="#2B2118" fill-opacity="1.0" style="font-family:Georgia,'Times New Roman',serif;font-size:18px">10 / 10</text>
+<text x="370.0" y="546.0" text-anchor="middle" fill="#2B2118" fill-opacity="1.0" style="font-family:Georgia,'Times New Roman',serif;font-size:11.5px;font-style:italic">"find out which</text><text x="370.0" y="561.0" text-anchor="middle" fill="#2B2118" fill-opacity="1.0" style="font-family:Georgia,'Times New Roman',serif;font-size:11.5px;font-style:italic">side is wrong"</text>
+<text x="108.0" y="634.0" text-anchor="start" fill="#2B2118" fill-opacity="0.85" style="font-family:Georgia,'Times New Roman',serif;font-size:12px;font-style:italic">With a correct test: 0 of 60 runs weakened it,</text><text x="108.0" y="651.0" text-anchor="start" fill="#2B2118" fill-opacity="0.85" style="font-family:Georgia,'Times New Roman',serif;font-size:12px;font-style:italic">60 of 60 fixed the real race bug.</text>
+<rect x="88.0" y="700" width="344" height="480" fill="#F7F0DF" stroke="#2B2118" stroke-width=".9"/>
+<text x="108.0" y="732.0" text-anchor="start" fill="#2B2118" fill-opacity="1.0" style="font-family:Georgia,'Times New Roman',serif;font-size:13px;font-weight:bold;letter-spacing:.16em;text-transform:uppercase">COLD READ</text>
+<text x="108.0" y="754.0" text-anchor="start" fill="#2B2118" fill-opacity="1.0" style="font-family:Georgia,'Times New Roman',serif;font-size:12.5px;font-style:italic">Words a model reads before it beats</text><text x="108.0" y="771.0" text-anchor="start" fill="#2B2118" fill-opacity="1.0" style="font-family:Georgia,'Times New Roman',serif;font-size:12.5px;font-style:italic">a coin flip on the author's gender</text>
+<rect x="199.0" y="800" width="18" height="270" fill="#D9C08C" stroke="#2B2118" stroke-width="1"/>
+<rect x="199.0" y="800" width="18" height="270" fill="url(#hatch)"/>
+<line x1="193.0" y1="1070.0" x2="199.0" y2="1070.0" stroke="#2B2118" stroke-width=".8"/>
+<text x="188.0" y="1074.0" text-anchor="end" fill="#2B2118" fill-opacity="0.7" style="font-family:Georgia,'Times New Roman',serif;font-size:11px">25</text>
+<line x1="193.0" y1="1031.4" x2="199.0" y2="1031.4" stroke="#2B2118" stroke-width=".8"/>
+<text x="188.0" y="1035.4" text-anchor="end" fill="#2B2118" fill-opacity="0.7" style="font-family:Georgia,'Times New Roman',serif;font-size:11px">50</text>
+<line x1="193.0" y1="992.9" x2="199.0" y2="992.9" stroke="#2B2118" stroke-width=".8"/>
+<text x="188.0" y="996.9" text-anchor="end" fill="#2B2118" fill-opacity="0.7" style="font-family:Georgia,'Times New Roman',serif;font-size:11px">100</text>
+<line x1="193.0" y1="954.3" x2="199.0" y2="954.3" stroke="#2B2118" stroke-width=".8"/>
+<text x="188.0" y="958.3" text-anchor="end" fill="#2B2118" fill-opacity="0.7" style="font-family:Georgia,'Times New Roman',serif;font-size:11px">200</text>
+<line x1="193.0" y1="915.7" x2="199.0" y2="915.7" stroke="#2B2118" stroke-width=".8"/>
+<text x="188.0" y="919.7" text-anchor="end" fill="#2B2118" fill-opacity="0.7" style="font-family:Georgia,'Times New Roman',serif;font-size:11px">400</text>
+<line x1="193.0" y1="877.1" x2="199.0" y2="877.1" stroke="#2B2118" stroke-width=".8"/>
+<text x="188.0" y="881.1" text-anchor="end" fill="#2B2118" fill-opacity="0.7" style="font-family:Georgia,'Times New Roman',serif;font-size:11px">800</text>
+<line x1="193.0" y1="838.6" x2="199.0" y2="838.6" stroke="#2B2118" stroke-width=".8"/>
+<text x="188.0" y="842.6" text-anchor="end" fill="#2B2118" fill-opacity="0.7" style="font-family:Georgia,'Times New Roman',serif;font-size:11px">1,600</text>
+<line x1="193.0" y1="800.0" x2="199.0" y2="800.0" stroke="#2B2118" stroke-width=".8"/>
+<text x="188.0" y="804.0" text-anchor="end" fill="#2B2118" fill-opacity="0.7" style="font-family:Georgia,'Times New Roman',serif;font-size:11px">3,200</text>
+<g class="show" style="animation-delay:0.40s"><path d="M217.0 1031.4h28" stroke="#8E2F28" stroke-width="1.6"/><circle cx="208.0" cy="1031.4" r="5" fill="#8E2F28"/><text x="252.0" y="1035.9" text-anchor="start" fill="#2B2118" fill-opacity="1.0" style="font-family:Georgia,'Times New Roman',serif;font-size:12.5px">llama3.1:8b  ·  50 words</text></g>
+<g class="show" style="animation-delay:0.70s"><path d="M217.0 877.1h28" stroke="#8E2F28" stroke-width="1.6"/><circle cx="208.0" cy="877.1" r="5" fill="#8E2F28"/><text x="252.0" y="881.6" text-anchor="start" fill="#2B2118" fill-opacity="1.0" style="font-family:Georgia,'Times New Roman',serif;font-size:12.5px">qwen2.5:7b  ·  800 words</text></g>
+<g class="show" style="animation-delay:1.00s"><path d="M217.0 838.6h28" stroke="#8E2F28" stroke-width="1.6"/><circle cx="208.0" cy="838.6" r="5" fill="#8E2F28"/><text x="252.0" y="843.1" text-anchor="start" fill="#2B2118" fill-opacity="1.0" style="font-family:Georgia,'Times New Roman',serif;font-size:12.5px">mistral:7b  ·  1,600 words</text></g>
+<text x="252.0" y="794.0" text-anchor="start" fill="#2B2118" fill-opacity="0.75" style="font-family:Georgia,'Times New Roman',serif;font-size:12px;font-style:italic">control (star sign): never</text>
+<text x="108.0" y="1138.0" text-anchor="start" fill="#2B2118" fill-opacity="0.85" style="font-family:Georgia,'Times New Roman',serif;font-size:12px;font-style:italic">Same 72 authors, same prompt: a thirty-two-</text><text x="108.0" y="1155.0" text-anchor="start" fill="#2B2118" fill-opacity="0.85" style="font-family:Georgia,'Times New Roman',serif;font-size:12px;font-style:italic">fold spread. Anonymity depends on the reader.</text>
+<rect x="88.0" y="1204" width="344" height="480" fill="#F7F0DF" stroke="#2B2118" stroke-width=".9"/>
+<text x="108.0" y="1236.0" text-anchor="start" fill="#2B2118" fill-opacity="1.0" style="font-family:Georgia,'Times New Roman',serif;font-size:13px;font-weight:bold;letter-spacing:.16em;text-transform:uppercase">AUGUR</text>
+<text x="108.0" y="1258.0" text-anchor="start" fill="#2B2118" fill-opacity="1.0" style="font-family:Georgia,'Times New Roman',serif;font-size:12.5px;font-style:italic">Ask a time-locked model what year it is:</text><text x="108.0" y="1275.0" text-anchor="start" fill="#2B2118" fill-opacity="1.0" style="font-family:Georgia,'Times New Roman',serif;font-size:12.5px;font-style:italic">it answers from the middle of its shelf</text>
+<line x1="118.0" y1="1504" x2="402.0" y2="1504" stroke="#2B2118" stroke-width="1.2"/>
+<line x1="118.0" y1="1500" x2="118.0" y2="1508" stroke="#2B2118" stroke-width=".8"/>
+<text x="118.0" y="1524.0" text-anchor="middle" fill="#2B2118" fill-opacity="0.7" style="font-family:Georgia,'Times New Roman',serif;font-size:11px">1840</text>
+<line x1="174.8" y1="1500" x2="174.8" y2="1508" stroke="#2B2118" stroke-width=".8"/>
+<text x="174.8" y="1524.0" text-anchor="middle" fill="#2B2118" fill-opacity="0.7" style="font-family:Georgia,'Times New Roman',serif;font-size:11px">1860</text>
+<line x1="231.6" y1="1500" x2="231.6" y2="1508" stroke="#2B2118" stroke-width=".8"/>
+<text x="231.6" y="1524.0" text-anchor="middle" fill="#2B2118" fill-opacity="0.7" style="font-family:Georgia,'Times New Roman',serif;font-size:11px">1880</text>
+<line x1="288.4" y1="1500" x2="288.4" y2="1508" stroke="#2B2118" stroke-width=".8"/>
+<text x="288.4" y="1524.0" text-anchor="middle" fill="#2B2118" fill-opacity="0.7" style="font-family:Georgia,'Times New Roman',serif;font-size:11px">1900</text>
+<line x1="345.2" y1="1500" x2="345.2" y2="1508" stroke="#2B2118" stroke-width=".8"/>
+<text x="345.2" y="1524.0" text-anchor="middle" fill="#2B2118" fill-opacity="0.7" style="font-family:Georgia,'Times New Roman',serif;font-size:11px">1920</text>
+<line x1="402.0" y1="1500" x2="402.0" y2="1508" stroke="#2B2118" stroke-width=".8"/>
+<text x="402.0" y="1524.0" text-anchor="middle" fill="#2B2118" fill-opacity="0.7" style="font-family:Georgia,'Times New Roman',serif;font-size:11px">1940</text>
+<path class="show" style="animation-delay:0.40s" d="M396.3 1504Q340.9 1344.0 285.6 1504" fill="none" stroke="#8E2F28" stroke-width="1.6" stroke-dasharray="5 3"/>
+<circle cx="396.3" cy="1504" r="4" fill="#F7F0DF" stroke="#2B2118" stroke-width="1.2"/><circle cx="285.6" cy="1504" r="5" fill="#8E2F28"/>
+<circle cx="116.0" cy="1556" r="5" fill="#8E2F28"/>
+<text x="130.0" y="1560.0" text-anchor="start" fill="#2B2118" fill-opacity="1.0" style="font-family:Georgia,'Times New Roman',serif;font-size:12.5px">TypeWriter-1938 speaks from 1899</text>
+<text x="130.0" y="1576.0" text-anchor="start" fill="#2B2118" fill-opacity="0.8" style="font-family:Georgia,'Times New Roman',serif;font-size:11px;font-style:italic">39 years short of its 1938 cutoff</text>
+<path class="show" style="animation-delay:0.80s" d="M373.6 1504Q260.0 1224.0 146.4 1504" fill="none" stroke="#8E2F28" stroke-width="1.6" stroke-dasharray="5 3"/>
+<circle cx="373.6" cy="1504" r="4" fill="#F7F0DF" stroke="#2B2118" stroke-width="1.2"/><circle cx="146.4" cy="1504" r="5" fill="#8E2F28"/>
+<circle cx="116.0" cy="1596" r="5" fill="#8E2F28"/>
+<text x="130.0" y="1600.0" text-anchor="start" fill="#2B2118" fill-opacity="1.0" style="font-family:Georgia,'Times New Roman',serif;font-size:12.5px">Talkie-1930 speaks from 1850</text>
+<text x="130.0" y="1616.0" text-anchor="start" fill="#2B2118" fill-opacity="0.8" style="font-family:Georgia,'Times New Roman',serif;font-size:11px;font-style:italic">80 years short of its 1930 cutoff</text>
+<text x="108.0" y="1642.0" text-anchor="start" fill="#2B2118" fill-opacity="0.85" style="font-family:Georgia,'Times New Roman',serif;font-size:12px;font-style:italic">Told the year, one model moves forty years;</text><text x="108.0" y="1659.0" text-anchor="start" fill="#2B2118" fill-opacity="0.85" style="font-family:Georgia,'Times New Roman',serif;font-size:12px;font-style:italic">the other does not move at all.</text>
+</svg>
