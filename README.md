@@ -35,7 +35,7 @@ python -c "from aftershock import ledger; print(ledger.verify())"
 
 ## I. Specimens
 
-<img src="https://raw.githubusercontent.com/zaidwhy/zaidwhy/main/assets/plate-specimens.svg" alt="Plate I, specimens: 3 pull requests merged upstream into libraries with 13.4k stars; 27 pull requests merged into a live product in 12 days; 2 research findings archived with a DOI; 363 offline tests; 3,240 forecasts locked before outcomes; 229 scored coding-agent runs." width="100%">
+<img src="https://raw.githubusercontent.com/zaidwhy/zaidwhy/main/assets/plate-specimens.svg" alt="Plate I, specimens: 3 pull requests merged upstream into libraries with 13.4k stars; 27 pull requests merged into a live product in 12 days; 2 research findings archived with a DOI; 356 offline tests; 3,240 forecasts locked before outcomes; 229 scored coding-agent runs." width="100%">
 
 Six samples from the core, each with a label that says where it was dug up. None of them is a self-description. Each one is a count you can reproduce from a public record.
 
@@ -51,7 +51,7 @@ Six samples from the core, each with a label that says where it was dug up. None
 | A 229-run pre-registered study of a coding agent: it fixed real race bugs instead of weakening the test (0 of 60), and **"do not change the tests" broke legitimate repairs (9/10 to 0/10)** | [RESULT.md](https://github.com/zaidwhy/flake-laundering/blob/master/RESULT.md) |
 | 2 original research findings, each with a negative control and a second-model replication, **archived with a permanent DOI** | [10.5281/zenodo.22309660](https://doi.org/10.5281/zenodo.22309660) · [10.5281/zenodo.22309658](https://doi.org/10.5281/zenodo.22309658) |
 | A retrieval method benchmarked against 6 baselines - including the version of it that **failed** | [TCMF write-up](https://github.com/zaidwhy/CivilizationOS/blob/main/docs/tcmf.md) · [case study](case-studies/civilizationos.md) |
-| 363 tests across the ecosystem, every one offline and mocked - no API key runs any of them | `pytest --collect-only` on [personal-llm](https://github.com/zaidwhy/personal-llm) · [second-brain](https://github.com/zaidwhy/second-brain) · [github-pr-agent](https://github.com/zaidwhy/github-pr-agent) |
+| 356 tests across the ecosystem, every one offline and mocked - no API key runs any of them | `pytest --collect-only` (personal-llm: `tests/ evals/`) on [personal-llm](https://github.com/zaidwhy/personal-llm) · [second-brain](https://github.com/zaidwhy/second-brain) · [github-pr-agent](https://github.com/zaidwhy/github-pr-agent) |
 | Every commit I author is cryptographically signed (the nightly activity bot's `auto:` commits are not), and both findings carry an ORCID-bound DOI | [PROVENANCE.md](PROVENANCE.md) · [ORCID 0009-0003-4313-1510](https://orcid.org/0009-0003-4313-1510) |
 
 </details>
@@ -174,7 +174,7 @@ A second finding fell out of the demo. Asked whether another great war was comin
 
 ## IV. Excavation
 
-<img src="https://raw.githubusercontent.com/zaidwhy/zaidwhy/main/assets/plate-excavation.svg" alt="Plate IV, excavation: five systems on the surface (CivilizationOS, Recall, autocto, AFTERSHOCK, Agent Factory) and below ground the personal-llm memory kernel with 188 offline tests, reached by second-brain, github-pr-agent and DreamOS." width="100%">
+<img src="https://raw.githubusercontent.com/zaidwhy/zaidwhy/main/assets/plate-excavation.svg" alt="Plate IV, excavation: five systems on the surface (CivilizationOS, Recall, autocto, AFTERSHOCK, Agent Factory) and below ground the personal-llm memory kernel with 181 offline tests, reached by second-brain, github-pr-agent and DreamOS." width="100%">
 
 The kernel was sunk once and every app below ground draws from it, instead of each one rebuilding retrieval. The headframes on the surface are the systems people can use, each with the one number it is judged by.
 
@@ -271,7 +271,7 @@ Shipped 3 full projects end to end in test runs. On [Receipts.dev](https://githu
 
 <br>
 
-- **[personal-llm](https://github.com/zaidwhy/personal-llm)** - local-first memory + RAG kernel. 188 offline tests, fully mocked, zero-key CI. Plan-act-reflect agent loop, 4 permission-tiered tools including an SSRF-guarded fetch, full audit log.
+- **[personal-llm](https://github.com/zaidwhy/personal-llm)** - local-first memory + RAG kernel. 181 offline tests, fully mocked, zero-key CI. Plan-act-reflect agent loop, 4 permission-tiered tools including an SSRF-guarded fetch, full audit log.
 - **[second-brain](https://github.com/zaidwhy/second-brain)** - vault ingestion, auto-linking, offline knowledge-graph viewer. 110 tests.
 - **[github-pr-agent](https://github.com/zaidwhy/github-pr-agent)** - repo analysis, issue triage, PR planning. 65 tests.
 - **[DreamOS](https://github.com/zaidwhy/dreamos-college-project)** - semantic file-management OS shell.

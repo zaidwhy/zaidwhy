@@ -36,7 +36,7 @@ REPOS = {
     "autocto": ("tool", "autocto", "The file to review first is the one that changes most and branches most.",
                 ["5 analyzers, no LLM", "160 tests", "pipx install repo-autocto"]),
     "personal-llm": ("kernel", "Personal LLM", "One memory kernel, sunk once and imported by three apps.",
-                     ["188 offline tests", "answers with citations or refuses", "keyless CI"]),
+                     ["181 offline tests", "answers with citations or refuses", "keyless CI"]),
     "second-brain": ("chamber", "Second Brain", "A vault that links itself, built on the personal-llm kernel.",
                      ["110 tests", "auto-linking on ingest", "offline graph viewer"]),
     "github-pr-agent": ("chamber", "GitHub PR Agent", "The planning half of a pull-request agent: analyze, triage, plan.",

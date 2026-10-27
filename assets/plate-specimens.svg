@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 590" width="1200" height="590" role="img" aria-label="Plate I, specimens: 3 pull requests merged upstream into libraries with 13.4k stars; 27 pull requests merged into a live product in 12 days; 2 research findings archived with a DOI; 363 offline tests; 3,240 forecasts locked before outcomes; 229 scored coding-agent runs.">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 590" width="1200" height="590" role="img" aria-label="Plate I, specimens: 3 pull requests merged upstream into libraries with 13.4k stars; 27 pull requests merged into a live product in 12 days; 2 research findings archived with a DOI; 356 offline tests; 3,240 forecasts locked before outcomes; 229 scored coding-agent runs.">
 <defs>
 <filter id="paper"><feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="2" seed="7"/><feColorMatrix values="0 0 0 0 .17 0 0 0 0 .13 0 0 0 0 .09 0 0 0 .07 0"/><feComposite in2="SourceGraphic" operator="in"/></filter>
 <pattern id="hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="7" stroke="#2B2118" stroke-opacity=".22" stroke-width=".8"/></pattern>
@@ -58,7 +58,7 @@
 <rect x="78" y="358" width="340" height="170" fill="#F7F0DF" stroke="#2B2118" stroke-width=".9"/>
 <polygon points="152.5,420.0 148.4,432.8 128.8,444.4 112.5,443.9 97.2,428.2 94.1,413.2 110.2,398.6 128.0,392.8 146.2,404.8" fill="#C99A55" stroke="#2B2118" stroke-width="1"/>
 <polygon points="152.5,420.0 148.4,432.8 128.8,444.4 112.5,443.9 97.2,428.2 94.1,413.2 110.2,398.6 128.0,392.8 146.2,404.8" fill="url(#dots)"/>
-<text x="188.0" y="434.0" text-anchor="start" fill="#2B2118" fill-opacity="1.0" style="font-family:Georgia,'Times New Roman',serif;font-size:46px">363</text>
+<text x="188.0" y="434.0" text-anchor="start" fill="#2B2118" fill-opacity="1.0" style="font-family:Georgia,'Times New Roman',serif;font-size:46px">356</text>
 <text x="102.0" y="476.0" text-anchor="start" fill="#2B2118" fill-opacity="1.0" style="font-family:Georgia,'Times New Roman',serif;font-size:14.5px">tests, all offline</text>
 <text x="102.0" y="498.0" text-anchor="start" fill="#2B2118" fill-opacity="0.8" style="font-family:Georgia,'Times New Roman',serif;font-size:12px;font-style:italic">mocked end to end</text><text x="102.0" y="515.0" text-anchor="start" fill="#2B2118" fill-opacity="0.8" style="font-family:Georgia,'Times New Roman',serif;font-size:12px;font-style:italic">no API key runs any of them</text>
 <circle cx="248.0" cy="366" r="3.2" fill="#8E2F28" stroke="#2B2118" stroke-width=".6"/>

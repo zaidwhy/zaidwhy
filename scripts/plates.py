@@ -113,14 +113,14 @@ def specimens():
         ("3", "pull requests merged upstream", ["tenacity, returns, gqlalchemy", "13.4k stars between them"]),
         ("27", "pull requests merged into a live product", ["12 days, +8,838 / -1,619 lines", "every one reviewed by its owner"]),
         ("2", "research findings with a DOI", ["each with a negative control", "and a second-model replication"]),
-        ("363", "tests, all offline", ["mocked end to end", "no API key runs any of them"]),
+        ("356", "tests, all offline", ["mocked end to end", "no API key runs any of them"]),
         ("3,240", "forecasts locked before outcomes", ["hash-chained public ledger", "graded in public from 15 Nov"]),
         ("229", "scored coding-agent runs", ["pre-registered, two studies", "every transcript shipped"]),
     ]
     out = frame(h, "Plate I  ·  Specimens", "What the drill brought up",
                 "Six samples from the core, each mounted with the label that says where it came from.",
                 "Plate I, specimens: 3 pull requests merged upstream into libraries with 13.4k stars; 27 pull requests merged into a live product in 12 days; "
-                "2 research findings archived with a DOI; 363 offline tests; 3,240 forecasts locked before outcomes; 229 scored coding-agent runs.")
+                "2 research findings archived with a DOI; 356 offline tests; 3,240 forecasts locked before outcomes; 229 scored coding-agent runs.")
     out.append(f'<rect x="54" y="146" width="{W - 108}" height="{h - 192}" fill="#E4D6B8" stroke="{INK}" stroke-width=".9"/>')
     cw, ch = 340, 170
     for i, (big, what, notes) in enumerate(cards):
@@ -274,7 +274,7 @@ def excavation():
     out = frame(h, "Plate IV  ·  Excavation", "What stands on the kernel",
                 "One memory kernel, sunk once and reached by every app below ground. The headframes above are the systems people can use.",
                 "Plate IV, excavation. Surface: CivilizationOS, 10 agents and 5 councils, live; Recall, recall at 1 of 10 out of 10 at 149 ms median; autocto, 5 analyzers and 160 tests on PyPI; "
-                "AFTERSHOCK, ROC AUC 0.817 on 829 held-out breakouts; Agent Factory, 6 agents on frozen contracts. Below ground the personal-llm kernel with 188 offline tests, "
+                "AFTERSHOCK, ROC AUC 0.817 on 829 held-out breakouts; Agent Factory, 6 agents on frozen contracts. Below ground the personal-llm kernel with 181 offline tests, "
                 "reached by second-brain with 110 tests, github-pr-agent with 65, and DreamOS.")
     ground = 300
     layers = [(ground, ground + 70, TINTS[0], "dots"), (ground + 70, ground + 150, TINTS[1], "dash"),
@@ -308,7 +308,7 @@ def excavation():
         out.append(f'<line x1="{shaft_x - 9}" y1="{y}" x2="{shaft_x + 9}" y2="{y}" stroke="{INK}" stroke-width=".5"/>')
     out.append(f'<ellipse cx="{shaft_x}" cy="{kernel_y}" rx="210" ry="30" fill="{CARD}" stroke="{WAX}" stroke-width="1.8"/>')
     out.append(text(shaft_x, kernel_y - 3, "personal-llm  ·  the memory kernel", 15, anchor="middle", bold=True))
-    out.append(text(shaft_x, kernel_y + 16, "188 offline tests, keyless CI", 12, anchor="middle", italic=True))
+    out.append(text(shaft_x, kernel_y + 16, "181 offline tests, keyless CI", 12, anchor="middle", italic=True))
     chambers = [("second-brain", "110 tests", 250, ground + 110), ("github-pr-agent", "65 tests", 950, ground + 110), ("DreamOS", "semantic file shell", 300, ground + 200)]
     for name, note, cx, cy in chambers:
         mid = shaft_x - 9 if cx < shaft_x else shaft_x + 9
