@@ -24,7 +24,9 @@
 
 - Round 9 (phones): at a 390 px phone width a 1200 px plate is drawn 358 px wide, so its 12 px notes come out near 3.6 px. Plate I now has a 520 px single-column twin (`plate-specimens-narrow.svg`, `specimens_narrow()` sharing `specimen_card()` with the wide plate). The README serves it through `<picture><source media="(max-width: 600px)">`, which GitHub's sanitizer keeps (checked through the markdown API). Loading GitHub's own rendered markup at 390 px picks the narrow plate, with notes near 8.3 px; at 1280 px it picks the wide plate. The wide plate is unchanged apart from line breaks. Headless Chromium could not reach github.com from this machine, so the live page itself was not loaded.
 
+- Round 10 (phones, Plate II): `plate-faults-narrow.svg`, 520 px, the faulted block above the five entries stacked one per row; `fault_block()` is shared with the wide plate, which regenerates identical apart from line breaks. Served under 600 px through `<picture>` like Plate I.
+
 ## Next
-- Phone twins for the other plates, in order of how much text they carry: faults, fieldwork, assays.
+- Phone twins for the remaining plates: fieldwork, then assays.
 - Re-run `repo_plates.py` monthly, or when a repo's headline numbers change, so the strips do not go stale.
 - Zaid: upload `weekend-profile-update/creative/banner-core.png` as the LinkedIn background.

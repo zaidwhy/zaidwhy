@@ -100,7 +100,10 @@ If any of it does not reproduce, the claim above is wrong and I want to know.
 
 ## II. Fault lines
 
+<picture>
+<source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/zaidwhy/zaidwhy/main/assets/plate-faults-narrow.svg">
 <img src="https://raw.githubusercontent.com/zaidwhy/zaidwhy/main/assets/plate-faults.svg" alt="Plate II, fault lines: five claims of mine broken by my own evidence: TCMF version one, COLD READ's confidently-wrong finding, AUGUR's forecasting programme, adk-python 6190, and AFTERSHOCK's song-placement effect." width="100%">
+</picture>
 
 Anyone can publish the version of their work where everything held. These are five places where I made a claim, went and collected the evidence, and the evidence broke it. Every correction stays in the repository it belongs to. The [TCMF write-up](https://github.com/zaidwhy/CivilizationOS/blob/main/docs/tcmf.md) still shows the fusion formula that scored 0.02. [`RESULT.md`](https://github.com/zaidwhy/coldread/blob/master/RESULT.md) still states the headline that did not survive a second model. [`FINDING.md`](https://github.com/zaidwhy/augur/blob/master/FINDING.md) still has the forecasting plan its own first phase falsified. [adk-python #6190](https://github.com/google/adk-python/pull/6190) is closed and on this page anyway, and the [AFTERSHOCK README](https://github.com/zaidwhy/aftershock) still says why its best result was thrown away.
 

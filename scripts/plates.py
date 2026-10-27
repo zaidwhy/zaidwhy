@@ -161,57 +161,83 @@ def specimens_narrow():
     save("plate-specimens-narrow.svg", out)
 
 
-def faults():
-    h = 640
-    entries = [
-        ("TCMF v1", ["claimed: causal fusion wins", "found: recall@5 0.02, where", "the causal signal alone is 1.00", "kept in: docs/tcmf.md"]),
-        ("COLD READ", ["claimed: short text gives", "confidently wrong guesses", "found: no replication on a", "second model; RESULT.md says so"]),
-        ("AUGUR", ["claimed: a forecasting", "programme on old models", "found: killed by its own", "phase zero; still in FINDING.md"]),
-        ("adk-python #6190", ["claimed: the fix for a CLI", "parser bug, LGTM'd", "found: a maintainer's commit", "landed first; closed, kept here"]),
-        ("AFTERSHOCK", ["claimed: a song-placement", "effect, significant", "found: data terms forbade it;", "rebuilt, did not replicate"]),
-    ]
-    out = frame(h, "Plate II  ·  Fault lines", "Where my own claims broke",
-                "Five places I said something, went looking for the evidence, and the rock gave way. The breaks stay on the record.",
-                "Plate II, fault lines: five claims of mine broken by my own evidence. TCMF version one scored recall at 5 of 0.02 where the causal signal alone reaches 1.00. "
+FAULTS = [
+    ("TCMF v1", ["claimed: causal fusion wins", "found: recall@5 0.02, where", "the causal signal alone is 1.00", "kept in: docs/tcmf.md"]),
+    ("COLD READ", ["claimed: short text gives", "confidently wrong guesses", "found: no replication on a", "second model; RESULT.md says so"]),
+    ("AUGUR", ["claimed: a forecasting", "programme on old models", "found: killed by its own", "phase zero; still in FINDING.md"]),
+    ("adk-python #6190", ["claimed: the fix for a CLI", "parser bug, LGTM'd", "found: a maintainer's commit", "landed first; closed, kept here"]),
+    ("AFTERSHOCK", ["claimed: a song-placement", "effect, significant", "found: data terms forbade it;", "rebuilt, did not replicate"]),
+]
+FAULTS_LABEL = ("Plate II, fault lines: five claims of mine broken by my own evidence. TCMF version one scored recall at 5 of 0.02 where the causal signal alone reaches 1.00. "
                 "COLD READ's confidently-wrong finding did not replicate on a second model. AUGUR's forecasting programme was killed by its own phase zero. "
                 "adk-python 6190 was closed after an LGTM when a maintainer's commit landed first. AFTERSHOCK's song-placement effect was discarded over data terms and did not replicate.")
-    top, bot, left, right = 160, 380, 60, W - 60
-    out.append(f'<clipPath id="block"><rect x="{left}" y="{top}" width="{right - left}" height="{bot - top}"/></clipPath>')
+NUMERALS = ["i", "ii", "iii", "iv", "v"]
+FAULTS_MOTTO = "A result that was never allowed to fail is not evidence of anything."
+
+
+def fault_block(top, bot, left, right, bed=22, step=14):
+    """The faulted rock: five slanted faults, each dropping the beds to its right by `step`."""
+    out = [f'<clipPath id="block"><rect x="{left}" y="{top}" width="{right - left}" height="{bot - top}"/></clipPath>']
     fault_x = [left + (right - left) * (k + 0.5) / 5 for k in range(5)]
     lean = 0.28
-    beds = [top + 22 * k for k in range(-6, 14)]
-    group = ['<g clip-path="url(#block)">']
+    mid = (top + bot) / 2
+    beds = [top + bed * k for k in range(-6, int((bot - top) / bed) + 4)]
+
+    def fx(k, y):
+        if k < 0:
+            return left - 200
+        if k >= 5:
+            return right + 200
+        return fault_x[k] + (y - mid) * lean
+
+    out.append('<g clip-path="url(#block)">')
     for seg in range(6):
-        drop = 14 * seg
-        def fx(k, y):
-            if k < 0:
-                return left - 200
-            if k >= 5:
-                return right + 200
-            return fault_x[k] + (y - (top + bot) / 2) * lean
+        drop = step * seg
         for b in range(len(beds) - 1):
             y0, y1 = beds[b] + drop, beds[b + 1] + drop
             shape = [(fx(seg - 1, y0), y0), (fx(seg, y0), y0), (fx(seg, y1), y1), (fx(seg - 1, y1), y1)]
-            tint = TINTS[b % len(TINTS)]
-            group.append(poly(shape, fill=tint, stroke=INK, stroke_width=".45", stroke_opacity=".6"))
-            group.append(poly(shape, fill="url(#dash)" if b % 2 else "url(#dots)"))
-    group.append("</g>")
-    out.extend(group)
+            out.append(poly(shape, fill=TINTS[b % len(TINTS)], stroke=INK, stroke_width=".45", stroke_opacity=".6"))
+            out.append(poly(shape, fill="url(#dash)" if b % 2 else "url(#dots)"))
+    out.append("</g>")
     out.append(f'<rect x="{left}" y="{top}" width="{right - left}" height="{bot - top}" fill="none" stroke="{INK}" stroke-width="1.2"/>')
     for k, x in enumerate(fault_x):
-        x0, x1 = x + (top - (top + bot) / 2) * lean, x + (bot - (top + bot) / 2) * lean
+        x0, x1 = x + (top - mid) * lean, x + (bot - mid) * lean
         out.append(f'<line x1="{x0:.1f}" y1="{top}" x2="{x1:.1f}" y2="{bot}" stroke="{WAX}" stroke-width="2.6"/>')
-        mx, my = (x0 + x1) / 2, (top + bot) / 2
-        out.append(f'<path d="M{mx - 16:.1f} {my - 26:.1f}v14l-4 -5m4 5l4 -5" stroke="{INK}" stroke-width="1.1" fill="none"/>')
+        mx = (x0 + x1) / 2
+        out.append(f'<path d="M{mx - 16:.1f} {mid - 26:.1f}v14l-4 -5m4 5l4 -5" stroke="{INK}" stroke-width="1.1" fill="none"/>')
         out.append(f'<circle cx="{x0:.1f}" cy="{top - 12}" r="11" fill="{CARD}" stroke="{WAX}" stroke-width="1.4"/>')
-        out.append(text(x0, top - 7.5, ["i", "ii", "iii", "iv", "v"][k], 12, anchor="middle", italic=True, fill=WAX))
+        out.append(text(x0, top - 7.5, NUMERALS[k], 12, anchor="middle", italic=True, fill=WAX))
+    return out
+
+
+def faults():
+    h = 640
+    out = frame(h, "Plate II  ·  Fault lines", "Where my own claims broke",
+                "Five places I said something, went looking for the evidence, and the rock gave way. The breaks stay on the record.", FAULTS_LABEL)
+    top, bot, left, right = 160, 380, 60, W - 60
+    out.extend(fault_block(top, bot, left, right))
     col_w = (right - left) / 5
-    for k, (name, rows) in enumerate(entries):
+    for k, (name, rows) in enumerate(FAULTS):
         cx = left + col_w * k + 10
-        out.append(text(cx, bot + 44, f"{['i', 'ii', 'iii', 'iv', 'v'][k]}.  {name}", 15, bold=True))
+        out.append(text(cx, bot + 44, f"{NUMERALS[k]}.  {name}", 15, bold=True))
         out.append(lines(cx, bot + 70, rows, 12.2, gap=18, italic=True))
-    out.append(text(W / 2, h - 44, "A result that was never allowed to fail is not evidence of anything.", 14, anchor="middle", italic=True))
+    out.append(text(W / 2, h - 44, FAULTS_MOTTO, 14, anchor="middle", italic=True))
     save("plate-faults.svg", out)
+
+
+def faults_narrow():
+    top, bot, left, right = 196, 326, 44, NARROW - 44
+    entry_h = 112
+    h = bot + 30 + len(FAULTS) * entry_h + 116
+    out = frame(h, "Plate II  ·  Fault lines", "Where my own claims broke",
+                ["Five places I said something, went looking", "for the evidence, and the rock gave way."], FAULTS_LABEL, width=NARROW)
+    out.extend(fault_block(top, bot, left, right, bed=16, step=10))
+    for k, (name, rows) in enumerate(FAULTS):
+        y = bot + 56 + k * entry_h
+        out.append(text(60, y, f"{NUMERALS[k]}.  {name}", 15, bold=True))
+        out.append(lines(78, y + 24, rows, 13, gap=18, italic=True))
+    out.append(lines(NARROW / 2, h - 58, ["A result that was never allowed to fail", "is not evidence of anything."], 14, gap=19, anchor="middle", italic=True))
+    save("plate-faults-narrow.svg", out)
 
 
 def assays():
@@ -424,6 +450,7 @@ if __name__ == "__main__":
     specimens()
     specimens_narrow()
     faults()
+    faults_narrow()
     assays()
     excavation()
     fieldwork()
