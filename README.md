@@ -92,14 +92,14 @@ If any of it does not reproduce, the claim above is wrong and I want to know.
 **Recent activity, pulled live from the repos below every night, not written by hand:**
 
 <!-- ACTIVITY:START -->
-- `2026-10-27` **autocto** - plan: clean error for a directory or non-UTF-8 proposal; CLI errors nam... ([`00d959f`](https://github.com/zaidwhy/autocto/commit/00d959f02cc917e4321b382e093cde07ac3a6ad2))
-- `2026-10-27` **personal-llm** - Test count: 181 offline (173 tests/ + 8 evals/); the 7 Space tests down... ([`af727ab`](https://github.com/zaidwhy/personal-llm/commit/af727ab39da2010f81868fcbdcaa4500fca916aa))
-- `2026-10-27` **CivilizationOS** - Log and handoff 2026-10-28 ([`c2753c0`](https://github.com/zaidwhy/CivilizationOS/commit/c2753c039ac65b27ba87da5cbf1284deb5f0ce52))
-- `2026-10-27` **recall** - Security: pillow 13.0.0, vite 6.4.4, source-map-js 1.2.2 (Dependabot) ([`6ee7f21`](https://github.com/zaidwhy/recall/commit/6ee7f217936f723bcd134fcba1dcb6eb3af8da04))
-- `2026-10-27` **dreamos-college-project** - Header plate in the profile's survey style ([`a013b2b`](https://github.com/zaidwhy/dreamos-college-project/commit/a013b2b0578bdd22fd40354b7304dba766a5eb09))
-- `2026-10-27` **github-pr-agent** - Header plate in the profile's survey style ([`307fd0f`](https://github.com/zaidwhy/github-pr-agent/commit/307fd0f6c830fc667dc6c9be530d53fa5f55666b))
-- `2026-10-27` **second-brain** - Header plate in the profile's survey style ([`c8292e5`](https://github.com/zaidwhy/second-brain/commit/c8292e51728c9518b53b4cec5a72ccafbbc4c0dd))
-- `2026-10-27` **personal-llm** - Header plate in the profile's survey style ([`5de9646`](https://github.com/zaidwhy/personal-llm/commit/5de964689b299f0f0db36d07ed7574d9934af738))
+- `2026-10-27` **resume-job-fit-ai** - Cap the Company Research role at 200 characters; it went into the promp... ([`e3700d0`](https://github.com/zaidwhy/resume-job-fit-ai/commit/e3700d0133ee0d0fea64d1028ee60b523ab18128))
+- `2026-10-27` **second-brain** - test_vault asserts the crash propagates; CLAUDE.md: manifest sits besid... ([`eb851a7`](https://github.com/zaidwhy/second-brain/commit/eb851a767ee11472c4f777c52627dc39dda4e0c6))
+- `2026-10-27` **personal-llm** - Ecosystem test total 381 ([`569cefb`](https://github.com/zaidwhy/personal-llm/commit/569cefbdf0a23bac63cba2fe1083959d4ec2bf85))
+- `2026-10-27` **second-brain** - Vault manifest lives beside the vector store; old manifest migrates onl... ([`ab4521c`](https://github.com/zaidwhy/second-brain/commit/ab4521c9d924dda41d9adc1b1c668ddac7be02c1))
+- `2026-10-27` **personal-llm** - Ecosystem test total 375 ([`9f162db`](https://github.com/zaidwhy/personal-llm/commit/9f162db8d6ba5ee30d6e3438bcb8226f8f0b22fd))
+- `2026-10-27` **github-pr-agent** - Validate owner/name before every gh call; the timeline path took the ra... ([`c4a8362`](https://github.com/zaidwhy/github-pr-agent/commit/c4a8362f83ca4d41bfa32dd1c99ef4ee6e15e197))
+- `2026-10-27` **coldread** - build_sample: argparse, so --help prints usage instead of rebuilding th... ([`91514ed`](https://github.com/zaidwhy/coldread/commit/91514edf0dfdc57727119f019336bc79aec7a4b9))
+- `2026-10-27` **recall** - README: tests badge 44 ([`e7971b6`](https://github.com/zaidwhy/recall/commit/e7971b64a57afd38b17b7834aca9f42098775ea5))
 <!-- ACTIVITY:END -->
 
 ---
@@ -202,7 +202,7 @@ The kernel was sunk once and every app below ground draws from it, instead of ea
 | [CivilizationOS](https://civilization-os-murex.vercel.app) | `200 OK` |
 | [AFTERSHOCK](https://aftershock-qloo.vercel.app) | `200 OK` |
 
-*checked 2026-10-27 20:29 UTC, by the workflow that runs this page*
+*checked 2026-10-27 20:49 UTC, by the workflow that runs this page*
 <!-- STATUS:END -->
 
 ### [CivilizationOS](https://github.com/zaidwhy/CivilizationOS) - a society of agents, and a retrieval method that failed first
