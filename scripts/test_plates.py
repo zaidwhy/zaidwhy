@@ -14,6 +14,7 @@ sys.path.insert(0, os.path.dirname(__file__))
 import core_sample  # noqa: E402
 import plates  # noqa: E402
 import repo_plates  # noqa: E402
+import apply_repo_plates  # noqa: E402
 
 
 class SplitIntoEras(unittest.TestCase):
@@ -166,6 +167,49 @@ class ScriptsAreClean(unittest.TestCase):
                     body = f.read()
                 with self.subTest(script=name):
                     self.assertFalse([c for c in body if ord(c) < 32 and c not in "\n\t\r"])
+
+
+class InstallRepoPlates(unittest.TestCase):
+    def setUp(self):
+        from pathlib import Path
+        self.tmp = tempfile.TemporaryDirectory()
+        root = Path(self.tmp.name)
+        self.plates, self.clone = root / "plates", root / "clone"
+        self.plates.mkdir()
+        self.clone.mkdir()
+        days = [date(2026, 1, 5), date(2026, 10, 1)]
+        (self.plates / "augur.svg").write_text(repo_plates.plate("augur", days, "2026-10-28"), encoding="utf-8")
+        (self.plates / "augur-narrow.svg").write_text(repo_plates.plate_narrow("augur", days, "2026-10-28"), encoding="utf-8")
+        (self.clone / "README.md").write_text("# augur\n\nBody text.\n", encoding="utf-8")
+
+    def tearDown(self):
+        self.tmp.cleanup()
+
+    def test_fresh_readme_gets_header_and_footer_and_rerun_changes_nothing(self):
+        apply_repo_plates.install(self.plates, "augur", self.clone)
+        first = (self.clone / "README.md").read_text(encoding="utf-8")
+        self.assertTrue(first.startswith("<picture>"))
+        self.assertIn("# augur", first)
+        self.assertEqual(first.count("survey at [github.com/zaidwhy]"), 1)
+        self.assertTrue((self.clone / ".github" / "plate-narrow.svg").is_file())
+        apply_repo_plates.install(self.plates, "augur", self.clone)
+        self.assertEqual((self.clone / "README.md").read_text(encoding="utf-8"), first)
+
+    def test_old_single_image_header_is_upgraded_in_place(self):
+        (self.clone / "README.md").write_text('<img src=".github/plate.svg" alt="old" width="100%">
+
+# augur
+', encoding="utf-8")
+        apply_repo_plates.install(self.plates, "augur", self.clone)
+        text = (self.clone / "README.md").read_text(encoding="utf-8")
+        self.assertEqual(text.count('<img src=".github/plate.svg"'), 1)
+        self.assertNotIn('alt="old"', text)
+        self.assertIn("plate-narrow.svg", text)
+
+    def test_missing_phone_plate_is_refused_by_name(self):
+        (self.plates / "augur-narrow.svg").unlink()
+        with self.assertRaisesRegex(FileNotFoundError, "augur-narrow.svg"):
+            apply_repo_plates.install(self.plates, "augur", self.clone)
 
 
 class RepoPlates(unittest.TestCase):
