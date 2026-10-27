@@ -296,7 +296,10 @@ Shipped 3 full projects end to end in test runs. On [Receipts.dev](https://githu
 
 ## V. Field work
 
+<picture>
+<source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/zaidwhy/zaidwhy/main/assets/plate-fieldwork-narrow.svg">
 <img src="https://raw.githubusercontent.com/zaidwhy/zaidwhy/main/assets/plate-fieldwork.svg" alt="Plate V, field work: 27 pull requests merged into Zabira Academy in 12 days; at Pratyaya Limited all 10 aggregate totals match the support platform's report and 53 of 55 per-agent averages agree within one second; upstream, 3 merged pull requests, 2 open, and adk-python 6190 closed after an LGTM." width="100%">
+</picture>
 
 Building your own project is the easy dig. This plate covers ground that belonged to someone else: a live product with paying users, a company's support data, and libraries whose maintainers owed me nothing. Every change had to pass somebody else's review.
 

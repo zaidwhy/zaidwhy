@@ -26,7 +26,9 @@
 
 - Round 10 (phones, Plate II): `plate-faults-narrow.svg`, 520 px, the faulted block above the five entries stacked one per row; `fault_block()` is shared with the wide plate, which regenerates identical apart from line breaks. Served under 600 px through `<picture>` like Plate I.
 
+- Round 11 (phones, Plate V): `plate-fieldwork-narrow.svg` stacks the Zabira grid, the Pratyaya reconciliation and the upstream fossils one under another. The three sections are now functions placed by origin, shared with the wide plate, which regenerates identical apart from line breaks.
+
 ## Next
-- Phone twins for the remaining plates: fieldwork, then assays.
+- Phone twins for the remaining plates: assays, then excavation and the seal.
 - Re-run `repo_plates.py` monthly, or when a repo's headline numbers change, so the strips do not go stale.
 - Zaid: upload `weekend-profile-update/creative/banner-core.png` as the LinkedIn background.

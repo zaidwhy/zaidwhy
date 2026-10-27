@@ -364,48 +364,47 @@ def excavation():
     save("plate-excavation.svg", out)
 
 
-def fieldwork():
-    h = 560
-    out = frame(h, "Plate V  ·  Field work", "Ground that was not mine",
-                "Digging in codebases other people own, where every change has to pass somebody else's review.",
-                "Plate V, field work. Zabira Academy: 27 pull requests merged into a live product in 12 days. Pratyaya Limited: all 10 aggregate totals match the support platform's report "
-                "and 53 of 55 per-agent averages agree within one second. Upstream: 3 merged pull requests, 2 open, and adk-python 6190 closed after an LGTM.")
-    cols = [60, 432, 804]
-    for x in cols:
-        out.append(f'<line x1="{x + 350}" y1="160" x2="{x + 350}" y2="{h - 60}" stroke="{INK}" stroke-width=".4"/>' if x != cols[-1] else "")
+FIELDWORK_LABEL = ("Plate V, field work. Zabira Academy: 27 pull requests merged into a live product in 12 days. Pratyaya Limited: all 10 aggregate totals match the support platform's report "
+                   "and 53 of 55 per-agent averages agree within one second. Upstream: 3 merged pull requests, 2 open, and adk-python 6190 closed after an LGTM.")
+UPSTREAM = [("tenacity #668", "8.8k stars", "merged"), ("returns #2480", "4.4k stars", "merged"), ("gqlalchemy #390", "query builder", "merged"),
+            ("2 more, under review", "gqlalchemy #392, django-taggit #944", "open"), ("adk-python #6190", "LGTM, beaten to it", "closed")]
 
-    x = cols[0]
-    out.append(text(x, 170, "ZABIRA ACADEMY  ·  live ed-tech", 12.5, caps=True, bold=True))
-    out.append(text(x, 192, "the excavation grid: one square per merged PR", 12, italic=True, opacity=.8))
+
+def zabira_section(x, top):
+    """The section's heading baseline is `top`; everything below is placed relative to it."""
+    out = [text(x, top, "ZABIRA ACADEMY  ·  live ed-tech", 12.5, caps=True, bold=True),
+           text(x, top + 22, "the excavation grid: one square per merged PR", 12, italic=True, opacity=.8)]
     for i in range(27):
-        gx, gy = x + (i % 9) * 36, 214 + (i // 9) * 36
+        gx, gy = x + (i % 9) * 36, top + 44 + (i // 9) * 36
         out.append(f'<rect class="show" style="animation-delay:{.04 * i:.2f}s" x="{gx}" y="{gy}" width="30" height="30" fill="{TINTS[(i * 5) % len(TINTS)]}" stroke="{INK}" stroke-width=".8"/>')
         out.append(f'<rect x="{gx}" y="{gy}" width="30" height="30" fill="url(#dots)"/>')
-    out.append(text(x, 360, "27", 40))
-    out.append(lines(x + 60, 346, ["pull requests in 12 days", "+8,838 / -1,619 across 557 file changes"], 12.5, italic=True))
-    out.append(lines(x, 400, ["security hardening across 226 files,", "Origin checks on 60 endpoints, and the", "first CI-gated end-to-end suite"], 12.5, gap=18))
+    out.append(text(x, top + 190, "27", 40))
+    out.append(lines(x + 60, top + 176, ["pull requests in 12 days", "+8,838 / -1,619 across 557 file changes"], 12.5, italic=True))
+    out.append(lines(x, top + 230, ["security hardening across 226 files,", "Origin checks on 60 endpoints, and the", "first CI-gated end-to-end suite"], 12.5, gap=18))
+    return out
 
-    x = cols[1]
-    out.append(text(x, 170, "PRATYAYA LIMITED  ·  AI intern", 12.5, caps=True, bold=True))
-    out.append(text(x, 192, "a dashboard reconciled to the platform's own report", 12, italic=True, opacity=.8))
+
+def pratyaya_section(x, top):
+    out = [text(x, top, "PRATYAYA LIMITED  ·  AI intern", 12.5, caps=True, bold=True),
+           text(x, top + 22, "a dashboard reconciled to the platform's own report", 12, italic=True, opacity=.8)]
     for i in range(10):
         bx = x + i * 32
-        out.append(f'<circle cx="{bx + 12}" cy="232" r="11" fill="{TINTS[3]}" stroke="{INK}" stroke-width=".9"/>')
-        out.append(f'<path d="M{bx + 7} 232l4 4l7 -8" stroke="{INK}" stroke-width="1.4" fill="none"/>')
-    out.append(text(x, 274, "10 of 10 aggregate totals match exactly", 12.5))
+        out.append(f'<circle cx="{bx + 12}" cy="{top + 62}" r="11" fill="{TINTS[3]}" stroke="{INK}" stroke-width=".9"/>')
+        out.append(f'<path d="M{bx + 7} {top + 62}l4 4l7 -8" stroke="{INK}" stroke-width="1.4" fill="none"/>')
+    out.append(text(x, top + 104, "10 of 10 aggregate totals match exactly", 12.5))
     for i in range(55):
-        dx, dy = x + 6 + (i % 11) * 28, 300 + (i // 11) * 22
+        dx, dy = x + 6 + (i % 11) * 28, top + 130 + (i // 11) * 22
         filled = i < 53
         out.append(f'<circle cx="{dx}" cy="{dy}" r="6.5" fill="{TINTS[1] if filled else CARD}" stroke="{INK if filled else WAX}" stroke-width="{.8 if filled else 1.6}"/>')
-    out.append(lines(x, 432, ["53 of 55 per-agent averages within one second;", "the 2 that differ are clickable and explain why"], 12.5, gap=18))
+    out.append(lines(x, top + 262, ["53 of 55 per-agent averages within one second;", "the 2 that differ are clickable and explain why"], 12.5, gap=18))
+    return out
 
-    x = cols[2]
-    out.append(text(x, 170, "UPSTREAM OPEN SOURCE", 12.5, caps=True, bold=True))
-    out.append(text(x, 192, "fossils left in other people's code", 12, italic=True, opacity=.8))
-    prs = [("tenacity #668", "8.8k stars", "merged"), ("returns #2480", "4.4k stars", "merged"), ("gqlalchemy #390", "query builder", "merged"),
-           ("2 more, under review", "gqlalchemy #392, django-taggit #944", "open"), ("adk-python #6190", "LGTM, beaten to it", "closed")]
-    for i, (name, note, state) in enumerate(prs):
-        cy = 228 + i * 50
+
+def upstream_section(x, top):
+    out = [text(x, top, "UPSTREAM OPEN SOURCE", 12.5, caps=True, bold=True),
+           text(x, top + 22, "fossils left in other people's code", 12, italic=True, opacity=.8)]
+    for i, (name, note, state) in enumerate(UPSTREAM):
+        cy = top + 58 + i * 50
         cx = x + 18
         if state == "merged":
             spiral = " ".join(f"{cx + 1.2 * math.exp(.15 * t / 18) * math.cos(t / 18):.1f},{cy + 1.2 * math.exp(.15 * t / 18) * math.sin(t / 18):.1f}" for t in range(260))
@@ -415,7 +414,33 @@ def fieldwork():
             out.append(f'<circle cx="{cx}" cy="{cy}" r="13" fill="none" stroke="{WAX if state == "closed" else INK}" stroke-width="1.2" stroke-dasharray="{dash}"/>')
         out.append(text(cx + 26, cy - 1, name, 13.5))
         out.append(text(cx + 26, cy + 15, f"{note}  ·  {state}", 11.5, italic=True, opacity=.8))
+    return out
+
+
+def fieldwork():
+    h = 560
+    out = frame(h, "Plate V  ·  Field work", "Ground that was not mine",
+                "Digging in codebases other people own, where every change has to pass somebody else's review.", FIELDWORK_LABEL)
+    cols = [60, 432, 804]
+    for x in cols:
+        out.append(f'<line x1="{x + 350}" y1="160" x2="{x + 350}" y2="{h - 60}" stroke="{INK}" stroke-width=".4"/>' if x != cols[-1] else "")
+    out.extend(zabira_section(cols[0], 170))
+    out.extend(pratyaya_section(cols[1], 170))
+    out.extend(upstream_section(cols[2], 170))
     save("plate-fieldwork.svg", out)
+
+
+def fieldwork_narrow():
+    tops = [196, 516, 860]
+    h = tops[-1] + 330
+    out = frame(h, "Plate V  ·  Field work", "Ground that was not mine",
+                ["Digging in codebases other people own, where", "every change has to pass somebody else's review."], FIELDWORK_LABEL, width=NARROW)
+    for y in tops[1:]:
+        out.append(f'<line x1="60" y1="{y - 34}" x2="{NARROW - 60}" y2="{y - 34}" stroke="{INK}" stroke-width=".4"/>')
+    out.extend(zabira_section(60, tops[0]))
+    out.extend(pratyaya_section(60, tops[1]))
+    out.extend(upstream_section(60, tops[2]))
+    save("plate-fieldwork-narrow.svg", out)
 
 
 def seal():
@@ -454,4 +479,5 @@ if __name__ == "__main__":
     assays()
     excavation()
     fieldwork()
+    fieldwork_narrow()
     seal()
