@@ -38,6 +38,8 @@
 
 - Round 16 (repo plate facts): the repo plates had no check tying their numbers to a source. `RepoPlateFactsHaveASource` now requires each one on the profile README (DOIs matched whole), or in an explicit `OFF_PAGE` list that names its source; one entry, longmemeval's 141 items, read from that repo's README. Planted errors (162 to 163, 116 to 117, a DOI digit) each fail it. While writing it, a shell edit turned the test's `\1` backreference into chr(1) for the second time tonight, which silently stopped it stripping the bot blocks; `ScriptsAreClean` now fails on any control character in a script.
 
+- Round 17 (LinkedIn banner): `weekend-profile-update/creative/banner_core.py` cropped at a fixed y=452, but the unconformity had already moved to a mean of y=466 as October's bed thickened. `strip_centre()` now measures the erosion line from the plate (falls back to the section middle when there is no gap), and the script body moved into `main()` so the function can be imported and checked. Regenerated: centred at y=454, same composition. The PNG still needs uploading on LinkedIn by Zaid.
+
 ## Next
 - Re-run `repo_plates.py` monthly, or when a repo's headline numbers change, so the strips do not go stale.
 - Zaid: upload `weekend-profile-update/creative/banner-core.png` as the LinkedIn background.
