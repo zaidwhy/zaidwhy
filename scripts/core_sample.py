@@ -17,9 +17,10 @@ import math
 import os
 import subprocess
 import sys
+import urllib.parse
 import urllib.request
 import zlib
-from datetime import date, datetime, timezone
+from datetime import datetime, timezone
 from xml.sax.saxutils import escape
 
 OWNER = "zaidwhy"
@@ -31,7 +32,7 @@ FIRST_YEAR = 2022     # account created Feb 2022; years before have no calendar
 W, H = 1200, 780
 SEC_L, SEC_R = 60, 860          # section edges
 PIVOT_X = 840                   # tilted beds have their true thickness here, where labels attach
-SURFACE_Y, FLOOR_Y = 168, 700
+SURFACE_Y, FLOOR_Y = 176, 700
 LABEL_X = 892
 INK = "#2B2118"
 PAPER = "#F1E8D4"
@@ -87,7 +88,7 @@ def founded_repos():
 
 def merged_upstream_prs():
     q = f"is:pr is:merged is:public author:{OWNER} -user:{OWNER}"
-    url = "https://api.github.com/search/issues?per_page=50&q=" + urllib.request.quote(q)
+    url = "https://api.github.com/search/issues?per_page=50&q=" + urllib.parse.quote(q)
     items = gh_request(url)["items"]
     return [(i["closed_at"][:7], f"{i['repository_url'].rsplit('/', 1)[1]} #{i['number']}") for i in items]
 
@@ -154,6 +155,7 @@ def draw(months, repos, prs, today):
 
     body, labels, marks = [], [], []
     bed_center = {}  # month -> function x -> y, for placing fossils and crystals
+    bed_ceiling = {}  # month -> the erosion surface above its era; a tilted bed is gone above it
     top_curve = lambda x: SURFACE_Y + 14 + wave(x, "surface", 1.5)
     y_cursor = SURFACE_Y + 14
     current_month = f"{today.year}-{today.month:02d}"
@@ -162,11 +164,10 @@ def draw(months, repos, prs, today):
         era_top = top_curve
         era_bottom_y = y_cursor + heights[idx]
         is_last = idx == len(eras) - 1
+        gap_key = "basement" if is_last else f"gap-{gaps[idx][0][0]}"
         if is_last:
-            base_key = "basement"
-            era_bottom = lambda x, b=era_bottom_y + basement_h: FLOOR_Y + 40
+            era_bottom = lambda x: FLOOR_Y + 40
         else:
-            gap_key = f"gap-{gaps[idx][0][0]}"
             era_bottom = lambda x, b=era_bottom_y, k=gap_key: b + wave(x, k, 7) + 3 * math.sin(x / 9)
         slope = math.tan(math.radians(9 * idx))  # older eras dip further
         clip_id = f"era{idx}"
@@ -176,7 +177,7 @@ def draw(months, repos, prs, today):
         group = [f'<g clip-path="url(#{clip_id})">']
 
         total = weights[idx]
-        beds = list(era)
+        beds = era[::-1]  # youngest bed on top
         if is_last:
             beds.append(("basement", None))
         y_at_pivot = y_cursor
@@ -188,11 +189,11 @@ def draw(months, repos, prs, today):
             def edge(x, y, key, open_end):
                 if open_end is not None:
                     return open_end
-                return y + slope * (PIVOT_X - x) + wave(x, key, 2.2 if slope else 3.2)
+                return y - slope * (PIVOT_X - x) + wave(x, key, 2.2 if slope else 3.2)
 
-            top_f = (lambda x, y=y0, k=month: era_top(x) - 30) if first else (lambda x, y=y0, k=month: edge(x, y, k, None))
+            top_f = (lambda x: era_top(x) - 30) if first else (lambda x, y=y0, k=month: edge(x, y, k, None))
             if last_bed:
-                bot_f = lambda x: FLOOR_Y + 60 + slope * (PIVOT_X - x)
+                bot_f = lambda x: FLOOR_Y + 60
             else:
                 bot_f = lambda x, y=y1, k=beds[n + 1][0]: edge(x, y, k, None)
             shape = [(x, top_f(x)) for x in XS] + [(x, bot_f(x)) for x in reversed(XS)]
@@ -202,7 +203,8 @@ def draw(months, repos, prs, today):
             group.append(poly(shape, fill=f"url(#{pat})"))
             group.append(f'<polyline points="{" ".join(f"{x:.1f},{bot_f(x):.1f}" for x in XS)}" fill="none" stroke="{INK}" stroke-opacity=".55" stroke-width=".8"/>')
             mid = (y0 + y1) / 2
-            bed_center[month] = lambda x, m=mid: m + slope * (PIVOT_X - x)
+            bed_center[month] = lambda x, m=mid, s=slope: m - s * (PIVOT_X - x)
+            bed_ceiling[month] = era_top
             if count is None:
                 labels.append((mid, "basement", f"account opened Feb 2022", True))
             else:
@@ -238,8 +240,10 @@ def draw(months, repos, prs, today):
             continue
         span = (SEC_R - 120 - (SEC_L + 140)) / max(len(items), 1)
         for i, (kind, name) in enumerate(sorted(items)):
-            x = SEC_L + 140 + span * (i + 0.5) + (seeded(name) - 0.5) * span * 0.3
-            y = bed_center[month](x) + (seeded(name + "y") - 0.5) * 8
+            x = SEC_L + 140 + span * (i + 0.5)
+            while bed_center[month](x) < bed_ceiling[month](x) + 16 and x < PIVOT_X - 60:
+                x += 10  # this stretch of the bed was eroded away; slide toward where it survives
+            y = bed_center[month](x) + (7 if i % 2 else -7) * (len(items) > 2)
             inclusions.append(glyph(kind, x, y, name))
 
     return body, labels, marks, inclusions, sum(c for _, c in months), months[0][0]
@@ -290,9 +294,9 @@ DEFS = f"""<defs>
 .cap{{font-family:Georgia,"Times New Roman",serif;letter-spacing:.18em;text-transform:uppercase}}
 .tag{{font-family:Georgia,"Times New Roman",serif;font-style:italic;font-size:10.5px;fill:{INK}}}
 .bit{{animation:drill 5.5s cubic-bezier(.5,0,.3,1) .6s both}}
-.bore{{stroke-dasharray:4 3;animation:bore 5.5s cubic-bezier(.5,0,.3,1) .6s both}}
+.bore{{stroke-dasharray:4 3;transform-box:fill-box;transform-origin:top;animation:bore 5.5s cubic-bezier(.5,0,.3,1) .6s both}}
 @keyframes drill{{from{{transform:translateY(0)}}to{{transform:translateY({FLOOR_Y - SURFACE_Y - 30}px)}}}}
-@keyframes bore{{from{{clip-path:inset(0 0 100% 0)}}to{{clip-path:inset(0 0 0 0)}}}}
+@keyframes bore{{from{{transform:scaleY(0)}}to{{transform:scaleY(1)}}}}
 @media (prefers-reduced-motion:reduce){{.bit,.bore{{animation:none}}}}
 </style>"""
 
@@ -307,7 +311,7 @@ def render(months, repos, prs, today):
            f'<rect width="{W}" height="{H}" filter="url(#paper)"/>',
            f'<rect x="18" y="18" width="{W - 36}" height="{H - 36}" fill="none" stroke="{INK}" stroke-width="1.4"/>',
            f'<rect x="24" y="24" width="{W - 48}" height="{H - 48}" fill="none" stroke="{INK}" stroke-width=".5"/>',
-           f'<text x="{SEC_L}" y="66" class="cap" font-size="13" fill="{INK}">Plate VIII  ·  Section through the account of Zaid Ali Syed</text>',
+           f'<text x="{SEC_L}" y="66" class="cap" font-size="13" fill="{INK}">Frontispiece  ·  Section through the account of Zaid Ali Syed</text>',
            f'<text x="{SEC_L}" y="102" class="serif" font-size="31" fill="{INK}">Core sample, {label_for(first)} to the present</text>',
            f'<text x="{SEC_L}" y="128" class="serif" font-size="14" font-style="italic" fill="{INK}" fill-opacity=".8">'
            f'{total:,} contributions laid down one month per bed. Redrawn every night from the GitHub API.</text>']
@@ -318,15 +322,16 @@ def render(months, repos, prs, today):
         h = 3 + seeded(f"grass{i}") * 5
         out.append(f'<line x1="{i}" y1="{SURFACE_Y}" x2="{i + 1.5:.1f}" y2="{SURFACE_Y - h:.1f}" stroke="#4E5A2C" stroke-width=".9"/>')
     out.extend(body)
-    rig_x = SEC_L + 70
+    rig_x = SEC_R - 50
     out.append(f'<path d="M{rig_x - 16} {SURFACE_Y}L{rig_x} {SURFACE_Y - 44}L{rig_x + 16} {SURFACE_Y}M{rig_x - 10} {SURFACE_Y - 14}H{rig_x + 10}M{rig_x - 6} {SURFACE_Y - 28}H{rig_x + 6}" stroke="{INK}" stroke-width="1.3" fill="none"/>')
     out.append(f'<line class="bore" x1="{rig_x}" y1="{SURFACE_Y}" x2="{rig_x}" y2="{FLOOR_Y - 6}" stroke="{INK}" stroke-width="1.6"/>')
     out.append(f'<path class="bit" d="M{rig_x - 4} {SURFACE_Y + 6}h8l-4 9z" fill="{INK}"/>')
-    out.append(f'<text x="{rig_x + 22}" y="{SURFACE_Y - 30}" class="tag">today, {today.isoformat()}</text>')
+    out.append(f'<text x="{rig_x - 22}" y="{SURFACE_Y - 22}" class="tag" text-anchor="end">drilled {today.isoformat()}</text>')
     out.extend(inclusions)
 
     # stratigraphic log on the right
-    out.append(f'<text x="{LABEL_X}" y="{SURFACE_Y - 10}" class="cap" font-size="10.5" fill="{INK}">Bed            Contributions</text>')
+    out.append(f'<text x="{LABEL_X}" y="{SURFACE_Y - 10}" class="cap" font-size="10.5" fill="{INK}">Bed</text>')
+    out.append(f'<text x="{W - 52}" y="{SURFACE_Y - 10}" class="cap" font-size="10.5" text-anchor="end" fill="{INK}">Contributions</text>')
     for mid, y, name, value, faint in place_labels(labels):
         op = ".6" if faint else "1"
         out.append(f'<path d="M{PIVOT_X} {mid:.1f}L{LABEL_X - 14} {mid:.1f}L{LABEL_X - 6} {y:.1f}" stroke="{INK}" stroke-width=".5" fill="none" stroke-opacity=".7"/>')
@@ -334,8 +339,9 @@ def render(months, repos, prs, today):
         out.append(f'<text x="{LABEL_X}" y="{y + 3.8:.1f}" class="serif" font-size="11.5" fill="{INK}" fill-opacity="{op}">{escape(name)}</text>')
         out.append(f'<text x="{W - 52}" y="{y + 3.8:.1f}" class="serif" font-size="11.5" text-anchor="end" fill="{INK}" fill-opacity="{op}" font-style="italic">{escape(value)}</text>')
     for y, title, detail in marks:
-        out.append(f'<text x="{SEC_L + 160}" y="{y - 14:.1f}" class="cap" font-size="11" fill="{INK}" font-weight="bold">{title}</text>')
-        out.append(f'<text x="{SEC_L + 300}" y="{y - 14:.1f}" class="tag" font-size="11.5">{escape(detail)}</text>')
+        out.append(f'<rect x="{SEC_L + 14}" y="{y + 12:.1f}" width="440" height="22" fill="{PAPER}" stroke="{INK}" stroke-width=".6"/>')
+        out.append(f'<text x="{SEC_L + 24}" y="{y + 27:.1f}" class="cap" font-size="10.5" fill="{INK}" font-weight="bold">{title}</text>')
+        out.append(f'<text x="{SEC_L + 152}" y="{y + 27:.1f}" class="tag" font-size="11.5">{escape(detail)}</text>')
 
     legend_y = FLOOR_Y + 32
     out.append(f'<line x1="{SEC_L}" y1="{FLOOR_Y + 12}" x2="{W - 52}" y2="{FLOOR_Y + 12}" stroke="{INK}" stroke-width=".5"/>')

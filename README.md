@@ -1,11 +1,11 @@
-<img src="https://raw.githubusercontent.com/zaidwhy/zaidwhy/main/assets/hero.svg" alt="Zaid Ali Syed. I build systems that remember and retrieve, then I try to break them. A trace shows my own retrieval method scoring 0.02 recall at 5 before the fix." width="100%">
+<img src="https://raw.githubusercontent.com/zaidwhy/zaidwhy/main/assets/core-sample.svg" alt="Frontispiece, a core sample: a geological section through every GitHub contribution on this account since June 2024, one rock bed per month and thicker beds for busier months. An eleven-month gap from July 2025 to May 2026 shows as an unconformity, an erosion surface above older tilted beds. Merged upstream pull requests sit in the August 2026 bed as fossils and every public repository sits as a crystal in the month it was founded." width="100%">
+
+<sub>Read it like a road cut: the youngest rock is on top. Each bed is one month, and its thickness grows with the square root of that month's contributions. The wavy line is an <b>unconformity</b>: eleven months in which almost nothing was laid down, kept on the plate instead of smoothed over, and the older beds under it lie tilted as old rock does. Fossils are pull requests merged into other people's code; crystals are repositories founded. A GitHub Action redraws the plate every night from the API (<a href="scripts/core_sample.py">scripts/core_sample.py</a>), so the top bed is still forming as you read this.</sub>
 
 > **I build AI systems that remember, retrieve, and decide.**
 > Then I try to break them - because a system that never got the chance to fail was never actually tested.
 
 Most of what follows is a number. Every number is a link to the artifact that produced it: the merged pull request, the raw model output, the test run, the reproducible script. Nothing here asks to be believed.
-
-<img src="https://raw.githubusercontent.com/zaidwhy/zaidwhy/main/assets/terminal.svg" alt="A terminal replaying real commands: three pull requests show MERGED, 27 pull requests merged at a live payments platform, and the last line says if any of this does not reproduce the claim is wrong." width="100%">
 
 B.Tech Information Technology (Honors with Research), MGM University, graduating June 2027. Open to **backend, AI engineer and new-grad roles in India** from January 2027.
 
