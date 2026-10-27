@@ -295,7 +295,7 @@ Shipped 3 full projects end to end in test runs. On [Receipts.dev](https://githu
 | [second-brain](https://github.com/zaidwhy/second-brain) | Vault ingestion, auto-linking and an offline knowledge-graph viewer | 116 |
 | [github-pr-agent](https://github.com/zaidwhy/github-pr-agent) | Repo analysis, issue triage and PR planning | 84 |
 | [DreamOS](https://github.com/zaidwhy/dreamos-college-project) | Semantic file-management OS shell | |
-| [resume-job-fit-ai](https://github.com/zaidwhy/resume-job-fit-ai) | Resume-to-job fit scoring with truthful rewrites and Pydantic-validated structured output | 48 unit tests, CI on every push |
+| [resume-job-fit-ai](https://github.com/zaidwhy/resume-job-fit-ai) | Resume-to-job fit scoring with truthful rewrites and Pydantic-validated structured output | 49 unit tests, CI on every push |
 
 </details>
 

@@ -32,7 +32,7 @@ REPOS = {
     "agent-factory": ("system", "Agent Factory", "The contract freezes before the code does, so two agents can build in parallel.",
                       ["6 specialised agents", "frozen API contracts", "3 projects shipped in test runs"]),
     "resume-job-fit-ai": ("system", "Resume Job-Fit AI", "Scores a resume against a job description, and rewrites without inventing experience.",
-                          ["48 unit tests", "Pydantic-validated output", "CI on every push"]),
+                          ["49 unit tests", "Pydantic-validated output", "CI on every push"]),
     "autocto": ("tool", "autocto", "The file to review first is the one that changes most and branches most.",
                 ["5 analyzers, no LLM", "162 tests", "pipx install repo-autocto"]),
     "personal-llm": ("kernel", "Personal LLM", "One memory kernel, sunk once and imported by three apps.",
