@@ -127,6 +127,47 @@ class PlateFactsMatchReadme(unittest.TestCase):
                             self.assertRegex(readme, rf"(?<![\d.]){re.escape(number)}(?!\d)")
 
 
+class RepoPlateFactsHaveASource(unittest.TestCase):
+    """Each number on a repository plate must be stated on the profile README, or listed here with its source."""
+
+    OFF_PAGE = {
+        ("longmemeval-key-audit", "141"): "status line of github.com/zaidwhy/longmemeval-key-audit README, read 2026-10-28",
+    }
+
+    def test_every_repo_plate_number_is_stated_somewhere_checkable(self):
+        import re
+
+        with open(os.path.join(os.path.dirname(__file__), "..", "README.md"), encoding="utf-8") as f:
+            readme = f.read()
+        readme = re.sub(r"<!-- (ACTIVITY|STATUS):START -->.*?<!-- \1:END -->", "", readme, flags=re.S)
+        readme = re.sub(r"\d{4}-\d{2}-\d{2}", "", readme).replace(",", "")
+        for repo, (_, _, thesis, notes) in repo_plates.REPOS.items():
+            for note in notes + [thesis]:
+                doi = re.search(r"10\.5281/zenodo\.\d+", note)
+                if doi:
+                    with self.subTest(repo=repo, note=note):
+                        self.assertIn(doi.group(0), readme)
+                    continue
+                for number in re.findall(r"\d[\d,.]*k?", note):
+                    number = number.rstrip(".,").replace(",", "")
+                    if (repo, number) in self.OFF_PAGE:
+                        continue
+                    with self.subTest(repo=repo, note=note):
+                        self.assertRegex(readme, rf"(?<![\d.]){re.escape(number)}(?!\d)")
+
+
+class ScriptsAreClean(unittest.TestCase):
+    def test_no_control_characters_in_any_script(self):
+        # Shell heredoc edits have twice turned a regex backreference into chr(1); the regex still compiled.
+        folder = os.path.dirname(__file__)
+        for name in sorted(os.listdir(folder)):
+            if name.endswith(".py"):
+                with open(os.path.join(folder, name), encoding="utf-8") as f:
+                    body = f.read()
+                with self.subTest(script=name):
+                    self.assertFalse([c for c in body if ord(c) < 32 and c not in "\n\t\r"])
+
+
 class RepoPlates(unittest.TestCase):
     def test_every_listed_repo_renders_from_one_commit(self):
         for repo in repo_plates.REPOS:

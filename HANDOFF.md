@@ -36,6 +36,8 @@
 
 - Round 15 (phones, the core sample): `phone_cut()` in `core_sample.py` crops the nightly plate to the rock, drops every label and leader (they fall below 4 px on a phone) and adds a 34 px title. The nightly job writes and commits `core-sample-narrow.svg` next to the full plate, and the README serves it under 600 px. A full layout refactor was ruled out because about 80 references to module-level layout constants sit in a script that runs unattended every night. All 8 images on the page now have phone versions.
 
+- Round 16 (repo plate facts): the repo plates had no check tying their numbers to a source. `RepoPlateFactsHaveASource` now requires each one on the profile README (DOIs matched whole), or in an explicit `OFF_PAGE` list that names its source; one entry, longmemeval's 141 items, read from that repo's README. Planted errors (162 to 163, 116 to 117, a DOI digit) each fail it. While writing it, a shell edit turned the test's `\\1` backreference into chr(1) for the second time tonight, which silently stopped it stripping the bot blocks; `ScriptsAreClean` now fails on any control character in a script.
+
 ## Next
 - Re-run `repo_plates.py` monthly, or when a repo's headline numbers change, so the strips do not go stale.
 - Zaid: upload `weekend-profile-update/creative/banner-core.png` as the LinkedIn background.
