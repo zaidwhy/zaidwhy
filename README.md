@@ -22,6 +22,7 @@ B.Tech Information Technology (Honors with Research), MGM University, graduating
 | 3 pull requests merged into upstream OSS totalling **13.4k stars** | [tenacity #668](https://github.com/jd/tenacity/pull/668) · [returns #2480](https://github.com/dry-python/returns/pull/2480) · [gqlalchemy #390](https://github.com/memgraph/gqlalchemy/pull/390) |
 | 27 pull requests merged into a **live production product** I did not build | [case study](case-studies/zabira-academy.md) |
 | A customer-support analytics dashboard built from scratch for a chat support team (Python, FastAPI, pandas): all 10 aggregate totals match the support platform's own report, 222 tests | no link: private repository, company work |
+| A 229-run pre-registered study of a coding agent: it fixed real race bugs instead of weakening the test (0 of 60), and **"do not change the tests" broke legitimate repairs (9/10 to 0/10)** | [RESULT.md](https://github.com/zaidwhy/flake-laundering/blob/master/RESULT.md) |
 | 2 original research findings, each with a negative control and a second-model replication, **archived with a permanent DOI** | [10.5281/zenodo.22309660](https://doi.org/10.5281/zenodo.22309660) · [10.5281/zenodo.22309658](https://doi.org/10.5281/zenodo.22309658) |
 | A retrieval method benchmarked against 6 baselines - including the version of it that **failed** | [TCMF write-up](https://github.com/zaidwhy/CivilizationOS/blob/main/docs/tcmf.md) · [case study](case-studies/civilizationos.md) |
 | 363 tests across the ecosystem, every one offline and mocked - no API key runs any of them | `pytest --collect-only` on [personal-llm](https://github.com/zaidwhy/personal-llm) · [second-brain](https://github.com/zaidwhy/second-brain) · [github-pr-agent](https://github.com/zaidwhy/github-pr-agent) |
@@ -78,7 +79,19 @@ That is the whole argument for the numbers further down. A result that was never
 
 ## III. Research
 
-Two studies. Each one carries a negative control, because a measurement without a control is a rumour, and each one was replicated on a second model family, because a finding from one model is a fact about that model.
+Three studies. Each one carries a negative control, because a measurement without a control is a rumour. The two older ones were replicated on a second model family, because a finding from one model is a fact about that model; the newest is one agent and one model, and says so in its first paragraph.
+
+### [FLAKE LAUNDERING](https://github.com/zaidwhy/flake-laundering) - the rule meant to stop it is what broke
+
+<img src="https://raw.githubusercontent.com/zaidwhy/zaidwhy/main/assets/flake-laundering.svg" alt="With a correct test and a real race bug, Claude Code weakened the test in 0 of 60 plain-brief runs. With a wrong test, it repaired the test in 9 of 10 runs, 0 of 10 when told not to change the tests, and 10 of 10 when told to find out which side is wrong." width="100%">
+
+A subagent on this very portfolio once made six failing Playwright tests pass by retrying a click until the menu opened. The test was right; a visitor's first click really was being lost. So I measured whether that is what coding agents do: web apps with seeded race bugs, a mock backend that is slow half the time, and Claude Code told to get CI green. Each run is scored by re-running the original test 50 times on a clean copy of the app, never by the agent's word.
+
+**It fixes the app.** 0 of 60 plain-brief runs weakened the test, 60 of 60 fixed the race, including when the cause was split across lazy modules, buried in a 44-file app, or met while shipping an unrelated feature. My pre-registered hypothesis was falsified.
+
+The control is where it got interesting. On tests that really were wrong, the guard everyone reaches for, **"do not change the tests", took correct repairs from 9 of 10 to 0 of 10**: every agent kept the bad test and bent working code around it. One sentence fixed it - "the test may be wrong or the app may be wrong; find out which" - 10 of 10 repaired, 0 of 40 correct tests weakened.
+
+`229 scored runs` · `pre-registered, two studies` · `negative and positive controls` · `blind LLM judge + hand review` · `every transcript shipped` · [read the result](https://github.com/zaidwhy/flake-laundering/blob/master/RESULT.md)
 
 ### [COLD READ](https://github.com/zaidwhy/coldread) - the anonymity half-life belongs to the reader
 
