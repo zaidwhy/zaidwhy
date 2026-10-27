@@ -40,7 +40,7 @@ REPOS = {
     "second-brain": ("chamber", "Second Brain", "A vault that links itself, built on the personal-llm kernel.",
                      ["110 tests", "auto-linking on ingest", "offline graph viewer"]),
     "github-pr-agent": ("chamber", "GitHub PR Agent", "The planning half of a pull-request agent: analyze, triage, plan.",
-                        ["65 tests", "imports the personal-llm kernel", "no API key in CI"]),
+                        ["84 tests", "imports the personal-llm kernel", "no API key in CI"]),
     "dreamos-college-project": ("chamber", "DreamOS", "A file manager that finds things by what they mean, not where they were put.",
                                 ["final-year B.Tech project", "imports the personal-llm kernel", "MGM University, IICT"]),
     "coldread": ("research", "COLD READ", "How long you stay anonymous depends on the model reading you, not on the text.",
