@@ -38,7 +38,7 @@ REPOS = {
     "personal-llm": ("kernel", "Personal LLM", "One memory kernel, sunk once and imported by three apps.",
                      ["181 offline tests", "answers with citations or refuses", "keyless CI"]),
     "second-brain": ("chamber", "Second Brain", "A vault that links itself, built on the personal-llm kernel.",
-                     ["110 tests", "auto-linking on ingest", "offline graph viewer"]),
+                     ["116 tests", "auto-linking on ingest", "offline graph viewer"]),
     "github-pr-agent": ("chamber", "GitHub PR Agent", "The planning half of a pull-request agent: analyze, triage, plan.",
                         ["84 tests", "imports the personal-llm kernel", "no API key in CI"]),
     "dreamos-college-project": ("chamber", "DreamOS", "A file manager that finds things by what they mean, not where they were put.",

@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 640" width="1200" height="640" role="img" aria-label="Plate IV, excavation. Surface: CivilizationOS, 10 agents and 5 councils, live; Recall, recall at 1 of 10 out of 10 at 149 ms median; autocto, 5 analyzers and 162 tests on PyPI; AFTERSHOCK, ROC AUC 0.817 on 829 held-out breakouts; Agent Factory, 6 agents on frozen contracts. Below ground the personal-llm kernel with 181 offline tests, reached by second-brain with 110 tests, github-pr-agent with 84, and DreamOS.">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 640" width="1200" height="640" role="img" aria-label="Plate IV, excavation. Surface: CivilizationOS, 10 agents and 5 councils, live; Recall, recall at 1 of 10 out of 10 at 149 ms median; autocto, 5 analyzers and 162 tests on PyPI; AFTERSHOCK, ROC AUC 0.817 on 829 held-out breakouts; Agent Factory, 6 agents on frozen contracts. Below ground the personal-llm kernel with 181 offline tests, reached by second-brain with 116 tests, github-pr-agent with 84, and DreamOS.">
 <defs>
 <filter id="paper"><feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="2" seed="7"/><feColorMatrix values="0 0 0 0 .17 0 0 0 0 .13 0 0 0 0 .09 0 0 0 .07 0"/><feComposite in2="SourceGraphic" operator="in"/></filter>
 <pattern id="hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="7" stroke="#2B2118" stroke-opacity=".22" stroke-width=".8"/></pattern>
@@ -253,7 +253,7 @@
 <path d="M591 410H320" stroke="#F1E8D4" stroke-width="4"/>
 <ellipse cx="250" cy="410" rx="72" ry="22" fill="#F7F0DF" stroke="#2B2118" stroke-width="1.1"/>
 <text x="250.0" y="408.0" text-anchor="middle" fill="#2B2118" fill-opacity="1.0" style="font-family:Georgia,'Times New Roman',serif;font-size:13.5px">second-brain</text>
-<text x="250.0" y="424.0" text-anchor="middle" fill="#2B2118" fill-opacity="0.8" style="font-family:Georgia,'Times New Roman',serif;font-size:11px;font-style:italic">110 tests</text>
+<text x="250.0" y="424.0" text-anchor="middle" fill="#2B2118" fill-opacity="0.8" style="font-family:Georgia,'Times New Roman',serif;font-size:11px;font-style:italic">116 tests</text>
 <path d="M609 410H880" stroke="#2B2118" stroke-width="7" stroke-opacity=".85"/>
 <path d="M609 410H880" stroke="#F1E8D4" stroke-width="4"/>
 <ellipse cx="950" cy="410" rx="72" ry="22" fill="#F7F0DF" stroke="#2B2118" stroke-width="1.1"/>

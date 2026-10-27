@@ -37,7 +37,7 @@ python -c "from aftershock import ledger; print(ledger.verify())"
 
 <picture>
 <source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/zaidwhy/zaidwhy/main/assets/plate-specimens-narrow.svg">
-<img src="https://raw.githubusercontent.com/zaidwhy/zaidwhy/main/assets/plate-specimens.svg" alt="Plate I, specimens: 3 pull requests merged upstream into libraries with 13.4k stars; 27 pull requests merged into a live product in 12 days; 2 research findings archived with a DOI; 375 offline tests; 3,240 forecasts locked before outcomes; 229 scored coding-agent runs." width="100%">
+<img src="https://raw.githubusercontent.com/zaidwhy/zaidwhy/main/assets/plate-specimens.svg" alt="Plate I, specimens: 3 pull requests merged upstream into libraries with 13.4k stars; 27 pull requests merged into a live product in 12 days; 2 research findings archived with a DOI; 381 offline tests; 3,240 forecasts locked before outcomes; 229 scored coding-agent runs." width="100%">
 </picture>
 
 Six samples from the core, each with a label that says where it was dug up. None of them is a self-description. Five are counts you can reproduce from a public record; the sixth, 27 pull requests into a private codebase, rests on the [case study](case-studies/zabira-academy.md) because the code cannot be shown.
@@ -54,7 +54,7 @@ Six samples from the core, each with a label that says where it was dug up. None
 | A 229-run pre-registered study of a coding agent: it fixed real race bugs instead of weakening the test (0 of 60), and **"do not change the tests" broke legitimate repairs (9/10 to 0/10)** | [RESULT.md](https://github.com/zaidwhy/flake-laundering/blob/master/RESULT.md) |
 | 2 original research findings, each with a negative control and a second-model replication, **archived with a permanent DOI** | [10.5281/zenodo.22309660](https://doi.org/10.5281/zenodo.22309660) · [10.5281/zenodo.22309658](https://doi.org/10.5281/zenodo.22309658) |
 | A retrieval method benchmarked against 6 baselines - including the version of it that **failed** | [TCMF write-up](https://github.com/zaidwhy/CivilizationOS/blob/main/docs/tcmf.md) · [case study](case-studies/civilizationos.md) |
-| 375 tests across the ecosystem, every one offline and mocked - no API key runs any of them | `pytest --collect-only` (personal-llm: `tests/ evals/`) on [personal-llm](https://github.com/zaidwhy/personal-llm) · [second-brain](https://github.com/zaidwhy/second-brain) · [github-pr-agent](https://github.com/zaidwhy/github-pr-agent) |
+| 381 tests across the ecosystem, every one offline and mocked - no API key runs any of them | `pytest --collect-only` (personal-llm: `tests/ evals/`) on [personal-llm](https://github.com/zaidwhy/personal-llm) · [second-brain](https://github.com/zaidwhy/second-brain) · [github-pr-agent](https://github.com/zaidwhy/github-pr-agent) |
 | Every commit I author is cryptographically signed (the nightly activity bot's `auto:` commits are not), and both findings carry an ORCID-bound DOI | [PROVENANCE.md](PROVENANCE.md) · [ORCID 0009-0003-4313-1510](https://orcid.org/0009-0003-4313-1510) |
 
 </details>
@@ -286,7 +286,7 @@ Shipped 3 full projects end to end in test runs. On [Receipts.dev](https://githu
 | Repository | What it does | Tests |
 |---|---|---|
 | [personal-llm](https://github.com/zaidwhy/personal-llm) | Local-first memory and RAG kernel: a plan-act-reflect agent loop, 4 permission-tiered tools including an SSRF-guarded fetch, a full audit log | 181 offline, fully mocked, zero-key CI |
-| [second-brain](https://github.com/zaidwhy/second-brain) | Vault ingestion, auto-linking and an offline knowledge-graph viewer | 110 |
+| [second-brain](https://github.com/zaidwhy/second-brain) | Vault ingestion, auto-linking and an offline knowledge-graph viewer | 116 |
 | [github-pr-agent](https://github.com/zaidwhy/github-pr-agent) | Repo analysis, issue triage and PR planning | 84 |
 | [DreamOS](https://github.com/zaidwhy/dreamos-college-project) | Semantic file-management OS shell | |
 | [resume-job-fit-ai](https://github.com/zaidwhy/resume-job-fit-ai) | Resume-to-job fit scoring with truthful rewrites and Pydantic-validated structured output | 48 unit tests, CI on every push |

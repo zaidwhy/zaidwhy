@@ -113,12 +113,12 @@ SPECIMENS = [
     ("3", "pull requests merged upstream", ["tenacity, returns, gqlalchemy", "13.4k stars between them"]),
     ("27", "pull requests merged into a live product", ["12 days, +8,838 / -1,619 lines", "every one reviewed by its owner"]),
     ("2", "research findings with a DOI", ["each with a negative control", "and a second-model replication"]),
-    ("375", "tests, all offline", ["mocked end to end", "no API key runs any of them"]),
+    ("381", "tests, all offline", ["mocked end to end", "no API key runs any of them"]),
     ("3,240", "forecasts locked before outcomes", ["hash-chained public ledger", "graded in public from 15 Nov"]),
     ("229", "scored coding-agent runs", ["pre-registered, two studies", "every transcript shipped"]),
 ]
 SPECIMENS_LABEL = ("Plate I, specimens: 3 pull requests merged upstream into libraries with 13.4k stars; 27 pull requests merged into a live product in 12 days; "
-                   "2 research findings archived with a DOI; 375 offline tests; 3,240 forecasts locked before outcomes; 229 scored coding-agent runs.")
+                   "2 research findings archived with a DOI; 381 offline tests; 3,240 forecasts locked before outcomes; 229 scored coding-agent runs.")
 NARROW = 520  # phone plates: about 400 px on screen keeps the smallest label near 9 px
 
 
@@ -341,29 +341,42 @@ def assays_narrow():
     save("plate-assays-narrow.svg", out)
 
 
+EXCAVATION_LABEL = ("Plate IV, excavation. Surface: CivilizationOS, 10 agents and 5 councils, live; Recall, recall at 1 of 10 out of 10 at 149 ms median; autocto, 5 analyzers and 162 tests on PyPI; "
+                "AFTERSHOCK, ROC AUC 0.817 on 829 held-out breakouts; Agent Factory, 6 agents on frozen contracts. Below ground the personal-llm kernel with 181 offline tests, "
+                "reached by second-brain with 116 tests, github-pr-agent with 84, and DreamOS.")
+SURFACE = [("CivilizationOS", ["10 agents, 5 councils", "live"]), ("Recall", ["Recall@1 10 of 10", "149 ms median"]),
+           ("autocto", ["5 analyzers, 162 tests", "on PyPI"]), ("AFTERSHOCK", ["AUC 0.817 on 829", "held-out breakouts"]),
+           ("Agent Factory", ["6 agents", "frozen contracts"])]
+CHAMBERS = [("second-brain", "116 tests"), ("github-pr-agent", "84 tests"), ("DreamOS", "semantic file shell")]
+KERNEL_NOTE = "181 offline tests, keyless CI"
+
+
+def strata(ground, h, width=W):
+    """Ground surface, grass and four rock layers down to the plate's floor."""
+    out = []
+    layers = [(ground, ground + 70, TINTS[0], "dots"), (ground + 70, ground + 150, TINTS[1], "dash"),
+              (ground + 150, ground + 230, TINTS[6], "dots"), (ground + 230, h - 40, "#9C9488", "hatch")]
+    for i, (y0, y1, tint, pat) in enumerate(layers):
+        top_pts = [(x, y0 + (wave(x, f"ex{i}", 4) if i else 0)) for x in range(24, width - 23, 8)]
+        bot_pts = [(x, y1 + wave(x, f"ex{i + 1}", 4)) for x in range(width - 24, 23, -8)] if i < 3 else [(width - 24, y1), (24, y1)]
+        out.append(poly(top_pts + bot_pts, fill=tint))
+        out.append(poly(top_pts + bot_pts, fill=f"url(#{pat})"))
+    out.append(f'<rect x="24" y="{ground - 8}" width="{width - 48}" height="8" fill="#6E6A3E"/>')
+    for x in range(26, width - 26, 7):
+        out.append(f'<line x1="{x}" y1="{ground - 8}" x2="{x + 1.5}" y2="{ground - 12 - seeded(f"g{x}") * 4:.1f}" stroke="#4E5A2C" stroke-width=".9"/>')
+
+    return out
+
+
 def excavation():
     h = 640
     out = frame(h, "Plate IV  ·  Excavation", "What stands on the kernel",
                 "One memory kernel, sunk once and reached by every app below ground. The headframes above are the systems people can use.",
-                "Plate IV, excavation. Surface: CivilizationOS, 10 agents and 5 councils, live; Recall, recall at 1 of 10 out of 10 at 149 ms median; autocto, 5 analyzers and 162 tests on PyPI; "
-                "AFTERSHOCK, ROC AUC 0.817 on 829 held-out breakouts; Agent Factory, 6 agents on frozen contracts. Below ground the personal-llm kernel with 181 offline tests, "
-                "reached by second-brain with 110 tests, github-pr-agent with 84, and DreamOS.")
+                EXCAVATION_LABEL)
     ground = 300
-    layers = [(ground, ground + 70, TINTS[0], "dots"), (ground + 70, ground + 150, TINTS[1], "dash"),
-              (ground + 150, ground + 230, TINTS[6], "dots"), (ground + 230, h - 40, "#9C9488", "hatch")]
-    for i, (y0, y1, tint, pat) in enumerate(layers):
-        top_pts = [(x, y0 + (wave(x, f"ex{i}", 4) if i else 0)) for x in range(24, W - 23, 8)]
-        bot_pts = [(x, y1 + wave(x, f"ex{i + 1}", 4)) for x in range(W - 24, 23, -8)] if i < 3 else [(W - 24, y1), (24, y1)]
-        out.append(poly(top_pts + bot_pts, fill=tint))
-        out.append(poly(top_pts + bot_pts, fill=f"url(#{pat})"))
-    out.append(f'<rect x="24" y="{ground - 8}" width="{W - 48}" height="8" fill="#6E6A3E"/>')
-    for x in range(26, W - 26, 7):
-        out.append(f'<line x1="{x}" y1="{ground - 8}" x2="{x + 1.5}" y2="{ground - 12 - seeded(f"g{x}") * 4:.1f}" stroke="#4E5A2C" stroke-width=".9"/>')
+    out.extend(strata(ground, h))
 
-    surface = [("CivilizationOS", ["10 agents, 5 councils", "live"]), ("Recall", ["Recall@1 10 of 10", "149 ms median"]),
-               ("autocto", ["5 analyzers, 162 tests", "on PyPI"]), ("AFTERSHOCK", ["AUC 0.817 on 829", "held-out breakouts"]),
-               ("Agent Factory", ["6 agents", "frozen contracts"])]
-    for i, (name, rows) in enumerate(surface):
+    for i, (name, rows) in enumerate(SURFACE):
         x = 130 + i * 210
         out.append(f'<g class="show" style="animation-delay:{.12 * i:.2f}s">')
         out.append(f'<path d="M{x - 22} {ground - 8}L{x} {ground - 74}L{x + 22} {ground - 8}M{x - 15} {ground - 30}H{x + 15}M{x - 8} {ground - 52}H{x + 8}" stroke="{INK}" stroke-width="1.4" fill="none"/>')
@@ -380,9 +393,8 @@ def excavation():
         out.append(f'<line x1="{shaft_x - 9}" y1="{y}" x2="{shaft_x + 9}" y2="{y}" stroke="{INK}" stroke-width=".5"/>')
     out.append(f'<ellipse cx="{shaft_x}" cy="{kernel_y}" rx="210" ry="30" fill="{CARD}" stroke="{WAX}" stroke-width="1.8"/>')
     out.append(text(shaft_x, kernel_y - 3, "personal-llm  ·  the memory kernel", 15, anchor="middle", bold=True))
-    out.append(text(shaft_x, kernel_y + 16, "181 offline tests, keyless CI", 12, anchor="middle", italic=True))
-    chambers = [("second-brain", "110 tests", 250, ground + 110), ("github-pr-agent", "84 tests", 950, ground + 110), ("DreamOS", "semantic file shell", 300, ground + 200)]
-    for name, note, cx, cy in chambers:
+    out.append(text(shaft_x, kernel_y + 16, KERNEL_NOTE, 12, anchor="middle", italic=True))
+    for (name, note), cx, cy in zip(CHAMBERS, (250, 950, 300), (ground + 110, ground + 110, ground + 200)):
         mid = shaft_x - 9 if cx < shaft_x else shaft_x + 9
         out.append(f'<path d="M{mid} {cy}H{cx + (70 if cx < shaft_x else -70)}" stroke="{INK}" stroke-width="7" stroke-opacity=".85"/>')
         out.append(f'<path d="M{mid} {cy}H{cx + (70 if cx < shaft_x else -70)}" stroke="{PAPER}" stroke-width="4"/>')
