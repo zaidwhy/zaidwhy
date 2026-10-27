@@ -311,7 +311,7 @@ The codebase is private, so the [case study](case-studies/zabira-academy.md) is 
 
 A customer-support analytics dashboard for a chat support team (Python, FastAPI, pandas, Jinja2): daily to month-to-date performance, per-agent response, resolution and CSAT, and bot versus agent resolution, each figure shown beside the support platform's own report.
 
-Reconciled to that platform's reports: all 10 aggregate totals match exactly and 53 of 55 per-agent response-time averages agree within one second; a figure that differs is clickable and explains why. Chat transcripts are read through a read-only, test-enforced API client to classify why chats were handed from bot to agent, which shrank the unexplained "other" bucket to about 1%. Role-based login, argon2 password hashing, a strict content-security policy, and 170 automated tests.
+Reconciled to that platform's reports: all 10 aggregate totals match exactly and 53 of 55 per-agent response-time averages agree within one second; a figure that differs is clickable and explains why. Chat transcripts are read through a read-only, test-enforced API client to classify why chats were handed from bot to agent, which shrank the unexplained "other" bucket to about 1%. Role-based login, argon2 password hashing, a strict content-security policy, and 222 automated tests.
 
 The repository is private and the data is the company's, so there is no link and nothing here describes a customer or a business figure.
 

@@ -20,7 +20,16 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: python3 scripts/update_telemetry.py
 
+      - name: Test the plate generators (offline)
+        id: plate_tests
+        continue-on-error: true
+        run: python3 -m unittest discover -s scripts -p "test_*.py"
+
       - name: Redraw the core sample plate
+        # Redraw only from code that passed its tests; a failed API call keeps yesterday's plate.
+        # Neither may block the activity update above.
+        if: steps.plate_tests.outcome == 'success'
+        continue-on-error: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: python3 scripts/core_sample.py
