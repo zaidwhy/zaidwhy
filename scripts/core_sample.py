@@ -307,6 +307,7 @@ def render(months, repos, prs, today):
            f'aria-label="Core sample: a geological section through {total:,} GitHub contributions since {label_for(first)}, '
            f'one rock bed per month, with merged upstream pull requests as fossils and founded repositories as crystals.">',
            DEFS,
+           f'<metadata>author: Zaid Ali Syed; ORCID 0009-0003-4313-1510; PGP EFE9 4832 B2B9 80D9 B583 91F2 8FAA BCC1 B1AC 09E5; drawn by scripts/core_sample.py in github.com/zaidwhy/zaidwhy</metadata>',
            f'<rect width="{W}" height="{H}" fill="{PAPER}"/>',
            f'<rect width="{W}" height="{H}" filter="url(#paper)"/>',
            f'<rect x="18" y="18" width="{W - 36}" height="{H - 36}" fill="none" stroke="{INK}" stroke-width="1.4"/>',

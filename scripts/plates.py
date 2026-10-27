@@ -21,10 +21,10 @@ ASSETS = os.path.join(os.path.dirname(__file__), "..", "assets")
 W = 1200
 WAX = "#8E2F28"
 CARD = "#F7F0DF"
-SERIF = 'Georgia,"Times New Roman",serif'
+SERIF = "Georgia,'Times New Roman',serif"
 
 
-def text(x, y, body, size=13, italic=False, bold=False, anchor="start", opacity=1, caps=False, fill=INK):
+def text(x, y, body, size=13.0, italic=False, bold=False, anchor="start", opacity=1.0, caps=False, fill=INK):
     style = [f"font-family:{SERIF}", f"font-size:{size}px"]
     if italic:
         style.append("font-style:italic")
@@ -62,6 +62,7 @@ def frame(h, kicker, title, subtitle, label):
 @keyframes show{{to{{opacity:1}}}}
 @media (prefers-reduced-motion:reduce){{.rise,.show{{animation:none;opacity:1}}}}
 </style>''',
+f'<metadata>author: Zaid Ali Syed; ORCID 0009-0003-4313-1510; PGP EFE9 4832 B2B9 80D9 B583 91F2 8FAA BCC1 B1AC 09E5; drawn by scripts/plates.py in github.com/zaidwhy/zaidwhy</metadata>',
         f'<rect width="{W}" height="{h}" fill="{PAPER}"/><rect width="{W}" height="{h}" filter="url(#paper)"/>',
         f'<rect x="18" y="18" width="{W - 36}" height="{h - 36}" fill="none" stroke="{INK}" stroke-width="1.4"/>',
         f'<rect x="24" y="24" width="{W - 48}" height="{h - 48}" fill="none" stroke="{INK}" stroke-width=".5"/>',
@@ -85,6 +86,7 @@ def route():
                 ("V", "Field work", "ground that was not mine"), ("VI", "The seal", "how you know it is mine")]
     out = [f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {h}" width="{W}" height="{h}" role="img" '
            f'aria-label="The route through this page: I Specimens, II Fault lines, III Assays, IV Excavation, V Field work, VI The seal.">',
+           f'<metadata>author: Zaid Ali Syed; ORCID 0009-0003-4313-1510; PGP EFE9 4832 B2B9 80D9 B583 91F2 8FAA BCC1 B1AC 09E5; drawn by scripts/plates.py in github.com/zaidwhy/zaidwhy</metadata>',
            f'<rect width="{W}" height="{h}" fill="{PAPER}"/>',
            f'<rect x="18" y="18" width="{W - 36}" height="{h - 36}" fill="none" stroke="{INK}" stroke-width="1.4"/>',
            text(60, 60, "The route through this survey", 12.5, caps=True)]
@@ -106,7 +108,7 @@ def route():
 
 
 def specimens():
-    h = 560
+    h = 590
     cards = [
         ("3", "pull requests merged upstream", ["tenacity, returns, gqlalchemy", "13.4k stars between them"]),
         ("27", "pull requests merged into a live product", ["12 days, +8,838 / -1,619 lines", "every one reviewed by its owner"]),
@@ -119,7 +121,7 @@ def specimens():
                 "Six samples from the core, each mounted with the label that says where it came from.",
                 "Plate I, specimens: 3 pull requests merged upstream into libraries with 13.4k stars; 27 pull requests merged into a live product in 12 days; "
                 "2 research findings archived with a DOI; 363 offline tests; 3,240 forecasts locked before outcomes; 229 scored coding-agent runs.")
-    out.append(f'<rect x="54" y="146" width="{W - 108}" height="{h - 196}" fill="#E4D6B8" stroke="{INK}" stroke-width=".9"/>')
+    out.append(f'<rect x="54" y="146" width="{W - 108}" height="{h - 192}" fill="#E4D6B8" stroke="{INK}" stroke-width=".9"/>')
     cw, ch = 340, 170
     for i, (big, what, notes) in enumerate(cards):
         col, row = i % 3, i // 3
@@ -160,7 +162,7 @@ def faults():
     out.append(f'<clipPath id="block"><rect x="{left}" y="{top}" width="{right - left}" height="{bot - top}"/></clipPath>')
     fault_x = [left + (right - left) * (k + 0.5) / 5 for k in range(5)]
     lean = 0.28
-    beds = [top + 22 * k for k in range(-2, 14)]
+    beds = [top + 22 * k for k in range(-6, 14)]
     group = ['<g clip-path="url(#block)">']
     for seg in range(6):
         drop = 14 * seg
@@ -184,9 +186,8 @@ def faults():
         out.append(f'<line x1="{x0:.1f}" y1="{top}" x2="{x1:.1f}" y2="{bot}" stroke="{WAX}" stroke-width="2.6"/>')
         mx, my = (x0 + x1) / 2, (top + bot) / 2
         out.append(f'<path d="M{mx - 16:.1f} {my - 26:.1f}v14l-4 -5m4 5l4 -5" stroke="{INK}" stroke-width="1.1" fill="none"/>')
-        out.append(f'<path d="M{mx + 16:.1f} {my + 26:.1f}v-14l-4 5m4 -5l4 5" stroke="{INK}" stroke-width="1.1" fill="none" transform="rotate(180 {mx + 16:.1f} {my + 19:.1f})"/>')
         out.append(f'<circle cx="{x0:.1f}" cy="{top - 12}" r="11" fill="{CARD}" stroke="{WAX}" stroke-width="1.4"/>')
-        out.append(text(x0, top - 7.5, "IVXLC"[0] * 0 + ["i", "ii", "iii", "iv", "v"][k], 12, anchor="middle", italic=True, fill=WAX))
+        out.append(text(x0, top - 7.5, ["i", "ii", "iii", "iv", "v"][k], 12, anchor="middle", italic=True, fill=WAX))
     col_w = (right - left) / 5
     for k, (name, rows) in enumerate(entries):
         cx = left + col_w * k + 10
@@ -197,7 +198,7 @@ def faults():
 
 
 def assays():
-    h = 600
+    h = 680
     out = frame(h, "Plate III  ·  Assays", "What the lab measured",
                 "Three samples sent for testing. Each one came back with a number nobody expected, mine included.",
                 "Plate III, assays. FLAKE LAUNDERING: with a correct test, coding agents weakened it in 0 of 60 runs; with a wrong test they repaired it in 9 of 10, "
@@ -261,8 +262,9 @@ def assays():
         lift = 80 + 60 * i
         out.append(f'<path class="show" style="animation-delay:{.4 + .4 * i:.2f}s" d="M{b:.1f} {ty}Q{(a + b) / 2:.1f} {ty - lift * 2:.1f} {a:.1f} {ty}" fill="none" stroke="{WAX}" stroke-width="1.6" stroke-dasharray="5 3"/>')
         out.append(f'<circle cx="{b:.1f}" cy="{ty}" r="4" fill="{CARD}" stroke="{INK}" stroke-width="1.2"/><circle cx="{a:.1f}" cy="{ty}" r="5" fill="{WAX}"/>')
-        out.append(text((a + b) / 2, ty - lift - 8, f"{model}: {voice}", 12.5, anchor="middle"))
-        out.append(text((a + b) / 2, ty - lift + 8, f"{cutoff - voice} years short of its cutoff", 11, anchor="middle", italic=True, opacity=.8))
+        out.append(f'<circle cx="{px + 28}" cy="{ty + 52 + 40 * i}" r="5" fill="{WAX}"/>')
+        out.append(text(px + 42, ty + 56 + 40 * i, f"{model} speaks from {voice}", 12.5))
+        out.append(text(px + 42, ty + 72 + 40 * i, f"{cutoff - voice} years short of its {cutoff} cutoff", 11, italic=True, opacity=.8))
     out.append(lines(px + 20, h - 92, ["Told the year, one model moves forty years;", "the other does not move at all."], 12, italic=True, opacity=.85))
     save("plate-assays.svg", out)
 
@@ -358,7 +360,7 @@ def fieldwork():
     out.append(text(x, 170, "UPSTREAM OPEN SOURCE", 12.5, caps=True, bold=True))
     out.append(text(x, 192, "fossils left in other people's code", 12, italic=True, opacity=.8))
     prs = [("tenacity #668", "8.8k stars", "merged"), ("returns #2480", "4.4k stars", "merged"), ("gqlalchemy #390", "query builder", "merged"),
-           ("gqlalchemy #392", "taggit #944", "open"), ("adk-python #6190", "LGTM, beaten to it", "closed")]
+           ("2 more, under review", "gqlalchemy #392, django-taggit #944", "open"), ("adk-python #6190", "LGTM, beaten to it", "closed")]
     for i, (name, note, state) in enumerate(prs):
         cy = 228 + i * 50
         cx = x + 18

@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 590" width="1200" height="590" role="img" aria-label="Plate I, specimens: 3 pull requests merged upstream into libraries with 13.4k stars; 27 pull requests merged into a live product in 12 days; 2 research findings archived with a DOI; 363 offline tests; 3,240 forecasts locked before outcomes; 229 scored coding-agent runs.">
+<defs>
+<filter id="paper"><feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="2" seed="7"/><feColorMatrix values="0 0 0 0 .17 0 0 0 0 .13 0 0 0 0 .09 0 0 0 .07 0"/><feComposite in2="SourceGraphic" operator="in"/></filter>
+<pattern id="hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="7" stroke="#2B2118" stroke-opacity=".22" stroke-width=".8"/></pattern>
+<pattern id="dots" width="9" height="9" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r=".7" fill="#2B2118" fill-opacity=".4"/><circle cx="6.5" cy="6" r=".6" fill="#2B2118" fill-opacity=".3"/></pattern>
+<pattern id="dash" width="22" height="7" patternUnits="userSpaceOnUse"><line x1="1" y1="3.5" x2="13" y2="3.5" stroke="#2B2118" stroke-opacity=".32" stroke-width=".7"/></pattern>
+</defs>
+<style>
+.rise{transform-box:fill-box;transform-origin:bottom;animation:rise 1.6s cubic-bezier(.3,0,.2,1) both}
+.show{opacity:0;animation:show .8s ease-out forwards}
+@keyframes rise{from{transform:scaleY(0)}to{transform:scaleY(1)}}
+@keyframes show{to{opacity:1}}
+@media (prefers-reduced-motion:reduce){.rise,.show{animation:none;opacity:1}}
+</style>
+<metadata>author: Zaid Ali Syed; ORCID 0009-0003-4313-1510; PGP EFE9 4832 B2B9 80D9 B583 91F2 8FAA BCC1 B1AC 09E5; drawn by scripts/plates.py in github.com/zaidwhy/zaidwhy</metadata>
+<rect width="1200" height="590" fill="#F1E8D4"/><rect width="1200" height="590" filter="url(#paper)"/>
+<rect x="18" y="18" width="1164" height="554" fill="none" stroke="#2B2118" stroke-width="1.4"/>
+<rect x="24" y="24" width="1152" height="542" fill="none" stroke="#2B2118" stroke-width=".5"/>
+<text x="60.0" y="62.0" text-anchor="start" fill="#2B2118" fill-opacity="1.0" style="font-family:Georgia,'Times New Roman',serif;font-size:12.5px;letter-spacing:.16em;text-transform:uppercase">Plate I  ·  Specimens</text>
+<text x="60.0" y="97.0" text-anchor="start" fill="#2B2118" fill-opacity="1.0" style="font-family:Georgia,'Times New Roman',serif;font-size:28px">What the drill brought up</text>
+<text x="60.0" y="122.0" text-anchor="start" fill="#2B2118" fill-opacity="0.8" style="font-family:Georgia,'Times New Roman',serif;font-size:14px;font-style:italic">Six samples from the core, each mounted with the label that says where it came from.</text>
+<rect x="54" y="146" width="1092" height="398" fill="#E4D6B8" stroke="#2B2118" stroke-width=".9"/>
+<g class="show" style="animation-delay:0.00s">
+<rect x="81" y="170" width="340" height="170" fill="#2B2118" fill-opacity=".12"/>
+<rect x="78" y="166" width="340" height="170" fill="#F7F0DF" stroke="#2B2118" stroke-width=".9"/>
+<polygon points="154.1,228.0 147.7,241.4 128.5,253.9 112.1,251.1 95.5,235.7 95.1,220.9 111.1,205.4 128.2,201.5 147.0,213.3" fill="#D9C08C" stroke="#2B2118" stroke-width="1"/>
+<polygon points="154.1,228.0 147.7,241.4 128.5,253.9 112.1,251.1 95.5,235.7 95.1,220.9 111.1,205.4 128.2,201.5 147.0,213.3" fill="url(#dots)"/>
+<text x="188.0" y="242.0" text-anchor="start" fill="#2B2118" fill-opacity="1.0" style="font-family:Georgia,'Times New Roman',serif;font-size:46px">3</text>
+<text x="102.0" y="284.0" text-anchor="start" fill="#2B2118" fill-opacity="1.0" style="font-family:Georgia,'Times New Roman',serif;font-size:14.5px">pull requests merged upstream</text>
+<text x="102.0" y="306.0" text-anchor="start" fill="#2B2118" fill-opacity="0.8" style="font-family:Georgia,'Times New Roman',serif;font-size:12px;font-style:italic">tenacity, returns, gqlalchemy</text><text x="102.0" y="323.0" text-anchor="start" fill="#2B2118" fill-opacity="0.8" style="font-family:Georgia,'Times New Roman',serif;font-size:12px;font-style:italic">13.4k stars between them</text>
+<circle cx="248.0" cy="174" r="3.2" fill="#8E2F28" stroke="#2B2118" stroke-width=".6"/>
+<text x="404.0" y="190.0" text-anchor="end" fill="#2B2118" fill-opacity="0.6" style="font-family:Georgia,'Times New Roman',serif;font-size:10.5px;font-style:italic">no. 01</text>
+</g>
+<g class="show" style="animation-delay:0.15s">
+<rect x="445" y="170" width="340" height="170" fill="#2B2118" fill-opacity=".12"/>
+<rect x="442" y="166" width="340" height="170" fill="#F7F0DF" stroke="#2B2118" stroke-width=".9"/>
+<polygon points="517.1,228.0 512.0,242.0 492.5,253.0 475.6,251.3 460.5,235.6 458.8,220.6 475.3,206.1 492.4,201.3 510.8,213.9" fill="#97A077" stroke="#2B2118" stroke-width="1"/>
+<polygon points="517.1,228.0 512.0,242.0 492.5,253.0 475.6,251.3 460.5,235.6 458.8,220.6 475.3,206.1 492.4,201.3 510.8,213.9" fill="url(#dots)"/>
+<text x="552.0" y="242.0" text-anchor="start" fill="#2B2118" fill-opacity="1.0" style="font-family:Georgia,'Times New Roman',serif;font-size:46px">27</text>
+<text x="466.0" y="284.0" text-anchor="start" fill="#2B2118" fill-opacity="1.0" style="font-family:Georgia,'Times New Roman',serif;font-size:14.5px">pull requests merged into a live product</text>
+<text x="466.0" y="306.0" text-anchor="start" fill="#2B2118" fill-opacity="0.8" style="font-family:Georgia,'Times New Roman',serif;font-size:12px;font-style:italic">12 days, +8,838 / -1,619 lines</text><text x="466.0" y="323.0" text-anchor="start" fill="#2B2118" fill-opacity="0.8" style="font-family:Georgia,'Times New Roman',serif;font-size:12px;font-style:italic">every one reviewed by its owner</text>
+<circle cx="612.0" cy="174" r="3.2" fill="#8E2F28" stroke="#2B2118" stroke-width=".6"/>
+<text x="768.0" y="190.0" text-anchor="end" fill="#2B2118" fill-opacity="0.6" style="font-family:Georgia,'Times New Roman',serif;font-size:10.5px;font-style:italic">no. 02</text>
+</g>
+<g class="show" style="animation-delay:0.30s">
+<rect x="809" y="170" width="340" height="170" fill="#2B2118" fill-opacity=".12"/>
+<rect x="806" y="166" width="340" height="170" fill="#F7F0DF" stroke="#2B2118" stroke-width=".9"/>
+<polygon points="880.2,228.0 877.2,241.0 856.6,252.2 840.4,252.6 825.4,235.9 821.2,221.1 838.7,206.8 856.1,199.9 873.4,213.0" fill="#8A6A47" stroke="#2B2118" stroke-width="1"/>
+<polygon points="880.2,228.0 877.2,241.0 856.6,252.2 840.4,252.6 825.4,235.9 821.2,221.1 838.7,206.8 856.1,199.9 873.4,213.0" fill="url(#dots)"/>
+<text x="916.0" y="242.0" text-anchor="start" fill="#2B2118" fill-opacity="1.0" style="font-family:Georgia,'Times New Roman',serif;font-size:46px">2</text>
+<text x="830.0" y="284.0" text-anchor="start" fill="#2B2118" fill-opacity="1.0" style="font-family:Georgia,'Times New Roman',serif;font-size:14.5px">research findings with a DOI</text>
+<text x="830.0" y="306.0" text-anchor="start" fill="#2B2118" fill-opacity="0.8" style="font-family:Georgia,'Times New Roman',serif;font-size:12px;font-style:italic">each with a negative control</text><text x="830.0" y="323.0" text-anchor="start" fill="#2B2118" fill-opacity="0.8" style="font-family:Georgia,'Times New Roman',serif;font-size:12px;font-style:italic">and a second-model replication</text>
+<circle cx="976.0" cy="174" r="3.2" fill="#8E2F28" stroke="#2B2118" stroke-width=".6"/>
+<text x="1132.0" y="190.0" text-anchor="end" fill="#2B2118" fill-opacity="0.6" style="font-family:Georgia,'Times New Roman',serif;font-size:10.5px;font-style:italic">no. 03</text>
+</g>
+<g class="show" style="animation-delay:0.45s">
+<rect x="81" y="362" width="340" height="170" fill="#2B2118" fill-opacity=".12"/>
+<rect x="78" y="358" width="340" height="170" fill="#F7F0DF" stroke="#2B2118" stroke-width=".9"/>
+<polygon points="152.5,420.0 148.4,432.8 128.8,444.4 112.5,443.9 97.2,428.2 94.1,413.2 110.2,398.6 128.0,392.8 146.2,404.8" fill="#C99A55" stroke="#2B2118" stroke-width="1"/>
+<polygon points="152.5,420.0 148.4,432.8 128.8,444.4 112.5,443.9 97.2,428.2 94.1,413.2 110.2,398.6 128.0,392.8 146.2,404.8" fill="url(#dots)"/>
+<text x="188.0" y="434.0" text-anchor="start" fill="#2B2118" fill-opacity="1.0" style="font-family:Georgia,'Times New Roman',serif;font-size:46px">363</text>
+<text x="102.0" y="476.0" text-anchor="start" fill="#2B2118" fill-opacity="1.0" style="font-family:Georgia,'Times New Roman',serif;font-size:14.5px">tests, all offline</text>
+<text x="102.0" y="498.0" text-anchor="start" fill="#2B2118" fill-opacity="0.8" style="font-family:Georgia,'Times New Roman',serif;font-size:12px;font-style:italic">mocked end to end</text><text x="102.0" y="515.0" text-anchor="start" fill="#2B2118" fill-opacity="0.8" style="font-family:Georgia,'Times New Roman',serif;font-size:12px;font-style:italic">no API key runs any of them</text>
+<circle cx="248.0" cy="366" r="3.2" fill="#8E2F28" stroke="#2B2118" stroke-width=".6"/>
+<text x="404.0" y="382.0" text-anchor="end" fill="#2B2118" fill-opacity="0.6" style="font-family:Georgia,'Times New Roman',serif;font-size:10.5px;font-style:italic">no. 04</text>
+</g>
+<g class="show" style="animation-delay:0.60s">
+<rect x="445" y="362" width="340" height="170" fill="#2B2118" fill-opacity=".12"/>
+<rect x="442" y="358" width="340" height="170" fill="#F7F0DF" stroke="#2B2118" stroke-width=".9"/>
+<polygon points="519.5,420.0 510.6,434.1 492.3,446.9 475.3,442.2 458.4,427.3 460.2,412.5 475.7,396.3 492.4,394.8 511.9,406.1" fill="#BE8573" stroke="#2B2118" stroke-width="1"/>
+<polygon points="519.5,420.0 510.6,434.1 492.3,446.9 475.3,442.2 458.4,427.3 460.2,412.5 475.7,396.3 492.4,394.8 511.9,406.1" fill="url(#dots)"/>
+<text x="552.0" y="434.0" text-anchor="start" fill="#2B2118" fill-opacity="1.0" style="font-family:Georgia,'Times New Roman',serif;font-size:46px">3,240</text>
+<text x="466.0" y="476.0" text-anchor="start" fill="#2B2118" fill-opacity="1.0" style="font-family:Georgia,'Times New Roman',serif;font-size:14.5px">forecasts locked before outcomes</text>
+<text x="466.0" y="498.0" text-anchor="start" fill="#2B2118" fill-opacity="0.8" style="font-family:Georgia,'Times New Roman',serif;font-size:12px;font-style:italic">hash-chained public ledger</text><text x="466.0" y="515.0" text-anchor="start" fill="#2B2118" fill-opacity="0.8" style="font-family:Georgia,'Times New Roman',serif;font-size:12px;font-style:italic">graded in public from 15 Nov</text>
+<circle cx="612.0" cy="366" r="3.2" fill="#8E2F28" stroke="#2B2118" stroke-width=".6"/>
+<text x="768.0" y="382.0" text-anchor="end" fill="#2B2118" fill-opacity="0.6" style="font-family:Georgia,'Times New Roman',serif;font-size:10.5px;font-style:italic">no. 05</text>
+</g>
+<g class="show" style="animation-delay:0.75s">
+<rect x="809" y="362" width="340" height="170" fill="#2B2118" fill-opacity=".12"/>
+<rect x="806" y="358" width="340" height="170" fill="#F7F0DF" stroke="#2B2118" stroke-width=".9"/>
+<polygon points="882.6,420.0 874.8,434.6 856.2,446.0 838.9,442.5 823.4,427.2 823.9,412.2 839.8,397.0 856.6,394.5 875.6,406.7" fill="#E3CFA4" stroke="#2B2118" stroke-width="1"/>
+<polygon points="882.6,420.0 874.8,434.6 856.2,446.0 838.9,442.5 823.4,427.2 823.9,412.2 839.8,397.0 856.6,394.5 875.6,406.7" fill="url(#dots)"/>
+<text x="916.0" y="434.0" text-anchor="start" fill="#2B2118" fill-opacity="1.0" style="font-family:Georgia,'Times New Roman',serif;font-size:46px">229</text>
+<text x="830.0" y="476.0" text-anchor="start" fill="#2B2118" fill-opacity="1.0" style="font-family:Georgia,'Times New Roman',serif;font-size:14.5px">scored coding-agent runs</text>
+<text x="830.0" y="498.0" text-anchor="start" fill="#2B2118" fill-opacity="0.8" style="font-family:Georgia,'Times New Roman',serif;font-size:12px;font-style:italic">pre-registered, two studies</text><text x="830.0" y="515.0" text-anchor="start" fill="#2B2118" fill-opacity="0.8" style="font-family:Georgia,'Times New Roman',serif;font-size:12px;font-style:italic">every transcript shipped</text>
+<circle cx="976.0" cy="366" r="3.2" fill="#8E2F28" stroke="#2B2118" stroke-width=".6"/>
+<text x="1132.0" y="382.0" text-anchor="end" fill="#2B2118" fill-opacity="0.6" style="font-family:Georgia,'Times New Roman',serif;font-size:10.5px;font-style:italic">no. 06</text>
+</g>
+</svg>

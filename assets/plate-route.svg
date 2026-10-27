@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 230" width="1200" height="230" role="img" aria-label="The route through this page: I Specimens, II Fault lines, III Assays, IV Excavation, V Field work, VI The seal.">
+<metadata>author: Zaid Ali Syed; ORCID 0009-0003-4313-1510; PGP EFE9 4832 B2B9 80D9 B583 91F2 8FAA BCC1 B1AC 09E5; drawn by scripts/plates.py in github.com/zaidwhy/zaidwhy</metadata>
+<rect width="1200" height="230" fill="#F1E8D4"/>
+<rect x="18" y="18" width="1164" height="194" fill="none" stroke="#2B2118" stroke-width="1.4"/>
+<text x="60.0" y="60.0" text-anchor="start" fill="#2B2118" fill-opacity="1.0" style="font-family:Georgia,'Times New Roman',serif;font-size:12.5px;letter-spacing:.16em;text-transform:uppercase">The route through this survey</text>
+<polyline points="70.0,130.9 76.0,130.6 82.0,130.2 88.0,129.7 94.0,129.3 100.0,128.9 106.0,128.6 112.0,128.6 118.0,128.7 124.0,129.1 130.0,129.7 136.0,130.5 142.0,131.6 148.0,132.7 154.0,134.0 160.0,135.4 166.0,136.7 172.0,137.9 178.0,139.0 184.0,139.9 190.0,140.5 196.0,140.8 202.0,140.8 208.0,140.6 214.0,140.1 220.0,139.3 226.0,138.4 232.0,137.3 238.0,136.2 244.0,135.1 250.0,134.0 256.0,133.1 262.0,132.3 268.0,131.7 274.0,131.3 280.0,131.2 286.0,131.2 292.0,131.4 298.0,131.7 304.0,132.1 310.0,132.5 316.0,132.9 322.0,133.1 328.0,133.2 334.0,133.2 340.0,132.9 346.0,132.4 352.0,131.7 358.0,130.8 364.0,129.7 370.0,128.6 376.0,127.4 382.0,126.3 388.0,125.2 394.0,124.3 400.0,123.7 406.0,123.2 412.0,123.1 418.0,123.2 424.0,123.6 430.0,124.3 436.0,125.3 442.0,126.4 448.0,127.6 454.0,128.9 460.0,130.2 466.0,131.5 472.0,132.6 478.0,133.5 484.0,134.2 490.0,134.7 496.0,135.0 502.0,135.0 508.0,134.8 514.0,134.5 520.0,134.1 526.0,133.7 532.0,133.3 538.0,132.9 544.0,132.7 550.0,132.6 556.0,132.7 562.0,133.1 568.0,133.6 574.0,134.3 580.0,135.1 586.0,136.0 592.0,137.0 598.0,137.9 604.0,138.8 610.0,139.5 616.0,140.0 622.0,140.2 628.0,140.2 634.0,139.9 640.0,139.3 646.0,138.5 652.0,137.4 658.0,136.1 664.0,134.8 670.0,133.3 676.0,131.9 682.0,130.6 688.0,129.4 694.0,128.4 700.0,127.7 706.0,127.1 712.0,126.9 718.0,126.8 724.0,127.0 730.0,127.4 736.0,127.9 742.0,128.5 748.0,129.0 754.0,129.5 760.0,130.0 766.0,130.2 772.0,130.3 778.0,130.2 784.0,129.9 790.0,129.5 796.0,128.9 802.0,128.2 808.0,127.4 814.0,126.7 820.0,126.0 826.0,125.5 832.0,125.2 838.0,125.1 844.0,125.2 850.0,125.7 856.0,126.3 862.0,127.3 868.0,128.4 874.0,129.8 880.0,131.2 886.0,132.7 892.0,134.1 898.0,135.4 904.0,136.6 910.0,137.6 916.0,138.3 922.0,138.8 928.0,139.0 934.0,138.9 940.0,138.6 946.0,138.1 952.0,137.5 958.0,136.8 964.0,136.0 970.0,135.3 976.0,134.6 982.0,134.1 988.0,133.8 994.0,133.6 1000.0,133.7 1006.0,133.9 1012.0,134.3 1018.0,134.8 1024.0,135.3 1030.0,135.9 1036.0,136.4 1042.0,136.8 1048.0,137.0 1054.0,137.0 1060.0,136.8 1066.0,136.3 1072.0,135.6 1078.0,134.7 1084.0,133.5 1090.0,132.2 1096.0,130.8 1102.0,129.4 1108.0,128.0 1114.0,126.7 1120.0,125.6 1126.0,124.7 1132.0,124.1 1138.0,123.7" fill="none" stroke="#2B2118" stroke-width="1.3" stroke-dasharray="2 5" stroke-linecap="round"/>
+<polygon points="110.0,113.6 98.0,135.6 122.0,135.6" fill="#C99A55" stroke="#2B2118" stroke-width="1.1"/>
+<circle cx="110" cy="127.6" r="2" fill="#2B2118"/>
+<text x="110.0" y="102.6" text-anchor="middle" fill="#2B2118" fill-opacity="1.0" style="font-family:Georgia,'Times New Roman',serif;font-size:13px;font-weight:bold">I</text>
+<text x="110.0" y="160.6" text-anchor="middle" fill="#2B2118" fill-opacity="1.0" style="font-family:Georgia,'Times New Roman',serif;font-size:16px">Specimens</text>
+<text x="110.0" y="179.6" text-anchor="middle" fill="#2B2118" fill-opacity="0.8" style="font-family:Georgia,'Times New Roman',serif;font-size:11.5px;font-style:italic">what the drill brought up</text>
+<polygon points="306.0,117.2 294.0,139.2 318.0,139.2" fill="#B0663F" stroke="#2B2118" stroke-width="1.1"/>
+<circle cx="306" cy="131.2" r="2" fill="#2B2118"/>
+<text x="306.0" y="106.2" text-anchor="middle" fill="#2B2118" fill-opacity="1.0" style="font-family:Georgia,'Times New Roman',serif;font-size:13px;font-weight:bold">II</text>
+<text x="306.0" y="164.2" text-anchor="middle" fill="#2B2118" fill-opacity="1.0" style="font-family:Georgia,'Times New Roman',serif;font-size:16px">Fault lines</text>
+<text x="306.0" y="183.2" text-anchor="middle" fill="#2B2118" fill-opacity="0.8" style="font-family:Georgia,'Times New Roman',serif;font-size:11.5px;font-style:italic">where my claims broke</text>
+<polygon points="502.0,120.0 490.0,142.0 514.0,142.0" fill="#97A077" stroke="#2B2118" stroke-width="1.1"/>
+<circle cx="502" cy="134.0" r="2" fill="#2B2118"/>
+<text x="502.0" y="109.0" text-anchor="middle" fill="#2B2118" fill-opacity="1.0" style="font-family:Georgia,'Times New Roman',serif;font-size:13px;font-weight:bold">III</text>
+<text x="502.0" y="167.0" text-anchor="middle" fill="#2B2118" fill-opacity="1.0" style="font-family:Georgia,'Times New Roman',serif;font-size:16px">Assays</text>
+<text x="502.0" y="186.0" text-anchor="middle" fill="#2B2118" fill-opacity="0.8" style="font-family:Georgia,'Times New Roman',serif;font-size:11.5px;font-style:italic">what the lab measured</text>
+<polygon points="698.0,112.9 686.0,134.9 710.0,134.9" fill="#BE8573" stroke="#2B2118" stroke-width="1.1"/>
+<circle cx="698" cy="126.9" r="2" fill="#2B2118"/>
+<text x="698.0" y="101.9" text-anchor="middle" fill="#2B2118" fill-opacity="1.0" style="font-family:Georgia,'Times New Roman',serif;font-size:13px;font-weight:bold">IV</text>
+<text x="698.0" y="159.9" text-anchor="middle" fill="#2B2118" fill-opacity="1.0" style="font-family:Georgia,'Times New Roman',serif;font-size:16px">Excavation</text>
+<text x="698.0" y="178.9" text-anchor="middle" fill="#2B2118" fill-opacity="0.8" style="font-family:Georgia,'Times New Roman',serif;font-size:11.5px;font-style:italic">what stands on the kernel</text>
+<polygon points="894.0,119.6 882.0,141.6 906.0,141.6" fill="#7F8C8E" stroke="#2B2118" stroke-width="1.1"/>
+<circle cx="894" cy="133.6" r="2" fill="#2B2118"/>
+<text x="894.0" y="108.6" text-anchor="middle" fill="#2B2118" fill-opacity="1.0" style="font-family:Georgia,'Times New Roman',serif;font-size:13px;font-weight:bold">V</text>
+<text x="894.0" y="166.6" text-anchor="middle" fill="#2B2118" fill-opacity="1.0" style="font-family:Georgia,'Times New Roman',serif;font-size:16px">Field work</text>
+<text x="894.0" y="185.6" text-anchor="middle" fill="#2B2118" fill-opacity="0.8" style="font-family:Georgia,'Times New Roman',serif;font-size:11.5px;font-style:italic">ground that was not mine</text>
+<polygon points="1090.0,117.2 1078.0,139.2 1102.0,139.2" fill="#8A6A47" stroke="#2B2118" stroke-width="1.1"/>
+<circle cx="1090" cy="131.2" r="2" fill="#2B2118"/>
+<text x="1090.0" y="106.2" text-anchor="middle" fill="#2B2118" fill-opacity="1.0" style="font-family:Georgia,'Times New Roman',serif;font-size:13px;font-weight:bold">VI</text>
+<text x="1090.0" y="164.2" text-anchor="middle" fill="#2B2118" fill-opacity="1.0" style="font-family:Georgia,'Times New Roman',serif;font-size:16px">The seal</text>
+<text x="1090.0" y="183.2" text-anchor="middle" fill="#2B2118" fill-opacity="0.8" style="font-family:Georgia,'Times New Roman',serif;font-size:11.5px;font-style:italic">how you know it is mine</text>
+</svg>
