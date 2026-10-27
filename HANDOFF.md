@@ -32,7 +32,8 @@
 
 - Round 13 (phones, Plate IV): `plate-excavation-narrow.svg` is its own composition, because five headframes in a row do not stack: the surface systems become a list of small headframes, and the shaft keeps the kernel and its three chambers. `strata()`, `SURFACE`, `CHAMBERS` and `KERNEL_NOTE` are shared with the wide plate. Another session committed new test counts (second-brain 116, ecosystem 381, commit b590812) from this same checkout mid-round; that commit also carried this round's refactor, so the history splits the work across two commits.
 
+- Round 14 (phones, route and Plate VI): `plate-route-narrow.svg` runs the six stations down a vertical trail and `plate-seal-narrow.svg` hangs the five seals on a vertical cord, sharing `STATIONS`, `station_marker()`, `SEALS` and `wax_seal()` with the wide plates (both identical apart from line breaks). Every plate on the page now has a phone twin: 7 `<picture>` elements, 14 plates.
+
 ## Next
-- Phone twins for the remaining plates: the seal, then the route strip.
 - Re-run `repo_plates.py` monthly, or when a repo's headline numbers change, so the strips do not go stale.
 - Zaid: upload `weekend-profile-update/creative/banner-core.png` as the LinkedIn background.

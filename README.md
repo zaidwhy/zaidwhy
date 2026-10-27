@@ -8,7 +8,10 @@ This page is a field survey. The core sample above shows when the work was laid 
 
 B.Tech Information Technology (Honors with Research), MGM University, graduating June 2027. Open to **backend, AI engineer and new-grad roles in India** from January 2027.
 
+<picture>
+<source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/zaidwhy/zaidwhy/main/assets/plate-route-narrow.svg">
 <img src="https://raw.githubusercontent.com/zaidwhy/zaidwhy/main/assets/plate-route.svg" alt="The route through this survey: I Specimens, II Fault lines, III Assays, IV Excavation, V Field work, VI The seal." width="100%">
+</picture>
 
 [I. Specimens](#i-specimens) · [II. Fault lines](#ii-fault-lines) · [III. Assays](#iii-assays) · [IV. Excavation](#iv-excavation) · [V. Field work](#v-field-work) · [VI. The seal](#vi-the-seal)
 
@@ -368,7 +371,10 @@ infra       Docker · GitHub Actions · Vercel · Render
 
 ## VI. The seal
 
+<picture>
+<source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/zaidwhy/zaidwhy/main/assets/plate-seal-narrow.svg">
 <img src="https://raw.githubusercontent.com/zaidwhy/zaidwhy/main/assets/plate-seal.svg" alt="Plate VI, the seal: a signed commit, an ed25519 signature verified by GitHub, an immutable release tag, a Zenodo DOI with an independent timestamp, and an ORCID iD bound to a person." width="100%">
+</picture>
 
 Five links, and the useful property is that four of them are asserted by somebody other than me. GitHub checks the signature. Zenodo issues the timestamp. ORCID binds the iD to a person. A repository can be cloned in a second; none of that comes with it.
 

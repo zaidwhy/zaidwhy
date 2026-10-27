@@ -81,25 +81,37 @@ def save(name, parts):
     print("wrote", name)
 
 
+STATIONS = [("I", "Specimens", "what the drill brought up"), ("II", "Fault lines", "where my claims broke"),
+            ("III", "Assays", "what the lab measured"), ("IV", "Excavation", "what stands on the kernel"),
+            ("V", "Field work", "ground that was not mine"), ("VI", "The seal", "how you know it is mine")]
+ROUTE_LABEL = "The route through this page: I Specimens, II Fault lines, III Assays, IV Excavation, V Field work, VI The seal."
+MANIFEST = ("<metadata>author: Zaid Ali Syed; ORCID 0009-0003-4313-1510; PGP EFE9 4832 B2B9 80D9 B583 91F2 8FAA BCC1 B1AC 09E5; "
+            "drawn by scripts/plates.py in github.com/zaidwhy/zaidwhy</metadata>")
+
+
+def route_head(width, h):
+    return [f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {width} {h}" width="{width}" height="{h}" role="img" aria-label="{ROUTE_LABEL}">',
+            MANIFEST, f'<rect width="{width}" height="{h}" fill="{PAPER}"/>',
+            f'<rect x="18" y="18" width="{width - 36}" height="{h - 36}" fill="none" stroke="{INK}" stroke-width="1.4"/>',
+            text(60, 60, "The route through this survey", 12.5, caps=True)]
+
+
+def station_marker(i, x, y):
+    return (poly([(x, y - 15), (x - 12, y + 7), (x + 12, y + 7)], fill=TINTS[i + 1], stroke=INK, stroke_width="1.1")
+            + f'<circle cx="{x}" cy="{y - 1:.1f}" r="2" fill="{INK}"/>')
+
+
 def route():
     h = 230
-    stations = [("I", "Specimens", "what the drill brought up"), ("II", "Fault lines", "where my claims broke"),
-                ("III", "Assays", "what the lab measured"), ("IV", "Excavation", "what stands on the kernel"),
-                ("V", "Field work", "ground that was not mine"), ("VI", "The seal", "how you know it is mine")]
-    out = [f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {h}" width="{W}" height="{h}" role="img" '
-           f'aria-label="The route through this page: I Specimens, II Fault lines, III Assays, IV Excavation, V Field work, VI The seal.">',
-           f'<metadata>author: Zaid Ali Syed; ORCID 0009-0003-4313-1510; PGP EFE9 4832 B2B9 80D9 B583 91F2 8FAA BCC1 B1AC 09E5; drawn by scripts/plates.py in github.com/zaidwhy/zaidwhy</metadata>',
-           f'<rect width="{W}" height="{h}" fill="{PAPER}"/>',
-           f'<rect x="18" y="18" width="{W - 36}" height="{h - 36}" fill="none" stroke="{INK}" stroke-width="1.4"/>',
-           text(60, 60, "The route through this survey", 12.5, caps=True)]
+    stations = STATIONS
+    out = route_head(W, h)
     xs = [110 + i * 196 for i in range(6)]
     trail = " ".join(f"{x:.1f},{132 + wave(x, 'trail', 9):.1f}" for x in range(70, W - 60, 6))
     out.append(f'<polyline points="{trail}" fill="none" stroke="{INK}" stroke-width="1.3" stroke-dasharray="2 5" stroke-linecap="round"/>')
     for i, (num, name, story) in enumerate(stations):
         x = xs[i]
         y = 132 + wave(x, "trail", 9)
-        out.append(poly([(x, y - 15), (x - 12, y + 7), (x + 12, y + 7)], fill=TINTS[i + 1], stroke=INK, stroke_width="1.1"))
-        out.append(f'<circle cx="{x}" cy="{y - 1:.1f}" r="2" fill="{INK}"/>')
+        out.append(station_marker(i, x, y))
         out.append(text(x, y - 26, num, 13, anchor="middle", bold=True))
         out.append(text(x, y + 32, name, 16, anchor="middle"))
         out.append(text(x, y + 51, story, 11.5, anchor="middle", italic=True, opacity=.8))
@@ -107,6 +119,21 @@ def route():
     with open(os.path.join(ASSETS, "plate-route.svg"), "w", encoding="utf-8", newline="\n") as f:
         f.write("\n".join(out))
     print("wrote plate-route.svg")
+
+
+def route_narrow():
+    row, top = 58, 108
+    h = top + len(STATIONS) * row + 20
+    out = route_head(NARROW, h)
+    trail = " ".join(f"{90 + wave(y, 'trail', 7):.1f},{y}" for y in range(top - 20, h - 40, 6))
+    out.append(f'<polyline points="{trail}" fill="none" stroke="{INK}" stroke-width="1.3" stroke-dasharray="2 5" stroke-linecap="round"/>')
+    for i, (num, name, story) in enumerate(STATIONS):
+        y = top + i * row
+        x = 90 + wave(y, "trail", 7)
+        out.append(station_marker(i, x, y))
+        out.append(text(130, y - 2, f"{num}.  {name}", 16))
+        out.append(text(130, y + 17, story, 12.5, italic=True, opacity=.8))
+    save("plate-route-narrow.svg", out)
 
 
 SPECIMENS = [
@@ -520,15 +547,25 @@ def fieldwork_narrow():
     save("plate-fieldwork-narrow.svg", out)
 
 
+SEALS = [("i", "a signed commit", "asserted by me"), ("ii", "ed25519 signature", "verified by GitHub"),
+         ("iii", "an immutable tag", "held by GitHub"), ("iv", "a Zenodo DOI", "timestamped by Zenodo"),
+         ("v", "an ORCID iD", "bound to a person by ORCID")]
+SEAL_LABEL = ("Plate VI, the seal: a signed commit, an ed25519 signature verified by GitHub, an immutable release tag, a Zenodo DOI with an independent timestamp, "
+              "and an ORCID iD bound to a person.")
+
+
+def wax_seal(i, x, y, num):
+    blob = [(x + (38 + 4 * math.sin(k * 2.3 + i)) * math.cos(k * math.tau / 22), y + (38 + 4 * math.sin(k * 2.3 + i)) * math.sin(k * math.tau / 22)) for k in range(22)]
+    return (poly(blob, fill=WAX, stroke="#5E1E19", stroke_width="1.2")
+            + f'<circle cx="{x}" cy="{y:.1f}" r="26" fill="none" stroke="#F1D9C9" stroke-opacity=".55" stroke-width="1.2"/>'
+            + text(x, y + 7, num, 22, anchor="middle", italic=True, fill="#F6E7DA"))
+
+
 def seal():
     h = 400
-    links = [("i", "a signed commit", "asserted by me"), ("ii", "ed25519 signature", "verified by GitHub"),
-             ("iii", "an immutable tag", "held by GitHub"), ("iv", "a Zenodo DOI", "timestamped by Zenodo"),
-             ("v", "an ORCID iD", "bound to a person by ORCID")]
+    links = SEALS
     out = frame(h, "Plate VI  ·  The seal", "How you know it is mine",
-                "Five links in the chain of custody. Four of them are asserted by somebody other than me, and none come with a copy.",
-                "Plate VI, the seal: a signed commit, an ed25519 signature verified by GitHub, an immutable release tag, a Zenodo DOI with an independent timestamp, "
-                "and an ORCID iD bound to a person.")
+                "Five links in the chain of custody. Four of them are asserted by somebody other than me, and none come with a copy.", SEAL_LABEL)
     xs = [140 + i * 230 for i in range(5)]
     cy = 230
     cord = " ".join(f"{x},{cy + 26 * math.sin((x - 140) / 230 * math.pi):.1f}" for x in range(110, 1100, 6))
@@ -536,19 +573,33 @@ def seal():
     for i, (num, what, who) in enumerate(links):
         x = xs[i]
         y = cy + 26 * math.sin((x - 140) / 230 * math.pi)
-        blob = [(x + (38 + 4 * math.sin(k * 2.3 + i)) * math.cos(k * math.tau / 22), y + (38 + 4 * math.sin(k * 2.3 + i)) * math.sin(k * math.tau / 22)) for k in range(22)]
         out.append(f'<g class="show" style="animation-delay:{.2 * i:.2f}s">')
-        out.append(poly(blob, fill=WAX, stroke="#5E1E19", stroke_width="1.2"))
-        out.append(f'<circle cx="{x}" cy="{y:.1f}" r="26" fill="none" stroke="#F1D9C9" stroke-opacity=".55" stroke-width="1.2"/>')
-        out.append(text(x, y + 7, num, 22, anchor="middle", italic=True, fill="#F6E7DA"))
+        out.append(wax_seal(i, x, y, num))
         out.append(text(x, y + 72, what, 14, anchor="middle"))
         out.append(text(x, y + 90, who, 12, anchor="middle", italic=True, opacity=.8))
         out.append("</g>")
     save("plate-seal.svg", out)
 
 
+def seal_narrow():
+    row, top = 108, 230
+    h = top + len(SEALS) * row - 10
+    out = frame(h, "Plate VI  ·  The seal", "How you know it is mine",
+                ["Five links in the chain of custody. Four are", "asserted by somebody other than me."], SEAL_LABEL, width=NARROW)
+    out.append(f'<line x1="110" y1="{top}" x2="110" y2="{top + (len(SEALS) - 1) * row}" stroke="{INK}" stroke-width="1.4" stroke-opacity=".7"/>')
+    for i, (num, what, who) in enumerate(SEALS):
+        y = top + i * row
+        out.append(f'<g class="show" style="animation-delay:{.2 * i:.2f}s">')
+        out.append(wax_seal(i, 110, y, num))
+        out.append(text(172, y - 2, what, 16))
+        out.append(text(172, y + 18, who, 13, italic=True, opacity=.8))
+        out.append("</g>")
+    save("plate-seal-narrow.svg", out)
+
+
 if __name__ == "__main__":
     route()
+    route_narrow()
     specimens()
     specimens_narrow()
     faults()
@@ -560,3 +611,4 @@ if __name__ == "__main__":
     fieldwork()
     fieldwork_narrow()
     seal()
+    seal_narrow()

@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 760" width="520" height="760" role="img" aria-label="Plate VI, the seal: a signed commit, an ed25519 signature verified by GitHub, an immutable release tag, a Zenodo DOI with an independent timestamp, and an ORCID iD bound to a person.">
+<defs>
+<filter id="paper"><feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="2" seed="7"/><feColorMatrix values="0 0 0 0 .17 0 0 0 0 .13 0 0 0 0 .09 0 0 0 .07 0"/><feComposite in2="SourceGraphic" operator="in"/></filter>
+<pattern id="hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="7" stroke="#2B2118" stroke-opacity=".22" stroke-width=".8"/></pattern>
+<pattern id="dots" width="9" height="9" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r=".7" fill="#2B2118" fill-opacity=".4"/><circle cx="6.5" cy="6" r=".6" fill="#2B2118" fill-opacity=".3"/></pattern>
+<pattern id="dash" width="22" height="7" patternUnits="userSpaceOnUse"><line x1="1" y1="3.5" x2="13" y2="3.5" stroke="#2B2118" stroke-opacity=".32" stroke-width=".7"/></pattern>
+</defs>
+<style>
+.rise{transform-box:fill-box;transform-origin:bottom;animation:rise 1.6s cubic-bezier(.3,0,.2,1) both}
+.show{animation:show .8s ease-out both}
+@keyframes rise{from{transform:scaleY(0)}to{transform:scaleY(1)}}
+@keyframes show{from{opacity:0}to{opacity:1}}
+@media (prefers-reduced-motion:reduce){.rise,.show{animation:none}}
+</style>
+<metadata>author: Zaid Ali Syed; ORCID 0009-0003-4313-1510; PGP EFE9 4832 B2B9 80D9 B583 91F2 8FAA BCC1 B1AC 09E5; drawn by scripts/plates.py in github.com/zaidwhy/zaidwhy</metadata>
+<rect width="520" height="760" fill="#F1E8D4"/><rect width="520" height="760" filter="url(#paper)"/>
+<rect x="18" y="18" width="484" height="724" fill="none" stroke="#2B2118" stroke-width="1.4"/>
+<rect x="24" y="24" width="472" height="712" fill="none" stroke="#2B2118" stroke-width=".5"/>
+<text x="60.0" y="62.0" text-anchor="start" fill="#2B2118" fill-opacity="1.0" style="font-family:Georgia,'Times New Roman',serif;font-size:12.5px;letter-spacing:.16em;text-transform:uppercase">Plate VI  ·  The seal</text>
+<text x="60.0" y="97.0" text-anchor="start" fill="#2B2118" fill-opacity="1.0" style="font-family:Georgia,'Times New Roman',serif;font-size:28px">How you know it is mine</text>
+<text x="60.0" y="122.0" text-anchor="start" fill="#2B2118" fill-opacity="0.8" style="font-family:Georgia,'Times New Roman',serif;font-size:14px;font-style:italic">Five links in the chain of custody. Four are</text><text x="60.0" y="141.0" text-anchor="start" fill="#2B2118" fill-opacity="0.8" style="font-family:Georgia,'Times New Roman',serif;font-size:14px;font-style:italic">asserted by somebody other than me.</text>
+<line x1="110" y1="230" x2="110" y2="662" stroke="#2B2118" stroke-width="1.4" stroke-opacity=".7"/>
+<g class="show" style="animation-delay:0.00s">
+<polygon points="148.0,230.0 149.3,241.5 138.6,248.4 136.4,260.5 126.2,265.4 114.9,264.1 104.1,271.3 94.8,263.2 86.3,257.4 74.8,252.6 76.8,239.8 71.3,230.0 71.1,218.6 81.4,211.6 83.3,199.1 94.1,195.2 105.0,195.5 116.0,188.5 124.9,197.4 134.2,202.1 145.0,207.5 142.9,220.3" fill="#8E2F28" stroke="#5E1E19" stroke-width="1.2"/><circle cx="110" cy="230.0" r="26" fill="none" stroke="#F1D9C9" stroke-opacity=".55" stroke-width="1.2"/><text x="110.0" y="237.0" text-anchor="middle" fill="#F6E7DA" fill-opacity="1.0" style="font-family:Georgia,'Times New Roman',serif;font-size:22px;font-style:italic">i</text>
+<text x="172.0" y="228.0" text-anchor="start" fill="#2B2118" fill-opacity="1.0" style="font-family:Georgia,'Times New Roman',serif;font-size:16px">a signed commit</text>
+<text x="172.0" y="248.0" text-anchor="start" fill="#2B2118" fill-opacity="0.8" style="font-family:Georgia,'Times New Roman',serif;font-size:13px;font-style:italic">asserted by me</text>
+</g>
+<g class="show" style="animation-delay:0.20s">
+<polygon points="151.4,338.0 145.9,348.5 139.8,357.2 137.5,369.7 124.6,370.0 115.4,375.4 104.1,378.7 95.8,369.0 83.7,368.3 77.1,359.2 77.0,347.7 68.3,338.0 74.8,327.7 79.7,318.5 82.6,306.3 95.6,306.4 104.5,300.0 115.8,297.7 124.1,307.1 136.6,307.3 142.4,317.2 143.3,328.2" fill="#8E2F28" stroke="#5E1E19" stroke-width="1.2"/><circle cx="110" cy="338.0" r="26" fill="none" stroke="#F1D9C9" stroke-opacity=".55" stroke-width="1.2"/><text x="110.0" y="345.0" text-anchor="middle" fill="#F6E7DA" fill-opacity="1.0" style="font-family:Georgia,'Times New Roman',serif;font-size:22px;font-style:italic">ii</text>
+<text x="172.0" y="336.0" text-anchor="start" fill="#2B2118" fill-opacity="1.0" style="font-family:Georgia,'Times New Roman',serif;font-size:16px">ed25519 signature</text>
+<text x="172.0" y="356.0" text-anchor="start" fill="#2B2118" fill-opacity="0.8" style="font-family:Georgia,'Times New Roman',serif;font-size:13px;font-style:italic">verified by GitHub</text>
+</g>
+<g class="show" style="animation-delay:0.40s">
+<polygon points="151.6,446.0 142.9,455.7 143.0,467.2 136.2,476.2 124.2,477.0 115.9,486.8 104.6,483.2 95.3,478.1 82.5,477.7 80.2,465.1 74.0,456.6 68.7,446.0 77.3,436.4 76.5,424.4 84.2,416.2 95.8,414.8 104.1,404.9 115.3,409.4 124.9,413.4 137.5,414.3 139.4,427.1 146.6,435.3" fill="#8E2F28" stroke="#5E1E19" stroke-width="1.2"/><circle cx="110" cy="446.0" r="26" fill="none" stroke="#F1D9C9" stroke-opacity=".55" stroke-width="1.2"/><text x="110.0" y="453.0" text-anchor="middle" fill="#F6E7DA" fill-opacity="1.0" style="font-family:Georgia,'Times New Roman',serif;font-size:22px;font-style:italic">iii</text>
+<text x="172.0" y="444.0" text-anchor="start" fill="#2B2118" fill-opacity="1.0" style="font-family:Georgia,'Times New Roman',serif;font-size:16px">an immutable tag</text>
+<text x="172.0" y="464.0" text-anchor="start" fill="#2B2118" fill-opacity="0.8" style="font-family:Georgia,'Times New Roman',serif;font-size:13px;font-style:italic">held by GitHub</text>
+</g>
+<g class="show" style="animation-delay:0.60s">
+<polygon points="148.6,554.0 143.3,563.8 145.2,576.6 133.7,581.3 125.2,587.3 115.9,595.3 105.1,588.1 93.8,589.5 83.7,584.4 81.4,572.4 70.6,565.6 72.1,554.0 76.3,544.1 74.7,531.3 86.7,527.1 94.5,520.2 104.1,513.0 114.9,520.2 126.5,518.0 136.0,524.0 138.8,535.5 149.8,542.3" fill="#8E2F28" stroke="#5E1E19" stroke-width="1.2"/><circle cx="110" cy="554.0" r="26" fill="none" stroke="#F1D9C9" stroke-opacity=".55" stroke-width="1.2"/><text x="110.0" y="561.0" text-anchor="middle" fill="#F6E7DA" fill-opacity="1.0" style="font-family:Georgia,'Times New Roman',serif;font-size:22px;font-style:italic">iv</text>
+<text x="172.0" y="552.0" text-anchor="start" fill="#2B2118" fill-opacity="1.0" style="font-family:Georgia,'Times New Roman',serif;font-size:16px">a Zenodo DOI</text>
+<text x="172.0" y="572.0" text-anchor="start" fill="#2B2118" fill-opacity="0.8" style="font-family:Georgia,'Times New Roman',serif;font-size:13px;font-style:italic">timestamped by Zenodo</text>
+</g>
+<g class="show" style="animation-delay:0.80s">
+<polygon points="145.0,662.0 146.5,672.7 144.4,684.1 132.3,687.7 126.8,698.7 115.5,700.4 105.1,696.2 92.6,700.0 86.2,689.5 79.4,681.6 69.9,673.8 75.4,662.0 72.8,651.1 76.0,640.1 87.7,636.3 93.0,624.8 104.6,624.2 115.0,627.4 127.4,623.8 133.5,634.9 141.1,642.0 149.9,650.3" fill="#8E2F28" stroke="#5E1E19" stroke-width="1.2"/><circle cx="110" cy="662.0" r="26" fill="none" stroke="#F1D9C9" stroke-opacity=".55" stroke-width="1.2"/><text x="110.0" y="669.0" text-anchor="middle" fill="#F6E7DA" fill-opacity="1.0" style="font-family:Georgia,'Times New Roman',serif;font-size:22px;font-style:italic">v</text>
+<text x="172.0" y="660.0" text-anchor="start" fill="#2B2118" fill-opacity="1.0" style="font-family:Georgia,'Times New Roman',serif;font-size:16px">an ORCID iD</text>
+<text x="172.0" y="680.0" text-anchor="start" fill="#2B2118" fill-opacity="0.8" style="font-family:Georgia,'Times New Roman',serif;font-size:13px;font-style:italic">bound to a person by ORCID</text>
+</g>
+</svg>
