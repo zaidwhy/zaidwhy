@@ -14,6 +14,8 @@
 ## Refine log
 - Round 4 (performance): core-sample.svg drew each bed outline three times (tint, hatching, boundary line). Each outline is now defined once and drawn twice by `<use>`, with the stroke drawing the boundary: 177 KB to 93 KB, pixel diff 0.76% (the count and date text). A size-budget test (36 months under 130 KB) guards it.
 
+- Round 5 (renderers without CSS animation): the fade-in elements had `opacity:0` as their base style, so converters and thumbnailers drew them blank: 5.7% of the seal plate and 5.0% of the specimens plate went missing in a Chromium render with `animation:none` forced. The animation now starts from transparent instead, and every plate loses 0.00% with animation off. A test rejects any base `opacity:0` rule.
+
 ## Next
 - Re-run `repo_plates.py` monthly, or when a repo's headline numbers change, so the strips do not go stale.
 - Zaid: upload `weekend-profile-update/creative/banner-core.png` as the LinkedIn background.

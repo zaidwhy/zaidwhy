@@ -57,10 +57,10 @@ def frame(h, kicker, title, subtitle, label):
 </defs>
 <style>
 .rise{{transform-box:fill-box;transform-origin:bottom;animation:rise 1.6s cubic-bezier(.3,0,.2,1) both}}
-.show{{opacity:0;animation:show .8s ease-out forwards}}
+.show{{animation:show .8s ease-out both}}
 @keyframes rise{{from{{transform:scaleY(0)}}to{{transform:scaleY(1)}}}}
-@keyframes show{{to{{opacity:1}}}}
-@media (prefers-reduced-motion:reduce){{.rise,.show{{animation:none;opacity:1}}}}
+@keyframes show{{from{{opacity:0}}to{{opacity:1}}}}
+@media (prefers-reduced-motion:reduce){{.rise,.show{{animation:none}}}}
 </style>''',
 f'<metadata>author: Zaid Ali Syed; ORCID 0009-0003-4313-1510; PGP EFE9 4832 B2B9 80D9 B583 91F2 8FAA BCC1 B1AC 09E5; drawn by scripts/plates.py in github.com/zaidwhy/zaidwhy</metadata>',
         f'<rect width="{W}" height="{h}" fill="{PAPER}"/><rect width="{W}" height="{h}" filter="url(#paper)"/>',

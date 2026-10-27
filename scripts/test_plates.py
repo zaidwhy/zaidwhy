@@ -43,6 +43,8 @@ class Rendering(unittest.TestCase):
         self.assertEqual(doc.documentElement.tagName, "svg")
         self.assertTrue(doc.getElementsByTagName("metadata"), "authorship manifest missing")
         self.assertNotIn(chr(0x2014), svg_text)
+        # A renderer without CSS animation shows the base style, so nothing may start hidden there.
+        self.assertNotRegex(svg_text, r"\.[\w-]+\{[^}]*opacity:0[;}]")
 
     def test_core_sample_renders_with_gap_fossil_and_crystal(self):
         months = [("2024-06", 55), ("2024-07", 63), ("2024-08", 2), ("2024-09", 0), ("2024-10", 1), ("2024-11", 900), ("2024-12", 300)]
