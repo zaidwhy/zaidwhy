@@ -4,7 +4,7 @@
 
 > **I build AI systems that remember, retrieve and decide. Then I go looking for the place they break.**
 
-This page is a field survey. The core sample above shows when the work was laid down. The six plates below follow it: what the drill brought up, where my own claims gave way, what the lab measured, what stands on the kernel, the ground I dug that was not mine, and how you can tell all of it is mine. Every number links to the artifact that produced it.
+This page is a field survey. The core sample above shows when the work was laid down. The six plates below follow it: what the drill brought up, where my own claims gave way, what the lab measured, what stands on the kernel, the ground I dug that was not mine, and how you can tell all of it is mine. Every number on a plate is stated again in the text beside it, with a link to the artifact that produced it.
 
 B.Tech Information Technology (Honors with Research), MGM University, graduating June 2027. Open to **backend, AI engineer and new-grad roles in India** from January 2027.
 
@@ -37,7 +37,7 @@ python -c "from aftershock import ledger; print(ledger.verify())"
 
 <img src="https://raw.githubusercontent.com/zaidwhy/zaidwhy/main/assets/plate-specimens.svg" alt="Plate I, specimens: 3 pull requests merged upstream into libraries with 13.4k stars; 27 pull requests merged into a live product in 12 days; 2 research findings archived with a DOI; 356 offline tests; 3,240 forecasts locked before outcomes; 229 scored coding-agent runs." width="100%">
 
-Six samples from the core, each with a label that says where it was dug up. None of them is a self-description. Each one is a count you can reproduce from a public record.
+Six samples from the core, each with a label that says where it was dug up. None of them is a self-description. Five are counts you can reproduce from a public record; the sixth, 27 pull requests into a private codebase, rests on the [case study](case-studies/zabira-academy.md) because the code cannot be shown.
 
 <details>
 <summary><b>Every specimen, with its receipt</b></summary>
@@ -394,4 +394,4 @@ Full signed statement: **[PROVENANCE.md](PROVENANCE.md)** · verify with `gpg --
 
 ---
 
-**[Portfolio](https://www.solstine.dev)** · **[LinkedIn](https://www.linkedin.com/in/zaidalisyed)** · Open to AI engineer internships and applied AI roles.
+**[Portfolio](https://www.solstine.dev)** · **[LinkedIn](https://www.linkedin.com/in/zaidalisyed)** · Open to backend, AI engineer and new-grad roles in India from January 2027.

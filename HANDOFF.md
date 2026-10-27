@@ -20,6 +20,8 @@
 
 - Round 7 (scan never clean): the craft-guard scan of README.md always reported one finding, from the bot-written status list. `update_telemetry.py` now writes the status as a table and also checks AFTERSHOCK, which the README claims is live. The "More systems" list became a table as well. The scan reports 0 findings for the first time. Another session corrected personal-llm to 181 offline tests and the fleet to 356 (commit 6e95d98) and regenerated the plates; the round-6 fact test passes against those numbers.
 
+- Round 8 (full flow, stranger read): 10 tests pass, and the telemetry, core sample, 7 plates and 12 repo plates all regenerate (the plates byte-identical to what is committed). Of 43 external links, 38 return 200. The other 5 are bot walls: both DOIs resolve to zenodo.org and the Zenodo API answers 200, LinkedIn answers scripts with 999. All 7 local paths exist. Every commit Zaid authored in the last 60 is signed (26 G); the 34 unsigned ones are the bot's, as the README says. Fixed three misleading lines: "every number links to the artifact" (plate numbers are not links; now: stated again in the text with a link); "each specimen is reproducible from a public record" (the 27 PRs are in a private codebase; now says so and points to the case study); the footer's role target, which contradicted the intro.
+
 ## Next
 - Re-run `repo_plates.py` monthly, or when a repo's headline numbers change, so the strips do not go stale.
 - Zaid: upload `weekend-profile-update/creative/banner-core.png` as the LinkedIn background.
