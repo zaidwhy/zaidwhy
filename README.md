@@ -1,4 +1,7 @@
+<picture>
+<source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/zaidwhy/zaidwhy/main/assets/core-sample-narrow.svg">
 <img src="https://raw.githubusercontent.com/zaidwhy/zaidwhy/main/assets/core-sample.svg" alt="Frontispiece, a core sample: a geological section through every GitHub contribution on this account since June 2024, one rock bed per month and thicker beds for busier months. An eleven-month gap from July 2025 to May 2026 shows as an unconformity, an erosion surface above older tilted beds. Merged upstream pull requests sit in the August 2026 bed as fossils and every public repository sits as a crystal in the month it was founded." width="100%">
+</picture>
 
 <sub>Read it like a road cut: the youngest rock is on top. Each bed is one month, and its thickness grows with the square root of that month's contributions. The wavy line is an <b>unconformity</b>: eleven months in which almost nothing was laid down, kept on the plate instead of smoothed over, and the older beds under it lie tilted as old rock does. Fossils are pull requests merged into other people's code; crystals are repositories founded. A GitHub Action redraws the plate every night from the API (<a href="scripts/core_sample.py">scripts/core_sample.py</a>), so the top bed is still forming as you read this.</sub>
 

@@ -38,10 +38,10 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          if git diff --quiet -- README.md assets/core-sample.svg; then
+          if git diff --quiet -- README.md assets/core-sample.svg assets/core-sample-narrow.svg; then
             echo "No changes to commit"
             exit 0
           fi
-          git add README.md assets/core-sample.svg
+          git add README.md assets/core-sample.svg assets/core-sample-narrow.svg
           git commit -m "auto: update live activity and status"
           git push

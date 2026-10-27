@@ -55,6 +55,15 @@ class Rendering(unittest.TestCase):
         self.assertIn("some-repo", svg)
         self.assertIn("lib #1", svg)
 
+    def test_phone_cut_keeps_the_rock_and_drops_the_small_labels(self):
+        months = [("2024-06", 55), ("2024-07", 3), ("2024-08", 2), ("2024-09", 0), ("2024-10", 900)]
+        cut = core_sample.phone_cut(core_sample.render(months, [("2024-10", "some-repo")], [], date(2024, 10, 20)), "2024-06")
+        self.assertValidSvg(cut)
+        labels = [t for t in __import__("re").findall(r"<text[^>]*>([^<]*)</text>", cut)]
+        self.assertEqual(labels, ["Core sample", "one bed per month since Jun 2024"])
+        self.assertIn("<use", cut)
+        self.assertNotIn("UNCONFORMITY", cut)
+
     def test_core_sample_renders_without_any_gap(self):
         svg = core_sample.render([("2026-09", 800), ("2026-10", 600)], [], [], date(2026, 10, 28))
         self.assertValidSvg(svg)

@@ -34,6 +34,8 @@
 
 - Round 14 (phones, route and Plate VI): `plate-route-narrow.svg` runs the six stations down a vertical trail and `plate-seal-narrow.svg` hangs the five seals on a vertical cord, sharing `STATIONS`, `station_marker()`, `SEALS` and `wax_seal()` with the wide plates (both identical apart from line breaks). Every plate on the page now has a phone twin: 7 `<picture>` elements, 14 plates.
 
+- Round 15 (phones, the core sample): `phone_cut()` in `core_sample.py` crops the nightly plate to the rock, drops every label and leader (they fall below 4 px on a phone) and adds a 34 px title. The nightly job writes and commits `core-sample-narrow.svg` next to the full plate, and the README serves it under 600 px. A full layout refactor was ruled out because about 80 references to module-level layout constants sit in a script that runs unattended every night. All 8 images on the page now have phone versions.
+
 ## Next
 - Re-run `repo_plates.py` monthly, or when a repo's headline numbers change, so the strips do not go stale.
 - Zaid: upload `weekend-profile-update/creative/banner-core.png` as the LinkedIn background.

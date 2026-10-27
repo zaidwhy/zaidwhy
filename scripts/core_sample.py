@@ -15,6 +15,7 @@ fails the script exits non-zero and leaves the old SVG in place.
 import json
 import math
 import os
+import re
 import subprocess
 import sys
 import urllib.parse
@@ -25,6 +26,7 @@ from xml.sax.saxutils import escape
 
 OWNER = "zaidwhy"
 OUT_PATH = os.path.join(os.path.dirname(__file__), "..", "assets", "core-sample.svg")
+PHONE_PATH = os.path.join(os.path.dirname(__file__), "..", "assets", "core-sample-narrow.svg")
 QUIET_BELOW = 10      # a month under this many contributions counts as nothing deposited
 GAP_MIN_MONTHS = 3    # this many quiet months in a row make an unconformity
 FIRST_YEAR = 2022     # account created Feb 2022; years before have no calendar
@@ -355,6 +357,26 @@ def render(months, repos, prs, today):
     return "\n".join(out)
 
 
+def phone_cut(svg, first_month):
+    """The plate cropped to the rock itself, for screens under 600 px.
+
+    At phone width the 11 px labels of the full plate shrink below 4 px, so the cut drops every
+    label and leader and keeps the beds, fossils, crystals and rig, with one title large enough to
+    read. The README caption under the image explains the plate in real text.
+    """
+    x0, y0 = SEC_L - 20, SURFACE_Y - 92
+    w, h = SEC_R - SEC_L + 40, FLOOR_Y - y0 + 20
+    cut = re.sub(r"<text\b[^>]*>.*?</text>", "", svg, flags=re.S)
+    cut = re.sub(rf'<path d="M{PIVOT_X} [^"]*"[^>]*/>|<circle cx="{PIVOT_X}"[^>]*/>', "", cut)
+    cut = re.sub(r'<rect x="[\d.]+" y="[\d.]+" width="440"[^>]*/>', "", cut)
+    cut = re.sub(r'viewBox="[^"]*" width="\d+" height="\d+"', f'viewBox="{x0} {y0} {w} {h}" width="{w}" height="{h}"', cut, count=1)
+    title = (f'<rect x="{x0 + 6}" y="{y0 + 6}" width="{w - 12}" height="{h - 12}" fill="none" stroke="{INK}" stroke-width="1.4"/>'
+             f'<text x="{SEC_L}" y="{y0 + 48}" style="font-family:Georgia,serif;font-size:34px" fill="{INK}">Core sample</text>'
+             f'<text x="{SEC_L}" y="{y0 + 76}" style="font-family:Georgia,serif;font-size:19px;font-style:italic" fill="{INK}">'
+             f'one bed per month since {label_for(first_month)}</text>')
+    return cut.replace("</svg>", title + "</svg>")
+
+
 def main():
     today = datetime.now(timezone.utc).date()
     months = monthly_contributions(today)
@@ -363,6 +385,8 @@ def main():
     svg = render(months, founded_repos(), merged_upstream_prs(), today)
     with open(OUT_PATH, "w", encoding="utf-8", newline="\n") as f:
         f.write(svg)
+    with open(PHONE_PATH, "w", encoding="utf-8", newline="\n") as f:
+        f.write(phone_cut(svg, months[0][0]))
     print(f"wrote {OUT_PATH}: {len(months)} months, {sum(c for _, c in months)} contributions")
 
 
