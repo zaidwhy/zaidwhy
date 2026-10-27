@@ -83,14 +83,14 @@ If any of it does not reproduce, the claim above is wrong and I want to know.
 **Recent activity, pulled live from the repos below every night, not written by hand:**
 
 <!-- ACTIVITY:START -->
-- `2026-10-27` **CivilizationOS** - ARCHITECTURE: tradeoffs as a table ([`f8fea8b`](https://github.com/zaidwhy/CivilizationOS/commit/f8fea8b979fc24b71b628ae9d45bdad95754615a))
-- `2026-10-27` **CivilizationOS** - Security: urllib3 2.8.0, source-map-js 1.2.2 (Dependabot alerts) ([`7a15e40`](https://github.com/zaidwhy/CivilizationOS/commit/7a15e4083f233bbd4b8f8cd51a987432e0c31529))
-- `2026-10-27` **CivilizationOS** - ARCHITECTURE: keepalive reduces cold starts, does not prevent them; dro... ([`f144d14`](https://github.com/zaidwhy/CivilizationOS/commit/f144d14882eb00b0b723625f70b959024b2e8735))
-- `2026-10-22` **CivilizationOS** - Wrap 2026-10-22: handoff and log entry ([`fe6d243`](https://github.com/zaidwhy/CivilizationOS/commit/fe6d24369558e428afe452fe09b192b39200c255))
-- `2026-10-22` **coldread** - Wrap 2026-10-22: handoff and log entry ([`c38809a`](https://github.com/zaidwhy/coldread/commit/c38809aeac6a263ba46d17d5d308d7c63f94d993))
-- `2026-10-22` **augur** - Wrap 2026-10-22: handoff and log entry ([`f703e78`](https://github.com/zaidwhy/augur/commit/f703e78891891ba41ab2b7b8eb3101e9a97dee29))
-- `2026-10-22` **dreamos-college-project** - Wrap 2026-10-22: handoff and log entry ([`82a6cef`](https://github.com/zaidwhy/dreamos-college-project/commit/82a6cef272acfb30bf26c593503dc7cc89e81e92))
-- `2026-10-22` **dreamos-college-project** - Dependencies: pypdf 6.21.2 clears 4 alerts ([`ae11ac5`](https://github.com/zaidwhy/dreamos-college-project/commit/ae11ac58e71d8bc2642c55d3bbb49082c25e9c90))
+- `2026-10-27` **recall** - Security: pillow 13.0.0, vite 6.4.4, source-map-js 1.2.2 (Dependabot) ([`6ee7f21`](https://github.com/zaidwhy/recall/commit/6ee7f217936f723bcd134fcba1dcb6eb3af8da04))
+- `2026-10-27` **dreamos-college-project** - Header plate in the profile's survey style ([`a013b2b`](https://github.com/zaidwhy/dreamos-college-project/commit/a013b2b0578bdd22fd40354b7304dba766a5eb09))
+- `2026-10-27` **github-pr-agent** - Header plate in the profile's survey style ([`307fd0f`](https://github.com/zaidwhy/github-pr-agent/commit/307fd0f6c830fc667dc6c9be530d53fa5f55666b))
+- `2026-10-27` **second-brain** - Header plate in the profile's survey style ([`c8292e5`](https://github.com/zaidwhy/second-brain/commit/c8292e51728c9518b53b4cec5a72ccafbbc4c0dd))
+- `2026-10-27` **personal-llm** - Header plate in the profile's survey style ([`5de9646`](https://github.com/zaidwhy/personal-llm/commit/5de964689b299f0f0db36d07ed7574d9934af738))
+- `2026-10-27` **augur** - Header plate in the profile's survey style ([`ba12191`](https://github.com/zaidwhy/augur/commit/ba121911894e911cc7d84fb8e7238644277b8168))
+- `2026-10-27` **coldread** - Header plate in the profile's survey style ([`7b00520`](https://github.com/zaidwhy/coldread/commit/7b00520f9c5b6d5309f3805b71a6663cfa7191b8))
+- `2026-10-27` **autocto** - Header plate in the profile's survey style ([`c85bf42`](https://github.com/zaidwhy/autocto/commit/c85bf42b61f8b4253fdbd205a6a885da86f9327c))
 <!-- ACTIVITY:END -->
 
 ---
@@ -181,7 +181,7 @@ The kernel was sunk once and every app below ground draws from it, instead of ea
 <!-- STATUS:START -->
 - **CivilizationOS** - `200 OK` - [https://civilization-os-murex.vercel.app](https://civilization-os-murex.vercel.app)
 
-*checked 2026-10-27 19:59 UTC, by the workflow that runs this page*
+*checked 2026-10-27 20:16 UTC, by the workflow that runs this page*
 <!-- STATUS:END -->
 
 ### [CivilizationOS](https://github.com/zaidwhy/CivilizationOS) - a society of agents, and a retrieval method that failed first
