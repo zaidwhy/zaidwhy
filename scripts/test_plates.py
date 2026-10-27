@@ -196,10 +196,7 @@ class InstallRepoPlates(unittest.TestCase):
         self.assertEqual((self.clone / "README.md").read_text(encoding="utf-8"), first)
 
     def test_old_single_image_header_is_upgraded_in_place(self):
-        (self.clone / "README.md").write_text('<img src=".github/plate.svg" alt="old" width="100%">
-
-# augur
-', encoding="utf-8")
+        (self.clone / "README.md").write_text('<img src=".github/plate.svg" alt="old" width="100%">\n\n# augur\n', encoding="utf-8")
         apply_repo_plates.install(self.plates, "augur", self.clone)
         text = (self.clone / "README.md").read_text(encoding="utf-8")
         self.assertEqual(text.count('<img src=".github/plate.svg"'), 1)
