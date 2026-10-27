@@ -15,10 +15,30 @@ B.Tech Information Technology (Honors with Research), MGM University, graduating
 
 ---
 
+## Now: AFTERSHOCK, built in public and graded in public
+
+**3,240 forecasts, locked in a hash-chained public ledger before any outcome exists.** [AFTERSHOCK](https://github.com/zaidwhy/aftershock) forecasts which countries a Netflix breakout charts in next, with Qloo's taste graph for what that audience loves there ([live](https://aftershock-qloo.vercel.app)). It is the same argument as the rest of this page, run forward in time: I committed to the numbers first, and the first grades land on 15 Nov 2026 whether I like them or not.
+
+Three things I did to it that were meant to hurt:
+
+- **I pre-registered the sponsor's claim and tried to lose it.** Does Qloo's launch kit beat an LLM's? The question, four arms, the metrics (overlap, no LLM judge) and the decision rule were committed on 27 Oct, before any LLM answer was collected: [EXPERIMENT_KITS.md](https://github.com/zaidwhy/aftershock/blob/main/docs/EXPERIMENT_KITS.md). It is reported whichever way it lands.
+- **I tested my own headline feature and said what it did.** Adding Qloo to the country forecast gave no lift (ROC AUC 0.8182 against 0.8188), so the probability is history-only and the site says so.
+- **I threw away my best result.** A song-placement effect that looked significant rested on data scraped from a site whose terms forbid automated collection. I read the terms, deleted the data and everything computed from it, rebuilt the ground truth from MusicBrainz, and re-ran the identical test. It did not replicate. The README says so.
+
+```bash
+# Verify the ledger yourself: no key, no network, prints None when every link in the chain holds.
+git clone https://github.com/zaidwhy/aftershock && cd aftershock
+wc -l ledger/forecasts.jsonl
+python -c "from aftershock import ledger; print(ledger.verify())"
+```
+
+---
+
 ## I. The short version, with receipts
 
 | Claim | Proof |
 |---|---|
+| 3,240 forecasts locked in a public hash-chained ledger before their outcomes, and a pre-registered test of whether a sponsor API beats an LLM; my best result was discarded after reading a data source's terms and did not replicate on licensed data | [AFTERSHOCK](https://github.com/zaidwhy/aftershock) · [pre-registration](https://github.com/zaidwhy/aftershock/blob/main/docs/EXPERIMENT_KITS.md) |
 | 3 pull requests merged into upstream OSS totalling **13.4k stars** | [tenacity #668](https://github.com/jd/tenacity/pull/668) · [returns #2480](https://github.com/dry-python/returns/pull/2480) · [gqlalchemy #390](https://github.com/memgraph/gqlalchemy/pull/390) |
 | 27 pull requests merged into a **live production product** I did not build | [case study](case-studies/zabira-academy.md) |
 | A customer-support analytics dashboard built from scratch for a chat support team (Python, FastAPI, pandas): all 10 aggregate totals match the support platform's own report, 222 tests | no link: private repository, company work |
@@ -186,9 +206,9 @@ backend/memory.py      churn 11 x complexity  49 =  539
 
 *The forecast is locked in a hash-chained file before the outcome exists.*
 
-Weekly it reads Netflix's public per-country Top 10, finds titles that just broke out, and forecasts the countries they reach next (history-only model, AUC 0.817 on 829 test breakouts). Qloo's taste graph supplies the launch kit and city hotspots. The measured part: Qloo added nothing to the country forecast (AUC 0.8188 against 0.8182), and a soundtrack-song result that looked significant on Tunefind data was discarded when its terms forbade automated collection and did not replicate on MusicBrainz data. Both are in the README. 89 tests.
+Weekly it reads Netflix's public per-country Top 10, finds titles that just broke out, and forecasts the countries they reach next (history-only model, ROC AUC 0.817 on 829 held-out breakouts). Qloo's taste graph supplies the launch kit and city hotspots. The measured part: Qloo added nothing to the country forecast (AUC 0.8188 against 0.8182), and a soundtrack-song result that looked significant on Tunefind data was discarded when its terms forbade automated collection and did not replicate on MusicBrainz data. Every probability for the week of 18 Oct 2026 (3,240 rows, 35 breakouts) is in `ledger/forecasts.jsonl`, graded from 15 Nov. 89 tests.
 
-`Python` · `FastAPI` · `MCP` · [live](https://aftershock-beige.vercel.app)
+`Python` · `FastAPI` · `MCP` · [live](https://aftershock-qloo.vercel.app) · [pre-registered experiment](https://github.com/zaidwhy/aftershock/blob/main/docs/EXPERIMENT_KITS.md)
 
 ### [Agent Factory](https://github.com/zaidwhy/agent-factory) - a build pipeline with frozen contracts
 
