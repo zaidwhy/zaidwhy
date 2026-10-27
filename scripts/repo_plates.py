@@ -108,7 +108,7 @@ def core_strip(days, x0, x1, y, h):
 def plate(repo, days, taken):
     kind, title, thesis, notes = REPOS[repo]
     strip, first, last, commits, span = core_strip(days, 60, W - 60, 262, 20)
-    label = (f"{title}: {thesis} {'; '.join(notes)}. Core strip: {commits} commits over {span} weeks, "
+    label = (f"{title}: {thesis} {'; '.join(notes)}. Core strip: {commits} commit{'s' if commits != 1 else ''} over {span} week{'s' if span != 1 else ''}, "
              f"{first.strftime('%b %Y')} to {last.strftime('%b %Y')}.")
     parts = [
         f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {H}" width="{W}" height="{H}" role="img" aria-label="{escape(label)}">',
@@ -129,7 +129,7 @@ def plate(repo, days, taken):
     parts.append(f'<line x1="60" y1="214" x2="{W - 260}" y2="214" stroke="{INK}" stroke-width=".4"/>')
     parts.append(motif(kind, W - 150, 128))
     parts.append(strip)
-    parts.append(text(60, 250, f"core strip: {commits} commits, one band per week", 11.5, italic=True, opacity=.75))
+    parts.append(text(60, 250, f"core strip: {commits} commit{'s' if commits != 1 else ''}, one band per week", 11.5, italic=True, opacity=.75))
     parts.append(text(W - 60, 250, f"{first.strftime('%b %Y')} to {last.strftime('%b %Y')}  ·  taken {taken}", 11.5, anchor="end", italic=True, opacity=.75))
     parts.append("</svg>")
     return "\n".join(parts)

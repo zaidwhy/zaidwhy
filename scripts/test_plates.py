@@ -13,6 +13,7 @@ from datetime import date
 sys.path.insert(0, os.path.dirname(__file__))
 import core_sample  # noqa: E402
 import plates  # noqa: E402
+import repo_plates  # noqa: E402
 
 
 class SplitIntoEras(unittest.TestCase):
@@ -73,6 +74,23 @@ class Rendering(unittest.TestCase):
                 with open(os.path.join(out, name), encoding="utf-8") as f:
                     with self.subTest(plate=name):
                         self.assertValidSvg(f.read())
+
+
+class RepoPlates(unittest.TestCase):
+    def test_every_listed_repo_renders_from_one_commit(self):
+        for repo in repo_plates.REPOS:
+            with self.subTest(repo=repo):
+                svg = repo_plates.plate(repo, [date(2026, 10, 28)], "2026-10-28")
+                xml.dom.minidom.parseString(svg.encode())
+                self.assertIn("1 commit, one band per week", svg)
+                self.assertIn("1 commit over 1 week,", svg)
+                self.assertNotIn(chr(0x2014), svg)
+
+    def test_strip_spans_first_to_newest_commit(self):
+        days = [date(2026, 1, 5), date(2026, 1, 6), date(2026, 10, 1)]
+        svg = repo_plates.plate("augur", days, "2026-10-28")
+        self.assertIn("Jan 2026 to Oct 2026", svg)
+        self.assertIn("3 commits", svg)
 
 
 if __name__ == "__main__":
