@@ -273,7 +273,7 @@ def excavation():
     h = 640
     out = frame(h, "Plate IV  ·  Excavation", "What stands on the kernel",
                 "One memory kernel, sunk once and reached by every app below ground. The headframes above are the systems people can use.",
-                "Plate IV, excavation. Surface: CivilizationOS, 10 agents and 5 councils, live; Recall, recall at 1 of 10 out of 10 at 149 ms median; autocto, 5 analyzers and 160 tests on PyPI; "
+                "Plate IV, excavation. Surface: CivilizationOS, 10 agents and 5 councils, live; Recall, recall at 1 of 10 out of 10 at 149 ms median; autocto, 5 analyzers and 162 tests on PyPI; "
                 "AFTERSHOCK, ROC AUC 0.817 on 829 held-out breakouts; Agent Factory, 6 agents on frozen contracts. Below ground the personal-llm kernel with 181 offline tests, "
                 "reached by second-brain with 110 tests, github-pr-agent with 65, and DreamOS.")
     ground = 300
@@ -289,7 +289,7 @@ def excavation():
         out.append(f'<line x1="{x}" y1="{ground - 8}" x2="{x + 1.5}" y2="{ground - 12 - seeded(f"g{x}") * 4:.1f}" stroke="#4E5A2C" stroke-width=".9"/>')
 
     surface = [("CivilizationOS", ["10 agents, 5 councils", "live"]), ("Recall", ["Recall@1 10 of 10", "149 ms median"]),
-               ("autocto", ["5 analyzers, 160 tests", "on PyPI"]), ("AFTERSHOCK", ["AUC 0.817 on 829", "held-out breakouts"]),
+               ("autocto", ["5 analyzers, 162 tests", "on PyPI"]), ("AFTERSHOCK", ["AUC 0.817 on 829", "held-out breakouts"]),
                ("Agent Factory", ["6 agents", "frozen contracts"])]
     for i, (name, rows) in enumerate(surface):
         x = 130 + i * 210

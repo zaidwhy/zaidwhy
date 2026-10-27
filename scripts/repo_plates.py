@@ -34,7 +34,7 @@ REPOS = {
     "resume-job-fit-ai": ("system", "Resume Job-Fit AI", "Scores a resume against a job description, and rewrites without inventing experience.",
                           ["48 unit tests", "Pydantic-validated output", "CI on every push"]),
     "autocto": ("tool", "autocto", "The file to review first is the one that changes most and branches most.",
-                ["5 analyzers, no LLM", "160 tests", "pipx install repo-autocto"]),
+                ["5 analyzers, no LLM", "162 tests", "pipx install repo-autocto"]),
     "personal-llm": ("kernel", "Personal LLM", "One memory kernel, sunk once and imported by three apps.",
                      ["181 offline tests", "answers with citations or refuses", "keyless CI"]),
     "second-brain": ("chamber", "Second Brain", "A vault that links itself, built on the personal-llm kernel.",

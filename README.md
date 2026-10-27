@@ -83,14 +83,14 @@ If any of it does not reproduce, the claim above is wrong and I want to know.
 **Recent activity, pulled live from the repos below every night, not written by hand:**
 
 <!-- ACTIVITY:START -->
+- `2026-10-27` **autocto** - plan: clean error for a directory or non-UTF-8 proposal; CLI errors nam... ([`00d959f`](https://github.com/zaidwhy/autocto/commit/00d959f02cc917e4321b382e093cde07ac3a6ad2))
+- `2026-10-27` **personal-llm** - Test count: 181 offline (173 tests/ + 8 evals/); the 7 Space tests down... ([`af727ab`](https://github.com/zaidwhy/personal-llm/commit/af727ab39da2010f81868fcbdcaa4500fca916aa))
 - `2026-10-27` **CivilizationOS** - Log and handoff 2026-10-28 ([`c2753c0`](https://github.com/zaidwhy/CivilizationOS/commit/c2753c039ac65b27ba87da5cbf1284deb5f0ce52))
 - `2026-10-27` **recall** - Security: pillow 13.0.0, vite 6.4.4, source-map-js 1.2.2 (Dependabot) ([`6ee7f21`](https://github.com/zaidwhy/recall/commit/6ee7f217936f723bcd134fcba1dcb6eb3af8da04))
 - `2026-10-27` **dreamos-college-project** - Header plate in the profile's survey style ([`a013b2b`](https://github.com/zaidwhy/dreamos-college-project/commit/a013b2b0578bdd22fd40354b7304dba766a5eb09))
 - `2026-10-27` **github-pr-agent** - Header plate in the profile's survey style ([`307fd0f`](https://github.com/zaidwhy/github-pr-agent/commit/307fd0f6c830fc667dc6c9be530d53fa5f55666b))
 - `2026-10-27` **second-brain** - Header plate in the profile's survey style ([`c8292e5`](https://github.com/zaidwhy/second-brain/commit/c8292e51728c9518b53b4cec5a72ccafbbc4c0dd))
 - `2026-10-27` **personal-llm** - Header plate in the profile's survey style ([`5de9646`](https://github.com/zaidwhy/personal-llm/commit/5de964689b299f0f0db36d07ed7574d9934af738))
-- `2026-10-27` **augur** - Header plate in the profile's survey style ([`ba12191`](https://github.com/zaidwhy/augur/commit/ba121911894e911cc7d84fb8e7238644277b8168))
-- `2026-10-27` **coldread** - Header plate in the profile's survey style ([`7b00520`](https://github.com/zaidwhy/coldread/commit/7b00520f9c5b6d5309f3805b71a6663cfa7191b8))
 <!-- ACTIVITY:END -->
 
 ---
@@ -179,9 +179,12 @@ A second finding fell out of the demo. Asked whether another great war was comin
 The kernel was sunk once and every app below ground draws from it, instead of each one rebuilding retrieval. The headframes on the surface are the systems people can use, each with the one number it is judged by.
 
 <!-- STATUS:START -->
-- **CivilizationOS** - `200 OK` - [https://civilization-os-murex.vercel.app](https://civilization-os-murex.vercel.app)
+| Live system | Answered |
+|---|---|
+| [CivilizationOS](https://civilization-os-murex.vercel.app) | `200 OK` |
+| [AFTERSHOCK](https://aftershock-qloo.vercel.app) | `200 OK` |
 
-*checked 2026-10-27 20:20 UTC, by the workflow that runs this page*
+*checked 2026-10-27 20:27 UTC, by the workflow that runs this page*
 <!-- STATUS:END -->
 
 ### [CivilizationOS](https://github.com/zaidwhy/CivilizationOS) - a society of agents, and a retrieval method that failed first
@@ -227,7 +230,7 @@ Quota guard:  120s floor between vision calls, on-screen daily budget counter
 <details>
 <summary>Dig notes</summary>
 
-Five analyzers, no LLM and zero runtime dependencies: bug hotspots (churn x complexity), duplicated logic (token-shingle Jaccard), maintenance cost (size x churn x (1 + fan-in)), architectural debt (Tarjan cycles, god files, layering violations), and a migration planner that orders proposed changes with a topological sort. I/O lives in one `analyze_repo()` per analyzer, with the `git log` call behind an injectable seam; everything underneath is a pure function. 160 tests on main.
+Five analyzers, no LLM and zero runtime dependencies: bug hotspots (churn x complexity), duplicated logic (token-shingle Jaccard), maintenance cost (size x churn x (1 + fan-in)), architectural debt (Tarjan cycles, god files, layering violations), and a migration planner that orders proposed changes with a topological sort. I/O lives in one `analyze_repo()` per analyzer, with the `git log` call behind an injectable seam; everything underneath is a pure function. 162 tests on main.
 
 ```
 $ autocto hotspots ../recall --limit 3
