@@ -22,6 +22,9 @@
 
 - Round 8 (full flow, stranger read): 10 tests pass, and the telemetry, core sample, 7 plates and 12 repo plates all regenerate (the plates byte-identical to what is committed). Of 43 external links, 38 return 200. The other 5 are bot walls: both DOIs resolve to zenodo.org and the Zenodo API answers 200, LinkedIn answers scripts with 999. All 7 local paths exist. Every commit Zaid authored in the last 60 is signed (26 G); the 34 unsigned ones are the bot's, as the README says. Fixed three misleading lines: "every number links to the artifact" (plate numbers are not links; now: stated again in the text with a link); "each specimen is reproducible from a public record" (the 27 PRs are in a private codebase; now says so and points to the case study); the footer's role target, which contradicted the intro.
 
+- Round 9 (phones): at a 390 px phone width a 1200 px plate is drawn 358 px wide, so its 12 px notes come out near 3.6 px. Plate I now has a 520 px single-column twin (`plate-specimens-narrow.svg`, `specimens_narrow()` sharing `specimen_card()` with the wide plate). The README serves it through `<picture><source media="(max-width: 600px)">`, which GitHub's sanitizer keeps (checked through the markdown API). Loading GitHub's own rendered markup at 390 px picks the narrow plate, with notes near 8.3 px; at 1280 px it picks the wide plate. The wide plate is unchanged apart from line breaks. Headless Chromium could not reach github.com from this machine, so the live page itself was not loaded.
+
 ## Next
+- Phone twins for the other plates, in order of how much text they carry: faults, fieldwork, assays.
 - Re-run `repo_plates.py` monthly, or when a repo's headline numbers change, so the strips do not go stale.
 - Zaid: upload `weekend-profile-update/creative/banner-core.png` as the LinkedIn background.
