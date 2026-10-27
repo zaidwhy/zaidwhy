@@ -23,6 +23,7 @@ ACTIVITY_REPOS = [
 ACTIVITY_COUNT = 8
 LIVE_SYSTEMS = [
     ("CivilizationOS", "https://civilization-os-murex.vercel.app"),
+    ("AFTERSHOCK", "https://aftershock-qloo.vercel.app"),
 ]
 README_PATH = os.path.join(os.path.dirname(__file__), "..", "README.md")
 TOKEN = os.environ.get("GITHUB_TOKEN", "")
@@ -78,7 +79,7 @@ def build_activity_block():
 
 
 def build_status_block():
-    lines = []
+    lines = ["| Live system | Answered |", "|---|---|"]
     now = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
     any_result = False
     for name, url in LIVE_SYSTEMS:
@@ -93,7 +94,7 @@ def build_status_block():
             state = f"`{e.code}`"
         except Exception as e:
             state = f"`unreachable` ({type(e).__name__})"
-        lines.append(f"- **{name}** - {state} - [{url}]({url})")
+        lines.append(f"| [{name}]({url}) | {state} |")
         any_result = True
     if not any_result:
         return None

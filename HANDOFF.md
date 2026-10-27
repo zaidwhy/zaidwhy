@@ -18,6 +18,8 @@
 
 - Round 6 (facts): a test now renders the plates and requires every number on them to appear in the README outside the bot blocks and dates. It was checked by planting three wrong numbers (27 to 28, 13.4k to 13.5k, 188 to 189); each one failed the test. The first real run caught two plate facts with no written source: the reader model names behind 50/800/1600 words, and AUGUR's 39 and 80 year gaps. Both had only been stated in the alt text of the charts the plates replaced. They are now stated in the Assays section.
 
+- Round 7 (scan never clean): the craft-guard scan of README.md always reported one finding, from the bot-written status list. `update_telemetry.py` now writes the status as a table and also checks AFTERSHOCK, which the README claims is live. The "More systems" list became a table as well. The scan reports 0 findings for the first time. Another session corrected personal-llm to 181 offline tests and the fleet to 356 (commit 6e95d98) and regenerated the plates; the round-6 fact test passes against those numbers.
+
 ## Next
 - Re-run `repo_plates.py` monthly, or when a repo's headline numbers change, so the strips do not go stale.
 - Zaid: upload `weekend-profile-update/creative/banner-core.png` as the LinkedIn background.
