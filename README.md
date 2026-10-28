@@ -132,6 +132,8 @@ Three samples sent to the lab. Each study has a negative control, because a meas
 
 `229 scored runs` · `pre-registered, two studies` · `negative and positive controls` · `blind LLM judge + hand review` · `every transcript shipped` · [read the result](https://github.com/zaidwhy/flake-laundering/blob/master/RESULT.md)
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23721575.svg)](https://doi.org/10.5281/zenodo.23721575) archived, citable, timestamped
+
 <details>
 <summary>Read the full story</summary>
 
