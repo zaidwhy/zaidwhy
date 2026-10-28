@@ -44,11 +44,10 @@
 
 - Round 19 (reproducibility): installing plates into the repos ran from two throwaway scripts in a scratch folder that can be wiped. `scripts/apply_repo_plates.py` now does it: it copies both plates, writes or upgrades the `<picture>` header, adds the footer once, and refuses by name when a plate or README is missing. Three tests cover a fresh README (and that a re-run changes nothing), upgrading the old single-image header, and a missing phone plate. Run against the real augur clone, it produced an empty diff, so it reproduces what was pushed. 17 tests in all.
 
-## Needs Zaid (found in refine round 20, not changed)
-- The built India resumes are stale; their sources are not. `resume-v11-ind_ai` (docx, PDF, ATS txt) still says "363 offline tests" and "160 tests" for autocto, and `ind_swe` says "160 tests". The build script's `ind_ai` summary and PROFILE-FACTS.yaml already say 381 (the old 363 counted 7 tests that download a model) and 162 (verified 2026-10-28); the files were simply built before those edits. Only a rebuild is needed: `python facts_to_json.py --allow-stale`, `node build_resume_v11_docx.js ind_ai` and `ind_swe`, Word PDF export, and a check that each is still 1 page. Not done unsupervised: the refine-round guardrail keeps these rounds off personal application files.
+## Needs Zaid
+- Nothing open. Resolved 2026-10-28 on Zaid's go-ahead: India resumes rebuilt (381 and 162, both 1 page, career e46e8b9); LinkedIn banner uploaded by Zaid; PROVENANCE.sig.txt re-signed to cover the script-drawn plates (8b506a1, verified from GitHub raw).
 
 - Round 20 (resume check, review only): compared the India resumes with PROFILE-FACTS.yaml; two stale counts, listed under Needs Zaid. No resume file changed.
 
 ## Next
 - Refresh the repo plates monthly, or when a headline number changes: `python scripts/repo_plates.py <out>`, then `python scripts/apply_repo_plates.py <out> <repo> <clone>` for each clone, then commit and push each repo (fetch first).
-- Zaid: upload `weekend-profile-update/creative/banner-core.png` as the LinkedIn background.
