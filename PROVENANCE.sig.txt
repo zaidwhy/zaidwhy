@@ -7,12 +7,26 @@ I, Zaid Ali Syed (GitHub: zaidwhy), assert that the following are my own
 original work:
 
   1. The prose and layout of the profile page at github.com/zaidwhy
-  2. assets/nameplate.svg          - hand-authored SVG artwork, Plate 01
-  3. assets/coldread-curves.svg    - hand-authored SVG plotting my own
-                                     experimental results, Plate 02
-  4. The research findings in github.com/zaidwhy/coldread (COLD READ) and
-     github.com/zaidwhy/augur (AUGUR), including the measurement code, the
-     raw model output, and the written analysis.
+  2. The survey artwork in assets/ of github.com/zaidwhy/zaidwhy:
+       core-sample.svg                - the frontispiece, a geological
+                                        section drawn from this account's
+                                        public contribution record
+       plate-route.svg, plate-specimens.svg, plate-faults.svg,
+       plate-assays.svg, plate-excavation.svg, plate-fieldwork.svg,
+       plate-seal.svg                 - Plates I to VI and the route
+     and their -narrow.svg phone versions. These are drawn by my own
+     generator code in that repository (scripts/core_sample.py and
+     scripts/plates.py), not by a badge or stats service. The design, the
+     drawing code and the facts on each plate are mine.
+  3. The repository plates at .github/plate.svg and .github/plate-narrow.svg
+     in my public repositories, drawn by scripts/repo_plates.py in the
+     same repository.
+  4. The earlier plates assets/nameplate.svg (Plate 01) and
+     assets/coldread-curves.svg (Plate 02), hand-authored SVG, still kept
+     in that repository.
+  5. The research findings in github.com/zaidwhy/coldread (COLD READ),
+     github.com/zaidwhy/augur (AUGUR) and FLAKE LAUNDERING, including the
+     measurement code, the raw model output, and the written analysis.
 
 The COLD READ figures plotted in Plate 02 were produced by my own
 measurement code from 72 authors of the Blog Authorship Corpus, 504 model
@@ -23,13 +37,16 @@ Code in my repositories is MIT licensed. The prose and artwork above are
 not part of that grant and remain (c) 2026 Zaid Ali Syed, all rights
 reserved.
 
-Signed on 2026-09-05 with ed25519 key
+This statement replaces the one signed on 2026-09-05, which covered
+items 1, 4 and the COLD READ and AUGUR findings.
+
+Signed on 2026-10-28 with ed25519 key
 EFE9 4832 B2B9 80D9 B583 91F2 8FAA BCC1 B1AC 09E5
 
 -----BEGIN PGP SIGNATURE-----
 
-iHUEARYKAB0WIQTv6UgysrmA2bWDkfKPqrzBsawJ5QUCapsShwAKCRCPqrzBsawJ
-5QOiAP4rmbmL3q+mddPQsafzPiEX1j8C9LDEAE1+MvrZ1JPcCQD+PrPpSvDNuCVX
-S8tIVdbyDuIZ3wOK5TTb+thfocl+/AQ=
-=tSne
+iHUEARYKAB0WIQTv6UgysrmA2bWDkfKPqrzBsawJ5QUCauGShQAKCRCPqrzBsawJ
+5fyeAQCHyMPe+xctA+pvZKfxvZxjVSxJtXU+SX47F8OtWCq+XAEAvinEhmwI+LEe
+Ww2WQskr+YgGVwok/lj2nB/h5+pZPgc=
+=YKbT
 -----END PGP SIGNATURE-----
