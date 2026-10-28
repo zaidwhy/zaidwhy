@@ -38,7 +38,7 @@ git log --show-signature -3
 
 ## On the artwork
 
-The SVG files in [`assets/`](assets/) are hand-authored, not produced by a badge or stats service. Each one carries an authorship manifest in its source, including the fingerprint above. They are served from this repository, so if you find them rendering on a page that is not mine, they are being loaded from here.
+The survey plates in [`assets/`](assets/) are drawn by my own generator code in [`scripts/`](scripts/) (`core_sample.py` and `plates.py`), not by a badge or stats service; the two earlier plates, `nameplate.svg` and `coldread-curves.svg`, are hand-authored. Each one carries an authorship manifest in its source, including the fingerprint above. They are served from this repository, so if you find them rendering on a page that is not mine, they are being loaded from here.
 
 ## On the research
 
