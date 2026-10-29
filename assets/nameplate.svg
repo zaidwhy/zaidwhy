@@ -60,7 +60,7 @@
 <text x="46" y="140" fill="#22D3EE" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="14.5" letter-spacing="2.4">AI SYSTEMS ENGINEER  /  MEMORY, RETRIEVAL, AGENTS</text>
 
 <!-- thesis -->
-<text x="46" y="166" fill="#7D8794" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="12.5" letter-spacing="0.6">Every claim below links to the artifact that proves it.</text>
+<text x="46" y="166" fill="#7D8794" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="12.5" letter-spacing="0.6">Every public claim below links to the artifact that proves it.</text>
 
 <!-- live signal readout -->
 <g transform="translate(676,74)">
