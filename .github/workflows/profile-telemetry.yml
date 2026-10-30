@@ -21,27 +21,18 @@ jobs:
         run: python3 scripts/update_telemetry.py
 
       - name: Test the plate generators (offline)
-        id: plate_tests
+        # A failing test shows red here but must not block the activity update.
         continue-on-error: true
         run: python3 -m unittest discover -s scripts -p "test_*.py"
-
-      - name: Redraw the core sample plate
-        # Redraw only from code that passed its tests; a failed API call keeps yesterday's plate.
-        # Neither may block the activity update above.
-        if: steps.plate_tests.outcome == 'success'
-        continue-on-error: true
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: python3 scripts/core_sample.py
 
       - name: Commit and push if changed
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          if git diff --quiet -- README.md assets/core-sample.svg assets/core-sample-narrow.svg; then
+          if git diff --quiet -- README.md; then
             echo "No changes to commit"
             exit 0
           fi
-          git add README.md assets/core-sample.svg assets/core-sample-narrow.svg
+          git add README.md
           git commit -m "auto: update live activity and status"
           git push
