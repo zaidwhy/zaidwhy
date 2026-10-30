@@ -8,7 +8,7 @@
 
 Most of what follows is a number. Every public number links to the artifact that produced it: the merged pull request, the raw model output, the test run, the reproducible script. Nothing here asks to be believed.
 
-B.Tech Information Technology (Honors with Research), MGM University, graduating June 2027. Open to **backend, AI engineer and new-grad roles in India** from January 2027.
+B.Tech Information Technology (Honors with Research), MGM University, graduating June 2027. Open to **backend, AI engineer and new-grad roles in India** from mid-December 2026.
 
 <img src="https://raw.githubusercontent.com/zaidwhy/zaidwhy/main/assets/roadmap.svg" alt="Roadmap of this page, six stations on a rail: I Proof, II Failures, III Research, IV Systems, V Production, VI Provenance." width="100%">
 
@@ -328,4 +328,4 @@ Full signed statement: **[PROVENANCE.md](PROVENANCE.md)** · verify with `gpg --
 
 ---
 
-**[Portfolio](https://www.solstine.dev)** · **[LinkedIn](https://www.linkedin.com/in/zaidalisyed)** · Open to backend, AI engineer and new-grad roles in India from January 2027.
+**[Portfolio](https://www.solstine.dev)** · **[LinkedIn](https://www.linkedin.com/in/zaidalisyed)** · Open to backend, AI engineer and new-grad roles in India from mid-December 2026.

@@ -62,7 +62,7 @@
 <g class="chip" style="animation-delay:1.3s"><rect x="852" y="332" width="360" height="44" rx="22" fill="#0E1730" stroke="#1E3A5F"/><circle cx="878" cy="354" r="5" fill="#A78BFA"/><text x="894" y="359" fill="#E2E8F0">3 studies &#183; permanent DOIs</text></g>
 <g class="chip" style="animation-delay:1.5s"><rect x="64" y="390" width="378" height="44" rx="22" fill="#0E1730" stroke="#1E3A5F"/><circle cx="90" cy="412" r="5" fill="#FBBF24"/><text x="106" y="417" fill="#E2E8F0">24 audit findings fixed &#183; 1 critical</text></g>
 <g class="chip" style="animation-delay:1.7s"><rect x="458" y="390" width="378" height="44" rx="22" fill="#0E1730" stroke="#1E3A5F"/><circle cx="484" cy="412" r="5" fill="#F43F5E"/><text x="500" y="417" fill="#E2E8F0">my own method failed first: 0.02</text></g>
-<g class="chip" style="animation-delay:1.9s"><rect x="852" y="390" width="360" height="44" rx="22" fill="#0E1730" stroke="#1E3A5F"/><circle cx="878" cy="412" r="5" fill="#22D3EE"/><text x="894" y="417" fill="#E2E8F0">available Jan 2027 &#183; India</text></g>
+<g class="chip" style="animation-delay:1.9s"><rect x="852" y="390" width="360" height="44" rx="22" fill="#0E1730" stroke="#1E3A5F"/><circle cx="878" cy="412" r="5" fill="#22D3EE"/><text x="894" y="417" fill="#E2E8F0">available mid-December 2026</text></g>
 </g>
 </g>
 <rect x="1" y="1" width="1278" height="458" rx="17" fill="none" stroke="#1E2A4A" stroke-width="2"/>
