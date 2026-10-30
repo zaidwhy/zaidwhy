@@ -117,6 +117,9 @@ class PlateFactsMatchReadme(unittest.TestCase):
             finally:
                 plates.ASSETS = original
             for name in sorted(os.listdir(out)):
+                # A plate the README does not show makes no claim on the page.
+                if f"assets/{name}" not in readme:
+                    continue
                 with open(os.path.join(out, name), encoding="utf-8") as f:
                     texts = [html.unescape(t) for t in re.findall(r"<text[^>]*>([^<]*)</text>", f.read())]
                 for label in texts:

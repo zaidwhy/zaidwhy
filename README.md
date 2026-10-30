@@ -1,4 +1,7 @@
-<img src="https://raw.githubusercontent.com/zaidwhy/zaidwhy/main/assets/nameplate.svg" alt="Zaid Ali Syed - AI systems engineer" width="100%">
+<picture>
+<source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/zaidwhy/zaidwhy/main/assets/neokyoto-hero-phone.webp">
+<img src="https://raw.githubusercontent.com/zaidwhy/zaidwhy/main/assets/neokyoto-hero.webp" alt="Neo-Kyoto, drawn in light: a pen of light builds a five-tier pagoda on a machine base, seen from six angles. Each room is one of my projects: personal-llm is the memory kernel at the base, CivilizationOS, Recall, autocto and second-brain hang off it, AFTERSHOCK is the mast, and the archive holds FLAKE LAUNDERING, COLD READ and AUGUR. The sign reads kioku, memory." width="100%">
+</picture>
 
 > **I build AI systems that remember, retrieve, and decide.**
 > Then I try to break them - because a system that never got the chance to fail was never actually tested.
@@ -19,7 +22,7 @@ B.Tech Information Technology (Honors with Research), MGM University, graduating
 |---|---|
 | 3 pull requests merged into upstream OSS totalling **13.4k stars** | [tenacity #668](https://github.com/jd/tenacity/pull/668) · [returns #2480](https://github.com/dry-python/returns/pull/2480) · [gqlalchemy #390](https://github.com/memgraph/gqlalchemy/pull/390) |
 | 27 pull requests merged into a **live production product** I did not build | [case study](case-studies/zabira-academy.md) |
-| A customer-support analytics dashboard built from scratch for a chat support team (Python, FastAPI, pandas): all 10 aggregate totals match the support platform's own report, 222 tests | no link: private repository, company work |
+| A customer-support analytics dashboard built from scratch for a chat support team (Python, FastAPI, pandas): all 10 aggregate totals match the support platform's own report, 285 tests | no link: private repository, company work |
 | A 229-run pre-registered study of a coding agent: it fixed real race bugs instead of weakening the test (0 of 60), and **"do not change the tests" broke legitimate repairs (9/10 to 0/10)** | [RESULT.md](https://github.com/zaidwhy/flake-laundering/blob/master/RESULT.md) |
 | 2 original research findings, each with a negative control and a second-model replication, **archived with a permanent DOI** | [10.5281/zenodo.22309660](https://doi.org/10.5281/zenodo.22309660) · [10.5281/zenodo.22309658](https://doi.org/10.5281/zenodo.22309658) |
 | A retrieval method benchmarked against 6 baselines - including the version of it that **failed** | [TCMF write-up](https://github.com/zaidwhy/CivilizationOS/blob/main/docs/tcmf.md) · [case study](case-studies/civilizationos.md) |
@@ -91,7 +94,7 @@ The control is where it got interesting. On tests that really were wrong, the gu
 
 `229 scored runs` · `pre-registered, two studies` · `negative and positive controls` · `blind LLM judge + hand review` · `every transcript shipped` · [read the result](https://github.com/zaidwhy/flake-laundering/blob/master/RESULT.md)
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23721575.svg)](https://doi.org/10.5281/zenodo.23721575) archived, citable, timestamped
+DOI [10.5281/zenodo.23721575](https://doi.org/10.5281/zenodo.23721575) · archived, citable, timestamped
 
 ### [COLD READ](https://github.com/zaidwhy/coldread) - the anonymity half-life belongs to the reader
 
@@ -109,7 +112,7 @@ Corpus memorisation was tested directly rather than waved away, and ruled out. O
 
 `n=3 model families` · `negative control held` · `contamination ruled out` · `Wilson 95% intervals` · [read the result](https://github.com/zaidwhy/coldread/blob/master/RESULT.md)
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22309660.svg)](https://doi.org/10.5281/zenodo.22309660) archived, citable, timestamped
+DOI [10.5281/zenodo.22309660](https://doi.org/10.5281/zenodo.22309660) · archived, citable, timestamped
 
 ### [AUGUR](https://github.com/zaidwhy/augur) - a model with a 1938 cutoff answers from 1899
 
@@ -125,7 +128,7 @@ A second finding fell out of the demo. Asked whether another great war was comin
 
 `n=2 model families` · `14-probe battery, temperature 0, fixed seed` · `raw output shipped unedited` · [read the finding](https://github.com/zaidwhy/augur/blob/master/FINDING.md)
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22309658.svg)](https://doi.org/10.5281/zenodo.22309658) archived, citable, timestamped
+DOI [10.5281/zenodo.22309658](https://doi.org/10.5281/zenodo.22309658) · archived, citable, timestamped
 
 ---
 
@@ -236,7 +239,7 @@ The codebase is private, so the [case study](case-studies/zabira-academy.md) is 
 
 A customer-support analytics dashboard for a chat support team (Python, FastAPI, pandas, Jinja2): daily to month-to-date performance, per-agent response, resolution and CSAT, and bot versus agent resolution, each figure shown beside the support platform's own report.
 
-Reconciled to that platform's reports: all 10 aggregate totals match exactly and 53 of 55 per-agent response-time averages agree within one second; a figure that differs is clickable and explains why. Chat transcripts are read through a read-only, test-enforced API client to classify why chats were handed from bot to agent, which shrank the unexplained "other" bucket to about 1%. Role-based login, argon2 password hashing, a strict content-security policy, and 170 automated tests.
+Reconciled to that platform's reports: all 10 aggregate totals match exactly and 53 of 55 per-agent response-time averages agree within one second; a figure that differs is clickable and explains why. Chat transcripts are read through a read-only, test-enforced API client to classify why chats were handed from bot to agent, which shrank the unexplained "other" bucket to about 1%. Role-based login, argon2 password hashing, a strict content-security policy, and 285 automated tests.
 
 The repository is private and the data is the company's, so there is no link and nothing here describes a customer or a business figure.
 
@@ -246,7 +249,7 @@ The repository is private and the data is the company's, so there is no link and
 
 ### [CivilizationOS](case-studies/civilizationos.md) - a retrieval method that failed its own benchmark, in public
 
-A multi-agent society simulation, live at [civilization-os-murex.vercel.app](https://civilization-os-murex.vercel.app). TCMF, its causal-retrieval method, is benchmarked against six baselines - the first version scored recall@5 0.02 on the exact signal it was built to exploit, and the benchmark is what caught it, not a hunch. 76 API tests, 211 benchmark tests, both in CI.
+A multi-agent society simulation, live at [civilization-os-murex.vercel.app](https://civilization-os-murex.vercel.app). TCMF, its causal-retrieval method, is benchmarked against six baselines - the first version scored recall@5 0.02 on the exact signal it was built to exploit, and the benchmark is what caught it, not a hunch. 76 API tests, 215 benchmark tests, both in CI.
 
 ### [Personal LLM](case-studies/personal-llm.md) - one kernel, three apps, and an eval suite that argued with itself
 
@@ -313,7 +316,7 @@ Check 3 is the one that tends to settle it. A README copied wholesale keeps pull
 
 <br>
 
-Every commit I author is signed with the key below; the nightly activity bot's `auto:` commits are not. The artwork on this page is hand-authored SVG, served from this repository, and carries an authorship manifest in its source.
+Every commit I author is signed with the key below; the nightly activity bot's `auto:` commits are not. The artwork on this page is served from this repository: the plates are hand-authored SVG with an authorship manifest in their source, and the header film is rendered from my own three.js scene in [`scripts/neokyoto/`](scripts/neokyoto/).
 
 ```
 Zaid Ali Syed

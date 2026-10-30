@@ -38,7 +38,7 @@ git log --show-signature -3
 
 ## On the artwork
 
-The survey plates in [`assets/`](assets/) are drawn by my own generator code in [`scripts/`](scripts/) (`core_sample.py` and `plates.py`), not by a badge or stats service; the two earlier plates, `nameplate.svg` and `coldread-curves.svg`, are hand-authored. Each one carries an authorship manifest in its source, including the fingerprint above. They are served from this repository, so if you find them rendering on a page that is not mine, they are being loaded from here.
+The artwork on the profile page is the Neo-Kyoto header film (`assets/neokyoto-hero.webp`, with `assets/neokyoto-hero-phone.webp` for phones), rendered from my own three.js scene in [`scripts/neokyoto/`](scripts/neokyoto/), and seven hand-authored plates (`roadmap`, `failure-ledger`, `flake-laundering`, `coldread-curves`, `augur-drift`, `kernel-map`, `chain-of-custody`), restyled by my own script into the film's palette. Each plate carries an authorship manifest in its source, including the fingerprint above. The earlier survey plates drawn by `scripts/core_sample.py` and `scripts/plates.py`, and `nameplate.svg`, stay in [`assets/`](assets/) but are no longer shown. Everything is served from this repository, so if you find it rendering on a page that is not mine, it is being loaded from here.
 
 ## On the research
 
