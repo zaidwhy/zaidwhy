@@ -56,6 +56,7 @@ If any of it does not reproduce, the claim above is wrong and I want to know.
 **Recent activity, pulled live from the repos below every night, not written by hand:**
 
 <!-- ACTIVITY:START -->
+- `2026-10-31` **dreamos-college-project** - Blackbook layout pass: 49 pages, tables kept whole, chapters on new pag... ([`586b8f0`](https://github.com/zaidwhy/dreamos-college-project/commit/586b8f0186d144e2c7c2ebb6f351cae0be86fe8d))
 - `2026-10-30` **dreamos-college-project** - Handoff: final state, submission status, rebuild order ([`3e9a1f1`](https://github.com/zaidwhy/dreamos-college-project/commit/3e9a1f1fb6361eb2ed1d618f6cab8cb699176d11))
 - `2026-10-30` **dreamos-college-project** - Blackbook to 54 pages: user manual, API reference, configuration, test... ([`78ad7b8`](https://github.com/zaidwhy/dreamos-college-project/commit/78ad7b85268e336e381875d95a9b69dc059e6f8c))
 - `2026-10-28` **second-brain** - Record the end-to-end ingest and search check in the rebuilt venv ([`fddee1f`](https://github.com/zaidwhy/second-brain/commit/fddee1f6872f703be95873ae48129cd77b5759aa))
@@ -63,7 +64,6 @@ If any of it does not reproduce, the claim above is wrong and I want to know.
 - `2026-10-27` **github-pr-agent** - Phone-width survey plate under 600 px ([`2be6677`](https://github.com/zaidwhy/github-pr-agent/commit/2be667730e374ee01a9f003b7b7b52723f5544ea))
 - `2026-10-27` **second-brain** - Phone-width survey plate under 600 px ([`02f554c`](https://github.com/zaidwhy/second-brain/commit/02f554c1fbb41163cb84892b8d969fbb34487590))
 - `2026-10-27` **personal-llm** - Phone-width survey plate under 600 px ([`cdf1c88`](https://github.com/zaidwhy/personal-llm/commit/cdf1c88530616f4538862f7df79d2eb9c42d4224))
-- `2026-10-27` **augur** - Phone-width survey plate under 600 px ([`42fee7c`](https://github.com/zaidwhy/augur/commit/42fee7c92de548b1f54f31bcb0f6de51d42300be))
 <!-- ACTIVITY:END -->
 
 ---
@@ -144,7 +144,7 @@ One memory kernel, built once, imported by everything downstream instead of each
 | [CivilizationOS](https://civilization-os-murex.vercel.app) | `200 OK` |
 | [AFTERSHOCK](https://aftershock-qloo.vercel.app) | `200 OK` |
 
-*checked 2026-10-30 09:39 UTC, by the workflow that runs this page*
+*checked 2026-10-31 09:19 UTC, by the workflow that runs this page*
 <!-- STATUS:END -->
 
 ### [CivilizationOS](https://github.com/zaidwhy/CivilizationOS) - a society of agents, and a retrieval method that failed first
