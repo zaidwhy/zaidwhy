@@ -144,7 +144,7 @@ One memory kernel, built once, imported by everything downstream instead of each
 | [CivilizationOS](https://civilization-os-murex.vercel.app) | `200 OK` |
 | [AFTERSHOCK](https://aftershock-qloo.vercel.app) | `200 OK` |
 
-*checked 2026-10-31 09:19 UTC, by the workflow that runs this page*
+*checked 2026-11-01 10:07 UTC, by the workflow that runs this page*
 <!-- STATUS:END -->
 
 ### [CivilizationOS](https://github.com/zaidwhy/CivilizationOS) - a society of agents, and a retrieval method that failed first
