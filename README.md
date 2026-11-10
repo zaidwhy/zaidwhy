@@ -21,10 +21,11 @@ B.Tech Information Technology (Honors with Research), MGM University, graduating
 | Claim | Proof |
 |---|---|
 | 3 pull requests merged into upstream OSS totalling **13.4k stars** | [tenacity #668](https://github.com/jd/tenacity/pull/668) · [returns #2480](https://github.com/dry-python/returns/pull/2480) · [gqlalchemy #390](https://github.com/memgraph/gqlalchemy/pull/390) |
+| 4 tools published to 3 public registries, each installable in one line | [Docstep](https://marketplace.visualstudio.com/items?itemName=zaidwhy.docstep) · [tiebreak-rerank](https://pypi.org/project/tiebreak-rerank/) · [skilltether](https://www.npmjs.com/package/skilltether) · [repo-autocto](https://pypi.org/project/repo-autocto/) |
 | 27 pull requests merged into a **live production product** I did not build | [case study](case-studies/zabira-academy.md) |
-| A customer-support analytics dashboard built from scratch for a chat support team (Python, FastAPI, pandas): all 10 aggregate totals match the support platform's own report, 285 tests | no link: private repository, company work |
+| A customer-support analytics dashboard built from scratch for a chat support team (Python, FastAPI, pandas): all 10 aggregate totals match the support platform's own report, 292 tests | no link: private repository, company work |
 | A 229-run pre-registered study of a coding agent: it fixed real race bugs instead of weakening the test (0 of 60), and **"do not change the tests" broke legitimate repairs (9/10 to 0/10)** | [RESULT.md](https://github.com/zaidwhy/flake-laundering/blob/master/RESULT.md) |
-| 2 original research findings, each with a negative control and a second-model replication, **archived with a permanent DOI** | [10.5281/zenodo.22309660](https://doi.org/10.5281/zenodo.22309660) · [10.5281/zenodo.22309658](https://doi.org/10.5281/zenodo.22309658) |
+| 3 studies **archived with permanent DOIs**; the two model studies each carry a negative control and a second-model replication | [10.5281/zenodo.22309660](https://doi.org/10.5281/zenodo.22309660) · [10.5281/zenodo.22309658](https://doi.org/10.5281/zenodo.22309658) · [10.5281/zenodo.23721575](https://doi.org/10.5281/zenodo.23721575) |
 | A retrieval method benchmarked against 6 baselines - including the version of it that **failed** | [TCMF write-up](https://github.com/zaidwhy/CivilizationOS/blob/main/docs/tcmf.md) · [case study](case-studies/civilizationos.md) |
 | 381 tests across the ecosystem, every one offline and mocked - no API key runs any of them | `pytest --collect-only` on [personal-llm](https://github.com/zaidwhy/personal-llm) · [second-brain](https://github.com/zaidwhy/second-brain) · [github-pr-agent](https://github.com/zaidwhy/github-pr-agent) |
 | Every commit I author is cryptographically signed (the nightly activity bot's `auto:` commits are not), and all three findings carry an ORCID-bound DOI | [PROVENANCE.md](PROVENANCE.md) · [ORCID 0009-0003-4313-1510](https://orcid.org/0009-0003-4313-1510) |
@@ -219,6 +220,27 @@ Shipped 3 full projects end to end in test runs. On [Receipts.dev](https://githu
 
 </details>
 
+### Things you can install
+
+The rest of this page asks you to read. This part asks you to run something.
+
+```bash
+code --install-extension zaidwhy.docstep    # VS Code Marketplace
+pip install tiebreak-rerank                 # PyPI
+npx skilltether doctor                      # npm
+pipx install repo-autocto                   # PyPI
+```
+
+If one of these four lines fails on your machine, that is a bug and I want the issue.
+
+**[Docstep](https://github.com/zaidwhy/docstep)** - Python docstrings that follow the signature. A maintained fork of autoDocstring (Nils Werner, MIT). The part that is mine is Update Docstring: change a function's parameters and it brings the existing docstring in line, keeping every description a person wrote. 17 upstream issues addressed, 331 unit tests, CI on Windows, macOS and Ubuntu.
+
+**[tiebreak](https://github.com/zaidwhy/tiebreak)** - the rerank endpoint Ollama does not have. A CPU-only cross-encoder server on ONNX Runtime, no torch, that answers the Cohere and Jina `/v1/rerank` shapes. The benchmark table in its README includes the dataset where the default model loses to BM25 (SciFact, -0.009 nDCG@10) next to the two where it wins (+0.048, +0.109).
+
+**[skilltether](https://github.com/zaidwhy/skilltether)** - one `.agents/` folder as the source of truth for agent skills, linked into Claude Code, Codex and Claude Desktop. Dry run by default; a file you edited by hand blocks the run instead of being overwritten.
+
+**[autocto](https://github.com/zaidwhy/autocto)** - described above; listed here because it installs the same way.
+
 ---
 
 ## V. Production work
@@ -239,7 +261,7 @@ The codebase is private, so the [case study](case-studies/zabira-academy.md) is 
 
 A customer-support analytics dashboard for a chat support team (Python, FastAPI, pandas, Jinja2): daily to month-to-date performance, per-agent response, resolution and CSAT, and bot versus agent resolution, each figure shown beside the support platform's own report.
 
-Reconciled to that platform's reports: all 10 aggregate totals match exactly and 53 of 55 per-agent response-time averages agree within one second; a figure that differs is clickable and explains why. Chat transcripts are read through a read-only, test-enforced API client to classify why chats were handed from bot to agent, which shrank the unexplained "other" bucket to about 1%. Role-based login, argon2 password hashing, a strict content-security policy, and 285 automated tests.
+Reconciled to that platform's reports: all 10 aggregate totals match exactly; a figure that differs is clickable and explains why. Chat transcripts are read through a read-only, test-enforced API client to classify why chats were handed from bot to agent, which shrank the unexplained "other" bucket to about 1%. Role-based login, argon2 password hashing, a strict content-security policy, and 285 automated tests.
 
 The repository is private and the data is the company's, so there is no link and nothing here describes a customer or a business figure.
 
@@ -249,7 +271,7 @@ The repository is private and the data is the company's, so there is no link and
 
 ### [CivilizationOS](case-studies/civilizationos.md) - a retrieval method that failed its own benchmark, in public
 
-A multi-agent society simulation, live at [civilization-os-murex.vercel.app](https://civilization-os-murex.vercel.app). TCMF, its causal-retrieval method, is benchmarked against six baselines - the first version scored recall@5 0.02 on the exact signal it was built to exploit, and the benchmark is what caught it, not a hunch. 76 API tests, 215 benchmark tests, both in CI.
+A multi-agent society simulation, live at [civilization-os-murex.vercel.app](https://civilization-os-murex.vercel.app). TCMF, its causal-retrieval method, is benchmarked against six baselines - the first version scored recall@5 0.02 on the exact signal it was built to exploit, and the benchmark is what caught it, not a hunch. 77 API tests, 215 benchmark tests, both in CI.
 
 ### [Personal LLM](case-studies/personal-llm.md) - one kernel, three apps, and an eval suite that argued with itself
 
