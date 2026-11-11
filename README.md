@@ -57,14 +57,14 @@ If any of it does not reproduce, the claim above is wrong and I want to know.
 **Recent activity, pulled live from the repos below every night, not written by hand:**
 
 <!-- ACTIVITY:START -->
+- `2026-11-11` **recall** - Bump vite to 6.4.5 for Dependabot alert 67 ([`3bdb5e6`](https://github.com/zaidwhy/recall/commit/3bdb5e6938b0c8adebb25edc9de62bc87409a51b))
+- `2026-11-11` **recall** - Serve a token-required page to browsers at 401 instead of bare JSON ([`6fa2541`](https://github.com/zaidwhy/recall/commit/6fa254178555cfc60a7cdb852095818f70592f67))
 - `2026-11-04` **CivilizationOS** - Security: pyasn1 0.6.5 (Dependabot alerts 37-40) ([`70a227d`](https://github.com/zaidwhy/CivilizationOS/commit/70a227de199cb30031d033eec94ae5f3fc960f6b))
 - `2026-11-04` **CivilizationOS** - Docs: frontend data flow in ARCHITECTURE, live screenshot in README, bu... ([`9cb2e23`](https://github.com/zaidwhy/CivilizationOS/commit/9cb2e23b61d0999658fb27c86287f63b32c065bb))
 - `2026-11-04` **CivilizationOS** - Test the narration rules and run frontend tests in CI ([`bc7d4a7`](https://github.com/zaidwhy/CivilizationOS/commit/bc7d4a7b8b126497b06b79366843b01623db997c))
 - `2026-11-04` **CivilizationOS** - Move the narrator's wording and queue rules into a pure module ([`a61f552`](https://github.com/zaidwhy/CivilizationOS/commit/a61f5523e3ad51028f2c6c1d682f9644ea031356))
 - `2026-11-04` **CivilizationOS** - Add a favicon; tolerate a trailing slash in VITE_API_BASE ([`d8abf3a`](https://github.com/zaidwhy/CivilizationOS/commit/d8abf3a54fc7e07fba544e11a5c9935e626f119b))
 - `2026-10-31` **dreamos-college-project** - Blackbook layout pass: 49 pages, tables kept whole, chapters on new pag... ([`586b8f0`](https://github.com/zaidwhy/dreamos-college-project/commit/586b8f0186d144e2c7c2ebb6f351cae0be86fe8d))
-- `2026-10-30` **dreamos-college-project** - Handoff: final state, submission status, rebuild order ([`3e9a1f1`](https://github.com/zaidwhy/dreamos-college-project/commit/3e9a1f1fb6361eb2ed1d618f6cab8cb699176d11))
-- `2026-10-30` **dreamos-college-project** - Blackbook to 54 pages: user manual, API reference, configuration, test... ([`78ad7b8`](https://github.com/zaidwhy/dreamos-college-project/commit/78ad7b85268e336e381875d95a9b69dc059e6f8c))
 <!-- ACTIVITY:END -->
 
 ---
@@ -145,7 +145,7 @@ One memory kernel, built once, imported by everything downstream instead of each
 | [CivilizationOS](https://civilization-os-murex.vercel.app) | `200 OK` |
 | [AFTERSHOCK](https://aftershock-qloo.vercel.app) | `200 OK` |
 
-*checked 2026-11-10 10:49 UTC, by the workflow that runs this page*
+*checked 2026-11-11 10:24 UTC, by the workflow that runs this page*
 <!-- STATUS:END -->
 
 ### [CivilizationOS](https://github.com/zaidwhy/CivilizationOS) - a society of agents, and a retrieval method that failed first
