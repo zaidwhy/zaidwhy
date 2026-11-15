@@ -57,14 +57,14 @@ If any of it does not reproduce, the claim above is wrong and I want to know.
 **Recent activity, pulled live from the repos below every night, not written by hand:**
 
 <!-- ACTIVITY:START -->
+- `2026-11-14` **CivilizationOS** - Log PR #16 and write the 14 Nov handoff ([`9170b49`](https://github.com/zaidwhy/CivilizationOS/commit/9170b49399a3d2313db4593801b75e2606b41b5d))
+- `2026-11-14` **CivilizationOS** - Audit report: record that items 6 and 7 landed in PR #16 ([`7559ca3`](https://github.com/zaidwhy/CivilizationOS/commit/7559ca317fb76dec994ae7e3b6e8352d1c11c7de))
 - `2026-11-14` **CivilizationOS** - Merge pull request #16 from zaidwhy/fix/tcmf-linker-embeddings ([`53d5912`](https://github.com/zaidwhy/CivilizationOS/commit/53d591267817fb222ddd8540e8ec3b82710f4005))
 - `2026-11-14` **CivilizationOS** - Let the linker reach a similar cause older than its 48-tick window ([`1fc13ad`](https://github.com/zaidwhy/CivilizationOS/commit/1fc13ad4fdbb5188851cba34de29e3806943e875))
 - `2026-11-14` **CivilizationOS** - Embed crisis and verdict memories so the causal boost can reach them ([`6fb2ffe`](https://github.com/zaidwhy/CivilizationOS/commit/6fb2ffe1496fc222a0fb95db60f5c21c2d6dc9d0))
 - `2026-11-13` **agent-factory** - Rewrite README around the thesis, verified numbers ([`10dc564`](https://github.com/zaidwhy/agent-factory/commit/10dc564d63cbdb9cbef526584e1db465dbb921bf))
 - `2026-11-13` **dreamos-college-project** - Rewrite README around the thesis, verified numbers ([`552d8ae`](https://github.com/zaidwhy/dreamos-college-project/commit/552d8ae28fe9796327c4ef0dc9d508010d0d6779))
 - `2026-11-13` **resume-job-fit-ai** - Rewrite README around the thesis, verified numbers ([`9f17855`](https://github.com/zaidwhy/resume-job-fit-ai/commit/9f17855647124b8a017597cb1726af491d7018e7))
-- `2026-11-13` **coldread** - Rewrite README around the thesis, verified numbers ([`197ae88`](https://github.com/zaidwhy/coldread/commit/197ae8875a10756527b934daf67742d7f518a6c5))
-- `2026-11-13` **autocto** - Rewrite README around the thesis, verified numbers; move analyzer refer... ([`579ee52`](https://github.com/zaidwhy/autocto/commit/579ee5250b0e388ac84114bdc7138ed8fb7a72d1))
 <!-- ACTIVITY:END -->
 
 ---
@@ -145,7 +145,7 @@ One memory kernel, built once, imported by everything downstream instead of each
 | [CivilizationOS](https://civilization-os-murex.vercel.app) | `200 OK` |
 | [AFTERSHOCK](https://aftershock-qloo.vercel.app) | `200 OK` |
 
-*checked 2026-11-14 09:50 UTC, by the workflow that runs this page*
+*checked 2026-11-15 10:26 UTC, by the workflow that runs this page*
 <!-- STATUS:END -->
 
 ### [CivilizationOS](https://github.com/zaidwhy/CivilizationOS) - a society of agents, and a retrieval method that failed first
