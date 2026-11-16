@@ -20,7 +20,7 @@ B.Tech Information Technology (Honors with Research), MGM University, graduating
 
 | Claim | Proof |
 |---|---|
-| 3 pull requests merged into upstream OSS totalling **13.4k stars** | [tenacity #668](https://github.com/jd/tenacity/pull/668) · [returns #2480](https://github.com/dry-python/returns/pull/2480) · [gqlalchemy #390](https://github.com/memgraph/gqlalchemy/pull/390) |
+| 4 pull requests merged into upstream OSS totalling **32.8k stars** | [sentence-transformers #4376](https://github.com/huggingface/sentence-transformers/pull/4376) · [tenacity #668](https://github.com/jd/tenacity/pull/668) · [returns #2480](https://github.com/dry-python/returns/pull/2480) · [gqlalchemy #390](https://github.com/memgraph/gqlalchemy/pull/390) |
 | 4 tools published to 3 public registries, each installable in one line | [Docstep](https://marketplace.visualstudio.com/items?itemName=zaidwhy.docstep) · [tiebreak-rerank](https://pypi.org/project/tiebreak-rerank/) · [skilltether](https://www.npmjs.com/package/skilltether) · [repo-autocto](https://pypi.org/project/repo-autocto/) |
 | 27 pull requests merged into a **live production product** I did not build | [case study](case-studies/zabira-academy.md) |
 | A customer-support analytics dashboard built from scratch for a chat support team (Python, FastAPI, pandas): all 10 aggregate totals match the support platform's own report, 292 tests | no link: private repository, company work |
@@ -37,6 +37,7 @@ B.Tech Information Technology (Honors with Research), MGM University, graduating
 
 ```bash
 # The merged pull requests. Check the author field.
+gh pr view 4376 --repo huggingface/sentence-transformers --json state,mergedAt,author
 gh pr view 668  --repo jd/tenacity         --json state,mergedAt,author
 gh pr view 2480 --repo dry-python/returns  --json state,mergedAt,author
 gh pr view 390  --repo memgraph/gqlalchemy --json state,mergedAt,author
@@ -283,6 +284,7 @@ A local-first memory and RAG engine imported by three separate apps instead of r
 
 **Merged:**
 
+- **[huggingface/sentence-transformers #4376](https://github.com/huggingface/sentence-transformers/pull/4376)** · 19.3k stars - input validation for `CrossEncoder.rank()`: a single string passed as the documents argument, or a negative `top_k`, now raises a clear error instead of being ranked character by character or silently dropping the lowest-scoring result, with regression tests.
 - **[jd/tenacity #668](https://github.com/jd/tenacity/pull/668)** · 8.8k stars - fixed static typing for `@retry`-decorated instance methods so bound-method signatures survive the decorator under mypy strict.
 - **[dry-python/returns #2480](https://github.com/dry-python/returns/pull/2480)** · 4.4k stars - relaxed `future()` / `future_safe()` parameter types from `Coroutine` to the broader `Awaitable` protocol.
 - **[memgraph/gqlalchemy #390](https://github.com/memgraph/gqlalchemy/pull/390)** - added unary-operator support (`IS NOT NULL`) to the query builder, with tests, docs, and a signed CLA.
