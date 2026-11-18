@@ -132,6 +132,16 @@ A second finding fell out of the demo. Asked whether another great war was comin
 
 DOI [10.5281/zenodo.22309658](https://doi.org/10.5281/zenodo.22309658) · archived, citable, timestamped
 
+### Checking other people's numbers
+
+The three studies above test my own claims. These test someone else's, under the same rule: say what held, what did not, and what was never checked.
+
+**[opsem-replication](https://github.com/zaidwhy/opsem-replication)** - one row of a lexical-dense fusion paper on conversational-memory retrieval ([arXiv 2606.04194](https://arxiv.org/abs/2606.04194)), rerun from the authors' code. It replicates: fusion Hit@1 0.7518 and NDCG@5 0.8292 against the paper's 0.752 and 0.829. One embedding model, one row; the README has a section on what this does not show.
+
+**[convomem-autopsy](https://github.com/zaidwhy/convomem-autopsy)** - an audit of the ConvoMem memory benchmark's answer key. No definite key error in 120 reviewed items, with the caveat that both reviewers were language models and no human read them. The finding sits somewhere else: a 3B model shown no conversation at all scores 49 of 50 on the abstention category, so that category does not measure memory.
+
+**[mem0 #7950](https://github.com/mem0ai/mem0/issues/7950)** - a correctness bug found by reading the code: when two entities in one `add()` batch resolve to the same stored entity, the earlier memory link is overwritten. Reproduced and reported; open, not yet triaged.
+
 ---
 
 ## IV. Systems
@@ -242,6 +252,8 @@ If one of these four lines fails on your machine, that is a bug and I want the i
 
 **[autocto](https://github.com/zaidwhy/autocto)** - described above; listed here because it installs the same way.
 
+**[peer-sessions](https://github.com/zaidwhy/peer-sessions)** - a Claude Code plugin, so it installs from inside Claude Code rather than from a registry: `/plugin install peer-sessions --marketplace zaidwhy/peer-sessions`. Parallel sessions on one machine see each other, and the one edit or git command that would race a live peer is held back once, with the reason. It fails open: if it cannot read its own state, every action runs as if it were not installed. 60 tests.
+
 ---
 
 ## V. Production work
@@ -289,7 +301,7 @@ A local-first memory and RAG engine imported by three separate apps instead of r
 - **[dry-python/returns #2480](https://github.com/dry-python/returns/pull/2480)** · 4.4k stars - relaxed `future()` / `future_safe()` parameter types from `Coroutine` to the broader `Awaitable` protocol.
 - **[memgraph/gqlalchemy #390](https://github.com/memgraph/gqlalchemy/pull/390)** - added unary-operator support (`IS NOT NULL`) to the query builder, with tests, docs, and a signed CLA.
 
-**Open:** [gqlalchemy #392](https://github.com/memgraph/gqlalchemy/pull/392) (`ON CREATE` / `ON MATCH` clauses) · [django-taggit #944](https://github.com/jazzband/django-taggit/pull/944) (`remove_by_slug()` on `TaggableManager`).
+**Open, which means waiting on review and nothing more:** [transformers #50873](https://github.com/huggingface/transformers/pull/50873) (`batch_decode` on an empty batch) · [cpython #162102](https://github.com/python/cpython/pull/162102) (`ntpath.realpath` with `ALLOW_MISSING`) · [llvm-project #243038](https://github.com/llvm/llvm-project/pull/243038) (clang-format, empty Java lambda bodies) · [numpy #33361](https://github.com/numpy/numpy/pull/33361) (exact `percentile` results for infinite values) · [mteb #5892](https://github.com/embeddings-benchmark/mteb/pull/5892) (USearch cache backend) · [gqlalchemy #392](https://github.com/memgraph/gqlalchemy/pull/392) (`ON CREATE` / `ON MATCH` clauses) · [django-taggit #944](https://github.com/jazzband/django-taggit/pull/944) (`remove_by_slug()` on `TaggableManager`).
 
 **And one that closed unmerged, which is the more useful story:** [google/adk-python #6190](https://github.com/google/adk-python/pull/6190) fixed an `Optional[List[str]]` hint that broke the CLI parser. It survived a full maintainer review round - I root-caused a CI failure to a leftover repro script breaking Mypy and the linter, fixed it, got an LGTM - and then a maintainer's own commit resolved the same underlying bug first and the PR closed. Reviewed, correct, and beaten to it.
 
