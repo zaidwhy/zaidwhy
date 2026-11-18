@@ -98,17 +98,17 @@ The control is where it got interesting. On tests that really were wrong, the gu
 
 DOI [10.5281/zenodo.23721575](https://doi.org/10.5281/zenodo.23721575) · archived, citable, timestamped
 
-### [COLD READ](https://github.com/zaidwhy/coldread) - the anonymity half-life belongs to the reader
+### [COLD READ](https://github.com/zaidwhy/coldread) - the anonymity half-life belongs to the reader and the prompt
 
 <img src="https://raw.githubusercontent.com/zaidwhy/zaidwhy/main/assets/coldread-curves.svg" alt="Gender inference accuracy against words shown, for two models. llama3.1:8b clears chance at 50 words, qwen2.5:7b at 800." width="100%">
 
-<sub>Plate 02 plots the first two readers. The third, mistral:7b, needs about 1600 words; all three are in <a href="https://github.com/zaidwhy/coldread/blob/master/RESULT.md">RESULT.md</a>. A 3B model from one family never clears gender within 1600 words (v1.2.0). v1.3.0 adds industry as a fourth attribute, with half-lives of 25 to 50 words at 7-8B, and states that a topic-vocabulary shortcut is not yet ruled out.</sub>
+<sub>Plate 02 plots the first two readers in the original runs, before the option-order correction described below. The third, mistral:7b, needed about 1600 words there; all three are in <a href="https://github.com/zaidwhy/coldread/blob/master/RESULT.md">RESULT.md</a>. A 3B model from one family never clears gender within 1600 words (v1.2.0). v1.3.0 adds industry as a fourth attribute, with half-lives of 25 to 50 words at 7-8B, and states that a topic-vocabulary shortcut is not yet ruled out.</sub>
 
 How many words can you write before a machine knows who you are? I went looking for that number and found that the question is malformed - and why it is malformed is the finding.
 
 72 authors from a labelled blog corpus, shown to local models in growing slices, forced to commit to gender, age band, and star sign at every step. **Star sign is the control**: it is labelled in the data and is not inferable from prose. It never cleared its floor in any of the three models, which is the only reason to trust anything else on the chart.
 
-Same authors, same words, same prompt, three readers of the same size. One needs 50 words to beat a coin flip on gender, another 800, the third 1600. **A thirty-two-fold spread on identical text**, which means no statement of the form "you are anonymous for N words" means anything at all without naming the model doing the reading.
+Same authors, same words, three readers of the same size. I first reported that one needs 50 words to beat a coin flip on gender, another 800, the third 1600: a thirty-two-fold spread. **I then tried to kill that claim and mostly did.** Two of the readers were answering whichever gender the prompt listed first. With every author asked under both orders (2026-11-18), the three clear at 25, 100 and 50 words, and the gap between readers shows only when "female" is listed first. So no statement of the form "you are anonymous for N words" means anything without naming the model and the prompt.
 
 Corpus memorisation was tested directly rather than waved away, and ruled out. One finding from the first model - that short samples produce *confidently wrong* guesses rather than uncertainty - did **not** replicate on the second, and the write-up says so in those words.
 
