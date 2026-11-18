@@ -58,14 +58,14 @@ If any of it does not reproduce, the claim above is wrong and I want to know.
 **Recent activity, pulled live from the repos below every night, not written by hand:**
 
 <!-- ACTIVITY:START -->
+- `2026-11-18` **coldread** - Mark the original gender half-lives as withdrawn where they still read... ([`10147e4`](https://github.com/zaidwhy/coldread/commit/10147e4086b3940d428a7592547daf3949c6fd83))
+- `2026-11-18` **coldread** - Handoff 2026-11-18-1107 ([`1b0716f`](https://github.com/zaidwhy/coldread/commit/1b0716f0ac84c1de3f35bd59d25ba6ff6f5e6f0b))
+- `2026-11-18` **coldread** - docs: curve plate redrawn from the crossed-order rows ([`49f4b2d`](https://github.com/zaidwhy/coldread/commit/49f4b2d02467052136d5b5b9735317956fa71e67))
+- `2026-11-18` **coldread** - Release v1.5.0: crossed option order, 32x spread withdrawn, new title ([`3672a3a`](https://github.com/zaidwhy/coldread/commit/3672a3af58b5b3bbeafd072bdddf1357b5525dab))
+- `2026-11-18` **coldread** - Citation abstract carries the step 4 correction; Zenodo metadata prepar... ([`d2fac86`](https://github.com/zaidwhy/coldread/commit/d2fac865fb83bce9472fb41b8c01fef7211b5412))
 - `2026-11-14` **CivilizationOS** - Log PR #16 and write the 14 Nov handoff ([`9170b49`](https://github.com/zaidwhy/CivilizationOS/commit/9170b49399a3d2313db4593801b75e2606b41b5d))
 - `2026-11-14` **CivilizationOS** - Audit report: record that items 6 and 7 landed in PR #16 ([`7559ca3`](https://github.com/zaidwhy/CivilizationOS/commit/7559ca317fb76dec994ae7e3b6e8352d1c11c7de))
 - `2026-11-14` **CivilizationOS** - Merge pull request #16 from zaidwhy/fix/tcmf-linker-embeddings ([`53d5912`](https://github.com/zaidwhy/CivilizationOS/commit/53d591267817fb222ddd8540e8ec3b82710f4005))
-- `2026-11-14` **CivilizationOS** - Let the linker reach a similar cause older than its 48-tick window ([`1fc13ad`](https://github.com/zaidwhy/CivilizationOS/commit/1fc13ad4fdbb5188851cba34de29e3806943e875))
-- `2026-11-14` **CivilizationOS** - Embed crisis and verdict memories so the causal boost can reach them ([`6fb2ffe`](https://github.com/zaidwhy/CivilizationOS/commit/6fb2ffe1496fc222a0fb95db60f5c21c2d6dc9d0))
-- `2026-11-13` **agent-factory** - Rewrite README around the thesis, verified numbers ([`10dc564`](https://github.com/zaidwhy/agent-factory/commit/10dc564d63cbdb9cbef526584e1db465dbb921bf))
-- `2026-11-13` **dreamos-college-project** - Rewrite README around the thesis, verified numbers ([`552d8ae`](https://github.com/zaidwhy/dreamos-college-project/commit/552d8ae28fe9796327c4ef0dc9d508010d0d6779))
-- `2026-11-13` **resume-job-fit-ai** - Rewrite README around the thesis, verified numbers ([`9f17855`](https://github.com/zaidwhy/resume-job-fit-ai/commit/9f17855647124b8a017597cb1726af491d7018e7))
 <!-- ACTIVITY:END -->
 
 ---
@@ -156,7 +156,7 @@ One memory kernel, built once, imported by everything downstream instead of each
 | [CivilizationOS](https://civilization-os-murex.vercel.app) | `200 OK` |
 | [AFTERSHOCK](https://aftershock-qloo.vercel.app) | `200 OK` |
 
-*checked 2026-11-17 11:30 UTC, by the workflow that runs this page*
+*checked 2026-11-18 11:12 UTC, by the workflow that runs this page*
 <!-- STATUS:END -->
 
 ### [CivilizationOS](https://github.com/zaidwhy/CivilizationOS) - a society of agents, and a retrieval method that failed first
