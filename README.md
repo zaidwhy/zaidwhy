@@ -72,7 +72,7 @@ If any of it does not reproduce, the claim above is wrong and I want to know.
 
 ## II. The ledger of things I got wrong
 
-<img src="https://raw.githubusercontent.com/zaidwhy/zaidwhy/main/assets/failure-ledger.svg" alt="The failure ledger: TCMF version one scored 0.02 recall at 5 on the causal signal it was built for where a causal oracle reaches 1.00, AUGUR's forecasting programme was killed by its own phase zero, COLD READ's headline finding failed to replicate on a second model, and adk-python 6190 was closed unmerged after an LGTM." width="100%">
+<img src="https://raw.githubusercontent.com/zaidwhy/zaidwhy/main/assets/failure-ledger.svg" alt="The failure ledger: TCMF version one scored 0.02 recall at 5 on the causal signal it was built for where a causal oracle reaches 1.00, AUGUR's forecasting programme was killed by its own phase zero, COLD READ's thirty-two-fold spread between readers was mostly an option-order habit of the prompt, and adk-python 6190 was closed unmerged after an LGTM." width="100%">
 
 Anyone can publish the version of their work where everything went right. The four entries above are claims I actually made, each one struck by evidence I went and collected, and each correction is published in the repository named beside it rather than quietly dropped. The [TCMF write-up](https://github.com/zaidwhy/CivilizationOS/blob/main/docs/tcmf.md) still contains the fusion formula that scored zero. [`FINDING.md`](https://github.com/zaidwhy/augur/blob/master/FINDING.md) still contains the forecasting plan its own first phase falsified. [`RESULT.md`](https://github.com/zaidwhy/coldread/blob/master/RESULT.md) still contains the headline that did not survive a second model. [adk-python #6190](https://github.com/google/adk-python/pull/6190) is closed and is on this page anyway.
 
@@ -100,9 +100,9 @@ DOI [10.5281/zenodo.23721575](https://doi.org/10.5281/zenodo.23721575) · archiv
 
 ### [COLD READ](https://github.com/zaidwhy/coldread) - the anonymity half-life belongs to the reader and the prompt
 
-<img src="https://raw.githubusercontent.com/zaidwhy/zaidwhy/main/assets/coldread-curves.svg" alt="Gender inference accuracy against words shown, for two models. llama3.1:8b clears chance at 50 words, qwen2.5:7b at 800." width="100%">
+<img src="https://raw.githubusercontent.com/zaidwhy/zaidwhy/main/assets/coldread-curves.svg" alt="Gender inference accuracy against words shown, for three models, each author asked under both option orders. llama3.1:8b clears chance at 25 words, mistral:7b at 50, qwen2.5:7b at 100. The star sign control never clears." width="100%">
 
-<sub>Plate 02 plots the first two readers in the original runs, before the option-order correction described below. The third, mistral:7b, needed about 1600 words there; all three are in <a href="https://github.com/zaidwhy/coldread/blob/master/RESULT.md">RESULT.md</a>. A 3B model from one family never clears gender within 1600 words (v1.2.0). v1.3.0 adds industry as a fourth attribute, with half-lives of 25 to 50 words at 7-8B, and states that a topic-vocabulary shortcut is not yet ruled out.</sub>
+<sub>Plate 02 plots the three readers with every author asked under both option orders (v1.5.0). The original runs, which gave 50, 800 and 1600 words, and the correction are both in <a href="https://github.com/zaidwhy/coldread/blob/master/RESULT.md">RESULT.md</a>. In the original runs a 3B model from one family never clears gender within 1600 words (v1.2.0, not rerun with both orders). v1.3.0 adds industry as a fourth attribute, with half-lives of 25 to 50 words at 7-8B, and states that a topic-vocabulary shortcut is not yet ruled out.</sub>
 
 How many words can you write before a machine knows who you are? I went looking for that number and found that the question is malformed - and why it is malformed is the finding.
 
