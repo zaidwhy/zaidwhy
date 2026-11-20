@@ -20,7 +20,7 @@ B.Tech Information Technology (Honors with Research), MGM University, graduating
 
 | Claim | Proof |
 |---|---|
-| 4 pull requests merged into upstream OSS totalling **32.8k stars** | [sentence-transformers #4376](https://github.com/huggingface/sentence-transformers/pull/4376) · [tenacity #668](https://github.com/jd/tenacity/pull/668) · [returns #2480](https://github.com/dry-python/returns/pull/2480) · [gqlalchemy #390](https://github.com/memgraph/gqlalchemy/pull/390) |
+| 5 pull requests merged into libraries with **202k stars** combined | [transformers #50873](https://github.com/huggingface/transformers/pull/50873) · [sentence-transformers #4376](https://github.com/huggingface/sentence-transformers/pull/4376) · [tenacity #668](https://github.com/jd/tenacity/pull/668) · [returns #2480](https://github.com/dry-python/returns/pull/2480) · [gqlalchemy #390](https://github.com/memgraph/gqlalchemy/pull/390) |
 | 4 tools published to 3 public registries, each installable in one line | [Docstep](https://marketplace.visualstudio.com/items?itemName=zaidwhy.docstep) · [tiebreak-rerank](https://pypi.org/project/tiebreak-rerank/) · [skilltether](https://www.npmjs.com/package/skilltether) · [repo-autocto](https://pypi.org/project/repo-autocto/) |
 | 27 pull requests merged into a **live production product** I did not build | [case study](case-studies/zabira-academy.md) |
 | A customer-support analytics dashboard built from scratch for a chat support team (Python, FastAPI, pandas): all 10 aggregate totals match the support platform's own report, 292 tests | no link: private repository, company work |
@@ -37,6 +37,7 @@ B.Tech Information Technology (Honors with Research), MGM University, graduating
 
 ```bash
 # The merged pull requests. Check the author field.
+gh pr view 50873 --repo huggingface/transformers --json state,mergedAt,author
 gh pr view 4376 --repo huggingface/sentence-transformers --json state,mergedAt,author
 gh pr view 668  --repo jd/tenacity         --json state,mergedAt,author
 gh pr view 2480 --repo dry-python/returns  --json state,mergedAt,author
@@ -296,6 +297,7 @@ A local-first memory and RAG engine imported by three separate apps instead of r
 
 **Merged:**
 
+- **[huggingface/transformers #50873](https://github.com/huggingface/transformers/pull/50873)** · 169.3k stars - fixed a v5 regression where the tokenizer's `batch_decode()` returned `['']` instead of `[]` for an empty batch, with regression tests and a docs note.
 - **[huggingface/sentence-transformers #4376](https://github.com/huggingface/sentence-transformers/pull/4376)** · 19.3k stars - input validation for `CrossEncoder.rank()`: a single string passed as the documents argument, or a negative `top_k`, now raises a clear error instead of being ranked character by character or silently dropping the lowest-scoring result, with regression tests.
 - **[jd/tenacity #668](https://github.com/jd/tenacity/pull/668)** · 8.8k stars - fixed static typing for `@retry`-decorated instance methods so bound-method signatures survive the decorator under mypy strict.
 - **[dry-python/returns #2480](https://github.com/dry-python/returns/pull/2480)** · 4.4k stars - relaxed `future()` / `future_safe()` parameter types from `Coroutine` to the broader `Awaitable` protocol.
@@ -306,7 +308,7 @@ A local-first memory and RAG engine imported by three separate apps instead of r
 - **Mozilla Firefox, [bug 2067351](https://bugzilla.mozilla.org/show_bug.cgi?id=2067351)** - fixed a misspelled path in the CI task config so the stylelint task runs when the linter's own config changes ([commit](https://github.com/mozilla-firefox/firefox/commit/61032f5b8d5d)).
 - **Mozilla Firefox, [bug 2094299](https://bugzilla.mozilla.org/show_bug.cgi?id=2094299)** - corrected the MPL license version (0.0 to 2.0) in a test file header ([commit](https://github.com/mozilla-firefox/firefox/commit/074b11015720)).
 
-**Open, which means waiting on review and nothing more:** [transformers #50873](https://github.com/huggingface/transformers/pull/50873) (`batch_decode` on an empty batch) · [cpython #162102](https://github.com/python/cpython/pull/162102) (`ntpath.realpath` with `ALLOW_MISSING`) · [llvm-project #243038](https://github.com/llvm/llvm-project/pull/243038) (clang-format, empty Java lambda bodies) · [numpy #33361](https://github.com/numpy/numpy/pull/33361) (exact `percentile` results for infinite values) · [mteb #5892](https://github.com/embeddings-benchmark/mteb/pull/5892) (USearch cache backend) · [gqlalchemy #392](https://github.com/memgraph/gqlalchemy/pull/392) (`ON CREATE` / `ON MATCH` clauses) · [django-taggit #944](https://github.com/jazzband/django-taggit/pull/944) (`remove_by_slug()` on `TaggableManager`).
+**Open, which means waiting on review and nothing more:** [cpython #162102](https://github.com/python/cpython/pull/162102) (`ntpath.realpath` with `ALLOW_MISSING`) · [llvm-project #243038](https://github.com/llvm/llvm-project/pull/243038) (clang-format, empty Java lambda bodies) · [numpy #33361](https://github.com/numpy/numpy/pull/33361) (exact `percentile` results for infinite values) · [mteb #5892](https://github.com/embeddings-benchmark/mteb/pull/5892) (USearch cache backend) · [gqlalchemy #392](https://github.com/memgraph/gqlalchemy/pull/392) (`ON CREATE` / `ON MATCH` clauses).
 
 **And one that closed unmerged, which is the more useful story:** [google/adk-python #6190](https://github.com/google/adk-python/pull/6190) fixed an `Optional[List[str]]` hint that broke the CLI parser. It survived a full maintainer review round - I root-caused a CI failure to a leftover repro script breaking Mypy and the linter, fixed it, got an LGTM - and then a maintainer's own commit resolved the same underlying bug first and the PR closed. Reviewed, correct, and beaten to it.
 
