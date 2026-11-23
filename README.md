@@ -3,6 +3,8 @@
 <img src="https://raw.githubusercontent.com/zaidwhy/zaidwhy/main/assets/neokyoto-hero.webp" alt="Neo-Kyoto, drawn in light: a pen of light builds a five-tier pagoda on a machine base, seen from six angles. Each room is one of my projects: personal-llm is the memory kernel at the base, CivilizationOS, Recall, autocto and second-brain hang off it, AFTERSHOCK is the mast, and the archive holds FLAKE LAUNDERING, COLD READ and AUGUR. The sign reads kioku, memory." width="100%">
 </picture>
 
+<img src="https://raw.githubusercontent.com/zaidwhy/zaidwhy/main/assets/gh-banner.webp" alt="A white line drawing of a five-tier pagoda on a long horizon line, with a single magenta light bar standing beside it, on a black field. AI-generated illustration." width="100%">
+
 > **I build AI systems that remember, retrieve, and decide.**
 > Then I try to break them - because a system that never got the chance to fail was never actually tested.
 
