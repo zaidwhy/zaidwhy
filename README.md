@@ -10,6 +10,8 @@ Most of what follows is a number. Every public number links to the artifact that
 
 B.Tech Information Technology (Honors with Research), MGM University, graduating June 2027. Open to **backend, AI engineer and new-grad roles in India** from mid-December 2026.
 
+**Zaid Ali Syed** · Portfolio: **[solstine.dev](https://www.solstine.dev)** · [LinkedIn](https://www.linkedin.com/in/zaidalisyed)
+
 <img src="https://raw.githubusercontent.com/zaidwhy/zaidwhy/main/assets/roadmap.svg" alt="Roadmap of this page, six stations on a rail: I Proof, II Failures, III Research, IV Systems, V Production, VI Provenance." width="100%">
 
 [I. Proof](#i-the-short-version-with-receipts) · [II. Failures](#ii-the-ledger-of-things-i-got-wrong) · [III. Research](#iii-research) · [IV. Systems](#iv-systems) · [V. Production](#v-production-work) · [VI. Provenance](#vi-provenance)
